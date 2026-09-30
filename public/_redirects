@@ -1,0 +1,14 @@
+# Cloudflare Pages redirects — legacy WordPress URLs that must never 301-loop.
+# Kept in sync with src/data/redirects.json (source of truth for documentation).
+
+# Duplicate v1 lotion pump landing page (already excluded from the old sitemap)
+/lotion-pump-manufacturer-landingpage/ /lotion-pump-manufacturer-landingpage-v2/ 301
+
+# Elementor draft artefact (already de-indexed on the legacy site)
+/elementor-1657/ / 301
+
+# WordPress plumbing that must never resolve on the static site
+/wp-admin/* / 301
+/wp-login.php / 301
+/xmlrpc.php / 301
+/feed/ / 301

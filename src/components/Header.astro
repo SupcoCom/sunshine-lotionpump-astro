@@ -1,0 +1,166 @@
+---
+import { NAV, CONTACT, SITE } from '@/config/site';
+
+const path = Astro.url.pathname.replace(/\/+$/, '') || '/';
+const isActive = (href?: string) => {
+  if (!href) return false;
+  const clean = href.replace(/\/+$/, '') || '/';
+  if (clean === '/') return path === '/';
+  return path === clean || path.startsWith(clean + '/');
+};
+const isGroupActive = (children?: Array<{ href: string }>) =>
+  (children ?? []).some((c) => isActive(c.href));
+---
+
+<a
+  href="#main"
+  class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-brand-600"
+  >Skip to content</a
+>
+
+<div class="hidden bg-brand-700 text-white lg:block">
+  <div class="container-x flex h-10 items-center justify-between text-[13px]">
+    <div class="flex items-center gap-5">
+      <a href={CONTACT.phoneHref} class="hover:text-accent-400">☎ {CONTACT.phoneDisplay}</a>
+      <a href={`mailto:${CONTACT.email}`} class="hover:text-accent-400">✉ {CONTACT.email}</a>
+    </div>
+    <div class="flex items-center gap-4 text-white/80">
+      <span>ISO 9001:2015 certified · Cixi, Ningbo, China</span>
+      <span aria-hidden="true">|</span>
+      <a href={CONTACT.alibaba} rel="noopener nofollow" target="_blank" class="hover:text-accent-400"
+        >Alibaba Store</a
+      >
+    </div>
+  </div>
+</div>
+
+<header class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur">
+  <div class="container-x flex h-16 items-center justify-between gap-4 lg:h-[72px]">
+    <a href="/" class="flex items-center gap-2.5" aria-label={`${SITE.name} home`}>
+      <span
+        class="grid size-9 place-items-center rounded-md bg-brand-600 text-lg font-black text-white"
+        >S</span
+      >
+      <span class="leading-tight">
+        <strong class="block text-[15px] font-black tracking-tight text-brand-600"
+          >{SITE.brand} Plastic</strong
+        >
+        <span class="block text-[10px] uppercase tracking-[0.14em] text-muted"
+          >{SITE.tagline}</span
+        >
+      </span>
+    </a>
+
+    <nav aria-label="Main" class="hidden lg:block">
+      <ul class="flex items-center gap-1">
+        {
+          NAV.map((item) => (
+            <li class="group relative">
+              {item.children ? (
+                <>
+                  <button
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    class:list={[
+                      'flex items-center gap-1 rounded px-3 py-2 text-[15px] font-medium transition',
+                      isGroupActive(item.children)
+                        ? 'text-accent-500'
+                        : 'text-brand-600 hover:text-accent-500',
+                    ]}
+                  >
+                    {item.label}
+                    <svg width="10" height="10" viewBox="0 0 20 20" aria-hidden="true">
+                      <path
+                        fill="currentColor"
+                        d="M5.5 7.5 10 12l4.5-4.5"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        fill="none"
+                        stroke-linecap="round"
+                      />
+                    </svg>
+                  </button>
+                  <ul class="invisible absolute left-0 top-full z-50 w-60 translate-y-1 rounded-lg border border-line bg-white py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:visible group-focus-within:translate-y-0 group-focus-within:opacity-100">
+                    {item.children.map((child) => (
+                      <li>
+                        <a
+                          href={child.href}
+                          class:list={[
+                            'block px-4 py-2 text-sm hover:bg-brand-50 hover:text-brand-600',
+                            isActive(child.href) ? 'text-accent-500' : 'text-ink',
+                          ]}
+                        >
+                          {child.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <a
+                  href={item.href}
+                  class:list={[
+                    'block rounded px-3 py-2 text-[15px] font-medium transition',
+                    isActive(item.href)
+                      ? 'text-accent-500'
+                      : 'text-brand-600 hover:text-accent-500',
+                  ]}
+                >
+                  {item.label}
+                </a>
+              )}
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="/contact-us/" class="btn hidden sm:inline-flex">GET A QUOTE</a>
+      <details class="relative lg:hidden">
+        <summary
+          class="grid size-10 cursor-pointer list-none place-items-center rounded border border-line text-brand-600 [&::-webkit-details-marker]:hidden"
+          aria-label="Open menu"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+          </svg>
+        </summary>
+        <div
+          class="absolute right-0 top-12 z-50 max-h-[75vh] w-72 overflow-y-auto rounded-lg border border-line bg-white p-2 shadow-xl"
+        >
+          <ul class="text-sm">
+            {
+              NAV.map((item) => (
+                <li class="border-b border-line/60 last:border-0">
+                  {item.href ? (
+                    <a href={item.href} class="block px-3 py-2.5 font-semibold text-brand-600">
+                      {item.label}
+                    </a>
+                  ) : (
+                    <details>
+                      <summary class="cursor-pointer px-3 py-2.5 font-semibold text-brand-600">
+                        {item.label}
+                      </summary>
+                      <ul class="pb-2 pl-3">
+                        {item.children?.map((child) => (
+                          <li>
+                            <a href={child.href} class="block px-3 py-2 text-ink/80">
+                              {child.label}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </details>
+                  )}
+                </li>
+              ))
+            }
+          </ul>
+          <a href="/contact-us/" class="btn mt-2 w-full">GET A QUOTE</a>
+        </div>
+      </details>
+    </div>
+  </div>
+</header>

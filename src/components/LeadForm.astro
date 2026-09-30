@@ -1,0 +1,237 @@
+---
+/**
+ * The single lead form used across the whole site.
+ *
+ * Two visual variants:
+ *   - `site` : Tailwind styled (home / contact / product / article pages)
+ *   - `lp`   : matches the ported landing-page CSS contract (`.wpcf7-form`,
+ *              `.lp-form-field`) so the hand-tuned LP design keeps working.
+ *
+ * Both post to the same edge endpoint `/api/lead`, which forwards to the
+ * WordPress Contact Form 7 form that already owns the email + Flamingo +
+ * HubSpot pipeline. No PHP is required on the static host.
+ */
+interface Props {
+  variant?: 'site' | 'lp';
+  source?: string;
+  group?: string;
+  title?: string;
+  description?: string;
+  submitLabel?: string;
+  compact?: boolean;
+  id?: string;
+}
+
+const {
+  variant = 'site',
+  source = 'site',
+  group = '',
+  title,
+  description,
+  submitLabel = 'Send My Requirement',
+  compact = false,
+  id,
+} = Astro.props;
+
+const fieldId = id ?? `lead-${source}-${Math.random().toString(36).slice(2, 7)}`;
+
+const controls = [
+  { name: 'your-name', label: 'Your Name', type: 'text', placeholder: 'e.g. Sarah Chen', autocomplete: 'name' },
+  { name: 'your-email', label: 'Email', type: 'email', placeholder: 'buyer@yourcompany.com', autocomplete: 'email' },
+  {
+    name: 'your-message',
+    label: 'Your Requirement',
+    type: 'textarea',
+    placeholder: 'e.g. Lotion pump 24/410, white, custom logo, 50,000 pcs',
+  },
+] as const;
+---
+
+<form
+  class:list={[
+    'lead-form',
+    variant === 'lp' ? 'wpcf7-form init' : 'space-y-4',
+  ]}
+  data-lead-form
+  data-source={source}
+  data-min-ms="1500"
+  novalidate
+>
+  {title && <h3 class={variant === 'lp' ? '' : 'text-xl font-bold text-brand-600'}>{title}</h3>}
+  {description && <p class={variant === 'lp' ? 'text-sm text-muted' : 'text-sm text-muted'}>{description}</p>}
+
+  <div class={variant === 'lp' ? 'sr-only' : 'sr-only'}>
+    <label for={`${fieldId}-website`}>Website</label>
+    <input id={`${fieldId}-website`} type="text" name="website" tabindex="-1" autocomplete="off" />
+  </div>
+
+  <input type="hidden" name="lp-source" value={source} />
+  <input type="hidden" name="lp-group" value={group} />
+  <input type="hidden" name="page_url" value={Astro.url.pathname} />
+
+  {
+    controls.map((control) => (
+      <div class={variant === 'lp' ? 'lp-form-field' : ''}>
+        {variant === 'lp' ? (
+          <p>
+            <label for={`${fieldId}-${control.name}`}>
+              {control.label} *
+            </label>
+            <span class="wpcf7-form-control-wrap" data-name={control.name}>
+              {control.type === 'textarea' ? (
+                <textarea
+                  id={`${fieldId}-${control.name}`}
+                  name={control.name}
+                  rows={compact ? 3 : 5}
+                  required
+                  aria-required="true"
+                  placeholder={control.placeholder}
+                  class="wpcf7-form-control wpcf7-textarea"
+                />
+              ) : (
+                <input
+                  id={`${fieldId}-${control.name}`}
+                  name={control.name}
+                  type={control.type}
+                  required
+                  aria-required="true"
+                  autocomplete={control.autocomplete}
+                  placeholder={control.placeholder}
+                  class:list={[
+                    'wpcf7-form-control',
+                    control.type === 'email' ? 'wpcf7-email' : 'wpcf7-text',
+                  ]}
+                />
+              )}
+            </span>
+          </p>
+        ) : (
+          <label class="block">
+            <span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-brand-600">
+              {control.label} *
+            </span>
+            {control.type === 'textarea' ? (
+              <textarea
+                id={`${fieldId}-${control.name}`}
+                name={control.name}
+                rows={compact ? 3 : 4}
+                required
+                aria-required="true"
+                placeholder={control.placeholder}
+                class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+              />
+            ) : (
+              <input
+                id={`${fieldId}-${control.name}`}
+                name={control.name}
+                type={control.type}
+                required
+                aria-required="true"
+                autocomplete={control.autocomplete}
+                placeholder={control.placeholder}
+                class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+              />
+            )}
+          </label>
+        )}
+      </div>
+    ))
+  }
+
+  <button
+    type="submit"
+    class:list={[
+      variant === 'lp' ? 'lp-form-submit' : 'btn btn-lg w-full',
+    ]}
+    data-lead-submit
+  >
+    {submitLabel} →
+  </button>
+
+  <p class="text-xs leading-relaxed text-muted">
+    By submitting you agree to our <a href="/privacy-policy/" class="underline">Privacy Policy</a
+    >. We use your details only to prepare your quote — no spam, no third-party sharing.
+  </p>
+
+  <div class="wpcf7-response-output" role="status" aria-live="polite"></div>
+  <p class="text-sm font-medium text-accent-600" data-lead-error hidden></p>
+</form>
+
+<script>
+  const forms = document.querySelectorAll<HTMLFormElement>('[data-lead-form]');
+
+  forms.forEach((form) => {
+    const button = form.querySelector<HTMLButtonElement>('[data-lead-submit]');
+    const output = form.querySelector<HTMLElement>('.wpcf7-response-output');
+    const errorBox = form.querySelector<HTMLElement>('[data-lead-error]');
+    const renderedAt = Date.now();
+
+    const setState = (state: 'sent' | 'failed' | 'sending', message: string) => {
+      form.classList.remove('sent', 'failed', 'sending');
+      form.classList.add(state);
+      if (output) {
+        output.textContent = message;
+        output.hidden = false;
+      }
+    };
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (errorBox) errorBox.hidden = true;
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        setState('failed', 'Please complete the required fields marked with *.');
+        return;
+      }
+
+      const data = new FormData(form);
+      // Honeypot + time-to-submit heuristics (mirrors the old server-side checks)
+      if (String(data.get('website') || '').trim() !== '') return;
+      if (Date.now() - renderedAt < 1500) {
+        setState('failed', 'Please take a moment to review your message, then send again.');
+        return;
+      }
+
+      if (button) button.disabled = true;
+      setState('sending', 'Sending…');
+
+      try {
+        const response = await fetch('/api/lead', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: JSON.stringify(Object.fromEntries(data.entries())),
+        });
+        const result = (await response.json().catch(() => ({}))) as {
+          ok?: boolean;
+          message?: string;
+        };
+
+        if (!response.ok || !result.ok) {
+          throw new Error(result.message || 'Submission failed.');
+        }
+
+        setState('sent', result.message || 'Thanks — your inquiry is in. We reply within 24 hours.');
+        form.reset();
+        (window as unknown as { sunshineTrackLead?: (s: string) => void }).sunshineTrackLead?.(
+          String(data.get('lp-source') || 'site'),
+        );
+
+        const redirect = form.dataset.redirect;
+        if (redirect) window.location.href = redirect;
+      } catch (error) {
+        const message =
+          (error as Error).message === 'Failed to fetch'
+            ? 'Network error — please email info@sunshine-lotionpump.com or try again.'
+            : (error as Error).message;
+        if (errorBox) {
+          errorBox.textContent = message;
+          errorBox.hidden = false;
+        }
+        setState('failed', message);
+      } finally {
+        if (button) button.disabled = false;
+      }
+    });
+  });
+</script>

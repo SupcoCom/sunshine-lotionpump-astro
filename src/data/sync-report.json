@@ -1,0 +1,54 @@
+{
+  "fetched": {
+    "pages": 20,
+    "posts": 23,
+    "products": 57,
+    "productCategories": 11,
+    "postCategories": 5,
+    "media": 344,
+    "cf7": [
+      {
+        "formId": "2575",
+        "version": "6.1.7",
+        "locale": "en_US"
+      },
+      {
+        "formId": "2576",
+        "version": "6.1.7",
+        "locale": "en_US"
+      },
+      {
+        "formId": "2479",
+        "version": "6.1.7",
+        "locale": "en_US"
+      },
+      {
+        "formId": "2480",
+        "version": "6.1.7",
+        "locale": "en_US"
+      }
+    ],
+    "registry": 39,
+    "seo": 115
+  },
+  "skipped": [
+    {
+      "slug": "lotion-pump-manufacturer",
+      "reason": "elementor — re-authored in Astro"
+    },
+    {
+      "slug": "contact-us",
+      "reason": "elementor — re-authored in Astro"
+    },
+    {
+      "slug": "about-us",
+      "reason": "elementor — re-authored in Astro"
+    },
+    {
+      "slug": "home",
+      "reason": "elementor — re-authored in Astro"
+    }
+  ],
+  "issues": [],
+  "redirects": []
+}

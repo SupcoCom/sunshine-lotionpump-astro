@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "slug": "blog",
+    "name": "Blog",
+    "count": 1,
+    "parent": 0,
+    "description": ""
+  },
+  {
+    "id": 30,
+    "slug": "product-comparisons",
+    "name": "Product Comparisons",
+    "count": 5,
+    "parent": 1,
+    "description": "Head-to-head comparisons of cosmetic packaging types to help buyers choose the right solution"
+  },
+  {
+    "id": 29,
+    "slug": "product-guides",
+    "name": "Product Guides",
+    "count": 10,
+    "parent": 1,
+    "description": "In-depth technical guides on cosmetic packaging closures, pumps, sprayers, and dispensing systems"
+  },
+  {
+    "id": 31,
+    "slug": "sourcing-manufacturing",
+    "name": "Sourcing & Manufacturing",
+    "count": 3,
+    "parent": 1,
+    "description": "Step-by-step guides for sourcing custom cosmetic packaging from China factories"
+  },
+  {
+    "id": 32,
+    "slug": "technical-specifications",
+    "name": "Technical Specifications",
+    "count": 4,
+    "parent": 1,
+    "description": "Detailed technical specs, dimensions, and material data for cosmetic packaging components"
+  }
+]

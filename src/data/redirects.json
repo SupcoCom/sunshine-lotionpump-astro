@@ -1,0 +1,12 @@
+[
+  {
+    "from": "/lotion-pump-manufacturer-landingpage/",
+    "to": "/lotion-pump-manufacturer-landingpage-v2/",
+    "reason": "duplicate v1 landing page — canonical v2 kept (v1 was already out of the sitemap)"
+  },
+  {
+    "from": "/elementor-1657/",
+    "to": "/",
+    "reason": "Elementor draft artefact, already de-indexed"
+  }
+]

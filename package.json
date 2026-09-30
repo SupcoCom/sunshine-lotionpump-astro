@@ -1,0 +1,32 @@
+{
+  "name": "sunshine-lotionpump",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Astro + Headless WordPress rebuild of sunshine-lotionpump.com (Elementor-free)",
+  "scripts": {
+    "sync": "node scripts/sync-wp.mjs",
+    "sync:seo": "node scripts/sync-seo.mjs",
+    "dev": "astro dev",
+    "build": "node scripts/sync-wp.mjs && astro build",
+    "build:offline": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "audit": "node scripts/audit.mjs"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.3",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.2",
+    "zod": "^4.6.5"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

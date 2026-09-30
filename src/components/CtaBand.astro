@@ -1,0 +1,68 @@
+---
+import LeadForm from '@/components/LeadForm.astro';
+import { CONTACT } from '@/config/site';
+
+interface Props {
+  source?: string;
+  group?: string;
+  eyebrow?: string;
+  title?: string;
+  description?: string;
+}
+
+const {
+  source = 'site-cta',
+  group = '',
+  eyebrow = 'Reply within 24 hours',
+  title = 'Request Your Factory-Direct Quote',
+  description = "Share your requirements — pump type, size, volume and quantity. We'll respond within 24 hours with factory pricing and a sample recommendation.",
+} = Astro.props;
+
+const promises = [
+  'Quality issues? We remake for free',
+  'Late delivery? 5% discount on next order',
+  'Not satisfied? We resolve it — no excuses',
+  'Customer satisfaction is our priority',
+];
+---
+
+<section id="quote" class="bg-brand-600 py-16 text-white">
+  <div class="container-x grid gap-10 lg:grid-cols-2">
+    <div>
+      <span class="eyebrow text-accent-400">{eyebrow}</span>
+      <h2 class="mt-2 text-white">{title}</h2>
+      <p class="mt-4 max-w-xl text-white/80">{description}</p>
+
+      <ul class="mt-6 space-y-2 text-sm text-white/85">
+        {promises.map((promise) => <li>✔ {promise}</li>)}
+      </ul>
+
+      <div class="mt-8 space-y-3 text-sm">
+        <p>
+          <a href={`mailto:${CONTACT.email}`} class="text-accent-400 hover:text-white"
+            >✉ {CONTACT.email}</a
+          >
+        </p>
+        <p>
+          <a href={CONTACT.phoneHref} class="text-accent-400 hover:text-white"
+            >☎ Call us: {CONTACT.phoneDisplay}</a
+          >
+        </p>
+        <p>
+          <a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-400 hover:text-white"
+            >WhatsApp: {CONTACT.whatsappDisplay}</a
+          >
+        </p>
+        <p>
+          <a href={CONTACT.alibaba} rel="noopener nofollow" class="text-accent-400 hover:text-white"
+            >Alibaba store →</a
+          >
+        </p>
+      </div>
+    </div>
+
+    <div class="rounded-xl bg-white p-6 shadow-xl">
+      <LeadForm variant="site" source={source} group={group} submitLabel="Get Your Factory-Direct Quote" />
+    </div>
+  </div>
+</section>

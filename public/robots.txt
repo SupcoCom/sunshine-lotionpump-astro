@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+Disallow: /thank-you/
+Disallow: /api/
+
+Sitemap: https://sunshine-lotionpump.com/sitemap-index.xml

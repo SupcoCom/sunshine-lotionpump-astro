@@ -1,0 +1,70 @@
+---
+/**
+ * Head + SEO. Mirrors what Rank Math was emitting on the legacy site
+ * (title / description / canonical / robots / OpenGraph / Twitter) and adds
+ * JSON-LD through the `schema` slot.
+ */
+import { SITE, TRACKING } from '@/config/site';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalPath?: string;
+  image?: string;
+  ogType?: string;
+  robots?: string;
+  publishedTime?: string;
+  keywords?: string[];
+}
+
+const {
+  title,
+  description = SITE.shortDescription,
+  canonicalPath,
+  image,
+  ogType = 'website',
+  robots,
+  publishedTime,
+  keywords = [],
+} = Astro.props;
+
+const canonical = canonicalPath
+  ? new URL(canonicalPath, SITE.url).toString()
+  : Astro.url.toString();
+
+const ogImage = image || SITE.logo;
+const robotsContent = robots ?? 'index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large';
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="generator" content={Astro.generator} />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonical} />
+<meta name="robots" content={robotsContent} />
+<meta name="theme-color" content="#083834" />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:type" content={ogType} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:locale" content={SITE.locale} />
+{publishedTime && <meta property="article:published_time" content={publishedTime} />}
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+
+<link rel="icon" href={SITE.favicon} sizes="32x32" />
+<link rel="apple-touch-icon" href={SITE.favicon} />
+<link rel="alternate" hreflang="en" href={canonical} />
+
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="dns-prefetch" href={SITE.cdnHost ? `https://${SITE.cdnHost}` : SITE.url} />
+
+<meta name="google-ads-id" content={TRACKING.googleAdsId} />

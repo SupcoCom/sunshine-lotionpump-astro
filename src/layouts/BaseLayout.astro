@@ -1,0 +1,100 @@
+---
+import '@/styles/global.css';
+import BaseHead from '@/components/BaseHead.astro';
+import Tracking from '@/components/Tracking.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import JsonLd from '@/components/JsonLd.astro';
+import { SITE, CONTACT } from '@/config/site';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalPath?: string;
+  image?: string;
+  ogType?: string;
+  robots?: string;
+  publishedTime?: string;
+  keywords?: string[];
+  /** Extra JSON-LD nodes for this page. */
+  schema?: Array<Record<string, unknown>>;
+  /** Renders the header/footer. Landing pages opt out. */
+  chrome?: boolean;
+}
+
+const {
+  title,
+  description,
+  canonicalPath,
+  image,
+  ogType,
+  robots,
+  publishedTime,
+  keywords,
+  schema = [],
+  chrome = true,
+} = Astro.props;
+
+const organisation = {
+  '@type': 'Organization',
+  '@id': `${SITE.url}/#organization`,
+  name: SITE.legalName,
+  alternateName: SITE.brand,
+  url: SITE.url,
+  logo: { '@type': 'ImageObject', url: SITE.logo },
+  email: CONTACT.email,
+  telephone: CONTACT.phoneDisplay,
+  foundingDate: SITE.established,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: '1109 Huancheng South Road, Zhouxiang Town',
+    addressLocality: 'Cixi City, Ningbo',
+    addressRegion: 'Zhejiang',
+    addressCountry: 'CN',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    email: CONTACT.email,
+    telephone: CONTACT.phoneDisplay,
+    availableLanguage: ['en', 'zh'],
+  },
+};
+
+const graph = [
+  organisation,
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    url: SITE.url,
+    name: `${SITE.brand} — ${SITE.tagline}`,
+    publisher: { '@id': `${SITE.url}/#organization` },
+  },
+  ...schema,
+];
+---
+
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      canonicalPath={canonicalPath}
+      image={image}
+      ogType={ogType}
+      robots={robots}
+      publishedTime={publishedTime}
+      keywords={keywords}
+    />
+    <JsonLd data={{ '@context': 'https://schema.org', '@graph': graph }} />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <Tracking />
+    {chrome && <Header />}
+    <main id="main" class="flex-1">
+      <slot />
+    </main>
+    {chrome && <Footer />}
+  </body>
+</html>

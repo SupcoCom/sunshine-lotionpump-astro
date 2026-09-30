@@ -1,0 +1,177 @@
+---
+/**
+ * /contact-us/ — rebuild of the legacy Elementor page.
+ * Address normalised to the footer/home value (see docs/CONTENT-AUDIT.md).
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import LeadForm from '@/components/LeadForm.astro';
+import { seoFor } from '@/lib/content';
+import { SITE, CONTACT } from '@/config/site';
+
+const path = '/contact-us/';
+const seo = seoFor(path);
+
+const channels = [
+  {
+    title: 'Factory address',
+    body: CONTACT.addressOneLine,
+    note: 'Near Ningbo Port — efficient global export',
+  },
+  {
+    title: 'Email & Alibaba',
+    body: `B2B inquiries: ${CONTACT.email}`,
+    note: `Phone / WhatsApp: ${CONTACT.phoneDisplay}`,
+    link: { href: CONTACT.alibaba, label: 'View our Alibaba store →' },
+  },
+  {
+    title: 'Business hours',
+    body: 'Mon – Fri: 08:30 – 18:00 CST',
+    note: 'Sat: 09:00 – 13:00 CST · Sun: closed · Email replies within 24 hours',
+  },
+];
+
+const commitments = [
+  'Free samples for qualified B2B buyers',
+  'MOQ from 5,000 pcs per SKU',
+  'Standard lead time: 15–20 days',
+  'Export terms: FOB / CIF / EXW (Ningbo)',
+  'OEM/ODM: custom colour, material & print',
+];
+
+const quickFacts = [
+  ['MOQ: 5,000 pcs', 'Per SKU, standard or custom'],
+  ['Lead time: 15–20 days', 'After sample approval'],
+  ['Free samples available', 'For qualified B2B buyers'],
+  ['FOB / CIF / EXW', 'Ningbo Port, Zhejiang'],
+];
+---
+
+<BaseLayout
+  title={seo.title || `Contact ${SITE.brand} | Cosmetic Pump Manufacturer & Supplier`}
+  description={seo.description ||
+    `Contact ${SITE.legalName} for factory-direct cosmetic pump pricing, samples and OEM/ODM. Email ${CONTACT.email} — we reply within 24 hours.`}
+  canonicalPath={path}
+  schema={[
+    {
+      '@type': 'ContactPage',
+      '@id': `${SITE.url}${path}#webpage`,
+      url: `${SITE.url}${path}`,
+      name: `Contact ${SITE.brand}`,
+      isPartOf: { '@id': `${SITE.url}/#website` },
+      about: { '@id': `${SITE.url}/#organization` },
+    },
+  ]}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact Us' }]} />
+
+  <section class="container-x py-12">
+    <h1>Contact us</h1>
+    <p class="mt-3 max-w-3xl text-ink/75">
+      Get factory-direct quotes, request samples, or ask about OEM/ODM customization. We reply
+      within 24 hours.
+    </p>
+
+    <div class="mt-9 grid gap-5 md:grid-cols-3">
+      {
+        channels.map((channel) => (
+          <div class="card p-6">
+            <h2 class="text-base">{channel.title}</h2>
+            <p class="mt-2 text-sm text-ink/80">{channel.body}</p>
+            <p class="mt-1 text-xs text-muted">{channel.note}</p>
+            {channel.link && (
+              <a
+                href={channel.link.href}
+                rel="noopener nofollow"
+                target="_blank"
+                class="mt-3 inline-block text-sm font-semibold text-accent-600 hover:underline"
+              >
+                {channel.link.label}
+              </a>
+            )}
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="mt-12 grid gap-10 lg:grid-cols-[1.15fr_1fr]">
+      <div>
+        <h2>Send us a message</h2>
+        <p class="mt-3 text-ink/75">
+          Tell us about your product requirements — pump type, size, material, quantity and any
+          customization needs. Our team will prepare a detailed quote and product recommendation
+          within 24 hours.
+        </p>
+
+        <ul class="mt-6 space-y-2 text-sm">
+          {commitments.map((item) => <li class="flex gap-2">✔ <span>{item}</span></li>)}
+        </ul>
+
+        <div class="card mt-8 p-6">
+          <h3 class="text-base">Prefer to talk directly?</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li>
+              Email:
+              <a href={`mailto:${CONTACT.email}`} class="font-medium text-accent-600 hover:underline"
+                >{CONTACT.email}</a
+              >
+            </li>
+            <li>
+              Phone:
+              <a href={CONTACT.phoneHref} class="font-medium text-accent-600 hover:underline"
+                >{CONTACT.phoneDisplay}</a
+              >
+              {' / '}
+              <a href="tel:+8615757418802" class="font-medium text-accent-600 hover:underline"
+                >{CONTACT.phoneAlt}</a
+              >
+            </li>
+            <li>
+              WhatsApp:
+              <a
+                href={CONTACT.whatsappHref}
+                rel="noopener"
+                class="font-medium text-accent-600 hover:underline">{CONTACT.whatsappDisplay}</a
+              >
+            </li>
+            <li>
+              Alibaba:
+              <a
+                href={CONTACT.alibaba}
+                rel="noopener nofollow"
+                target="_blank"
+                class="font-medium text-accent-600 hover:underline">cn1527061733eukl.en.alibaba.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <dl class="mt-8 grid grid-cols-2 gap-4">
+          {
+            quickFacts.map(([title, note]) => (
+              <div class="card p-4">
+                <dt class="text-sm font-bold text-brand-600">{title}</dt>
+                <dd class="mt-1 text-xs text-muted">{note}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+
+      <div class="card h-fit p-6">
+        <h2 class="text-xl">Inquiry form</h2>
+        <p class="mt-1 text-sm text-muted">
+          Fields marked * are required. We never share your details.
+        </p>
+        <div class="mt-4">
+          <LeadForm
+            variant="site"
+            source="contact-page"
+            submitLabel="Send Inquiry"
+            description=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,48 @@
+---
+/**
+ * Bare layout for ported landing pages.
+ *
+ * Replaces WordPress' `elementor_canvas` page template: no theme header/footer,
+ * full-bleed, page owns the whole viewport. The ported markup carries its own
+ * scoped CSS inside `.lp-wrap`, so global Tailwind is loaded but unused there.
+ */
+import '@/styles/global.css';
+import BaseHead from '@/components/BaseHead.astro';
+import Tracking from '@/components/Tracking.astro';
+import JsonLd from '@/components/JsonLd.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  canonicalPath?: string;
+  image?: string;
+  robots?: string;
+  schema?: Array<Record<string, unknown>>;
+}
+
+const { title, description, canonicalPath, image, robots, schema = [] } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead
+      title={title}
+      description={description}
+      canonicalPath={canonicalPath}
+      image={image}
+      robots={robots}
+    />
+    {
+      schema.length > 0 && (
+        <JsonLd data={{ '@context': 'https://schema.org', '@graph': schema }} />
+      )
+    }
+  </head>
+  <body class="bg-white">
+    <Tracking />
+    <main id="main">
+      <slot />
+    </main>
+  </body>
+</html>

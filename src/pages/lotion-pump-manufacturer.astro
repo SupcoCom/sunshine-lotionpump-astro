@@ -1,0 +1,825 @@
+---
+/**
+ * /lotion-pump-manufacturer/ — rebuild of the legacy Elementor pillar page (WP id 1550).
+ *
+ * This was the site's strongest organic asset, so the editorial structure, data
+ * tables and FAQs are reproduced faithfully. Two deliberate normalisations:
+ *   - company identity is taken from `@/config/site` (single source of truth)
+ *     instead of repeating the contradictory values that were on the old page
+ *   - the 15-SKU catalogue grid is generated from the product content collection
+ *     instead of being hardcoded, so it can never drift from the CMS
+ * See docs/CONTENT-AUDIT.md for the conflicts this resolves.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import ProductCard from '@/components/ProductCard.astro';
+import LeadForm from '@/components/LeadForm.astro';
+import FaqList from '@/components/FaqList.astro';
+import { seoFor } from '@/lib/content';
+import { SITE, CONTACT } from '@/config/site';
+
+const path = '/lotion-pump-manufacturer/';
+const seo = seoFor(path);
+
+const all = await getCollection('products');
+const lotionPumps = all
+  .filter((p) => p.data.categories.includes('lotion-pump'))
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+const catalog = lotionPumps.slice(0, 15);
+
+const nav = [
+  'How a lotion pump actually works (and the 3 failure modes brands miss)',
+  'The 24/410 vs 28/410 vs 28/412 neck-size decision',
+  'Material selection: PP, PP/PE, polymer, metal spring, UV-coated',
+  '6 closure finish options and when each one wins',
+  "OEM customization scope — what's free, what costs tooling",
+  'How to evaluate a lotion pump factory in under 20 minutes',
+  'Pricing, MOQ, lead time and sample policy (real numbers)',
+];
+
+const anatomy = [
+  {
+    title: 'Spring fatigue resistance',
+    body: 'A typical pump cycles 3,000–5,000 times in a household. Our standard PP/PE pumps are tested at 5,000 cycle equivalents on the Up/Down Lock SKU before assembly approval.',
+  },
+  {
+    title: 'Gasket compression set',
+    body: 'The gasket must hold seal under both freezing transit (−15 °C ocean container in winter) and 45 °C warehouse heat. PP/PE gaskets in our line maintain &lt;15% compression set after 168 h at 70 °C.',
+  },
+  {
+    title: 'Dip tube length tolerance',
+    body: 'The tube must reach within 2 mm of the bottle base. We cut tubes to ±0.5 mm using CNC-grade tooling rated at ±0.1 mm dimensional accuracy.',
+  },
+];
+
+const sizes = [
+  ['24/410', '24 mm', '410 (standard, low-finish)', '100–250 mL', 'Travel-size lotions, hand cream, hair serum'],
+  ['28/410', '28 mm', '410 (standard, low-finish)', '250–500 mL', 'Body lotion, shampoo, conditioner, hand wash'],
+  ['28/412', '28 mm', '412 (taller thread)', '250–500 mL', 'Same applications as 28/410, but for taller-finish bottles'],
+];
+
+const gallery = [
+  {
+    src: 'https://img.supcous.com/2026/05/Left-Right-Lock-Pump-28mm-Silver-Uv.jpg',
+    caption: 'Left-Right Lock Pump · 28 mm · Silver UV',
+    price: '$0.05–$0.07/unit @ MOQ 10K',
+  },
+  {
+    src: 'https://img.supcous.com/2026/05/Cosmetic-Plastic-Left-Right-Lock-Lotion-Dispenser.jpg',
+    caption: 'Cosmetic Left-Right Lock Dispenser · PP',
+    price: '$0.05–$0.07/unit @ MOQ 10K',
+  },
+  {
+    src: 'https://img.supcous.com/2026/05/China-Factory-Direct-Sell-Plastic-Screw-Dispenser.jpg',
+    caption: 'Screw Dispenser Pump · Multi-size · PP',
+    price: '$0.04–$0.06/unit @ MOQ 10K',
+  },
+  {
+    src: 'https://img.supcous.com/2026/05/PP-Alum-UV-Mini-Household-Pump-Head.jpg',
+    caption: 'PP / Alum / UV Mini Pump Head · 28 mm',
+    price: '$0.08–$0.10/unit @ MOQ 10K',
+  },
+];
+
+const materials = [
+  ['PP (Polypropylene)', 'WP-1221, WP-1218, WP-1153', 'Water-based lotions, hand wash, shampoo', 'Excellent for surfactants, neutral pH', 'Entry'],
+  ['PP/PE (PP body + PE gasket)', 'WP-1224, WP-1206, WP-1156', 'Standard cosmetic line — best all-around', 'Wide range; resists most lotion bases', 'Standard'],
+  ['Plastic + Metal Spring', 'WP-885', 'Premium hand soap, premium lotion', 'Spring corrosion-resistant for 5,000+ cycles', 'Premium'],
+  ['Plastic with UV coating', 'WP-1194, WP-1119', 'Brand-positioned premium lotion, gloss/metallic finish', 'Same as PP underlying body', 'Premium+'],
+];
+
+const finishes = [
+  ['Smooth', 'Matte or gloss plastic', 'Mass market, drugstore, value', 'Baseline'],
+  ['Ribbed', 'Vertical grip ridges', 'Wet-hand grip — kitchen, bath', '0–5%'],
+  ['Aluminum', 'Brushed or polished metal collar', 'Premium, salon, luxury', '+15–25%'],
+  ['UV Coating', 'Glossy metallic effect (gold, silver, rose gold)', 'Premium gift, holiday SKU', '+10–18%'],
+  ['Water Transfer Printing', 'Marble, wood-grain, custom pattern', 'Differentiated indie brand', '+20–30%'],
+  ['Bamboo', 'Natural bamboo collar over plastic core', 'Sustainable, natural beauty', '+25–35%'],
+];
+
+const freeCustom = [
+  'Color — Pantone-matched body and head, no surcharge above MOQ 10,000',
+  'Closure finish — any of the 6 finishes, surcharge per the table',
+  "Dip tube length — cut to your bottle's internal height, ±0.5 mm",
+  'Logo printing — silk-screen or pad print on actuator, 1–2 colors, MOQ 10,000',
+  'Output dose tuning — 1.0 mL, 1.5 mL, 2.0 mL output via internal piston spec swap (no mold change)',
+];
+
+const toolingCustom = [
+  'Custom actuator shape (proprietary head silhouette)',
+  'Custom collar geometry beyond 24/410, 28/410, 28/412',
+  'Brand-locked threading to prevent counterfeit pumps fitting your bottle',
+  'Embedded brand emblem (raised or recessed) on actuator',
+];
+
+const buyers = [
+  ['Indie Beauty Brand (US / EU)', '10,000–50,000 pcs/run', 'Premium finish (UV, Aluminum, Bamboo), brand-matched color, fast sample turnaround', 'All 6 finishes available; sample in 5–7 days; Pantone matching at MOQ'],
+  ['Private Label / OEM Packer (SE Asia, Middle East)', '50,000–500,000 pcs/run', 'Consistent spec lock, low defect rate, volume pricing', 'ISO 9001:2015 QC; dedicated production lines; per-batch QC report'],
+  ['Wholesale Distributor (Africa, Domestic China)', '100,000–1,000,000 pcs/year', 'Lowest unit cost, reliable supply, no custom tooling', 'Standard PP SKUs from $0.04/unit; parallel production lines; 20-day avg lead time'],
+  ['Brand Packaging Manager (North America, Southern Europe)', 'Annualized 500K–5M pcs', 'Tooling ownership, ISO compliance, FOB documentation', 'Buyer-owned molds; ISO 9001:2015; FOB / CIF / EXW Ningbo Port'],
+];
+
+const markets = [
+  ['30%', 'Middle East', 'UAE, Saudi Arabia, Turkey'],
+  ['20%', 'Africa', 'Nigeria, Kenya, South Africa'],
+  ['15%', 'Southeast Asia', 'Vietnam, Thailand, Indonesia'],
+  ['10%', 'North America', 'USA, Canada'],
+  ['5%', 'Southern Europe', 'Italy, Spain, Greece'],
+  ['20%', 'Domestic China', 'OEM for local brands'],
+];
+
+const checklist = [
+  ['Production capacity', 'Monthly capacity per SKU + total line capacity', '100K–1M per SKU; 5.6M total/month on the lotion pump line; 50M+ units/year across all categories'],
+  ['Quality certification', 'ISO certificate number + scope; ask for the certificate PDF', 'ISO 9001:2015 certified; SGS-tested products'],
+  ['MOQ transparency', 'MOQ per SKU and price-break tiers', 'MOQ 10,000 (most SKUs) or 20,000 (premium SKUs); price breaks at 50K / 100K / 500K'],
+  ['Lead time honesty', 'Actual lead time including the shipping window', '15–30 days production; 18–35 days delivered FOB Ningbo Port'],
+  ['Sample policy', 'Free samples? Sample lead time? Shipping cost?', 'Free samples for qualified B2B buyers; 5–7 day sample lead time; courier paid by buyer'],
+  ['Tooling ownership', 'Who owns the mold after order — you or the factory?', 'Buyer owns the mold after full mold-cost payment; mold storage free for 24 months'],
+  ['Vertical integration', 'Mold-making, injection, assembly and QC under one roof?', '10 injection molding machines + 4 automated assembly lines + in-house mold making — no subcontracting'],
+  ['Export experience', 'Years exporting + reference markets', 'Exporting to North America, the EU, Australia and MENA; FOB / CIF / EXW Ningbo Port'],
+];
+
+const applications = [
+  ['Hand washing soap', 'Low–medium (1,000–3,000 cP)', 'PP / PP/PE', '1.0–1.5 mL', 'Smooth or Ribbed (wet-grip)'],
+  ['Body lotion / body wash', 'Medium (3,000–8,000 cP)', 'PP/PE; metal-spring for premium', '1.5–2.0 mL', 'Smooth, Aluminum, UV'],
+  ['Hair shampoo / conditioner', 'Medium–high (5,000–10,000 cP)', 'PP/PE with reinforced spring', '1.5–2.5 mL', 'Smooth or Ribbed (wet environment)'],
+  ['Kitchen cleaning detergent', 'Low (500–2,000 cP)', 'PP (chemical-resistant; avoid PE gasket for harsh surfactants)', '1.0 mL', 'Ribbed (grip when wet)'],
+  ['Disinfectant / hand sanitiser', 'Very low (water-thin)', 'PP only — no metal contact (alcohol corrosion)', '0.5–1.0 mL', 'Smooth or Aluminum collar (no metal-touch path)'],
+];
+
+const failures = [
+  ['Failure 1 — Pump won’t prime after transit', 'Air gap between dip tube tip and bottle base; or a clogged check ball from solid lotion settling.', 'Dip tube cut to within 2 mm of the bottle base (we cut to ±0.5 mm); pre-prime testing on 3 pumps per production lot before sealed packaging.'],
+  ['Failure 2 — Output dose drift after 500 cycles', 'Spring fatigue or piston wear, common in pumps with metal springs of insufficient hardness (HRC < 42).', 'Our metal-spring SKU uses an HRC 45–48 stainless spring rated for 5,000+ cycles; PP-only spring SKUs are speced for 3,000-cycle applications and labelled accordingly.'],
+  ['Failure 3 — Leak during air shipment', 'Pressure differential at altitude expands trapped air in the pump chamber, forcing lotion past the gasket.', 'The Up/Down Lock SKU prevents accidental actuation during transit; for non-lock SKUs the actuator ships in the down/locked position with a removable shipping clip.'],
+];
+
+const pricing = [
+  ['Standard Lotion Dispenser', '28/410', '$0.04–$0.06', 'PP, Smooth/Ribbed collar'],
+  ['Up/Down Lock Pump', '24/410, 28/410, 28/412', '$0.05–$0.07', 'PP/PE, anti-leak travel-safe'],
+  ['Multi-size Screw Lotion Pump', '24/410, 24/415, 28/400, 28/410', '$0.05–$0.07', 'PP, widest neck compatibility'],
+  ['High-output Pump (4.5 cc)', '28/410, 32/410', '$0.08–$0.10', 'PP, shampoo / body wash dose'],
+];
+
+const priceAdders = [
+  ['Pantone color matching', '+5–12% per unit', '+0 days', 'None'],
+  ['Aluminum collar finish', '+15–25%', '+0 days', 'None'],
+  ['UV coating finish', '+10–18%', '+5 days', 'None'],
+  ['Water transfer printing', '+20–30%', '+7 days', 'None'],
+  ['Bamboo collar', '+25–35%', '+10 days', 'None'],
+  ['Silk-screen logo (1–2 color)', '+$0.005–0.015/unit', '+0 days', 'None'],
+  ['Custom actuator mold', 'N/A (one-time tooling)', '+30–45 days', '$4,000–$12,000'],
+];
+
+const commercial = [
+  ['MOQ', '10,000 pcs for entry SKUs; 20,000 pcs for premium / metal-spring / UV-coated SKUs'],
+  ['Lead time', '15 days standard PP / PP/PE; 20–30 days for premium finishes (UV, water transfer, bamboo); +30–45 days if a custom mold is required'],
+  ['Payment terms', '30% T/T deposit, 70% balance against B/L copy; LC at sight available for orders above USD 30,000'],
+  ['Sample policy', '1–3 free standard samples for qualified B2B buyers (verified company + product line); buyer covers DHL/FedEx courier (typically USD 35–65)'],
+  ['Volume price breaks', 'Tier breaks at 50K, 100K, 500K and 1M units — typically 8–22% below MOQ price at the 1M tier'],
+  ['Mold cost (if custom)', 'USD 4,000–12,000 depending on geometry; ownership transfers to the buyer on full payment; storage free for 24 months'],
+];
+
+const faqs = [
+  ['What is the minimum order quantity for a custom lotion pump?', '10,000 pieces for entry-tier PP SKUs and 20,000 pieces for premium SKUs (metal-spring, UV-coated, up/down lock). Color and finish customization is included at MOQ; custom mold tooling adds USD 4,000–12,000 plus 30–45 days.'],
+  ['What is the lead time for a 50,000-unit lotion pump order?', '15–30 days production, depending on finish complexity. PP smooth or ribbed: 15 days. UV / water transfer / bamboo: 20–30 days. Add 7–14 days for sea freight to North America or the EU on FOB Ningbo Port terms.'],
+  ['Do you offer free samples?', 'Yes. We provide 1–3 free standard samples to qualified B2B buyers (verified company registration and active product line). Buyers cover the DHL or FedEx courier cost, typically USD 35–65 to most destinations. Sample lead time is 5–7 working days.'],
+  ['Which lotion pump size fits a 250 mL bottle?', 'For a standard 250 mL bottle the most common neck size is 28/410. For taller European-spec bottles choose 28/412. Our 28/410 and 28/412 lotion pumps are interchangeable in dispensing performance — only the thread depth differs.'],
+  ['What materials do you use for lotion pumps?', 'PP (polypropylene) for entry tier, PP/PE construction (PP body with PE gasket) for standard tier, plastic with metal spring for premium tier, and UV-coated plastic for premium-plus visual finish. All resin is food-contact grade with COA available on request.'],
+  ["Can you produce a lotion pump with my brand's logo and color?", "Yes — Pantone-matched color and 1–2 color logo printing (silk-screen or pad print) on the actuator are standard customization at MOQ 10,000 with no tooling cost. We also offer hot stamping and laser engraving on request."],
+  ['Are your lotion pumps ISO certified?', 'Yes. We are ISO 9001:2015 certified and our products are SGS-tested. We can provide the ISO certificate PDF and SGS test reports with every quotation.'],
+  ['What is the difference between a lotion pump and a treatment pump?', 'Lotion pumps deliver 1.0–2.0 mL per stroke for body lotion, hand wash and shampoo. Treatment pumps deliver 0.3–0.5 mL per stroke for serums and concentrated skincare where small-dose precision is critical.'],
+];
+
+const trust = [
+  ['90,000+', 'Orders fulfilled'],
+  ['97.62%', 'Inquiry response rate'],
+  ['≤3 h', 'Average response time'],
+  ['20 days', 'Average lead time'],
+  ['6', 'Export markets'],
+];
+
+const hub = [
+  { label: 'How to Choose the Right Lotion Pump Size: 24/410 vs 28/410 vs 33/410', href: '/lotion-pump-size-guide-24-410-vs-28-410-vs-33-410/' },
+  { label: 'Lotion Pump vs Treatment Pump vs Foam Pump: Which Closure Is Right for Your Product?', href: '/treatment-pump-vs-lotion-pump-vs-dropper/' },
+  { label: 'OEM Custom Lotion Pump: MOQ, Lead Time & Pricing Explained', href: '/oem-custom-lotion-pump-moq-lead-time-pricing/' },
+  { label: 'Top 5 Lotion Pump Materials: PP, PE & Metal-Free Options', href: '/top-5-lotion-pump-materials/' },
+  { label: 'Lotion Pump Quality Testing: Spring Life, Leak Proof & Compatibility Standards', href: '/lotion-pump-quality-testing/' },
+];
+
+const schema = [
+  {
+    '@type': 'Article',
+    '@id': `${SITE.url}${path}#article`,
+    headline: 'Lotion Pump Manufacturer | Custom 24/410 28/410 — SUNSHINE Factory China',
+    description: seo.description,
+    author: { '@id': `${SITE.url}/#organization` },
+    publisher: { '@id': `${SITE.url}/#organization` },
+    about: 'Lotion pump manufacturing and sourcing',
+    mainEntityOfPage: `${SITE.url}${path}`,
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(([q, a]) => ({
+      '@type': 'Question',
+      name: q,
+      acceptedAnswer: { '@type': 'Answer', text: a },
+    })),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      { '@type': 'ListItem', position: 2, name: 'Lotion Pump Manufacturer', item: `${SITE.url}${path}` },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title={seo.title || `Lotion Pump Manufacturer | Custom 24/410 28/410 — ${SITE.brand} Factory China`}
+  description={seo.description ||
+    'Custom lotion pump manufacturer in Ningbo, China. 24/410, 28/410 and 28/412, 6 closure finishes, MOQ 10,000 pcs, 15–30 day lead time. ISO 9001:2015, SGS-tested.'}
+  canonicalPath={path}
+  ogType="article"
+  schema={schema}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Lotion Pump Manufacturer' }]} />
+
+  <article class="container-x py-10">
+    <header class="mx-auto max-w-3xl">
+      <span class="eyebrow">Pillar guide</span>
+      <h1 class="mt-2">Lotion Pump Manufacturer — Custom 24/410 &amp; 28/410</h1>
+      <p class="mt-4 text-sm text-muted">
+        By our senior product engineering team · Reviewed by the production director at{' '}
+        {SITE.legalName} · Last updated {new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' })}
+        {' · '}Reading time: 14 min · For: brand owners, sourcing managers, packaging buyers
+      </p>
+    </header>
+
+    <div class="prose-wp mx-auto mt-8 max-w-3xl">
+      <h2>Why sourcing the right lotion pump decides your bottle's fate</h2>
+      <p>
+        A lotion pump looks like a 6-gram piece of plastic. In reality it is the single
+        highest-failure component on a personal care bottle: a clogged pump, a leaking dip tube, or a
+        1.2 mL dose where the formulator specified 0.8 mL — any one of these will trigger a consumer
+        return, a retail chargeback, or a relabel cycle that costs more than the entire pump order.
+      </p>
+      <p>
+        This guide is written for B2B buyers who need to make that decision once and get it right. We
+        pull spec data from the lotion pump SKUs currently in production at our Cixi, Ningbo factory
+        and tell you exactly what we can deliver — MOQ, lead time, material grades, neck sizes,
+        finish options — with verifiable numbers in every section instead of generic adjectives. By
+        the end you will know which neck size fits your bottle line, which closure finish suits your
+        brand positioning, what lead time and MOQ you should hold suppliers to, and how to spec a
+        custom pump without overpaying for tooling.
+      </p>
+
+      <h3>What we'll cover</h3>
+      <ul>
+        {nav.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h2>How a lotion pump works — anatomy of a 6-gram component</h2>
+      <p>
+        A standard lotion pump has 7 functional parts: <strong
+          >actuator (head), closure ring, gasket, piston, spring, dip tube and stem</strong
+        >. When the user pushes the actuator, the piston compresses the spring and pushes air out of
+        the chamber; when released, the spring expands and the resulting vacuum draws lotion up the
+        dip tube. A check ball at the base of the chamber prevents backflow.
+      </p>
+      <p>
+        Three things have to be right for this mechanism to deliver consistent performance across a
+        24-month shelf life:
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 grid max-w-3xl gap-4 sm:grid-cols-3">
+      {
+        anatomy.map((item) => (
+          <div class="card p-5">
+            <h3 class="text-base">{item.title}</h3>
+            <p class="mt-2 text-sm text-ink/75" set:html={item.body} />
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose-wp mx-auto mt-10 max-w-3xl">
+      <h3>The output dose: why 1.0 mL ≠ 1.2 mL matters</h3>
+      <p>
+        Cosmetic formulators specify dose down to 0.1 mL because viscosity, fragrance load and
+        skin-feel are calibrated against that volume. A pump that delivers 1.2 mL when speced at
+        1.0 mL means each consumer use over-delivers by 20% — the bottle empties 20% faster, your
+        repurchase cycle moves forward, and your cost-per-use maths breaks. Reputable factories test
+        dose-per-stroke on at least 5 pumps per production batch and reject lots above ±0.05 mL
+        deviation.
+      </p>
+
+      <h2>Lotion pump sizes: 24/410, 28/410, 28/412 decoded</h2>
+      <p>
+        The number on every lotion pump spec — 24/410, 28/410, 28/412 — is the neck finish code. The
+        first number is the inside diameter of the bottle neck in millimetres; the second number
+        indicates the thread style. Get this wrong and your pump won't seat — or will leak.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">Neck size</th>
+            <th class="border border-line px-3 py-2">Inside Ø</th>
+            <th class="border border-line px-3 py-2">Thread type</th>
+            <th class="border border-line px-3 py-2">Best fit bottle sizes</th>
+            <th class="border border-line px-3 py-2">Common use</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            sizes.map((row) => (
+              <tr>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <p class="mx-auto mt-4 max-w-3xl text-sm text-muted">
+      All lotion pump SKUs currently produced at our factory are available in 24/410 or 28/410, with
+      several SKUs also available in 28/412. The catalogue below is generated from our live product
+      data, so it updates as new sizes are added.
+    </p>
+
+    <h2 class="mt-12">Our lotion pump catalogue — {catalog.length} SKUs in production</h2>
+    <p class="mt-2 text-sm text-muted">
+      All sizes (24/410, 28/410, 28/412) and all 6 closure finishes available. MOQ 10,000 pcs.
+    </p>
+    <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {catalog.map((product, index) => <ProductCard product={product.data} eager={index < 3} />)}
+    </div>
+    <p class="mt-4 text-sm">
+      <a class="font-semibold text-accent-600 underline" href="/product-category/lotion-pump/"
+        >View the full lotion pump range →</a
+      >
+    </p>
+
+    <h2 class="mt-14">Lotion pump product gallery — real factory samples</h2>
+    <p class="mt-2 max-w-3xl text-sm text-muted">
+      Every image below is photographed from factory production samples at our Cixi facility. We ship
+      physical samples within 5–7 working days for any SKU shown.
+    </p>
+    <div class="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      {
+        gallery.map((item) => (
+          <figure class="card overflow-hidden">
+            <img
+              src={item.src}
+              alt={item.caption}
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+              class="aspect-square w-full object-cover"
+            />
+            <figcaption class="p-4 text-xs">
+              <strong class="block text-brand-600">{item.caption}</strong>
+              <span class="text-muted">{item.price}</span>
+            </figcaption>
+          </figure>
+        ))
+      }
+    </div>
+    <p class="mt-4 text-xs text-muted">
+      All prices are factory-direct unit prices at MOQ 10,000 pcs. Final price varies by colour,
+      finish and volume.
+    </p>
+
+    <div class="prose-wp mx-auto mt-12 max-w-3xl">
+      <h3>How to choose your neck size in 30 seconds</h3>
+      <ul>
+        <li>Bottle ≤ 200 mL → <strong>24/410</strong></li>
+        <li>Bottle 250–500 mL with standard finish → <strong>28/410</strong></li>
+        <li>Bottle 250–500 mL with taller finish (typically EU spec) → <strong>28/412</strong></li>
+        <li>
+          Bottle &gt; 500 mL → use a trigger sprayer instead (
+          <a href="/product-category/trigger-sprayers/">we manufacture those too</a>)
+        </li>
+      </ul>
+
+      <h2>Material selection: PP, PP/PE, metal spring, UV-coated</h2>
+      <p>
+        Material choice drives three things: chemical compatibility with your formula, finish quality
+        (cosmetic premium look) and unit cost. Our lotion pump line uses 4 distinct material
+        constructions, each suited to a different price-and-performance bracket.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">Material construction</th>
+            <th class="border border-line px-3 py-2">SKUs</th>
+            <th class="border border-line px-3 py-2">Best for</th>
+            <th class="border border-line px-3 py-2">Chemical compatibility</th>
+            <th class="border border-line px-3 py-2">Cost tier</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            materials.map((row) => (
+              <tr>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose-wp mx-auto mt-8 max-w-3xl">
+      <p>
+        <strong>Materials note for formula safety:</strong> all our pumps use food-contact-grade
+        resin sourced from major Chinese petrochemical suppliers. We can issue resin Certificates of
+        Analysis on request. We do not use recycled polymer in cosmetic-grade pumps unless the brand
+        specifically requests PCR for sustainability claims (PCR available with 30-day extra lead
+        time).
+      </p>
+
+      <h2>6 closure finish options — which one fits your brand?</h2>
+      <p>
+        The closure finish is what your end consumer touches and sees. We offer 6 standard finish
+        types across the lotion pump line — none of them require custom tooling, so you pay only the
+        unit cost difference.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">Finish</th>
+            <th class="border border-line px-3 py-2">Visual</th>
+            <th class="border border-line px-3 py-2">Brand positioning</th>
+            <th class="border border-line px-3 py-2">Surcharge vs smooth</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            finishes.map((row) => (
+              <tr>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose-wp mx-auto mt-8 max-w-3xl">
+      <p>
+        Most of our lotion pump SKUs support all 6 finish options. The remaining entry-tier or
+        specialised SKUs support 2–3 finishes — your sourcing manager can match your finish
+        requirement against the catalogue before ordering.
+      </p>
+
+      <h2>OEM custom lotion pump: what costs tooling, what doesn't</h2>
+      <p>
+        Most "custom" lotion pump requests fall into one of two buckets: finish-level customization
+        (no tooling, fast turnaround) or geometry-level customization (new mold, $4K–$12K tooling
+        investment, 30–45 day extra lead time). Knowing the difference is the single biggest
+        cost-control lever in pump sourcing.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 grid max-w-3xl gap-5 md:grid-cols-2">
+      <div class="card p-5">
+        <h3 class="text-base">Free / no-tool customization</h3>
+        <p class="text-xs uppercase tracking-wide text-accent-500">Standard lead time 15–30 days</p>
+        <ul class="mt-3 space-y-2 text-sm">
+          {freeCustom.map((item) => <li class="flex gap-2">✔ <span>{item}</span></li>)}
+        </ul>
+      </div>
+      <div class="card p-5">
+        <h3 class="text-base">Tooling-required customization</h3>
+        <p class="text-xs uppercase tracking-wide text-accent-500">
+          +30–45 days · $4K–$12K mold cost
+        </p>
+        <ul class="mt-3 space-y-2 text-sm">
+          {toolingCustom.map((item) => <li class="flex gap-2">⚙ <span>{item}</span></li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="prose-wp mx-auto mt-12 max-w-3xl">
+      <h2>Who buys {SITE.brand} lotion pumps — and why</h2>
+      <p>
+        Across 90,000+ orders fulfilled, customers cluster into four buyer profiles. Knowing which
+        one you are helps you set the right MOQ and lead-time expectations before contacting us.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">Buyer profile</th>
+            <th class="border border-line px-3 py-2">Typical order size</th>
+            <th class="border border-line px-3 py-2">Primary concern</th>
+            <th class="border border-line px-3 py-2">Our fit</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            buyers.map((row) => (
+              <tr>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="mx-auto mt-12 max-w-3xl">Where our products go — export market breakdown</h3>
+    <div class="mx-auto mt-5 grid max-w-3xl gap-3 sm:grid-cols-3">
+      {
+        markets.map(([share, region, countries]) => (
+          <div class="card p-4">
+            <p class="text-2xl font-black text-accent-500">{share}</p>
+            <p class="text-sm font-bold text-brand-600">{region}</p>
+            <p class="text-xs text-muted">{countries}</p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose-wp mx-auto mt-12 max-w-3xl">
+      <h2>How to evaluate a lotion pump manufacturer — 8-point checklist</h2>
+      <p>
+        Brand owners ask us how to vet competing factories. Here is the honest rubric — feel free to
+        use it on us as well as on every other quote you receive.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">#</th>
+            <th class="border border-line px-3 py-2">Criterion</th>
+            <th class="border border-line px-3 py-2">What to ask for</th>
+            <th class="border border-line px-3 py-2">{SITE.brand} reference</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            checklist.map((row, index) => (
+              <tr>
+                <td class="border border-line px-3 py-2 align-top font-bold">{index + 1}</td>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose-wp mx-auto mt-8 max-w-3xl">
+      <p>
+        If a factory cannot answer any one of these 8 questions with a specific number — not "high
+        capacity" or "ISO certified" alone — push back or move on. The numbers are how you de-risk a
+        50,000-unit purchase order before it ships.
+      </p>
+
+      <h2>Industry applications — which lotion pump for which product category</h2>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">Application</th>
+            <th class="border border-line px-3 py-2">Typical viscosity</th>
+            <th class="border border-line px-3 py-2">Recommended material</th>
+            <th class="border border-line px-3 py-2">Recommended dose</th>
+            <th class="border border-line px-3 py-2">Recommended finish</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            applications.map((row) => (
+              <tr>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose-wp mx-auto mt-8 max-w-3xl">
+      <p><strong>Two practical notes from production:</strong></p>
+      <ul>
+        <li>
+          For alcohol-based disinfectants (60%+ ethanol): use PP-only construction with no metal
+          spring. Alcohol attacks unprotected steel within 6 months of contact; even stainless
+          springs may corrode if the spring touches the formula. We can spec an alcohol-rated SKU
+          with a fully encapsulated piston that isolates the spring from product contact.
+        </li>
+        <li>
+          For high-viscosity products (&gt;8,000 cP): standard piston geometry won't pull viscous
+          lotion at full stroke. Either step up to a 2.0 mL+ dose pump (longer stroke, more chamber
+          volume) or move to a treatment-pump-style geometry. We can recommend an SKU after viscosity
+          testing on a 50 mL formula sample.
+        </li>
+      </ul>
+
+      <h2>Common lotion pump failure modes (and how we prevent them)</h2>
+      <p>
+        Three failure modes account for roughly 85% of the lotion pump returns we have seen in over
+        a decade of production.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 grid max-w-3xl gap-4">
+      {
+        failures.map(([title, cause, prevention]) => (
+          <div class="card p-5">
+            <h3 class="text-base">{title}</h3>
+            <p class="mt-2 text-sm">
+              <strong class="text-muted">Cause:</strong> {cause}
+            </p>
+            <p class="mt-1 text-sm">
+              <strong class="text-muted">Prevention:</strong> {prevention}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="prose-wp mx-auto mt-8 max-w-3xl">
+      <p>
+        We log failure-mode telemetry per SKU per year and adjust the QC inspection ratio
+        accordingly. SKUs with a &gt;0.3% return rate move to 100% inline inspection until the rate
+        drops below 0.1%.
+      </p>
+
+      <h2>Factory-direct pricing — real numbers from our production catalogue</h2>
+      <p>
+        Here is what you are actually looking at before customization, at MOQ 10,000 pcs — no
+        bait-and-switch.
+      </p>
+    </div>
+
+    <div class="mx-auto mt-6 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">SKU category</th>
+            <th class="border border-line px-3 py-2">Sizes</th>
+            <th class="border border-line px-3 py-2">Unit price @ MOQ 10K</th>
+            <th class="border border-line px-3 py-2">Key spec</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            pricing.map((row) => (
+              <tr>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="mx-auto mt-10 max-w-3xl">What adds to the base price</h3>
+    <div class="mx-auto mt-5 max-w-3xl overflow-x-auto">
+      <table class="w-full border-collapse text-sm">
+        <thead>
+          <tr class="bg-surface text-left">
+            <th class="border border-line px-3 py-2">Customization</th>
+            <th class="border border-line px-3 py-2">Surcharge</th>
+            <th class="border border-line px-3 py-2">Lead time impact</th>
+            <th class="border border-line px-3 py-2">Tooling cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+            priceAdders.map((row) => (
+              <tr>
+                {row.map((cell) => <td class="border border-line px-3 py-2 align-top">{cell}</td>)}
+              </tr>
+            ))
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prose-wp mx-auto mt-8 max-w-3xl">
+      <p>
+        <strong>Volume discount tiers:</strong> standard break points at 10K → 50K → 100K → 500K
+        units. Buyers at 500K typically save 15–22% vs MOQ price. Annualised contracts (1M+
+        units/year) qualify for dedicated production line allocation and priority scheduling.
+      </p>
+      <p>
+        <strong>Payment terms:</strong> 30% T/T deposit on order confirmation; 70% balance against
+        B/L scan copy. LC at sight available for orders above USD 30,000. Accepted currencies: USD,
+        CNY.
+      </p>
+    </div>
+
+    <h3 class="mx-auto mt-10 max-w-3xl">Pricing, MOQ and lead time</h3>
+    <p class="mx-auto mt-2 max-w-3xl text-sm text-muted">
+      We don't publish a public price list because pump cost depends on colour, finish, label, dip
+      tube length and order volume. What we will commit to in writing on every quotation:
+    </p>
+    <div class="mx-auto mt-5 max-w-3xl">
+      <dl class="card divide-y divide-line">
+        {
+          commercial.map(([label, value]) => (
+            <div class="grid gap-1 px-5 py-4 sm:grid-cols-[160px_1fr]">
+              <dt class="text-sm font-bold text-brand-600">{label}</dt>
+              <dd class="text-sm text-ink/80">{value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </article>
+
+  <FaqList items={faqs.map(([q, a]) => ({ q, a }))} title="Frequently asked questions" />
+
+  <section class="bg-brand-700 py-14 text-white">
+    <div class="container-x">
+      <h2 class="text-white">Trusted by 90,000+ global B2B buyers</h2>
+      <p class="mt-2 text-white/75">
+        Factory-direct exporter with independently audited trade performance metrics.
+      </p>
+      <dl class="mt-8 grid gap-6 sm:grid-cols-3 lg:grid-cols-5">
+        {
+          trust.map(([value, label]) => (
+            <div>
+              <dt class="text-[11px] uppercase tracking-wide text-white/60">{label}</dt>
+              <dd class="text-2xl font-black text-accent-400">{value}</dd>
+            </div>
+          ))
+        }
+      </dl>
+      <p class="mt-8 text-xs text-white/60">
+        Beauty Eurasia Trade Show participant (Turkey, 2018) · ISO 9001:2015 certified · SGS-tested
+        products · FOB Ningbo Port
+      </p>
+    </div>
+  </section>
+
+  <section class="container-x py-14">
+    <h2>Explore deeper topics — lotion pump knowledge hub</h2>
+    <p class="mt-2 max-w-3xl text-sm text-muted">
+      This pillar page is the entry point. For decision-stage research, the cluster guides below dig
+      into specific sourcing questions.
+    </p>
+    <ul class="mt-6 grid gap-3 md:grid-cols-2">
+      {
+        hub.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class="card block p-4 text-sm font-medium text-brand-600 transition hover:border-accent-500"
+            >
+              {item.label} →
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="bg-brand-600 py-16 text-white">
+    <div class="container-x grid gap-10 lg:grid-cols-2">
+      <div>
+        <span class="eyebrow text-accent-400">Reply within 24 hours</span>
+        <h2 class="mt-2 text-white">Ready to source your lotion pumps?</h2>
+        <p class="mt-4 text-white/80">
+          If you have a target neck size, finish type and target volume in mind, we can return a
+          written quotation in 1 business day and free samples in 5–7 working days.
+        </p>
+        <p class="mt-6 text-sm text-white/70">
+          {SITE.legalName} · ISO 9001:2015 certified · {CONTACT.addressOneLine}
+        </p>
+      </div>
+      <div class="rounded-xl bg-white p-6 shadow-xl">
+        <LeadForm
+          variant="site"
+          source="lotion-pump-pillar"
+          group="Lotion Pump"
+          submitLabel="Request a Quote & Free Samples"
+        />
+      </div>
+    </div>
+  </section>
+</BaseLayout>

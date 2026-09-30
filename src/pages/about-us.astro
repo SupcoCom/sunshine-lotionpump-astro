@@ -1,0 +1,230 @@
+---
+/**
+ * /about-us/ — rebuild of the legacy Elementor page.
+ * Company identity comes from `@/config/site` (single source of truth);
+ * the old page carried three different company names / cities / founding years.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import LeadForm from '@/components/LeadForm.astro';
+import { seoFor } from '@/lib/content';
+import { SITE, CONTACT, ABOUT_STATS, PRODUCT_CATEGORIES } from '@/config/site';
+
+const path = '/about-us/';
+const seo = seoFor(path);
+
+const bullets = [
+  'ISO 9001:2015 certified — SGS-tested products',
+  'Factory-direct pricing — no middlemen',
+  'Full OEM/ODM customization (colour, material, finish)',
+  'MOQ from 5,000 pcs · standard lead time 15–20 days',
+  'Free samples for qualified B2B buyers',
+  'Export terms: FOB / CIF / EXW (Ningbo Port)',
+];
+
+const capabilities = [
+  {
+    title: '10 injection molding machines',
+    body: 'CNC-grade tooling with ±0.1 mm dimensional accuracy. In-house mold making cuts lead time by 30%.',
+  },
+  {
+    title: '4 automated assembly lines',
+    body: '300,000+ units produced daily with 24-hour durability cycle testing before shipment.',
+  },
+  {
+    title: 'Triple-stage QC inspection',
+    body: 'In-house testing lab: pressure, leak-proof, pump actuation and material safety — every batch.',
+  },
+  {
+    title: 'Full OEM/ODM customization',
+    body: 'Custom colour (PP/PET/aluminium), finish (UV coating, bamboo, water transfer printing), neck size and dosage.',
+  },
+];
+
+const range = [
+  ['Fine Mist Sprayers', '24/410, 28/410'],
+  ['Lotion Pumps', '24/410, 28/410'],
+  ['Foam Pumps', '28/410, 28/412'],
+  ['Trigger Sprayers', '28/400, 28/410'],
+  ['Oil Pumps', '24/410, 28/410'],
+  ['Treatment Pumps', '24/410, 32/410'],
+  ['Disc Top Caps', '24 mm, 28 mm'],
+  ['Nail Polish Pumps', 'custom sizes'],
+  ['Cream Pumps', '20/400, 24/410'],
+];
+
+const certifications = [
+  'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/07/SGS1.png',
+  'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/07/SGS2.png',
+  'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/07/SGS3.png',
+  'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/07/ISO-9001-Quality-Certifications.jpg',
+];
+---
+
+<BaseLayout
+  title={seo.title || `About ${SITE.brand} | Cosmetic Pump Manufacturer in China`}
+  description={seo.description ||
+    `${SITE.legalName} — ISO 9001:2015 certified B2B cosmetic pump manufacturer in Cixi, Ningbo, China. 7,000 m² factory, 50M+ units per year, full OEM/ODM.`}
+  canonicalPath={path}
+  schema={[
+    {
+      '@type': 'AboutPage',
+      '@id': `${SITE.url}${path}#webpage`,
+      url: `${SITE.url}${path}`,
+      name: `About ${SITE.brand}`,
+      isPartOf: { '@id': `${SITE.url}/#website` },
+      about: { '@id': `${SITE.url}/#organization` },
+    },
+  ]}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} />
+
+  <section class="container-x py-12">
+    <span class="eyebrow">About {SITE.brand} Plastic</span>
+    <h1 class="mt-2">About {SITE.brand} Plastic</h1>
+    <p class="mt-3 text-lg font-semibold text-brand-600">{SITE.legalName}</p>
+    <p class="mt-2 max-w-3xl text-sm text-muted">
+      ISO 9001:2015 certified B2B cosmetic pump manufacturer · Cixi, Ningbo, China · {SITE.established} ·
+      Factory-direct OEM/ODM
+    </p>
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+      <div class="prose-wp max-w-none">
+        <h2>Our story</h2>
+        <p>
+          Founded in {SITE.established}, {SITE.brand} Plastic ({SITE.legalName}) is a dedicated B2B
+          manufacturer of cosmetic spray pumps and dispensers in Cixi, Ningbo, Zhejiang — minutes
+          from Ningbo Port for efficient global export.
+        </p>
+        <p>
+          We have scaled to a 7,000 m² factory with 10 injection moulding machines and 4 automated
+          assembly lines, producing over 50 million units annually. Our single focus:
+          precision-engineered cosmetic pumps at transparent factory-direct prices, with full OEM/ODM
+          support for beauty brands worldwide.
+        </p>
+        <ul>
+          {bullets.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+      <img
+        src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/all-closures-overview.png"
+        alt={`${SITE.brand} closures and pumps product overview`}
+        width="620"
+        height="620"
+        loading="lazy"
+        decoding="async"
+        class="card w-full object-contain p-3"
+      />
+    </div>
+
+    <dl class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      {
+        ABOUT_STATS.map((stat) => (
+          <div class="card p-5">
+            <dt class="text-[11px] uppercase tracking-wide text-muted">{stat.label}</dt>
+            <dd class="text-2xl font-black text-accent-500">{stat.value}</dd>
+          </div>
+        ))
+      }
+    </dl>
+  </section>
+
+  <section class="bg-surface py-14">
+    <div class="container-x">
+      <h2>Manufacturing capabilities</h2>
+      <p class="mt-3 max-w-3xl text-ink/75">
+        Vertically integrated factory — mould design, injection moulding, assembly, QC and packaging
+        all under one roof. No subcontracting, no quality surprises.
+      </p>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          capabilities.map((item) => (
+            <article class="card p-5">
+              <h3 class="text-base">{item.title}</h3>
+              <p class="mt-2 text-sm text-ink/75">{item.body}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="container-x py-14">
+    <h2>Our product range</h2>
+    <p class="mt-3 max-w-3xl text-ink/75">
+      9 core product families — all available in standard and custom OEM configurations. Sizes from
+      20/400 to 32/410. Materials: PP, PP+PE, PET, aluminium, UV, bamboo.
+    </p>
+    <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        range.map(([name, sizes], index) => (
+          <li class="card flex items-center justify-between gap-3 p-4 text-sm">
+            <span class="font-semibold text-brand-600">{name}</span>
+            <span class="text-right text-xs text-muted">{sizes}</span>
+            {PRODUCT_CATEGORIES[index] && (
+              <a href={`/product-category/${PRODUCT_CATEGORIES[index].slug}/`} class="sr-only">
+                {name}
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+    <p class="mt-4 text-sm">
+      <a href="/product-category/lotion-pump/" class="font-semibold text-accent-600 underline"
+        >Browse the full product catalogue →</a
+      >
+    </p>
+  </section>
+
+  <section class="container-x pb-14">
+    <h2>Certifications &amp; quality standards</h2>
+    <p class="mt-3 max-w-3xl text-ink/75">
+      ISO 9001:2015 certified manufacturer. SGS-tested products. Every batch undergoes triple-stage
+      inspection — dimensional QC, pressure testing, and 24-hour leak and actuation durability tests.
+    </p>
+    <div class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+      {
+        certifications.map((src, index) => (
+          <img
+            src={src}
+            alt={`${SITE.brand} certification document ${index + 1}`}
+            width="420"
+            height="560"
+            loading="lazy"
+            decoding="async"
+            class="card h-full w-full object-contain p-2"
+          />
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="bg-brand-600 py-16 text-white">
+    <div class="container-x grid gap-10 lg:grid-cols-2">
+      <div>
+        <span class="eyebrow text-accent-400">Reply within 24 hours</span>
+        <h2 class="mt-2 text-white">Partner with {SITE.brand} today</h2>
+        <p class="mt-4 text-white/80">
+          Factory-direct pricing on custom spray pumps, lotion dispensers and cosmetic packaging.
+          MOQ 5,000 pcs. Reply within 24 hours.
+        </p>
+        <ul class="mt-6 space-y-2 text-sm text-white/85">
+          <li><a href={`mailto:${CONTACT.email}`} class="text-accent-400 hover:text-white">✉ {CONTACT.email}</a></li>
+          <li><a href={CONTACT.phoneHref} class="text-accent-400 hover:text-white">☎ {CONTACT.phoneDisplay}</a></li>
+          <li><a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-400 hover:text-white">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
+          <li class="text-white/70">{CONTACT.addressOneLine}</li>
+        </ul>
+      </div>
+      <div class="rounded-xl bg-white p-6 shadow-xl">
+        <h2 class="text-xl">Request a quote</h2>
+        <p class="mt-1 text-sm text-muted">
+          Tell us your product, size and volume — we'll reply with pricing and a sample plan.
+        </p>
+        <div class="mt-4">
+          <LeadForm variant="site" source="about-quote" submitLabel="Request a Quote" />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

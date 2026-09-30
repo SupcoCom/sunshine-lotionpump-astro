@@ -1,0 +1,127 @@
+---
+/**
+ * /products/ — the product archive.
+ *
+ * On the legacy site this was the WordPress custom-post-type archive rendered
+ * through an Elementor template: a flat grid plus a "Product Catagories" list,
+ * with a broken H1 (it printed a random product title) and an auto-generated
+ * meta description. This rebuild keeps the URL and the purpose, fixes the
+ * heading/metadata and makes the grid filterable.
+ */
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import ProductCard from '@/components/ProductCard.astro';
+import CtaBand from '@/components/CtaBand.astro';
+import { seoFor, productCategories } from '@/lib/content';
+import { SITE } from '@/config/site';
+
+const path = '/products/';
+const seo = seoFor(path);
+
+const all = await getCollection('products');
+const products = all
+  .slice()
+  .sort((a, b) => a.data.title.localeCompare(b.data.title));
+
+const families = productCategories.filter((c) => c.count > 0);
+
+const schema = [
+  {
+    '@type': 'CollectionPage',
+    '@id': `${SITE.url}${path}#collection`,
+    url: `${SITE.url}${path}`,
+    name: 'Cosmetic pump products',
+    description: seo.description,
+    isPartOf: { '@id': `${SITE.url}/#website` },
+  },
+  {
+    '@type': 'ItemList',
+    itemListElement: products.map((product, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      url: new URL(`/product/${product.data.slug}/`, SITE.url).toString(),
+      name: product.data.title,
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title={seo.title || `Cosmetic Pump Products | ${SITE.brand} Manufacturer`}
+  description={seo.description ||
+    `Browse ${products.length} cosmetic dispensing pumps and closures — lotion pumps, foam pumps, fine mist sprayers, trigger sprayers, disc caps and treatment pumps. MOQ 10,000 pcs, factory direct.`}
+  canonicalPath={path}
+  robots="index, follow"
+  schema={schema}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Products' }]} />
+
+  <section class="container-x py-10">
+    <h1>Cosmetic pump products</h1>
+    <p class="mt-3 max-w-3xl text-ink/75">
+      {products.length} standard products across {families.length} families — lotion pumps, cream
+      pumps, fine mist sprayers, foam pumps, trigger sprayers, treatment pumps, disc top caps, oil
+      pumps and nail polish pumps. Every item is manufactured in-house in Cixi, Ningbo, China and is
+      available in custom OEM/ODM configuration.
+    </p>
+
+    <nav class="mt-6 flex flex-wrap gap-2" aria-label="Product families">
+      {
+        families.map((family) => (
+          <a
+            href={`/product-category/${family.slug}/`}
+            class="rounded-full border border-line bg-white px-4 py-2 text-sm hover:border-accent-500 hover:text-accent-600"
+          >
+            {family.name} ({family.count})
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="mt-8 flex flex-wrap gap-2" data-product-filter>
+      <button type="button" class="btn text-sm" data-filter="all" aria-pressed="true">All</button>
+      {
+        families.map((family) => (
+          <button type="button" class="btn btn-ghost text-sm" data-filter={family.slug} aria-pressed="false">
+            {family.name}
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-product-grid>
+      {
+        products.map((product, index) => (
+          <div data-product-category={product.data.categories.join(' ')}>
+            <ProductCard product={product.data} eager={index < 3} />
+          </div>
+        ))
+      }
+    </div>
+  </section>
+
+  <CtaBand source="products-archive" />
+
+  <script>
+    const wrapper = document.querySelector<HTMLElement>('[data-product-filter]');
+    const grid = document.querySelector<HTMLElement>('[data-product-grid]');
+    if (wrapper && grid) {
+      const cards = Array.from(grid.querySelectorAll<HTMLElement>('[data-product-category]'));
+      wrapper.addEventListener('click', (event) => {
+        const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
+        if (!button) return;
+        const filter = button.dataset.filter ?? 'all';
+        wrapper.querySelectorAll('button').forEach((b) => {
+          const active = b === button;
+          b.setAttribute('aria-pressed', String(active));
+          b.classList.toggle('btn-ghost', !active);
+        });
+        cards.forEach((card) => {
+          const categories = card.dataset.productCategory ?? '';
+          card.hidden = filter !== 'all' && !categories.split(' ').includes(filter);
+        });
+      });
+    }
+  </script>
+</BaseLayout>

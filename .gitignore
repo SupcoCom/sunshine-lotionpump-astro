@@ -1,0 +1,27 @@
+# build output
+dist/
+.astro/
+.output/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment
+.env
+.env.production
+
+# editor / os
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# local sync artefacts are committed on purpose: the repo must build offline.
+# `npm run sync` refreshes them from WordPress before every build.

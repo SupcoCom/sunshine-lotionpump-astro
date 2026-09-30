@@ -1,0 +1,275 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Breadcrumbs from '@/components/Breadcrumbs.astro';
+import LeadForm from '@/components/LeadForm.astro';
+import SpecGrid from '@/components/SpecGrid.astro';
+import ProductCard from '@/components/ProductCard.astro';
+import FaqList from '@/components/FaqList.astro';
+import { seoFor, specRows, absolute, formatDate, stripBrand } from '@/lib/content';
+import { SITE, CONTACT } from '@/config/site';
+
+export async function getStaticPaths() {
+  const products = await getCollection('products');
+  return products.map((product) => ({
+    params: { slug: product.data.slug },
+    props: { product, all: products },
+  }));
+}
+
+const { product, all } = Astro.props;
+const p = product.data;
+const displayTitle = stripBrand(p.title);
+const path = `/product/${p.slug}/`;
+const seo = seoFor(path);
+
+const rows = specRows(p).map(([label, value]) => ({ label, value }));
+const gallery = [p.image, ...p.gallery].filter(Boolean) as string[];
+
+const related = all
+  .filter((other) => other.data.slug !== p.slug)
+  .map((other) => ({
+    other,
+    score: other.data.categories.filter((c) => p.categories.includes(c)).length,
+  }))
+  .filter((x) => x.score > 0)
+  .sort((a, b) => b.score - a.score)
+  .slice(0, 3)
+  .map((x) => x.other);
+
+const faqs = [
+  {
+    q: `What is the MOQ for this product?`,
+    a: `Minimum order quantity is <strong>${p.moq || '10,000 pcs'}</strong>. Smaller trial orders can be discussed for first-time buyers.`,
+  },
+  {
+    q: 'Can you customize colour, material and printing?',
+    a: `Yes — ${p.oemOdm || 'OEM/ODM is available'}. We support custom colour, finish (UV coating, water transfer printing, bamboo), neck size and dosage.`,
+  },
+  {
+    q: 'How long does production and delivery take?',
+    a: `Standard lead time is <strong>${p.leadTime || p.deliveryTime || '15–20 days'}</strong> after sample approval. Supply ability: ${p.supplyAbility || '300,000 pcs per day'}.`,
+  },
+  {
+    q: 'Can I get a sample before ordering?',
+    a: `${p.sample || 'Samples are provided'} — you only cover the courier cost. Samples are dispatched within 3 working days.`,
+  },
+  {
+    q: 'What are the payment and shipping terms?',
+    a: `Payment: ${p.paymentTerms || '30% deposit T/T advance'}. Export terms: FOB / CIF / EXW from Ningbo Port.`,
+  },
+];
+
+const schema = [
+  {
+    '@type': 'Product',
+    '@id': `${absolute(path)}#product`,
+    name: displayTitle,
+    description: p.excerpt || `${displayTitle} — factory-direct from ${SITE.legalName}.`,
+    sku: p.modelNumber || p.slug,
+    image: gallery.length ? gallery : undefined,
+    brand: { '@type': 'Brand', name: p.brand || SITE.brand },
+    material: p.material || undefined,
+    category: p.categoryNames?.[0],
+    manufacturer: { '@id': `${SITE.url}/#organization` },
+    additionalProperty: rows.map((row) => ({
+      '@type': 'PropertyValue',
+      name: row.label,
+      value: row.value,
+    })),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE.url },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: p.categoryNames?.[0] ?? 'Products',
+        item: absolute(`/product-category/${p.categories[0] ?? ''}/`),
+      },
+      { '@type': 'ListItem', position: 3, name: displayTitle, item: absolute(path) },
+    ],
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a.replace(/<[^>]+>/g, '') },
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title={seo.title || `${displayTitle} | ${SITE.brand}`}
+  description={seo.description || p.excerpt || `${displayTitle} — factory-direct manufacturer pricing.`}
+  canonicalPath={path}
+  ogType="product"
+  image={p.image || undefined}
+  schema={schema}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Home', href: '/' },
+      ...(p.categoryNames?.[0]
+        ? [
+            {
+              label: p.categoryNames[0],
+              href: `/product-category/${p.categories[0]}/`,
+            },
+          ]
+        : []),
+      { label: displayTitle },
+    ]}
+  />
+
+  <div class="container-x grid gap-10 py-10 lg:grid-cols-[1.1fr_1fr]">
+    <div>
+      <div class="card overflow-hidden p-4">
+        {
+          p.image ? (
+            <img
+              id="product-image"
+              src={p.image}
+              alt={p.imageAlt || displayTitle}
+              width="700"
+              height="700"
+              class="mx-auto aspect-square w-full max-w-[520px] object-contain"
+              loading="eager"
+              decoding="async"
+            />
+          ) : (
+            <div class="grid aspect-square place-items-center text-sm text-muted">
+              Product image available on request
+            </div>
+          )
+        }
+        {
+          gallery.length > 1 && (
+            <div class="mt-4 flex flex-wrap gap-2" data-gallery>
+              {gallery.map((src, index) => (
+                <button
+                  type="button"
+                  class:list={[
+                    'size-16 overflow-hidden rounded border bg-white p-1 transition',
+                    index === 0 ? 'border-accent-500' : 'border-line hover:border-accent-500',
+                  ]}
+                  data-gallery-src={src}
+                  aria-label={`View image ${index + 1}`}
+                >
+                  <img src={src} alt="" width="64" height="64" loading="lazy" class="size-full object-contain" />
+                </button>
+              ))}
+            </div>
+          )
+        }
+      </div>
+    </div>
+
+    <div>
+      <h1 class="text-brand-600">{displayTitle}</h1>
+      {p.excerpt && <p class="mt-3 text-ink/75">{p.excerpt}</p>}
+
+      <ul class="mt-5 grid gap-2 text-sm sm:grid-cols-2">
+        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">MOQ:</span> <strong>{p.moq || '10,000 pcs'}</strong></li>
+        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">Lead time:</span> <strong>{p.leadTime || p.deliveryTime || '15–20 days'}</strong></li>
+        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">Material:</span> <strong>{p.material || 'PP'}</strong></li>
+        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">Sample:</span> <strong>{p.sample || 'Available'}</strong></li>
+      </ul>
+
+      <div class="card mt-6 p-5">
+        <h2 class="text-lg">Request factory pricing</h2>
+        <p class="mt-1 text-sm text-muted">
+          Send your target size, colour and quantity — we reply within 24 hours.
+        </p>
+        <div class="mt-4">
+          <LeadForm
+            variant="site"
+            source={`product-${p.slug}`}
+            group={p.categoryNames?.[0] ?? ''}
+            submitLabel="Get a Quote"
+            compact
+          />
+        </div>
+      </div>
+
+      <p class="mt-4 text-xs text-muted">
+        Last updated {formatDate(p.modified || new Date().toISOString())}
+      </p>
+    </div>
+  </div>
+
+  <section class="container-x pb-4">
+    <h2 class="mb-5">Technical specifications</h2>
+    <SpecGrid rows={rows} caption={p.categoryNames?.[0] ?? 'Product data'} />
+  </section>
+
+  {
+    p.use.length > 0 && (
+      <section class="container-x py-8">
+        <h2 class="mb-4">Recommended applications</h2>
+        <ul class="flex flex-wrap gap-2">
+          {p.use.map((item) => (
+            <li class="rounded-full border border-line bg-white px-4 py-2 text-sm">{item}</li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    product.body && (
+      <section class="container-x py-8">
+        <div class="prose-wp mx-auto max-w-3xl" set:html={product.body} />
+      </section>
+    )
+  }
+
+  <FaqList items={faqs} title="Frequently asked questions" />
+
+  {
+    related.length > 0 && (
+      <section class="container-x py-12">
+        <h2 class="mb-6">Related products</h2>
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {related.map((item) => (
+            <ProductCard product={item.data} />
+          ))}
+        </div>
+      </section>
+    )
+  }
+
+  <section class="container-x pb-14">
+    <div class="card flex flex-col items-start gap-3 p-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h2 class="text-lg">Need a different size or finish?</h2>
+        <p class="text-sm text-muted">
+          We tool custom pumps in-house — tell us the neck size, dosage and closure you need.
+        </p>
+      </div>
+      <div class="flex gap-3">
+        <a href="/contact-us/" class="btn">Contact us</a>
+        <a href={CONTACT.whatsappHref} rel="noopener" class="btn btn-ghost">WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const gallery = document.querySelector<HTMLElement>('[data-gallery]');
+    const main = document.getElementById('product-image') as HTMLImageElement | null;
+    if (gallery && main) {
+      gallery.addEventListener('click', (event) => {
+        const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-gallery-src]');
+        if (!button) return;
+        const src = button.dataset.gallerySrc;
+        if (src) main.src = src;
+        gallery
+          .querySelectorAll('button')
+          .forEach((b) => b.classList.toggle('border-accent-500', b === button));
+      });
+    }
+  </script>
+</BaseLayout>

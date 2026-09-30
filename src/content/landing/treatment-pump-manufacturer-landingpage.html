@@ -1,0 +1,1030 @@
+<div class="lp-wrap" data-lp-group="Treatment Pump">
+
+  <!-- ============ BLOCK 1: 全局 CSS ============ -->
+  <style>
+    .lp-wrap *, .lp-wrap *::before, .lp-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .lp-wrap img { display: block; max-width: 100%; height: auto; }
+    .lp-wrap a { text-decoration: none; color: inherit; }
+    :root {
+      --lp-navy:   #0f1f3d;
+      --lp-navy2:  #1a3260;
+      --lp-orange: #f97316;
+      --lp-orange2:#ea6100;
+      --lp-gray:   #f4f6fa;
+      --lp-border: #e2e8f0;
+      --lp-text:   #374151;
+      --lp-muted:  #6b7280;
+      --lp-green:  #16a34a;
+    }
+    .lp-container { max-width: 1160px; margin: 0 auto; padding: 0 20px; }
+    .lp-btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--lp-orange); color: #fff !important;
+      padding: 14px 28px; border-radius: 8px;
+      font-weight: 700; font-size: 15px; letter-spacing: .3px;
+      cursor: pointer; border: none; transition: background .2s, transform .15s;
+      white-space: nowrap; font-family: 'Inter', sans-serif;
+    }
+    .lp-btn-primary:hover { background: var(--lp-orange2); transform: translateY(-1px); }
+    .lp-btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: #fff !important;
+      padding: 13px 26px; border-radius: 8px;
+      font-weight: 600; font-size: 15px;
+      cursor: pointer; border: 2px solid rgba(255,255,255,.5);
+      transition: border-color .2s, background .2s;
+      white-space: nowrap; font-family: 'Inter', sans-serif;
+    }
+    .lp-btn-ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); }
+    .lp-section-label {
+      display: inline-block;
+      background: rgba(249,115,22,.12); color: var(--lp-orange);
+      font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; padding: 5px 14px; border-radius: 20px;
+      margin-bottom: 14px; font-family: 'Inter', sans-serif;
+    }
+    .lp-section-title {
+      font-size: clamp(26px, 4vw, 38px); font-weight: 800;
+      color: var(--lp-navy); line-height: 1.2; margin-bottom: 14px;
+      font-family: 'Inter', sans-serif;
+    }
+    .lp-section-sub {
+      font-size: 17px; color: var(--lp-muted); max-width: 600px;
+      font-family: 'Inter', sans-serif;
+    }
+    .lp-wrap a:focus-visible, .lp-wrap button:focus-visible,
+    .lp-wrap input:focus-visible, .lp-wrap select:focus-visible,
+    .lp-wrap textarea:focus-visible { outline: 3px solid var(--lp-orange); outline-offset: 2px; }
+
+    /* Nav */
+    .lp-nav { position: sticky; top: 0; z-index: 999; background: var(--lp-navy); padding: 12px 0; box-shadow: 0 2px 12px rgba(0,0,0,.25); }
+    .lp-nav-inner { display: flex; align-items: center; justify-content: space-between; }
+    .lp-nav-logo { display: flex; align-items: center; gap: 10px; }
+    .lp-nav-logo-mark { width: 36px; height: 36px; background: var(--lp-orange); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 16px; color: #fff; flex-shrink: 0; }
+    .lp-nav-logo-text { color: #fff; }
+    .lp-nav-logo-text strong { display: block; font-size: 15px; font-weight: 700; font-family: 'Inter', sans-serif; }
+    .lp-nav-logo-text span { display: block; font-size: 11px; color: rgba(255,255,255,.55); font-family: 'Inter', sans-serif; margin-top: 2px; }
+    .lp-nav-cta { display: flex; align-items: center; gap: 10px; }
+    /* Hero */
+    .lp-hero { background: linear-gradient(rgba(15,31,61,.88), rgba(26,50,96,.85)), url('https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/08/factory_workshop_floor.webp') center/cover no-repeat; padding: 76px 0 60px; position: relative; overflow: hidden; font-family: 'Inter', sans-serif; }
+    .lp-hero::before { content: ''; position: absolute; inset: 0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat; }
+    .lp-hero-inner { display: grid; grid-template-columns: 1fr 420px; gap: 48px; align-items: center; position: relative; z-index: 1; }
+    .lp-hero-kw { display: inline-block; background: rgba(249,115,22,.2); color: #fba765; font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 18px; }
+    .lp-hero h1 { font-size: clamp(28px, 4.5vw, 50px); font-weight: 800; color: #fff; line-height: 1.12; margin-bottom: 18px; font-family: 'Inter', sans-serif; }
+    .lp-hero h1 em { color: var(--lp-orange); font-style: normal; }
+    .lp-hero-sub { font-size: 17px; color: rgba(255,255,255,.72); margin-bottom: 30px; max-width: 520px; }
+    .lp-hero-cta { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 36px; }
+    .lp-hero-stats { display: flex; gap: 28px; flex-wrap: wrap; }
+    .lp-hero-stat { color: #fff; }
+    .lp-hero-stat strong { display: block; font-size: 22px; font-weight: 800; color: var(--lp-orange); font-family: 'Inter', sans-serif; }
+    .lp-hero-stat span { font-size: 12px; color: rgba(255,255,255,.55); }
+    .lp-hero-card { background: #fff; border-radius: 16px; padding: 30px 28px; box-shadow: 0 20px 60px rgba(0,0,0,.25); }
+    .lp-hero-card h3 { font-size: 18px; font-weight: 700; color: var(--lp-navy); margin-bottom: 6px; font-family: 'Inter', sans-serif; }
+    .lp-hero-card > p { font-size: 13px; color: var(--lp-muted); margin-bottom: 20px; }
+    .lp-form-field { margin-bottom: 14px; }
+    .lp-form-field label { display: block; font-size: 12px; font-weight: 600; color: var(--lp-navy); margin-bottom: 5px; font-family: 'Inter', sans-serif; }
+    .lp-form-field input, .lp-form-field select, .lp-form-field textarea { width: 100%; padding: 10px 14px; border: 1.5px solid var(--lp-border); border-radius: 7px; font-size: 14px; color: var(--lp-navy); font-family: 'Inter', sans-serif; transition: border-color .2s, box-shadow .2s; background: #fff; }
+    .lp-form-field input:focus, .lp-form-field select:focus, .lp-form-field textarea:focus { outline: none; border-color: var(--lp-orange); box-shadow: 0 0 0 3px rgba(249,115,22,.15); }
+    .lp-form-field textarea { resize: vertical; min-height: 72px; }
+    .lp-form-submit { width: 100%; padding: 14px; background: var(--lp-orange); color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: background .2s; font-family: 'Inter', sans-serif; }
+    .lp-form-submit:hover { background: var(--lp-orange2); }
+    .lp-form-note { margin-top: 10px; font-size: 11.5px; color: var(--lp-muted); text-align: center; }
+    .lp-form-privacy-note { margin-top: 8px; font-size: 11px; color: var(--lp-muted); line-height: 1.5; }
+    .lp-form-privacy-note a { color: var(--lp-orange) !important; text-decoration: underline; }
+    .lp-promise-list { margin-top: 16px; border-top: 1px solid var(--lp-border); padding-top: 14px; }
+    .lp-promise-list li { list-style: none; font-size: 12.5px; color: var(--lp-text); padding: 3px 0; display: flex; align-items: center; gap: 6px; font-family: 'Inter', sans-serif; }
+    .lp-hero-mobile-cta { display: none; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 12px; padding: 16px 20px; text-align: center; margin-top: 20px; }
+    .lp-hero-mobile-cta p { color: rgba(255,255,255,.75); font-size: 14px; margin-bottom: 12px; font-family: 'Inter', sans-serif; }
+    .lp-hero-factory-strip { background: var(--lp-navy); padding: 18px 0 26px; font-family: 'Inter', sans-serif; border-top: 1px solid rgba(255,255,255,.08); }
+    .lp-hero-strip-label { display: flex; align-items: center; justify-content: center; gap: 14px; color: rgba(255,255,255,.55); font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; margin-bottom: 14px; text-align: center; }
+    .lp-hero-strip-label::before, .lp-hero-strip-label::after { content: ''; flex: 1; max-width: 90px; height: 1px; background: rgba(255,255,255,.15); }
+    .lp-hero-strip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .lp-hero-strip-img { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid rgba(255,255,255,.14); aspect-ratio: 16/9; background: #0d1a33; }
+    .lp-hero-strip-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+    .lp-hero-strip-img:hover img { transform: scale(1.05); }
+    .lp-hero-strip-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 20px 10px 8px; background: linear-gradient(transparent, rgba(0,0,0,.72)); color: #fff; font-size: 11.5px; font-weight: 600; letter-spacing: .4px; text-align: center; }
+
+    /* Trust Bar */
+    .lp-trust-bar { background: var(--lp-gray); padding: 16px 0; border-top: 1px solid var(--lp-border); border-bottom: 1px solid var(--lp-border); font-family: 'Inter', sans-serif; }
+    .lp-trust-inner { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+    .lp-trust-item { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; color: var(--lp-navy); }
+    .lp-trust-divider { width: 1px; height: 20px; background: var(--lp-border); }
+
+    /* Social Proof */
+    .lp-social-proof { background: #ffffff; padding: 26px 0; font-family: 'Inter', sans-serif; border-bottom: 1px solid var(--lp-border); }
+    .lp-sp-inner { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+    .lp-sp-item { display: flex; align-items: center; gap: 12px; }
+    .lp-sp-num { font-size: 26px; font-weight: 800; color: var(--lp-orange); line-height: 1; }
+    .lp-sp-label { font-size: 13.5px; color: var(--lp-text); font-weight: 500; max-width: 200px; line-height: 1.35; }
+    .lp-sp-divider { width: 1px; height: 36px; background: var(--lp-border); }
+
+    /* Pain */
+    .lp-pain { padding: 72px 0; font-family: 'Inter', sans-serif; }
+    .lp-pain-header { text-align: center; margin-bottom: 48px; }
+    .lp-pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .lp-pain-card { border: 1.5px solid var(--lp-border); border-radius: 12px; padding: 28px; transition: box-shadow .2s, border-color .2s; }
+    .lp-pain-card:hover { box-shadow: 0 8px 32px rgba(0,0,0,.08); border-color: var(--lp-orange); }
+    .lp-pain-icon { width: 44px; height: 44px; border-radius: 10px; background: rgba(249,115,22,.1); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; font-size: 22px; }
+    .lp-pain-card h4 { font-size: 15px; font-weight: 700; color: var(--lp-navy); margin-bottom: 8px; }
+    .lp-pain-card .lp-prob { font-size: 13.5px; color: #9ca3af; margin-bottom: 10px; text-decoration: line-through; }
+    .lp-pain-card .lp-sol { font-size: 14px; color: var(--lp-text); font-weight: 500; }
+    .lp-pain-card .lp-sol strong { color: var(--lp-green); }
+
+    /* Products */
+    .lp-products { padding: 72px 0; background: var(--lp-gray); font-family: 'Inter', sans-serif; }
+    .lp-products-header { margin-bottom: 40px; }
+    .lp-products-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .lp-prod-card { background: #fff; border-radius: 12px; overflow: hidden; border: 1.5px solid var(--lp-border); transition: box-shadow .2s, transform .15s; }
+    .lp-prod-card:hover { box-shadow: 0 12px 36px rgba(0,0,0,.1); transform: translateY(-3px); }
+    .lp-prod-img { width: 100%; aspect-ratio: 4/3; object-fit: cover; background: #f9fafb; }
+    .lp-prod-body { padding: 18px; }
+    .lp-prod-cat { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--lp-orange); margin-bottom: 6px; }
+    .lp-prod-name { font-size: 14px; font-weight: 700; color: var(--lp-navy); margin-bottom: 10px; line-height: 1.4; }
+    .lp-prod-specs { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .lp-prod-tag { background: var(--lp-gray); border: 1px solid var(--lp-border); font-size: 11px; font-weight: 600; color: var(--lp-text); padding: 3px 9px; border-radius: 20px; }
+    .lp-prod-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--lp-border); }
+    .lp-prod-moq { font-size: 12px; color: var(--lp-muted); }
+    .lp-prod-moq strong { color: var(--lp-navy); font-size: 13px; }
+    .lp-prod-link { font-size: 12px; font-weight: 700; color: var(--lp-orange); display: flex; align-items: center; gap: 4px; }
+
+    /* Why */
+    .lp-why { padding: 80px 0; font-family: 'Inter', sans-serif; }
+    .lp-why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .lp-why-left { position: sticky; top: 100px; }
+    .lp-why-img-wrap { position: relative; }
+    .lp-why-img { width: 100%; border-radius: 14px; object-fit: cover; max-height: 480px; }
+    .lp-why-badge { position: absolute; bottom: -16px; left: 24px; background: var(--lp-navy); color: #fff; border-radius: 12px; padding: 14px 20px; box-shadow: 0 8px 24px rgba(0,0,0,.2); }
+    .lp-why-badge strong { display: block; font-size: 22px; font-weight: 800; color: var(--lp-orange); font-family: 'Inter', sans-serif; }
+    .lp-why-badge span { font-size: 12px; color: rgba(255,255,255,.65); }
+    .lp-why-pillars { display: flex; flex-direction: column; gap: 20px; }
+    .lp-pillar { display: flex; gap: 16px; padding: 22px; border: 1.5px solid var(--lp-border); border-radius: 12px; transition: border-color .2s, box-shadow .2s; }
+    .lp-pillar:hover { border-color: var(--lp-orange); box-shadow: 0 4px 20px rgba(249,115,22,.08); }
+    .lp-pillar-icon { width: 48px; height: 48px; border-radius: 10px; background: rgba(249,115,22,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 22px; }
+    .lp-pillar h4 { font-size: 15px; font-weight: 700; color: var(--lp-navy); margin-bottom: 6px; }
+    .lp-pillar p { font-size: 13.5px; color: var(--lp-text); line-height: 1.55; }
+    .lp-pillar-stat { margin-top: 8px; font-size: 12px; font-weight: 700; color: var(--lp-orange); }
+
+    /* Specs */
+    .lp-specs { padding: 72px 0; background: var(--lp-navy); font-family: 'Inter', sans-serif; }
+    .lp-specs .lp-section-title { color: #fff; }
+    .lp-specs .lp-section-label { background: rgba(249,115,22,.2); }
+    .lp-specs .lp-section-sub { color: rgba(255,255,255,.6); }
+    .lp-spec-table-wrap { overflow-x: auto; margin-top: 36px; -webkit-overflow-scrolling: touch; }
+    .lp-spec-table { width: 100%; border-collapse: collapse; font-size: 14px; font-family: 'Inter', sans-serif; min-width: 620px; }
+    .lp-spec-table thead th { background: rgba(255,255,255,.08); color: rgba(255,255,255,.7); font-weight: 600; padding: 12px 16px; text-align: left; white-space: nowrap; }
+    .lp-spec-table tbody tr { border-bottom: 1px solid rgba(255,255,255,.06); }
+    .lp-spec-table tbody tr:hover { background: rgba(255,255,255,.04); }
+    .lp-spec-table tbody td { padding: 13px 16px; color: rgba(255,255,255,.85); }
+    .lp-spec-table tbody td:first-child { font-weight: 600; color: #fff; }
+    .lp-badge-green { background: rgba(22,163,74,.2); color: #4ade80; font-size: 11px; font-weight: 700; padding: 3px 9px; border-radius: 20px; white-space: nowrap; }
+
+    /* Process */
+    .lp-process { padding: 80px 0; background: var(--lp-gray); font-family: 'Inter', sans-serif; }
+    .lp-process-header { text-align: center; margin-bottom: 52px; }
+    .lp-process-steps { display: grid; grid-template-columns: repeat(7, 1fr); gap: 0; position: relative; }
+    .lp-process-steps::before { content: ''; position: absolute; top: 28px; left: 7%; right: 7%; height: 2px; background: var(--lp-border); z-index: 0; }
+    .lp-step { display: flex; flex-direction: column; align-items: center; text-align: center; position: relative; z-index: 1; }
+    .lp-step-num { width: 56px; height: 56px; border-radius: 50%; background: #fff; border: 2px solid var(--lp-border); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,.08); transition: border-color .2s; }
+    .lp-step:hover .lp-step-num { border-color: var(--lp-orange); }
+    .lp-step-title { font-size: 12px; font-weight: 700; color: var(--lp-navy); margin-bottom: 5px; }
+    .lp-step-desc { font-size: 11px; color: var(--lp-muted); max-width: 88px; }
+
+    /* Custom */
+    .lp-custom { padding: 72px 0; font-family: 'Inter', sans-serif; }
+    .lp-custom-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+    .lp-custom-options { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .lp-custom-opt { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-radius: 10px; border: 1.5px solid var(--lp-border); transition: border-color .2s; }
+    .lp-custom-opt:hover { border-color: var(--lp-orange); }
+    .lp-custom-opt-icon { font-size: 22px; }
+    .lp-custom-opt-label { font-size: 13px; font-weight: 600; color: var(--lp-navy); }
+    .lp-custom-opt-sub { font-size: 11.5px; color: var(--lp-muted); }
+
+    /* Certs */
+    .lp-certs { padding: 48px 0; background: var(--lp-gray); border-top: 1px solid var(--lp-border); font-family: 'Inter', sans-serif; }
+    .lp-certs-inner { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .lp-cert-item { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
+    .lp-cert-icon { width: 60px; height: 60px; border-radius: 12px; border: 1.5px solid var(--lp-border); background: #fff; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+    .lp-cert-name { font-size: 12px; font-weight: 700; color: var(--lp-navy); }
+    .lp-cert-sub { font-size: 11px; color: var(--lp-muted); }
+
+    /* FAQ */
+    .lp-faq { padding: 80px 0; font-family: 'Inter', sans-serif; }
+    .lp-faq-header { text-align: center; margin-bottom: 44px; }
+    .lp-faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 900px; margin: 0 auto; }
+    .lp-faq-item { border: 1.5px solid var(--lp-border); border-radius: 10px; overflow: hidden; }
+    .lp-faq-q { padding: 18px 20px; font-size: 14px; font-weight: 700; color: var(--lp-navy); cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 12px; user-select: none; transition: background .2s; }
+    .lp-faq-q:hover { background: rgba(249,115,22,.04); }
+    .lp-faq-q::after { content: '+'; font-size: 20px; font-weight: 400; color: var(--lp-orange); flex-shrink: 0; transition: transform .3s; }
+    .lp-faq-item.open .lp-faq-q::after { content: '−'; }
+    .lp-faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s ease; font-size: 13.5px; color: var(--lp-text); line-height: 1.6; }
+    .lp-faq-item.open .lp-faq-a { max-height: 300px; padding: 0 20px 18px; }
+
+    /* Final CTA */
+    .lp-final-cta { padding: 80px 0; background: linear-gradient(130deg, var(--lp-navy) 0%, var(--lp-navy2) 100%); font-family: 'Inter', sans-serif; }
+    .lp-final-cta-inner { display: grid; grid-template-columns: 1fr 420px; gap: 56px; align-items: start; }
+    .lp-final-cta h2 { font-size: clamp(26px, 3.5vw, 40px); font-weight: 800; color: #fff; line-height: 1.2; margin-bottom: 16px; font-family: 'Inter', sans-serif; }
+    .lp-final-cta h2 em { color: var(--lp-orange); font-style: normal; }
+    .lp-final-cta-sub { color: rgba(255,255,255,.65); font-size: 16px; margin-bottom: 28px; }
+    .lp-final-promises { display: flex; flex-direction: column; gap: 10px; }
+    .lp-fp-item { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: rgba(255,255,255,.8); }
+    .lp-fp-check { width: 20px; height: 20px; border-radius: 50%; background: rgba(22,163,74,.2); color: #4ade80; display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; margin-top: 1px; }
+    .lp-cta-urgency { margin-top: 28px; padding: 14px 18px; background: rgba(249,115,22,.15); border: 1px solid rgba(249,115,22,.3); border-radius: 8px; font-size: 13px; color: #fba765; }
+    .lp-final-form { background: #fff; border-radius: 16px; padding: 30px 28px; box-shadow: 0 24px 60px rgba(0,0,0,.3); }
+    .lp-final-form h3 { font-size: 18px; font-weight: 700; color: var(--lp-navy); margin-bottom: 4px; font-family: 'Inter', sans-serif; }
+    .lp-final-form > p { font-size: 13px; color: var(--lp-muted); margin-bottom: 20px; }
+    .lp-contact-alt { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--lp-border); display: flex; gap: 10px; flex-wrap: wrap; }
+    .lp-alt-btn { flex: 1; display: flex; align-items: center; justify-content: center; gap: 7px; padding: 10px 14px; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; border: 1.5px solid var(--lp-border); color: var(--lp-navy) !important; transition: border-color .2s; min-width: 120px; font-family: 'Inter', sans-serif; }
+    .lp-alt-btn:hover { border-color: var(--lp-orange); }
+    .lp-alt-btn.lp-wa { background: #25d366; color: #fff !important; border-color: #25d366; }
+    .lp-alt-btn.lp-wa:hover { background: #20b858; }
+
+    /* About */
+    .lp-about { padding: 56px 0; background: var(--lp-gray); border-top: 1px solid var(--lp-border); font-family: 'Inter', sans-serif; }
+    .lp-about-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; align-items: start; }
+    .lp-about h3 { font-size: 20px; font-weight: 800; color: var(--lp-navy); margin-bottom: 8px; font-family: 'Inter', sans-serif; }
+    .lp-about-tagline { font-size: 14px; color: var(--lp-muted); margin-bottom: 20px; }
+    .lp-about-contact { display: flex; flex-direction: column; gap: 8px; }
+    .lp-about-contact a { font-size: 13px; color: var(--lp-text) !important; display: flex; align-items: center; gap: 8px; }
+    .lp-about-contact a:hover { color: var(--lp-orange) !important; }
+    .lp-about-contact .lp-about-contact-item { font-size: 13px; color: var(--lp-text); display: flex; align-items: center; gap: 8px; }
+    .lp-about-facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .lp-fact-item { background: #fff; border-radius: 10px; padding: 18px; border: 1px solid var(--lp-border); text-align: center; }
+    .lp-fact-item strong { display: block; font-size: 22px; font-weight: 800; color: var(--lp-orange); margin-bottom: 4px; font-family: 'Inter', sans-serif; }
+    .lp-fact-item span { font-size: 12px; color: var(--lp-muted); }
+
+    /* Footer */
+    .lp-footer { background: var(--lp-navy); color: rgba(255,255,255,.5); padding: 20px 0; text-align: center; font-size: 12px; font-family: 'Inter', sans-serif; }
+    .lp-footer a { color: rgba(255,255,255,.4) !important; }
+    .lp-footer a:hover { color: #fff !important; }
+.lp-float-quote {
+  position: fixed; bottom: 26px; right: 24px; z-index: 9999;
+  display: flex; align-items: center; gap: 8px;
+  background: var(--lp-orange); color: #fff;
+  padding: 13px 20px; border-radius: 999px;
+  font-size: 14px; font-weight: 700; font-family: 'Inter', sans-serif;
+  box-shadow: 0 8px 28px rgba(249,115,22,.45);
+  transition: transform .2s, background .2s;
+}
+.lp-float-quote:hover { background: var(--lp-orange2); transform: translateY(-2px); }
+.lp-float-quote svg { width: 18px; height: 18px; fill: #fff; flex-shrink: 0; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .lp-hero-inner { grid-template-columns: 1fr; }
+      .lp-hero-card { display: none; }
+      .lp-hero-mobile-cta { display: block; }
+      .lp-hero-factory-strip { padding: 14px 0 20px; }
+      .lp-hero-strip-grid { gap: 8px; }
+      .lp-pain-grid { grid-template-columns: 1fr 1fr; }
+      .lp-products-grid { grid-template-columns: 1fr 1fr; }
+      .lp-why-inner { grid-template-columns: 1fr; }
+      .lp-why-left { position: static; }
+      .lp-custom-inner { grid-template-columns: 1fr; }
+      .lp-final-cta-inner { grid-template-columns: 1fr; }
+      .lp-about-inner { grid-template-columns: 1fr; }
+      .lp-about-facts { grid-template-columns: repeat(2, 1fr); }
+      .lp-faq-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .lp-pain-grid { grid-template-columns: 1fr; }
+      .lp-hero-strip-label::before, .lp-hero-strip-label::after { max-width: 36px; }
+      .lp-hero-strip-grid { grid-template-columns: 1fr; gap: 8px; }
+      .lp-hero-strip-img { aspect-ratio: 21/9; }
+      .lp-products-grid { grid-template-columns: 1fr; }
+      .lp-nav-cta .lp-btn-primary { display: inline-flex; padding: 8px 14px; font-size: 12px; }
+      .lp-trust-inner { gap: 12px; }
+      .lp-trust-divider { display: none; }
+      .lp-trust-item { font-size: 11px; }
+      .lp-custom-options { grid-template-columns: 1fr; }
+      .lp-certs-inner { gap: 20px; }
+      .lp-cert-icon { width: 48px; height: 48px; font-size: 20px; }
+    }
+
+    /* CF7 integration */
+    .lp-wrap .wpcf7-form { margin: 0; }
+    .lp-wrap .wpcf7-form p { margin: 0; }
+    .lp-wrap .wpcf7-form .lp-form-field { margin-bottom: 14px; }
+    .lp-wrap .wpcf7-form .lp-form-field > p > label { margin-bottom: 5px; }
+    .lp-wrap .wpcf7-form fieldset.hidden-fields-container { border: 0; padding: 0; margin: 0; }
+    .lp-wrap .wpcf7-form-control-wrap { display: block; }
+    .lp-wrap .wpcf7-form input[type="hidden"], .lp-wrap .wpcf7-form .wpcf7-screen-reader-response { display: none; }
+    .lp-wrap .wpcf7-response-output { margin: 12px 0 0; padding: 10px 14px; border-radius: 6px; font-size: 13px; line-height: 1.5; text-align: center; border: 1px solid #d1d5db; background: #f9fafb; color: #374151; }
+    .lp-wrap .wpcf7-form.sent .wpcf7-response-output { border-color: #22c55e; background: #f0fdf4; color: #166534; }
+    .lp-wrap .wpcf7-form.failed .wpcf7-response-output, .lp-wrap .wpcf7-form.aborted .wpcf7-response-output, .lp-wrap .wpcf7-form.spam .wpcf7-response-output, .lp-wrap .wpcf7-form.invalid .wpcf7-response-output, .lp-wrap .wpcf7-form.unaccepted .wpcf7-response-output { border-color: #ef4444; background: #fef2f2; color: #b91c1c; }
+    .lp-wrap .wpcf7-not-valid-tip { color: #dc2626; font-size: 12px; margin-top: 4px; }
+  </style>
+
+  <!-- ============ BLOCK 2: Sticky Nav ============ -->
+  <nav class="lp-nav">
+    <div class="lp-container lp-nav-inner">
+      <div class="lp-nav-logo">
+        <div class="lp-nav-logo-mark">S</div>
+        <div class="lp-nav-logo-text">
+          <strong>SUNSHINE Plastic</strong>
+          <span>Ningbo Sunshine Plastic Industry</span>
+        </div>
+      </div>
+      <div class="lp-nav-cta"><a class="lp-btn-primary" href="#lp-quote">Send Inquiry</a></div>
+    </div>
+  </nav>
+
+  <!-- ============ BLOCK 3: Hero ============ -->
+  <header class="lp-hero">
+    <div class="lp-container lp-hero-inner">
+      <div class="lp-hero-content">
+        <span class="lp-hero-kw">China Treatment Pump Factory · Ningbo</span>
+        <h1>Custom <em>Treatment Pump</em> Manufacturer<br>Serum & Skincare Pumps — 10,000 pcs MOQ,<br>Ship in 15–20 Days · Factory Direct</h1>
+        <p class="lp-hero-sub"><strong style="color:#fff;">Ningbo Sunshine Plastic Industry Co., Ltd.</strong> — 24/410 & 32/410 treatment pumps, serum pumps & skincare dispensers. ISO 9001:2015 · Factory direct, no middlemen.</p>
+        <div class="lp-hero-cta">
+          <a class="lp-btn-primary" href="#lp-quote">Get Free Quote →</a>
+          <a class="lp-btn-ghost" href="#lp-products">View Products</a>
+        </div>
+        <div class="lp-hero-stats">
+          <div class="lp-hero-stat"><strong>7,000㎡</strong><span>Factory Floor</span></div>
+          <div class="lp-hero-stat"><strong>10,000</strong><span>Min. Order (pcs)</span></div>
+          <div class="lp-hero-stat"><strong>15–20 Days</strong><span>Standard Lead Time</span></div>
+          <div class="lp-hero-stat"><strong>24h</strong><span>Quote Reply</span></div>
+        </div>
+      </div>
+      <div class="lp-hero-card" id="lp-quote" data-lp-source="hero">
+        <h3>Get Factory-Direct Quotes in 24h</h3>
+        <p>Share your requirement — our team replies within 1 business day.</p>
+        
+<!--LEAD_FORM:hero-->
+
+        <p class="lp-form-privacy-note">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. Your information is used only to prepare your quote — no spam, no third-party sharing.</p>
+        <ul class="lp-promise-list">
+          <li>✓ Free sample (pay shipping)</li>
+          <li>✓ Quote within 24 hours</li>
+          <li>✓ NDA available on request</li>
+          <li>✓ No commitment required</li>
+        </ul>
+      </div>
+      <div class="lp-hero-mobile-cta">
+        <p>Get a factory-direct quote within 24 hours</p>
+        <a class="lp-btn-primary" href="#lp-quote">Get Free Quote →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ BLOCK 3b: Factory Image Strip ============ -->
+  <div class="lp-hero-factory-strip">
+    <div class="lp-container">
+      <div class="lp-hero-strip-label">Real Factory · In-House Workshop · Made in China</div>
+      <div class="lp-hero-strip-grid">
+        <div class="lp-hero-strip-img">
+          <img loading="lazy" decoding="async" loading="lazy" width="600" height="337" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp" alt="Lotion pump production line inside our Ningbo factory">
+          <span class="lp-hero-strip-cap">In-House Production Line</span>
+        </div>
+        <div class="lp-hero-strip-img">
+          <img loading="lazy" decoding="async" loading="lazy" width="600" height="337" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/08/factory_equipment.webp" alt="Injection molding and assembly equipment in our workshop">
+          <span class="lp-hero-strip-cap">Workshop & Equipment</span>
+        </div>
+        <div class="lp-hero-strip-img">
+          <img loading="lazy" decoding="async" loading="lazy" width="600" height="337" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/08/factory_exterior.webp" alt="Sunshine Plastic factory exterior in Cixi, Ningbo, China">
+          <span class="lp-hero-strip-cap">Factory · Cixi, Ningbo</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BLOCK 4: Trust Bar ============ -->
+  <div class="lp-trust-bar">
+    <div class="lp-container lp-trust-inner">
+      <div class="lp-trust-item">✅ ISO 9001 Compliant</div>
+      <div class="lp-trust-divider"></div>
+      <div class="lp-trust-item">✅ PP / All-Plastic Available</div>
+      <div class="lp-trust-divider"></div>
+      <div class="lp-trust-item">✅ 15–20 Day Lead Time</div>
+      <div class="lp-trust-divider"></div>
+      <div class="lp-trust-item">✅ Leak-Proof Tested</div>
+      <div class="lp-trust-divider"></div>
+      <div class="lp-trust-item">✅ OEM/ODM Custom Logo & Color</div>
+    </div>
+  </div>
+
+  <!-- ============ BLOCK 4b: Social Proof ============ -->
+  <div class="lp-social-proof">
+    <div class="lp-container lp-sp-inner">
+      <div class="lp-sp-item">
+        <div class="lp-sp-num">100+</div>
+        <div class="lp-sp-label">Beauty & personal care brands source pumps directly from our factory</div>
+      </div>
+      <div class="lp-sp-divider"></div>
+      <div class="lp-sp-item">
+        <div class="lp-sp-num">99.8%</div>
+        <div class="lp-sp-label">On-time delivery across 100+ global clients</div>
+      </div>
+      <div class="lp-sp-divider"></div>
+      <div class="lp-sp-item">
+        <div class="lp-sp-num">4</div>
+        <div class="lp-sp-label">Regions served: Middle East · Africa · Southeast Asia · North America</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ BLOCK 6: Products ============ -->
+  <section class="lp-products" id="lp-products">
+    <div class="lp-container">
+      <div class="lp-products-header">
+        <span class="lp-section-label">Treatment Pump Range</span>
+        <h2 class="lp-section-title">Serum & Skincare Pumps — In-House Manufactured</h2>
+        <p class="lp-section-sub">Treatment pumps, serum pumps & skincare dispensers for beauty brands.</p>
+      </div>
+      <div class="lp-products-grid">
+        <div class="lp-prod-card">
+          <img loading="lazy" decoding="async" class="lp-prod-img" loading="lazy" width="600" height="450" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706969385.webp" alt="White treatment pump 24/410">
+          <div class="lp-prod-body">
+            <span class="lp-prod-cat">Treatment Pump · SUNSHINE</span>
+            <div class="lp-prod-name">White treatment pump 24/410</div>
+            <div class="lp-prod-specs">
+              <span class="lp-prod-tag">24/410</span>
+              <span class="lp-prod-tag">White</span>
+            </div>
+            <div class="lp-prod-footer">
+              <div class="lp-prod-moq">MOQ <strong>10,000 pcs</strong> · 15–20 days</div>
+              <a class="lp-prod-link" href="#lp-mid-quote">Get Quote →</a>
+            </div>
+          </div>
+        </div>
+        <div class="lp-prod-card">
+          <img loading="lazy" decoding="async" class="lp-prod-img" loading="lazy" width="600" height="450" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706976675.webp" alt="White non spill 32/410 treatment pump with cap">
+          <div class="lp-prod-body">
+            <span class="lp-prod-cat">Treatment Pump · SUNSHINE</span>
+            <div class="lp-prod-name">White non spill 32/410 treatment pump with cap</div>
+            <div class="lp-prod-specs">
+              <span class="lp-prod-tag">32/410</span>
+              <span class="lp-prod-tag">Non-Spill</span>
+              <span class="lp-prod-tag">White</span>
+            </div>
+            <div class="lp-prod-footer">
+              <div class="lp-prod-moq">MOQ <strong>10,000 pcs</strong> · 15–20 days</div>
+              <a class="lp-prod-link" href="#lp-mid-quote">Get Quote →</a>
+            </div>
+          </div>
+        </div>
+        <div class="lp-prod-card">
+          <img loading="lazy" decoding="async" class="lp-prod-img" loading="lazy" width="600" height="450" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706961288.webp" alt="24/410 treatment pump liquid cream pump beauty cosmetic skincare">
+          <div class="lp-prod-body">
+            <span class="lp-prod-cat">Treatment Pump · SUNSHINE</span>
+            <div class="lp-prod-name">24/410 treatment pump liquid cream pump beauty cosmetic skincare</div>
+            <div class="lp-prod-specs">
+              <span class="lp-prod-tag">24/410</span>
+            </div>
+            <div class="lp-prod-footer">
+              <div class="lp-prod-moq">MOQ <strong>10,000 pcs</strong> · 15–20 days</div>
+              <a class="lp-prod-link" href="#lp-mid-quote">Get Quote →</a>
+            </div>
+          </div>
+        </div>
+        <div class="lp-prod-card">
+          <img loading="lazy" decoding="async" class="lp-prod-img" loading="lazy" width="600" height="450" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777704919547.webp" alt="Color 24/410 treatment lotion pump crimp">
+          <div class="lp-prod-body">
+            <span class="lp-prod-cat">Treatment Pump · SUNSHINE</span>
+            <div class="lp-prod-name">Color 24/410 treatment lotion pump crimp</div>
+            <div class="lp-prod-specs">
+              <span class="lp-prod-tag">24/410</span>
+              <span class="lp-prod-tag">Crimp</span>
+            </div>
+            <div class="lp-prod-footer">
+              <div class="lp-prod-moq">MOQ <strong>10,000 pcs</strong> · 15–20 days</div>
+              <a class="lp-prod-link" href="#lp-mid-quote">Get Quote →</a>
+            </div>
+          </div>
+        </div>
+        <div class="lp-prod-card">
+          <img loading="lazy" decoding="async" class="lp-prod-img" loading="lazy" width="600" height="450" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777703715171.webp" alt="28/410 yellow airless lotion pump treatment">
+          <div class="lp-prod-body">
+            <span class="lp-prod-cat">Treatment Pump · SUNSHINE</span>
+            <div class="lp-prod-name">28/410 yellow airless lotion pump treatment</div>
+            <div class="lp-prod-specs">
+              <span class="lp-prod-tag">28/410</span>
+              <span class="lp-prod-tag">Airless</span>
+              <span class="lp-prod-tag">Yellow</span>
+            </div>
+            <div class="lp-prod-footer">
+              <div class="lp-prod-moq">MOQ <strong>10,000 pcs</strong> · 15–20 days</div>
+              <a class="lp-prod-link" href="#lp-mid-quote">Get Quote →</a>
+            </div>
+          </div>
+        </div>
+        <div class="lp-prod-card">
+          <img loading="lazy" decoding="async" class="lp-prod-img" loading="lazy" width="600" height="450" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777701254405.webp" alt="24/410 yellow lotion treatment pump">
+          <div class="lp-prod-body">
+            <span class="lp-prod-cat">Treatment Pump · SUNSHINE</span>
+            <div class="lp-prod-name">24/410 yellow lotion treatment pump</div>
+            <div class="lp-prod-specs">
+              <span class="lp-prod-tag">24/410</span>
+              <span class="lp-prod-tag">Yellow</span>
+            </div>
+            <div class="lp-prod-footer">
+              <div class="lp-prod-moq">MOQ <strong>10,000 pcs</strong> · 15–20 days</div>
+              <a class="lp-prod-link" href="#lp-mid-quote">Get Quote →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 8: Spec Table ============ -->
+  <section class="lp-specs">
+    <div class="lp-container">
+      <span class="lp-section-label">Technical Specifications</span>
+      <h2 class="lp-section-title">Treatment Pump Specifications</h2>
+      <p class="lp-section-sub">All standard sizes available from stock. Custom specs on request.</p>
+      <div class="lp-spec-table-wrap">
+        <table class="lp-spec-table">
+          <thead>
+            <tr>
+              <th>Product Type</th>
+              <th>Neck Sizes</th>
+              <th>Material</th>
+              <th>MOQ</th>
+              <th>Lead Time</th>
+              <th>Closures Available</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>White treatment pump 24/410</td>
+              <td>24/410</td>
+              <td>PP</td>
+              <td>10,000 pcs</td>
+              <td>15–20 days</td>
+              <td>White</td>
+            </tr>
+            <tr>
+              <td>White non spill 32/410 treatment pump with cap</td>
+              <td>32/410</td>
+              <td>PP</td>
+              <td>10,000 pcs</td>
+              <td>15–20 days</td>
+              <td>Non-Spill · White</td>
+            </tr>
+            <tr>
+              <td>24/410 treatment pump liquid cream pump beauty cosmetic skincare</td>
+              <td>24/410</td>
+              <td>PP</td>
+              <td>10,000 pcs</td>
+              <td>15–20 days</td>
+              <td>Smooth</td>
+            </tr>
+            <tr>
+              <td>Color 24/410 treatment lotion pump crimp</td>
+              <td>24/410</td>
+              <td>PP</td>
+              <td>10,000 pcs</td>
+              <td>15–20 days</td>
+              <td>Crimp</td>
+            </tr>
+            <tr>
+              <td>28/410 yellow airless lotion pump treatment</td>
+              <td>28/410</td>
+              <td>PP</td>
+              <td>10,000 pcs</td>
+              <td>15–20 days</td>
+              <td>Airless · Yellow</td>
+            </tr>
+            <tr>
+              <td>24/410 yellow lotion treatment pump</td>
+              <td>24/410</td>
+              <td>PP</td>
+              <td>10,000 pcs</td>
+              <td>15–20 days</td>
+              <td>Yellow</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 5: Pain Points ============ -->
+  <section class="lp-pain">
+    <div class="lp-container">
+      <div class="lp-pain-header">
+        <span class="lp-section-label">Why Buyers Switch to Us</span>
+        <h2 class="lp-section-title">Common Problems We Solve for Cosmetic Brands</h2>
+        <p class="lp-section-sub">If you’ve sourced lotion pumps before, these problems probably sound familiar.</p>
+      </div>
+      <div class="lp-pain-grid">
+        <div class="lp-pain-card">
+          <div class="lp-pain-icon">🚚</div>
+          <h4>Late Shipments Kill Launches</h4>
+          <p class="lp-prob">Supplier promised 45 days, took 90 — missed peak season</p>
+          <p class="lp-sol"><strong>15–20 day guaranteed lead time</strong> on standard 24/410 & 28/410 pumps. Custom molds: 45 days with milestone updates.</p>
+        </div>
+        <div class="lp-pain-card">
+          <div class="lp-pain-icon">💧</div>
+          <h4>Pump Leakage & Returns</h4>
+          <p class="lp-prob">1–3% defect rate eating into our margins every season</p>
+          <p class="lp-sol"><strong>100% pressure & leak test per batch.</strong> Screw up-down lock mechanism prevents leaks during shipping.</p>
+        </div>
+        <div class="lp-pain-card">
+          <div class="lp-pain-icon">📦</div>
+          <h4>MOQ Too High for New Products</h4>
+          <p class="lp-prob">Minimum 100,000 pcs — too risky for a new SKU</p>
+          <p class="lp-sol"><strong>MOQ starts at 10,000 pcs.</strong> Free sample available so you validate fit before placing a bulk order.</p>
+        </div>
+      </div>
+    </div>
+  </section><!-- ============ BLOCK 7: Why Choose Us ============ -->
+  <section class="lp-why">
+    <div class="lp-container lp-why-inner">
+      <div class="lp-why-left">
+        <div class="lp-why-img-wrap">
+          <img loading="lazy" decoding="async" class="lp-why-img" loading="lazy" width="560" height="480" src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706969385.webp" alt="SUNSHINE Plastic Treatment Pump Factory Ningbo China">
+          <div class="lp-why-badge">
+            <strong>Factory Direct</strong>
+            <span>Ningbo, Zhejiang, China</span>
+          </div>
+        </div>
+      </div>
+      <div class="lp-why-right">
+        <span class="lp-section-label">Factory Credentials</span>
+        <h2 class="lp-section-title">Why Cosmetic Brands Choose SUNSHINE Plastic</h2>
+        <p class="lp-section-sub">Specific numbers, not adjectives. Here’s what our factory delivers.</p>
+        <div class="lp-why-pillars">
+          <div class="lp-pillar">
+            <div class="lp-pillar-icon">🏭</div>
+            <div>
+              <h4>Direct Factory Manufacturing</h4>
+              <p>Ningbo Sunshine Plastic Industry Co., Ltd. — all pumps produced in-house in Ningbo, China. No subcontracting. You deal with the production team directly.</p>
+              <div class="lp-pillar-stat">Ningbo, Zhejiang, China · Factory Direct</div>
+            </div>
+          </div>
+          <div class="lp-pillar">
+            <div class="lp-pillar-icon">📈</div>
+            <div>
+<h4>High-Volume, Consistent Output</h4>
+                <p>In-house mold making and dedicated dispenser pump and disc cap production lines, with reorders fulfilled without lead time surprises.</p>
+                <div class="lp-pillar-stat">In-house Molds · Reorders on Schedule</div>
+            </div>
+          </div>
+          <div class="lp-pillar">
+            <div class="lp-pillar-icon">🔍</div>
+            <div>
+<h4>Built-In Quality Control</h4>
+                <p>ISO 9001:2015 certified factory with SGS testing — every batch goes through pressure testing and leak verification to prevent transit leakage.</p>
+                <div class="lp-pillar-stat">ISO 9001:2015 · SGS Tested</div>
+            </div>
+          </div>
+          <div class="lp-pillar">
+            <div class="lp-pillar-icon">🎛️</div>
+            <div>
+              <h4>Full OEM/ODM Customization</h4>
+              <p>6 closure finish options: Smooth, Ribbed, Aluminum, UV Coating, Water Transfer Printing, Bamboo. Custom color, neck size, dip tube length, output volume.</p>
+              <div class="lp-pillar-stat">Custom Color · Logo · Finish · Dip Tube</div>
+            </div>
+          </div>
+          <div class="lp-pillar">
+            <div class="lp-pillar-icon">⚡</div>
+            <div>
+              <h4>Fast, Reliable Lead Times</h4>
+              <p>Standard production ships in 15–20 days, with a 12-day rush option for urgent launches — confirmed by 99.8% on-time delivery across 100+ global clients.</p>
+              <div class="lp-pillar-stat">15–20 Days Standard · 12-Day Rush</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 9: Process ============ -->
+  <section class="lp-process">
+    <div class="lp-container">
+      <div class="lp-process-header">
+        <span class="lp-section-label">How It Works</span>
+        <h2 class="lp-section-title">From Inquiry to Delivery — 7 Steps</h2>
+        <p class="lp-section-sub">Transparent process. You know exactly what happens and when.</p>
+      </div>
+      <div class="lp-process-steps">
+        <div class="lp-step">
+          <div class="lp-step-num">1</div>
+          <div class="lp-step-title">Inquiry</div>
+          <div class="lp-step-desc">Submit specs via form or WhatsApp</div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">2</div>
+          <div class="lp-step-title">Quote</div>
+          <div class="lp-step-desc">Price & lead time within 24h</div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">3</div>
+          <div class="lp-step-title">Free Sample</div>
+          <div class="lp-step-desc">Physical sample in 7 days</div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">4</div>
+          <div class="lp-step-title">Approval</div>
+          <div class="lp-step-desc">Confirm specs & place order</div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">5</div>
+          <div class="lp-step-title">Production</div>
+          <div class="lp-step-desc">15–20 day production run</div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">6</div>
+          <div class="lp-step-title">QC Report</div>
+          <div class="lp-step-desc">Full test report with photos</div>
+        </div>
+        <div class="lp-step">
+          <div class="lp-step-num">7</div>
+          <div class="lp-step-title">Shipment</div>
+          <div class="lp-step-desc">FOB Ningbo or CIF to port</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ============ BLOCK 5b: Mid CTA (lightweight form) ============ -->
+  <section class="lp-final-cta lp-mid-cta" id="lp-mid-quote" data-lp-source="mid">
+    <div class="lp-container lp-final-cta-inner">
+      <div>
+        <span class="lp-section-label" style="background: rgba(249,115,22,.2);">Quick Quote</span>
+        <h2>Need Specs or a Quote? <em>We Reply in 24 Hours</em></h2>
+        <p class="lp-final-cta-sub">Tell us your product type, quantity, and customization needs — we will send a detailed quote with unit price and lead time.</p>
+      </div>
+      <div class="lp-final-form">
+        <h3>Request a Free Quote</h3>
+        <p>Fill in the form — response in 24 hours.</p>
+        
+<!--LEAD_FORM:landing-->
+
+        <p class="lp-form-privacy-note">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. Your details stay private — used only to respond to your inquiry.</p>
+        <div class="lp-contact-alt">
+          <a class="lp-alt-btn lp-wa" href="https://wa.me/8615888503691?text=Hi%2C%20I%20need%20a%20quote%20for%20pumps" target="_blank" rel="noopener">WhatsApp Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- ============ BLOCK 10: Customization ============ -->
+  <section class="lp-custom">
+    <div class="lp-container lp-custom-inner">
+      <div>
+        <span class="lp-section-label">OEM / ODM</span>
+        <h2 class="lp-section-title">Every Detail Customizable</h2>
+        <p class="lp-section-sub">From closure finish to dip tube length — your brand identity, our engineering.</p>
+        <div style="margin-top: 24px;">
+          <a class="lp-btn-primary" href="#lp-mid-quote">Start Custom Order →</a>
+        </div>
+      </div>
+      <div class="lp-custom-options">
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">🎨</div>
+          <div>
+            <div class="lp-custom-opt-label">Color</div>
+            <div class="lp-custom-opt-sub">Any Pantone shade</div>
+          </div>
+        </div>
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">🏷️</div>
+          <div>
+            <div class="lp-custom-opt-label">Logo / Printing</div>
+            <div class="lp-custom-opt-sub">Screen print · UV print · hot stamp</div>
+          </div>
+        </div>
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">🔩</div>
+          <div>
+            <div class="lp-custom-opt-label">Neck Size</div>
+            <div class="lp-custom-opt-sub">24/410 · 28/410 · 28/412</div>
+          </div>
+        </div>
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">📏</div>
+          <div>
+            <div class="lp-custom-opt-label">Output Volume</div>
+            <div class="lp-custom-opt-sub">0.5cc · 1.0cc · 2.0cc · 4.0cc</div>
+          </div>
+        </div>
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">🧱</div>
+          <div>
+            <div class="lp-custom-opt-label">Closure Finish</div>
+            <div class="lp-custom-opt-sub">Smooth · Ribbed · Aluminum · UV · Bamboo · WTP</div>
+          </div>
+        </div>
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">🍶</div>
+          <div>
+            <div class="lp-custom-opt-label">Dip Tube Length</div>
+            <div class="lp-custom-opt-sub">Matched to your bottle height</div>
+          </div>
+        </div>
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">🧪</div>
+          <div>
+            <div class="lp-custom-opt-label">Material Grade</div>
+            <div class="lp-custom-opt-sub">PP · PP/PE · PET · All-Plastic</div>
+          </div>
+        </div>
+        <div class="lp-custom-opt">
+          <div class="lp-custom-opt-icon">📦</div>
+          <div>
+            <div class="lp-custom-opt-label">Packaging</div>
+            <div class="lp-custom-opt-sub">Bulk / inner box / display box</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 11: Certs ============ -->
+  <section class="lp-certs">
+    <div class="lp-container lp-certs-inner">
+      <div class="lp-cert-item">
+        <div class="lp-cert-icon">✅</div>
+        <div class="lp-cert-name">ISO 9001</div>
+        <div class="lp-cert-sub">Quality Management</div>
+      </div>
+      <div class="lp-cert-item">
+        <div class="lp-cert-icon">🌿</div>
+        <div class="lp-cert-name">ISO 14001</div>
+        <div class="lp-cert-sub">Environmental System</div>
+      </div>
+      <div class="lp-cert-item">
+        <div class="lp-cert-icon">🍼</div>
+        <div class="lp-cert-name">FDA Compliant</div>
+        <div class="lp-cert-sub">Food-contact grade PP</div>
+      </div>
+      <div class="lp-cert-item">
+        <div class="lp-cert-icon">🧪</div>
+        <div class="lp-cert-name">REACH / RoHS</div>
+        <div class="lp-cert-sub">EU chemical compliance</div>
+      </div>
+      <div class="lp-cert-item">
+        <div class="lp-cert-icon">🔬</div>
+        <div class="lp-cert-name">SGS Tested</div>
+        <div class="lp-cert-sub">Third-party QC</div>
+      </div>
+      <div class="lp-cert-item">
+        <div class="lp-cert-icon">♻️</div>
+        <div class="lp-cert-name">BPA-Free</div>
+        <div class="lp-cert-sub">All plastic components</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 14: About ============ -->
+  <section class="lp-about">
+    <div class="lp-container lp-about-inner">
+      <div>
+        <h3>About the Manufacturer</h3>
+        <p class="lp-about-tagline">Ningbo Sunshine Plastic Industry Co., Ltd. (SUNSHINE Plastic)</p>
+        <div class="lp-about-contact">
+          <a href="mailto:info@sunshine-lotionpump.com">✉️ info@sunshine-lotionpump.com</a>
+          <a href="https://sunshine-lotionpump.com" target="_blank" rel="noopener">🌐 sunshine-lotionpump.com</a>
+          <a href="https://wa.me/8615888503691" target="_blank" rel="noopener">💬 WhatsApp: +86 158 8850 3691</a>
+          <span class="lp-about-contact-item">📍 Ningbo, Zhejiang Province, China</span>
+        </div>
+      </div>
+      <div class="lp-about-facts">
+        <div class="lp-fact-item"><strong>100+</strong><span>Global Brands Served</span></div>
+        <div class="lp-fact-item"><strong>10K</strong><span>Minimum Order Qty</span></div>
+        <div class="lp-fact-item"><strong>15–20d</strong><span>Standard Lead Time</span></div>
+        <div class="lp-fact-item"><strong>6</strong><span>Closure Finish Types</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 12: FAQ ============ -->
+  <section class="lp-faq" id="lp-faq">
+    <div class="lp-container">
+      <div class="lp-faq-header">
+        <span class="lp-section-label">FAQ</span>
+        <h2 class="lp-section-title">Questions Every Buyer Asks</h2>
+      </div>
+      <div class="lp-faq-grid">
+        <div class="lp-faq-item">
+          <div class="lp-faq-q" onclick="lpToggleFaq(this)">What is your MOQ for treatment pumps?</div>
+          <div class="lp-faq-a">Standard treatment pump (24/410 and 28/410) start at 10,000 pcs per color/style. Custom molds are available for larger programs — we will guide you on quantities that fit your launch plan.</div>
+        </div>
+        <div class="lp-faq-item">
+          <div class="lp-faq-q" onclick="lpToggleFaq(this)">How do I get a free sample?</div>
+          <div class="lp-faq-a">Submit your inquiry via the form, specifying pump type and neck size. We prepare a physical sample within 7 days and ship it — you only pay courier costs (~$15–25 via DHL). No commitment required.</div>
+        </div>
+        <div class="lp-faq-item">
+          <div class="lp-faq-q" onclick="lpToggleFaq(this)">What is the lead time for custom color orders?</div>
+          <div class="lp-faq-a">Custom color production takes 15–20 days after sample approval. New mold required? Add 15–20 days. We provide milestone updates via WhatsApp throughout.</div>
+        </div>
+        <div class="lp-faq-item">
+          <div class="lp-faq-q" onclick="lpToggleFaq(this)">Do you accept OEM branding (logo on the pump)?</div>
+          <div class="lp-faq-a">Yes. We support screen printing, UV printing, hot stamping, and water transfer printing. Provide artwork as AI or PDF vector file. Minimum branding run matches MOQ (10,000 pcs).</div>
+        </div>
+        <div class="lp-faq-item">
+          <div class="lp-faq-q" onclick="lpToggleFaq(this)">Which serum viscosities work best with treatment pumps?</div>
+          <div class="lp-faq-a">Treatment pumps handle light-to-medium serum and essence formulas (watery to slightly thick). Standard 24/410 and 32/410 neck sizes with 0.5–1.0cc output — tell us your formula and we will recommend the right pump.</div>
+        </div>
+        <div class="lp-faq-item">
+          <div class="lp-faq-q" onclick="lpToggleFaq(this)">What quality testing do you perform?</div>
+          <div class="lp-faq-a">Every batch undergoes pressure leak testing and pump cycle durability testing. We provide a QC report with photos. Third-party SGS inspection available on request.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 13: Final CTA ============ -->
+  <section class="lp-final-cta" id="lp-final-quote" data-lp-source="final">
+    <div class="lp-container lp-final-cta-inner">
+      <div>
+        <span class="lp-section-label" style="background: rgba(249,115,22,.2);">Ready to Order?</span>
+        <h2>Get Your Free Quote <em>Within 24 Hours</em></h2>
+        <p class="lp-final-cta-sub">Tell us your product type, quantity, and customization needs. Our team sends a detailed quote with unit price, lead time, and shipping options.</p>
+        <div class="lp-final-promises">
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> Free sample program — pay courier only (~$15)</div>
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> Detailed quote in 24 hours, not 3 days</div>
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> MOQ 10,000 pcs — no oversized commitments</div>
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> 12-day rush available for urgent launches</div>
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> NDA available before sharing artwork</div>
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> FOB Ningbo or CIF to your port</div>
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> ISO 9001:2015 certified · SGS tested</div>
+          <div class="lp-fp-item"><span class="lp-fp-check">✓</span> Trusted by 100+ beauty & personal care brands</div>
+        </div>
+        <div class="lp-cta-urgency">We currently accept a limited number of new OEM clients per month to maintain delivery quality. Fill in the form to reserve your next production slot.</div>
+      </div>
+      <div class="lp-final-form">
+        <h3>Request a Free Quote</h3>
+        <p>Fill in the form — response in 24 hours.</p>
+        
+<!--LEAD_FORM:landing-->
+
+        <p class="lp-form-privacy-note">By submitting, you agree to our <a href="/privacy-policy/">Privacy Policy</a>. Your details stay private — used only to respond to your inquiry.</p>
+        <div class="lp-contact-alt">
+          <a class="lp-alt-btn lp-wa" href="https://wa.me/8615888503691?text=Hi%2C%20I%20need%20a%20quote%20for%20lotion%20pumps" target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="lp-alt-btn" href="mailto:info@sunshine-lotionpump.com">Email Direct</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOCK 15: Footer ============ -->
+  <footer class="lp-footer">
+    <div class="lp-container">
+      © 2026 Ningbo Sunshine Plastic Industry Co., Ltd. (SUNSHINE Plastic) · sunshine-lotionpump.com · Ningbo, China · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/contact-us/">Contact</a> · All rights reserved.
+    </div>
+  </footer>
+
+  <!-- ============ Float Inquiry ============ -->
+  <a class="lp-float-quote" href="#lp-quote" aria-label="Request a quote">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    Request a Quote
+  </a>
+
+  <script>
+    function lpToggleFaq(el) {
+      var item = el.parentElement;
+      item.classList.toggle('open');
+    }
+    function lpQuoteTarget() {
+      var mq = window.matchMedia('(max-width: 900px)');
+      var href = mq.matches ? '#lp-final-quote' : '#lp-quote';
+      var links = document.querySelectorAll('a[href="#lp-quote"]');
+      for (var i = 0; i < links.length; i++) { links[i].setAttribute('href', href); }
+    }
+    document.addEventListener('DOMContentLoaded', lpQuoteTarget);
+    window.addEventListener('resize', lpQuoteTarget);
+
+    // 表单归因：为每个 CF7 表单注入 lp-source (hero/mid/final) 与 lp-group (产品族) 隐藏字段
+    (function () {
+      var group = 'Treatment Pump';
+      var wrap = document.querySelector('.lp-wrap');
+      if (wrap) group = wrap.getAttribute('data-lp-group') || group;
+      function lpInjectSource() {
+        document.querySelectorAll('[data-lp-source]').forEach(function (box) {
+          var src = box.getAttribute('data-lp-source');
+          box.querySelectorAll('form.wpcf7-form').forEach(function (form) {
+            // CF7 表单定义已预置 [hidden lp-source] / [hidden lp-group]：设置其值（优先），否则兜底创建
+            var h = form.querySelector('input[name="lp-source"]');
+            if (h) { h.value = src; }
+            else {
+              h = document.createElement('input');
+              h.type = 'hidden'; h.name = 'lp-source'; h.value = src;
+              form.appendChild(h);
+            }
+            var g = form.querySelector('input[name="lp-group"]');
+            if (g) { g.value = group; }
+            else {
+              g = document.createElement('input');
+              g.type = 'hidden'; g.name = 'lp-group'; g.value = group;
+              form.appendChild(g);
+            }
+          });
+        });
+      }
+      document.addEventListener('DOMContentLoaded', function () {
+        lpInjectSource();
+      });
+      // CF7 wpcf7submit 兜底：若字段缺失（如 SPA 重新渲染）再补一次
+      if (window.wpcf7) {
+        document.addEventListener('wpcf7submit', function () {
+          setTimeout(lpInjectSource, 0);
+        });
+      }
+    })();
+  </script>
+
+</div>

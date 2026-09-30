@@ -1,0 +1,41 @@
+---
+interface Row {
+  label: string;
+  value: string;
+}
+interface Props {
+  rows: Row[];
+  columns?: 2 | 3;
+  caption?: string;
+}
+const { rows, columns = 2, caption } = Astro.props;
+---
+
+<div class="card overflow-hidden">
+  {caption && (
+    <div class="border-b border-line bg-surface px-4 py-3 text-sm font-bold uppercase tracking-wide text-brand-600">
+      {caption}
+    </div>
+  )}
+  <dl
+    class:list={[
+      'grid',
+      columns === 3 ? 'sm:grid-cols-3' : 'sm:grid-cols-2',
+    ]}
+  >
+    {
+      rows.map((row, index) => (
+        <div
+          class:list={[
+            'flex flex-col gap-0.5 border-line px-4 py-3',
+            index % 2 === 0 ? 'bg-white' : 'bg-surface/60',
+            'border-b',
+          ]}
+        >
+          <dt class="text-[11px] font-semibold uppercase tracking-wide text-muted">{row.label}</dt>
+          <dd class="text-sm font-medium text-ink">{row.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+</div>
