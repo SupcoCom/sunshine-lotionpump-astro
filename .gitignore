@@ -25,3 +25,6 @@ Thumbs.db
 
 # local sync artefacts are committed on purpose: the repo must build offline.
 # `npm run sync` refreshes them from WordPress before every build.
+
+# local wrangler / miniflare state
+.wrangler/
