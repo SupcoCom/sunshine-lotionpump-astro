@@ -208,7 +208,7 @@ const schema = [
 
   {
     p.use.length > 0 && (
-      <section class="container-x py-8">
+      <section class="container-x py-14 md:py-24">
         <h2 class="mb-4">Recommended applications</h2>
         <ul class="flex flex-wrap gap-2">
           {p.use.map((item) => (
@@ -221,7 +221,7 @@ const schema = [
 
   {
     product.body && (
-      <section class="container-x py-8">
+      <section class="container-x py-14 md:py-24">
         <div class="prose-wp mx-auto max-w-3xl" set:html={product.body} />
       </section>
     )
@@ -231,7 +231,7 @@ const schema = [
 
   {
     related.length > 0 && (
-      <section class="container-x py-12">
+      <section class="container-x py-14 md:py-24">
         <h2 class="mb-6">Related products</h2>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {related.map((item) => (
@@ -242,7 +242,7 @@ const schema = [
     )
   }
 
-  <section class="container-x pb-14">
+  <section class="container-x pb-14 md:pb-24">
     <div class="card flex flex-col items-start gap-3 p-6 sm:flex-row sm:items-center sm:justify-between">
       <div>
         <h2 class="text-lg">Need a different size or finish?</h2>

@@ -7,7 +7,6 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import LeadForm from '@/components/LeadForm.astro';
-import ProductCard from '@/components/ProductCard.astro';
 import FaqList from '@/components/FaqList.astro';
 import { PRODUCT_CATEGORIES, SITE, CONTACT, TRUST_STATS } from '@/config/site';
 import { seoFor } from '@/lib/content';
@@ -181,7 +180,7 @@ const schema = [
 
       <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         {
-          families.map((family, index) => (
+          families.map((family) => (
             <a
               href={`/product-category/${family.slug}/`}
               class="card group flex items-center gap-4 p-4"

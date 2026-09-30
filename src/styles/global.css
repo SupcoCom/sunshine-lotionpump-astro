@@ -55,6 +55,7 @@
     font-size: 16px;
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4 {
@@ -65,7 +66,7 @@
 
   h1 {
     font-weight: 800;
-    font-size: clamp(2.4rem, 1.3rem + 4vw, 4.4rem);
+    font-size: clamp(2rem, 1.1rem + 3.6vw, 4.4rem);
     line-height: 1.04;
     letter-spacing: -0.035em;
   }
@@ -124,17 +125,20 @@
     inset: 0;
     background: linear-gradient(180deg, rgba(8, 44, 38, 0.55) 0%, rgba(8, 44, 38, 0.35) 45%, rgba(8, 44, 38, 0.82) 100%);
   }
-  .hero-inner { padding-block: 120px 72px; }
-  .hero h1 { color: #fff; max-width: 16ch; }
-  .hero .lede { margin-top: 1.5rem; max-width: 56ch; font-size: clamp(1rem, 0.95rem + 0.4vw, 1.2rem); line-height: 1.6; color: rgba(255, 255, 255, 0.88); }
+  .hero-inner { padding-block: 120px 72px; min-width: 0; }
+  .hero h1 { color: #fff; }
+  .hero .lede { margin-top: 1.5rem; max-width: 60ch; font-size: clamp(1rem, 0.95rem + 0.4vw, 1.2rem); line-height: 1.6; color: rgba(255, 255, 255, 0.88); }
   .hero-cta { margin-top: 2.25rem; display: flex; flex-wrap: wrap; gap: 14px; }
   .hero-stats {
     margin-top: 4rem;
     padding-top: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.22);
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 32px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) {
+    .hero-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
   }
   .hero-stats dt { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); }
   .hero-stats dd { margin: 0.35rem 0 0; font-family: var(--font-display); font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; color: #fff; }
@@ -306,3 +310,4 @@
   }
   [data-reveal] { opacity: 1; transform: none; }
 }
+
