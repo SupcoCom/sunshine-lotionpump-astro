@@ -1,10 +1,12 @@
 {
-  "/category/blog/": {
-    "title": "Blog - Sunshine Custom Cosmetic Pump Manufacturer",
-    "canonical": "https://sunshine-lotionpump.com/category/blog/",
+  "/": {
+    "title": "Cosmetic Pump Manufacturer & Lotion Pump Supplier | SUNSHINE",
+    "description": "Cosmetic pump manufacturer in Ningbo China. Custom lotion pumps, foam pumps, trigger & fine mist sprayers for beauty brands. OEM/ODM, factory direct, ISO 9001.",
+    "canonical": "https://sunshine-lotionpump.com/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Blog - Sunshine Custom Cosmetic Pump Manufacturer",
-    "ogType": "article"
+    "ogTitle": "Cosmetic Pump Manufacturer & Lotion Pump Supplier | SUNSHINE",
+    "ogDescription": "Cosmetic pump manufacturer in Ningbo China. Custom lotion pumps, foam pumps, trigger & fine mist sprayers for beauty brands. OEM/ODM, factory direct, ISO 9001.",
+    "ogType": "website"
   },
   "/oem-private-label-pump-manufacturer-landingpage/": {
     "title": "OEM & Private Label Pump Manufacturer | Custom Cosmetic Pumps China | SUNSHINE Packaging",
@@ -26,15 +28,6 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/all-closures-overview.png",
     "ogType": "article"
   },
-  "/": {
-    "title": "Cosmetic Pump Manufacturer & Lotion Pump Supplier | SUNSHINE",
-    "description": "Cosmetic pump manufacturer in Ningbo China. Custom lotion pumps, foam pumps, trigger & fine mist sprayers for beauty brands. OEM/ODM, factory direct, ISO 9001.",
-    "canonical": "https://sunshine-lotionpump.com/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Cosmetic Pump Manufacturer & Lotion Pump Supplier | SUNSHINE",
-    "ogDescription": "Cosmetic pump manufacturer in Ningbo China. Custom lotion pumps, foam pumps, trigger & fine mist sprayers for beauty brands. OEM/ODM, factory direct, ISO 9001.",
-    "ogType": "website"
-  },
   "/products/": {
     "title": "Products - Sunshine Custom Cosmetic Pump Manufacturer",
     "description": "Products Archive - Sunshine Custom Cosmetic Pump Manufacturer",
@@ -44,14 +37,11 @@
     "ogDescription": "Products Archive - Sunshine Custom Cosmetic Pump Manufacturer",
     "ogType": "article"
   },
-  "/lotion-pump-manufacturer/": {
-    "title": "Cosmetic Pump Manufacturer China | Custom 24/410 28/410",
-    "description": "Cosmetic pump manufacturer in China supplying custom lotion pumps in 24/410, 28/410 & 33/410 for shampoo, body wash & hand soap. OEM/ODM, factory direct.",
-    "canonical": "https://sunshine-lotionpump.com/lotion-pump-manufacturer/",
+  "/category/blog/": {
+    "title": "Blog - Sunshine Custom Cosmetic Pump Manufacturer",
+    "canonical": "https://sunshine-lotionpump.com/category/blog/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Cosmetic Pump Manufacturer China | Custom 24/410 28/410",
-    "ogDescription": "Cosmetic pump manufacturer in China supplying custom lotion pumps in 24/410, 28/410 & 33/410 for shampoo, body wash & hand soap. OEM/ODM, factory direct.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/Left-Right-Lock-Pump-28mm-Silver-Uv.jpg",
+    "ogTitle": "Blog - Sunshine Custom Cosmetic Pump Manufacturer",
     "ogType": "article"
   },
   "/lotion-pump-head-manufacturer-landingpage/": {
@@ -61,26 +51,6 @@
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
     "ogTitle": "Lotion Pump Head Manufacturer | OEM/ODM Lotion Pump Heads Factory China | SUNSHINE Packaging",
     "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — Cixi, Ningbo, Zhejiang · 30 min from Ningbo Port. B2B manufacturer of PP & all-plastic lotion pump head",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
-    "ogType": "article"
-  },
-  "/nail-polish-pump-manufacturer-landingpage/": {
-    "title": "Nail Polish Pump Manufacturer | OEM/ODM Nail Polish Pumps Factory China | SUNSHINE Packaging",
-    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410, 28/410 & 33/410 nail polish pumps & remover dispensers. ISO 9001:2015 · Factory direct, no",
-    "canonical": "https://sunshine-lotionpump.com/nail-polish-pump-manufacturer-landingpage/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Nail Polish Pump Manufacturer | OEM/ODM Nail Polish Pumps Factory China | SUNSHINE Packaging",
-    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410, 28/410 & 33/410 nail polish pumps & remover dispensers. ISO 9001:2015 · Factory direct, no",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
-    "ogType": "article"
-  },
-  "/fine-mist-sprayer-manufacturer-landingpage/": {
-    "title": "Fine Mist Sprayer Manufacturer | OEM/ODM Fine Mist Sprayers Factory China | SUNSHINE Packaging",
-    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410 & 28/410 fine mist sprayers, mist pumps & atomizers for perfume, cosmetics & body care. ISO",
-    "canonical": "https://sunshine-lotionpump.com/fine-mist-sprayer-manufacturer-landingpage/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Fine Mist Sprayer Manufacturer | OEM/ODM Fine Mist Sprayers Factory China | SUNSHINE Packaging",
-    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410 & 28/410 fine mist sprayers, mist pumps & atomizers for perfume, cosmetics & body care. ISO",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
@@ -94,22 +64,33 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
-  "/contact-us/": {
-    "title": "Contact SUNSHINE | Cosmetic Pump Manufacturer & Supplier",
-    "description": "Contact SUNSHINE, cosmetic pump manufacturer in China, for OEM/ODM lotion pumps, foam pumps & sprayers. Factory-direct quotes, free samples, 24-hour reply.",
-    "canonical": "https://sunshine-lotionpump.com/contact-us/",
+  "/spray-pump-manufacturer-landingpage/": {
+    "title": "Spray Pump Manufacturer | OEM/ODM Spray Pumps Factory China | SUNSHINE Packaging",
+    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — fine mist spray pumps for perfume & cosmetic bottles, 24/410 & 28/410. ISO 9001:2015 · Factory direct, no",
+    "canonical": "https://sunshine-lotionpump.com/spray-pump-manufacturer-landingpage/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Contact SUNSHINE | Cosmetic Pump Manufacturer & Supplier",
-    "ogDescription": "Contact SUNSHINE, cosmetic pump manufacturer in China, for OEM/ODM lotion pumps, foam pumps & sprayers. Factory-direct quotes, free samples, 24-hour reply.",
+    "ogTitle": "Spray Pump Manufacturer | OEM/ODM Spray Pumps Factory China | SUNSHINE Packaging",
+    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — fine mist spray pumps for perfume & cosmetic bottles, 24/410 & 28/410. ISO 9001:2015 · Factory direct, no",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
-  "/disc-top-cap-manufacturer-landingpage/": {
-    "title": "Disc Top Cap Manufacturer | OEM/ODM Disc Caps Factory China | SUNSHINE Packaging",
-    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24mm & 28mm disc top caps and flip top caps in PP & PE. Custom colors & logo. ISO 9001:2015 · Factory",
-    "canonical": "https://sunshine-lotionpump.com/disc-top-cap-manufacturer-landingpage/",
+  "/lotion-pump-manufacturer/": {
+    "title": "Cosmetic Pump Manufacturer China | Custom 24/410 28/410",
+    "description": "Cosmetic pump manufacturer in China supplying custom lotion pumps in 24/410, 28/410 & 33/410 for shampoo, body wash & hand soap. OEM/ODM, factory direct.",
+    "canonical": "https://sunshine-lotionpump.com/lotion-pump-manufacturer/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Disc Top Cap Manufacturer | OEM/ODM Disc Caps Factory China | SUNSHINE Packaging",
-    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24mm & 28mm disc top caps and flip top caps in PP & PE. Custom colors & logo. ISO 9001:2015 · Factory",
+    "ogTitle": "Cosmetic Pump Manufacturer China | Custom 24/410 28/410",
+    "ogDescription": "Cosmetic pump manufacturer in China supplying custom lotion pumps in 24/410, 28/410 & 33/410 for shampoo, body wash & hand soap. OEM/ODM, factory direct.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/Left-Right-Lock-Pump-28mm-Silver-Uv.jpg",
+    "ogType": "article"
+  },
+  "/nail-polish-pump-manufacturer-landingpage/": {
+    "title": "Nail Polish Pump Manufacturer | OEM/ODM Nail Polish Pumps Factory China | SUNSHINE Packaging",
+    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410, 28/410 & 33/410 nail polish pumps & remover dispensers. ISO 9001:2015 · Factory direct, no",
+    "canonical": "https://sunshine-lotionpump.com/nail-polish-pump-manufacturer-landingpage/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Nail Polish Pump Manufacturer | OEM/ODM Nail Polish Pumps Factory China | SUNSHINE Packaging",
+    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410, 28/410 & 33/410 nail polish pumps & remover dispensers. ISO 9001:2015 · Factory direct, no",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
@@ -123,23 +104,13 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
-  "/foam-pump-manufacturer-landingpage/": {
-    "title": "Foam Pump Manufacturer | OEM/ODM Foam Pumps Factory China | SUNSHINE Packaging",
-    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28/410 foam pumps & custom foaming dispensers for hand wash, shampoo and body care. ISO 9001:2015 · Factory",
-    "canonical": "https://sunshine-lotionpump.com/foam-pump-manufacturer-landingpage/",
+  "/fine-mist-sprayer-manufacturer-landingpage/": {
+    "title": "Fine Mist Sprayer Manufacturer | OEM/ODM Fine Mist Sprayers Factory China | SUNSHINE Packaging",
+    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410 & 28/410 fine mist sprayers, mist pumps & atomizers for perfume, cosmetics & body care. ISO",
+    "canonical": "https://sunshine-lotionpump.com/fine-mist-sprayer-manufacturer-landingpage/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Foam Pump Manufacturer | OEM/ODM Foam Pumps Factory China | SUNSHINE Packaging",
-    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28/410 foam pumps & custom foaming dispensers for hand wash, shampoo and body care. ISO 9001:2015 · Factory",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
-    "ogType": "article"
-  },
-  "/lotion-pump-manufacturer-landingpage-v2/": {
-    "title": "Lotion Pump Manufacturer | OEM/ODM Lotion Pumps Factory China | SUNSHINE Packaging",
-    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — Cixi, Ningbo, Zhejiang · 30 min from Ningbo Port. B2B manufacturer of PP & all-plastic lotion pumps, fine",
-    "canonical": "https://sunshine-lotionpump.com/lotion-pump-manufacturer-landingpage-v2/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Lotion Pump Manufacturer | OEM/ODM Lotion Pumps Factory China | SUNSHINE Packaging",
-    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — Cixi, Ningbo, Zhejiang · 30 min from Ningbo Port. B2B manufacturer of PP & all-plastic lotion pumps, fine",
+    "ogTitle": "Fine Mist Sprayer Manufacturer | OEM/ODM Fine Mist Sprayers Factory China | SUNSHINE Packaging",
+    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24/410 & 28/410 fine mist sprayers, mist pumps & atomizers for perfume, cosmetics & body care. ISO",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
@@ -153,22 +124,24 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
-  "/spray-pump-manufacturer-landingpage/": {
-    "title": "Spray Pump Manufacturer | OEM/ODM Spray Pumps Factory China | SUNSHINE Packaging",
-    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — fine mist spray pumps for perfume & cosmetic bottles, 24/410 & 28/410. ISO 9001:2015 · Factory direct, no",
-    "canonical": "https://sunshine-lotionpump.com/spray-pump-manufacturer-landingpage/",
+  "/trigger-sprayer-manufacturer-landingpage/": {
+    "title": "Trigger Sprayer Manufacturer | OEM/ODM Trigger Sprayers Factory China | SUNSHINE Packaging",
+    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28mm trigger sprayers, mist trigger sprayers & 24/410–28/410 spray nozzles for household, cleaning and garden",
+    "canonical": "https://sunshine-lotionpump.com/trigger-sprayer-manufacturer-landingpage/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Spray Pump Manufacturer | OEM/ODM Spray Pumps Factory China | SUNSHINE Packaging",
-    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — fine mist spray pumps for perfume & cosmetic bottles, 24/410 & 28/410. ISO 9001:2015 · Factory direct, no",
+    "ogTitle": "Trigger Sprayer Manufacturer | OEM/ODM Trigger Sprayers Factory China | SUNSHINE Packaging",
+    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28mm trigger sprayers, mist trigger sprayers & 24/410–28/410 spray nozzles for household, cleaning and garden",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
-  "/thank-you/": {
-    "title": "Thank You | SUNSHINE Packaging",
-    "description": "Your inquiry has been received. Our sales team will get back to you within 24 hours on business days.",
-    "robots": "follow, noindex",
-    "ogTitle": "Thank You | SUNSHINE Packaging",
-    "ogDescription": "Your inquiry has been received. Our sales team will get back to you within 24 hours on business days.",
+  "/lotion-pump-manufacturer-landingpage-v2/": {
+    "title": "Lotion Pump Manufacturer | OEM/ODM Lotion Pumps Factory China | SUNSHINE Packaging",
+    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — Cixi, Ningbo, Zhejiang · 30 min from Ningbo Port. B2B manufacturer of PP & all-plastic lotion pumps, fine",
+    "canonical": "https://sunshine-lotionpump.com/lotion-pump-manufacturer-landingpage-v2/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Lotion Pump Manufacturer | OEM/ODM Lotion Pumps Factory China | SUNSHINE Packaging",
+    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — Cixi, Ningbo, Zhejiang · 30 min from Ningbo Port. B2B manufacturer of PP & all-plastic lotion pumps, fine",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
   "/privacy-policy/": {
@@ -180,14 +153,40 @@
     "ogDescription": "Last updated: August 19, 2026",
     "ogType": "article"
   },
-  "/trigger-sprayer-complete-guide/": {
-    "title": "Trigger Sprayer Manufacturing & Sourcing Guide",
-    "description": "B2B guide to trigger sprayers, including 24/410 and 28/410 sizes, materials, spray patterns, MOQ, lead time and OEM sourcing checks.",
-    "canonical": "https://sunshine-lotionpump.com/trigger-sprayer-complete-guide/",
+  "/foam-pump-manufacturer-landingpage/": {
+    "title": "Foam Pump Manufacturer | OEM/ODM Foam Pumps Factory China | SUNSHINE Packaging",
+    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28/410 foam pumps & custom foaming dispensers for hand wash, shampoo and body care. ISO 9001:2015 · Factory",
+    "canonical": "https://sunshine-lotionpump.com/foam-pump-manufacturer-landingpage/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Trigger Sprayer Manufacturing & Sourcing Guide",
-    "ogDescription": "B2B guide to trigger sprayers, including 24/410 and 28/410 sizes, materials, spray patterns, MOQ, lead time and OEM sourcing checks.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/trigger-sprayer-complete-guide-featured.png",
+    "ogTitle": "Foam Pump Manufacturer | OEM/ODM Foam Pumps Factory China | SUNSHINE Packaging",
+    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28/410 foam pumps & custom foaming dispensers for hand wash, shampoo and body care. ISO 9001:2015 · Factory",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
+    "ogType": "article"
+  },
+  "/contact-us/": {
+    "title": "Contact SUNSHINE | Cosmetic Pump Manufacturer & Supplier",
+    "description": "Contact SUNSHINE, cosmetic pump manufacturer in China, for OEM/ODM lotion pumps, foam pumps & sprayers. Factory-direct quotes, free samples, 24-hour reply.",
+    "canonical": "https://sunshine-lotionpump.com/contact-us/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Contact SUNSHINE | Cosmetic Pump Manufacturer & Supplier",
+    "ogDescription": "Contact SUNSHINE, cosmetic pump manufacturer in China, for OEM/ODM lotion pumps, foam pumps & sprayers. Factory-direct quotes, free samples, 24-hour reply.",
+    "ogType": "article"
+  },
+  "/pump-manufacturer-china/": {
+    "title": "Pump Manufacturer in China — Custom Cosmetic Pumps Factory | SUNSHINE Packaging",
+    "description": "Pump manufacturer in China producing custom cosmetic pump heads. Lotion pumps, foam pumps, trigger & fine mist sprayers. OEM/ODM, MOQ 10,000, ISO 9001, factory direct. Get a 24h quote.",
+    "canonical": "https://sunshine-lotionpump.com/pump-manufacturer-china/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Pump Manufacturer in China — Custom Cosmetic Pumps Factory | SUNSHINE Packaging",
+    "ogDescription": "Pump manufacturer in China producing custom cosmetic pump heads. Lotion pumps, foam pumps, trigger & fine mist sprayers. OEM/ODM, MOQ 10,000, ISO 9001, factory direct. Get a 24h quote.",
+    "ogType": "article"
+  },
+  "/thank-you/": {
+    "title": "Thank You | SUNSHINE Packaging",
+    "description": "Your inquiry has been received. Our sales team will get back to you within 24 hours on business days.",
+    "robots": "follow, noindex",
+    "ogTitle": "Thank You | SUNSHINE Packaging",
+    "ogDescription": "Your inquiry has been received. Our sales team will get back to you within 24 hours on business days.",
     "ogType": "article"
   },
   "/lotion-pump-manufacturer-landingpage/": {
@@ -199,13 +198,24 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/08/prod-1.png",
     "ogType": "article"
   },
-  "/pump-manufacturer-china/": {
-    "title": "Pump Manufacturer in China — Custom Cosmetic Pumps Factory | SUNSHINE Packaging",
-    "description": "Pump manufacturer in China producing custom cosmetic pump heads. Lotion pumps, foam pumps, trigger & fine mist sprayers. OEM/ODM, MOQ 10,000, ISO 9001, factory direct. Get a 24h quote.",
-    "canonical": "https://sunshine-lotionpump.com/pump-manufacturer-china/",
+  "/treatment-pump-precision-dispensing-skincare-serum/": {
+    "title": "Treatment Pump Guide for Skincare & Serum Packaging",
+    "description": "Learn how treatment pumps control precise dosage for serum and skincare packaging, including output volume, sampling checks and bottle compatibility.",
+    "canonical": "https://sunshine-lotionpump.com/treatment-pump-precision-dispensing-skincare-serum/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Pump Manufacturer in China — Custom Cosmetic Pumps Factory | SUNSHINE Packaging",
-    "ogDescription": "Pump manufacturer in China producing custom cosmetic pump heads. Lotion pumps, foam pumps, trigger & fine mist sprayers. OEM/ODM, MOQ 10,000, ISO 9001, factory direct. Get a 24h quote.",
+    "ogTitle": "Treatment Pump Guide for Skincare & Serum Packaging",
+    "ogDescription": "Learn how treatment pumps control precise dosage for serum and skincare packaging, including output volume, sampling checks and bottle compatibility.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/svg-treatment-pump-featured.png",
+    "ogType": "article"
+  },
+  "/disc-top-cap-manufacturer-landingpage/": {
+    "title": "Disc Top Cap Manufacturer | OEM/ODM Disc Caps Factory China | SUNSHINE Packaging",
+    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24mm & 28mm disc top caps and flip top caps in PP & PE. Custom colors & logo. ISO 9001:2015 · Factory",
+    "canonical": "https://sunshine-lotionpump.com/disc-top-cap-manufacturer-landingpage/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Disc Top Cap Manufacturer | OEM/ODM Disc Caps Factory China | SUNSHINE Packaging",
+    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 24mm & 28mm disc top caps and flip top caps in PP & PE. Custom colors & logo. ISO 9001:2015 · Factory",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
   "/disc-top-cap-flip-top-cap-buyers-guide/": {
@@ -218,6 +228,16 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/svg-disc-flip-cap-featured.png",
     "ogType": "article"
   },
+  "/trigger-sprayer-complete-guide/": {
+    "title": "Trigger Sprayer Manufacturing & Sourcing Guide",
+    "description": "B2B guide to trigger sprayers, including 24/410 and 28/410 sizes, materials, spray patterns, MOQ, lead time and OEM sourcing checks.",
+    "canonical": "https://sunshine-lotionpump.com/trigger-sprayer-complete-guide/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Trigger Sprayer Manufacturing & Sourcing Guide",
+    "ogDescription": "B2B guide to trigger sprayers, including 24/410 and 28/410 sizes, materials, spray patterns, MOQ, lead time and OEM sourcing checks.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/trigger-sprayer-complete-guide-featured.png",
+    "ogType": "article"
+  },
   "/foam-pump-everything-brands-need-to-know/": {
     "title": "Foam Pump Guide for Personal Care Brands",
     "description": "Learn how foam pumps work, how formula viscosity affects foam quality, and what brands should confirm before sourcing foaming pump packaging.",
@@ -226,16 +246,6 @@
     "ogTitle": "Foam Pump Guide for Personal Care Brands",
     "ogDescription": "Learn how foam pumps work, how formula viscosity affects foam quality, and what brands should confirm before sourcing foaming pump packaging.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/svg-foam-pump-featured.png",
-    "ogType": "article"
-  },
-  "/lotion-pump-dosage-control-guide/": {
-    "title": "Lotion Pump Dosage Control Guide",
-    "description": "Learn how lotion pump dosage control works for 1ml, 2ml and 4ml outputs, including bore, stroke, neck finish and sampling checks.",
-    "canonical": "https://sunshine-lotionpump.com/lotion-pump-dosage-control-guide/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Lotion Pump Dosage Control Guide",
-    "ogDescription": "Learn how lotion pump dosage control works for 1ml, 2ml and 4ml outputs, including bore, stroke, neck finish and sampling checks.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/lotion-pump-dosage-featured.png",
     "ogType": "article"
   },
   "/fine-mist-sprayer/": {
@@ -258,16 +268,6 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/lotion-pump-quality-testing-featured.png",
     "ogType": "article"
   },
-  "/top-5-lotion-pump-materials/": {
-    "title": "Top Lotion Pump Materials: PP, PE & Metal-Free",
-    "description": "Compare PP, PE and metal-free lotion pump material options for cosmetic packaging, recyclability, heat resistance and formula compatibility.",
-    "canonical": "https://sunshine-lotionpump.com/top-5-lotion-pump-materials/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Top Lotion Pump Materials: PP, PE & Metal-Free",
-    "ogDescription": "Compare PP, PE and metal-free lotion pump material options for cosmetic packaging, recyclability, heat resistance and formula compatibility.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/lotion-pump-materials-featured.png",
-    "ogType": "article"
-  },
   "/lotion-pump-size-guide-24-410-vs-28-410-vs-33-410/": {
     "title": "Lotion Pump Size Guide: 24/410 vs 28/410 vs 33/410",
     "description": "Compare 24/410, 28/410 and 33/410 lotion pump sizes by bottle fit, output volume, application and sourcing requirements.",
@@ -276,16 +276,6 @@
     "ogTitle": "Lotion Pump Size Guide: 24/410 vs 28/410 vs 33/410",
     "ogDescription": "Compare 24/410, 28/410 and 33/410 lotion pump sizes by bottle fit, output volume, application and sourcing requirements.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/lotion-pump-size-guide-featured.png",
-    "ogType": "article"
-  },
-  "/trigger-sprayer-manufacturer-landingpage/": {
-    "title": "Trigger Sprayer Manufacturer | OEM/ODM Trigger Sprayers Factory China | SUNSHINE Packaging",
-    "description": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28mm trigger sprayers, mist trigger sprayers & 24/410–28/410 spray nozzles for household, cleaning and garden",
-    "canonical": "https://sunshine-lotionpump.com/trigger-sprayer-manufacturer-landingpage/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Trigger Sprayer Manufacturer | OEM/ODM Trigger Sprayers Factory China | SUNSHINE Packaging",
-    "ogDescription": "Ningbo Sunshine Plastic Industry Co., Ltd. — 28mm trigger sprayers, mist trigger sprayers & 24/410–28/410 spray nozzles for household, cleaning and garden",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/lotion-pump-manufacturer-production-line.jpg.webp",
     "ogType": "article"
   },
   "/cosmetic-packaging-closures-guide/": {
@@ -298,24 +288,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/cosmetic-packaging-closures-guide-featured.png",
     "ogType": "article"
   },
-  "/treatment-pump-precision-dispensing-skincare-serum/": {
-    "title": "Treatment Pump Guide for Skincare & Serum Packaging",
-    "description": "Learn how treatment pumps control precise dosage for serum and skincare packaging, including output volume, sampling checks and bottle compatibility.",
-    "canonical": "https://sunshine-lotionpump.com/treatment-pump-precision-dispensing-skincare-serum/",
+  "/top-5-lotion-pump-materials/": {
+    "title": "Top Lotion Pump Materials: PP, PE & Metal-Free",
+    "description": "Compare PP, PE and metal-free lotion pump material options for cosmetic packaging, recyclability, heat resistance and formula compatibility.",
+    "canonical": "https://sunshine-lotionpump.com/top-5-lotion-pump-materials/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Treatment Pump Guide for Skincare & Serum Packaging",
-    "ogDescription": "Learn how treatment pumps control precise dosage for serum and skincare packaging, including output volume, sampling checks and bottle compatibility.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/svg-treatment-pump-featured.png",
-    "ogType": "article"
-  },
-  "/treatment-pump-vs-lotion-pump-vs-dropper/": {
-    "title": "Treatment Pump vs Lotion Pump vs Dropper",
-    "description": "Compare treatment pumps, lotion pumps and droppers for serums and skincare formulas, including dosage, viscosity and premium packaging fit.",
-    "canonical": "https://sunshine-lotionpump.com/treatment-pump-vs-lotion-pump-vs-dropper/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Treatment Pump vs Lotion Pump vs Dropper",
-    "ogDescription": "Compare treatment pumps, lotion pumps and droppers for serums and skincare formulas, including dosage, viscosity and premium packaging fit.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/treatment-pump-vs-lotion-pump-vs-dropper-featured.png",
+    "ogTitle": "Top Lotion Pump Materials: PP, PE & Metal-Free",
+    "ogDescription": "Compare PP, PE and metal-free lotion pump material options for cosmetic packaging, recyclability, heat resistance and formula compatibility.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/lotion-pump-materials-featured.png",
     "ogType": "article"
   },
   "/source-custom-cosmetic-packaging-china/": {
@@ -328,14 +308,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/source-custom-cosmetic-packaging-china-featured.png",
     "ogType": "article"
   },
-  "/foam-pump-vs-lotion-pump/": {
-    "title": "Foam Pump vs Lotion Pump: Which to Choose",
-    "description": "Compare foam pumps and lotion pumps by formula type, output, user experience and packaging fit for personal care and home care products.",
-    "canonical": "https://sunshine-lotionpump.com/foam-pump-vs-lotion-pump/",
+  "/treatment-pump-vs-lotion-pump-vs-dropper/": {
+    "title": "Treatment Pump vs Lotion Pump vs Dropper",
+    "description": "Compare treatment pumps, lotion pumps and droppers for serums and skincare formulas, including dosage, viscosity and premium packaging fit.",
+    "canonical": "https://sunshine-lotionpump.com/treatment-pump-vs-lotion-pump-vs-dropper/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Foam Pump vs Lotion Pump: Which to Choose",
-    "ogDescription": "Compare foam pumps and lotion pumps by formula type, output, user experience and packaging fit for personal care and home care products.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/foam-pump-vs-lotion-pump-featured.png",
+    "ogTitle": "Treatment Pump vs Lotion Pump vs Dropper",
+    "ogDescription": "Compare treatment pumps, lotion pumps and droppers for serums and skincare formulas, including dosage, viscosity and premium packaging fit.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/treatment-pump-vs-lotion-pump-vs-dropper-featured.png",
     "ogType": "article"
   },
   "/foam-pump-bottle-guide/": {
@@ -348,14 +328,24 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/foam-pump-bottle-guide-featured.png",
     "ogType": "article"
   },
-  "/custom-trigger-sprayers-china/": {
-    "title": "Custom Trigger Sprayers from China",
-    "description": "Guide to sourcing custom trigger sprayers from China, including spray pattern, material choice, MOQ, sampling and OEM production checks.",
-    "canonical": "https://sunshine-lotionpump.com/custom-trigger-sprayers-china/",
+  "/foam-pump-vs-lotion-pump/": {
+    "title": "Foam Pump vs Lotion Pump: Which to Choose",
+    "description": "Compare foam pumps and lotion pumps by formula type, output, user experience and packaging fit for personal care and home care products.",
+    "canonical": "https://sunshine-lotionpump.com/foam-pump-vs-lotion-pump/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Custom Trigger Sprayers from China",
-    "ogDescription": "Guide to sourcing custom trigger sprayers from China, including spray pattern, material choice, MOQ, sampling and OEM production checks.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/custom-trigger-sprayers-china-featured.png",
+    "ogTitle": "Foam Pump vs Lotion Pump: Which to Choose",
+    "ogDescription": "Compare foam pumps and lotion pumps by formula type, output, user experience and packaging fit for personal care and home care products.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/foam-pump-vs-lotion-pump-featured.png",
+    "ogType": "article"
+  },
+  "/disc-top-vs-flip-top-vs-screw-cap/": {
+    "title": "Disc Top vs Flip Top vs Screw Cap",
+    "description": "Compare disc top caps, flip top caps and screw caps for cosmetic and personal care packaging by formula, dispensing style and user experience.",
+    "canonical": "https://sunshine-lotionpump.com/disc-top-vs-flip-top-vs-screw-cap/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Disc Top vs Flip Top vs Screw Cap",
+    "ogDescription": "Compare disc top caps, flip top caps and screw caps for cosmetic and personal care packaging by formula, dispensing style and user experience.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/disc-top-vs-flip-top-vs-screw-cap-featured.png",
     "ogType": "article"
   },
   "/disc-top-cap-sizes-explained/": {
@@ -368,14 +358,44 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/disc-top-cap-sizes-explained-featured.png",
     "ogType": "article"
   },
-  "/best-mist-sprayers-perfume-toner-hair-care/": {
-    "title": "Best Mist Sprayers for Perfume, Toner & Hair Care",
-    "description": "Choose fine mist sprayers for perfume, toner and hair care packaging by droplet quality, output consistency, actuator design and formula fit.",
-    "canonical": "https://sunshine-lotionpump.com/best-mist-sprayers-perfume-toner-hair-care/",
+  "/custom-trigger-sprayers-china/": {
+    "title": "Custom Trigger Sprayers from China",
+    "description": "Guide to sourcing custom trigger sprayers from China, including spray pattern, material choice, MOQ, sampling and OEM production checks.",
+    "canonical": "https://sunshine-lotionpump.com/custom-trigger-sprayers-china/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Best Mist Sprayers for Perfume, Toner & Hair Care",
-    "ogDescription": "Choose fine mist sprayers for perfume, toner and hair care packaging by droplet quality, output consistency, actuator design and formula fit.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/best-mist-sprayers-featured-light.png",
+    "ogTitle": "Custom Trigger Sprayers from China",
+    "ogDescription": "Guide to sourcing custom trigger sprayers from China, including spray pattern, material choice, MOQ, sampling and OEM production checks.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/custom-trigger-sprayers-china-featured.png",
+    "ogType": "article"
+  },
+  "/foam-trigger-vs-stream-trigger-vs-mist-trigger/": {
+    "title": "Foam Trigger vs Stream Trigger vs Mist Trigger",
+    "description": "Compare foam, stream and mist trigger spray patterns for cleaning, garden care and personal care products before choosing a sprayer.",
+    "canonical": "https://sunshine-lotionpump.com/foam-trigger-vs-stream-trigger-vs-mist-trigger/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Foam Trigger vs Stream Trigger vs Mist Trigger",
+    "ogDescription": "Compare foam, stream and mist trigger spray patterns for cleaning, garden care and personal care products before choosing a sprayer.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/foam-trigger-vs-stream-trigger-vs-mist-trigger-featured-image.png",
+    "ogType": "article"
+  },
+  "/trigger-sprayer-buying-guide/": {
+    "title": "Trigger Sprayer Buying Guide",
+    "description": "B2B trigger sprayer buying guide covering sizes, output, spray pattern, dip tube length, material choice and application matching.",
+    "canonical": "https://sunshine-lotionpump.com/trigger-sprayer-buying-guide/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Trigger Sprayer Buying Guide",
+    "ogDescription": "B2B trigger sprayer buying guide covering sizes, output, spray pattern, dip tube length, material choice and application matching.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/trigger-sprayer-buying-guide-featured.png",
+    "ogType": "article"
+  },
+  "/lotion-pump-dosage-control-guide/": {
+    "title": "Lotion Pump Dosage Control Guide",
+    "description": "Learn how lotion pump dosage control works for 1ml, 2ml and 4ml outputs, including bore, stroke, neck finish and sampling checks.",
+    "canonical": "https://sunshine-lotionpump.com/lotion-pump-dosage-control-guide/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Lotion Pump Dosage Control Guide",
+    "ogDescription": "Learn how lotion pump dosage control works for 1ml, 2ml and 4ml outputs, including bore, stroke, neck finish and sampling checks.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/lotion-pump-dosage-featured.png",
     "ogType": "article"
   },
   "/oem-custom-lotion-pump-moq-lead-time-pricing/": {
@@ -388,14 +408,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/oem-lotion-pump-featured-light.png",
     "ogType": "article"
   },
-  "/trigger-sprayer-buying-guide/": {
-    "title": "Trigger Sprayer Buying Guide",
-    "description": "B2B trigger sprayer buying guide covering sizes, output, spray pattern, dip tube length, material choice and application matching.",
-    "canonical": "https://sunshine-lotionpump.com/trigger-sprayer-buying-guide/",
+  "/best-mist-sprayers-perfume-toner-hair-care/": {
+    "title": "Best Mist Sprayers for Perfume, Toner & Hair Care",
+    "description": "Choose fine mist sprayers for perfume, toner and hair care packaging by droplet quality, output consistency, actuator design and formula fit.",
+    "canonical": "https://sunshine-lotionpump.com/best-mist-sprayers-perfume-toner-hair-care/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Trigger Sprayer Buying Guide",
-    "ogDescription": "B2B trigger sprayer buying guide covering sizes, output, spray pattern, dip tube length, material choice and application matching.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/trigger-sprayer-buying-guide-featured.png",
+    "ogTitle": "Best Mist Sprayers for Perfume, Toner & Hair Care",
+    "ogDescription": "Choose fine mist sprayers for perfume, toner and hair care packaging by droplet quality, output consistency, actuator design and formula fit.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/best-mist-sprayers-featured-light.png",
     "ogType": "article"
   },
   "/why-your-cleansing-oil-needs-a-specialized-24-410-oil-pump-preventing-leakage-and-oxidization/": {
@@ -418,14 +438,24 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/fine-mist-vs-regular-featured-light.png",
     "ogType": "article"
   },
-  "/disc-top-vs-flip-top-vs-screw-cap/": {
-    "title": "Disc Top vs Flip Top vs Screw Cap",
-    "description": "Compare disc top caps, flip top caps and screw caps for cosmetic and personal care packaging by formula, dispensing style and user experience.",
-    "canonical": "https://sunshine-lotionpump.com/disc-top-vs-flip-top-vs-screw-cap/",
+  "/product/wholesale-foam-pump-28-custom-plastic-packaging-for-hand-wash-shampoo-sunshine/": {
+    "title": "Wholesale Foam Pump 28 - Custom Plastic Packaging for Hand Wash & Shampoo | SUNSHINE",
+    "description": "Custom foam pump for hand wash, facial cleanser, body wash and shampoo packaging. OEM colors and wholesale bulk orders available.",
+    "canonical": "https://sunshine-lotionpump.com/product/wholesale-foam-pump-28-custom-plastic-packaging-for-hand-wash-shampoo-sunshine/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Disc Top vs Flip Top vs Screw Cap",
-    "ogDescription": "Compare disc top caps, flip top caps and screw caps for cosmetic and personal care packaging by formula, dispensing style and user experience.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/disc-top-vs-flip-top-vs-screw-cap-featured.png",
+    "ogTitle": "Wholesale Foam Pump 28 - Custom Plastic Packaging for Hand Wash & Shampoo | SUNSHINE",
+    "ogDescription": "Custom foam pump for hand wash, facial cleanser, body wash and shampoo packaging. OEM colors and wholesale bulk orders available.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777712121152-1024x1024.webp",
+    "ogType": "article"
+  },
+  "/product/wholesale-white-cosmetic-disc-top-cap-24mm-28mm-plastic-press-disc-cap/": {
+    "title": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap",
+    "description": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles.",
+    "canonical": "https://sunshine-lotionpump.com/product/wholesale-white-cosmetic-disc-top-cap-24mm-28mm-plastic-press-disc-cap/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap",
+    "ogDescription": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709803546.webp",
     "ogType": "article"
   },
   "/product/foam-28-410-plastic-bottle-for-hand-washing-and-body-washing-sunshine/": {
@@ -448,24 +478,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709794319.webp",
     "ogType": "article"
   },
-  "/foam-trigger-vs-stream-trigger-vs-mist-trigger/": {
-    "title": "Foam Trigger vs Stream Trigger vs Mist Trigger",
-    "description": "Compare foam, stream and mist trigger spray patterns for cleaning, garden care and personal care products before choosing a sprayer.",
-    "canonical": "https://sunshine-lotionpump.com/foam-trigger-vs-stream-trigger-vs-mist-trigger/",
+  "/product/economical-custom-non-spill-28mm-disc-top-cap-for-airless-lotion-pump-bottle/": {
+    "title": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle",
+    "description": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze b.",
+    "canonical": "https://sunshine-lotionpump.com/product/economical-custom-non-spill-28mm-disc-top-cap-for-airless-lotion-pump-bottle/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Foam Trigger vs Stream Trigger vs Mist Trigger",
-    "ogDescription": "Compare foam, stream and mist trigger spray patterns for cleaning, garden care and personal care products before choosing a sprayer.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/foam-trigger-vs-stream-trigger-vs-mist-trigger-featured-image.png",
-    "ogType": "article"
-  },
-  "/product/wholesale-foam-pump-28-custom-plastic-packaging-for-hand-wash-shampoo-sunshine/": {
-    "title": "Wholesale Foam Pump 28 - Custom Plastic Packaging for Hand Wash & Shampoo | SUNSHINE",
-    "description": "Custom foam pump for hand wash, facial cleanser, body wash and shampoo packaging. OEM colors and wholesale bulk orders available.",
-    "canonical": "https://sunshine-lotionpump.com/product/wholesale-foam-pump-28-custom-plastic-packaging-for-hand-wash-shampoo-sunshine/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Wholesale Foam Pump 28 - Custom Plastic Packaging for Hand Wash & Shampoo | SUNSHINE",
-    "ogDescription": "Custom foam pump for hand wash, facial cleanser, body wash and shampoo packaging. OEM colors and wholesale bulk orders available.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777712121152-1024x1024.webp",
+    "ogTitle": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle",
+    "ogDescription": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze b.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709824918.webp",
     "ogType": "article"
   },
   "/product/smooth-disc-top-caps-for-plastic-bottles-sunshine-b2b-packaging/": {
@@ -498,14 +518,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708073788.webp",
     "ogType": "article"
   },
-  "/product/wholesale-white-cosmetic-disc-top-cap-24mm-28mm-plastic-press-disc-cap/": {
-    "title": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap",
-    "description": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles.",
-    "canonical": "https://sunshine-lotionpump.com/product/wholesale-white-cosmetic-disc-top-cap-24mm-28mm-plastic-press-disc-cap/",
+  "/product/silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging/": {
+    "title": "Custom 24/410 Silver UV Lotion Pump for Cosmetic Packaging | SUNSHINE",
+    "description": "Custom 24/410 silver UV lotion pump for cosmetic, shampoo and body care packaging. OEM colors, tube length cutting and bulk factory supply.",
+    "canonical": "https://sunshine-lotionpump.com/product/silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap",
-    "ogDescription": "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709803546.webp",
+    "ogTitle": "Custom 24/410 Silver UV Lotion Pump for Cosmetic Packaging | SUNSHINE",
+    "ogDescription": "Custom 24/410 silver UV lotion pump for cosmetic, shampoo and body care packaging. OEM colors, tube length cutting and bulk factory supply.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708130300.webp",
     "ogType": "article"
   },
   "/product/silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging-2/": {
@@ -518,14 +538,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708121993.webp",
     "ogType": "article"
   },
-  "/product/silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging/": {
-    "title": "Custom 24/410 Silver UV Lotion Pump for Cosmetic Packaging | SUNSHINE",
-    "description": "Custom 24/410 silver UV lotion pump for cosmetic, shampoo and body care packaging. OEM colors, tube length cutting and bulk factory supply.",
-    "canonical": "https://sunshine-lotionpump.com/product/silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging/",
+  "/product/eco-friendly-plastic-pump-dispenser-for-cosmetic-cream-lotion-20-24-28-410-sizes-sunshine/": {
+    "title": "Eco-Friendly Plastic Pump Dispenser 20/410 24/410 28/410 | SUNSHINE",
+    "description": "Eco-friendly plastic pump dispenser for cosmetic cream, lotion and personal care bottles. Available in 20/410, 24/410 and 28/410 neck sizes.",
+    "canonical": "https://sunshine-lotionpump.com/product/eco-friendly-plastic-pump-dispenser-for-cosmetic-cream-lotion-20-24-28-410-sizes-sunshine/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Custom 24/410 Silver UV Lotion Pump for Cosmetic Packaging | SUNSHINE",
-    "ogDescription": "Custom 24/410 silver UV lotion pump for cosmetic, shampoo and body care packaging. OEM colors, tube length cutting and bulk factory supply.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708130300.webp",
+    "ogTitle": "Eco-Friendly Plastic Pump Dispenser 20/410 24/410 28/410 | SUNSHINE",
+    "ogDescription": "Eco-friendly plastic pump dispenser for cosmetic cream, lotion and personal care bottles. Available in 20/410, 24/410 and 28/410 neck sizes.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708138969.webp",
     "ogType": "article"
   },
   "/product/silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging-3/": {
@@ -538,26 +558,6 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708103143.webp",
     "ogType": "article"
   },
-  "/product/economical-custom-non-spill-28mm-disc-top-cap-for-airless-lotion-pump-bottle/": {
-    "title": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle",
-    "description": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze b.",
-    "canonical": "https://sunshine-lotionpump.com/product/economical-custom-non-spill-28mm-disc-top-cap-for-airless-lotion-pump-bottle/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle",
-    "ogDescription": "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze b.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709824918.webp",
-    "ogType": "article"
-  },
-  "/product/white-plastic-non-spill-32-410-treatment-pump-with-cap-sunshine/": {
-    "title": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE",
-    "description": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottle.",
-    "canonical": "https://sunshine-lotionpump.com/product/white-plastic-non-spill-32-410-treatment-pump-with-cap-sunshine/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE",
-    "ogDescription": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottle.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706976675.webp",
-    "ogType": "article"
-  },
   "/product/silver-uv-coating-lotion-pump-24-410-for-shampoo-body-wash-more/": {
     "title": "24/410 Silver UV Lotion Pump for Shampoo & Body Wash | SUNSHINE",
     "description": "Silver UV coating 24/410 lotion pump for shampoo, body wash, hand soap and daily care bottles. Custom colors and factory-direct wholesale supply.",
@@ -568,14 +568,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708112920.webp",
     "ogType": "article"
   },
-  "/product/white-plastic-treatment-pump-dispenser-24-410-sunshine/": {
-    "title": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE",
-    "description": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottles. OEM co.",
-    "canonical": "https://sunshine-lotionpump.com/product/white-plastic-treatment-pump-dispenser-24-410-sunshine/",
+  "/product/white-plastic-non-spill-32-410-treatment-pump-with-cap-sunshine/": {
+    "title": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE",
+    "description": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottle.",
+    "canonical": "https://sunshine-lotionpump.com/product/white-plastic-non-spill-32-410-treatment-pump-with-cap-sunshine/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE",
-    "ogDescription": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottles. OEM co.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706969385.webp",
+    "ogTitle": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE",
+    "ogDescription": "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottle.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706976675.webp",
     "ogType": "article"
   },
   "/product/24-410-treatment-pump-liquid-cream-pump-plastic-beauty-cosmetic-skincare-bottle/": {
@@ -598,24 +598,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777704919547.webp",
     "ogType": "article"
   },
-  "/product/28-410-yellow-plastic-airless-lotion-pump-for-cosmetic-treatment-sunshine/": {
-    "title": "28/410 Yellow Plastic Airless Lotion Pump for Cosmetic Treatment - SUNSHINE",
-    "description": "28/410 yellow treatment pump for skincare and cosmetic bottles. OEM color matching, tube length options and bulk orders available.",
-    "canonical": "https://sunshine-lotionpump.com/product/28-410-yellow-plastic-airless-lotion-pump-for-cosmetic-treatment-sunshine/",
+  "/product/white-plastic-treatment-pump-dispenser-24-410-sunshine/": {
+    "title": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE",
+    "description": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottles. OEM co.",
+    "canonical": "https://sunshine-lotionpump.com/product/white-plastic-treatment-pump-dispenser-24-410-sunshine/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "28/410 Yellow Plastic Airless Lotion Pump for Cosmetic Treatment - SUNSHINE",
-    "ogDescription": "28/410 yellow treatment pump for skincare and cosmetic bottles. OEM color matching, tube length options and bulk orders available.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777703715171.webp",
-    "ogType": "article"
-  },
-  "/product/wholesale-high-quality-purple-nail-polish-pump-28-410-33-410-remover-dispenser-pump/": {
-    "title": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump",
-    "description": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pum. Custom nail polish pump for nail polish remover, makeup remover and bea.",
-    "canonical": "https://sunshine-lotionpump.com/product/wholesale-high-quality-purple-nail-polish-pump-28-410-33-410-remover-dispenser-pump/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump",
-    "ogDescription": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pum. Custom nail polish pump for nail polish remover, makeup remover and bea.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700775639-1024x1024.webp",
+    "ogTitle": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE",
+    "ogDescription": "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottles. OEM co.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706969385.webp",
     "ogType": "article"
   },
   "/product/plastic-left-right-lock-nail-polish-remover-pump-24-28-33mm-sunshine/": {
@@ -628,16 +618,6 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700704010.webp",
     "ogType": "article"
   },
-  "/product/24-410-high-quality-plastic-cosmetics-perfume-mist-sprayer-full-cover-for-bottles/": {
-    "title": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles",
-    "description": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles. Custom fine mist sprayer for perfume, toner, hair care, skincare and tra.",
-    "canonical": "https://sunshine-lotionpump.com/product/24-410-high-quality-plastic-cosmetics-perfume-mist-sprayer-full-cover-for-bottles/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles",
-    "ogDescription": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles. Custom fine mist sprayer for perfume, toner, hair care, skincare and tra.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777671821235.webp",
-    "ogType": "article"
-  },
   "/product/33-410-nail-polish-remover-pump-dispenser-liquid-pump-for-cosmetics-packaging/": {
     "title": "33/410 Nail Polish Remover Pump Dispenser - Liquid Pump for Cosmetics Packaging",
     "description": "33/410 nail polish remover pump dispenser for cosmetics packaging. Custom color, closure size and bulk wholesale supply available.",
@@ -646,6 +626,16 @@
     "ogTitle": "33/410 Nail Polish Remover Pump Dispenser - Liquid Pump for Cosmetics Packaging",
     "ogDescription": "33/410 nail polish remover pump dispenser for cosmetics packaging. Custom color, closure size and bulk wholesale supply available.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700818309.webp",
+    "ogType": "article"
+  },
+  "/product/24-410-high-quality-plastic-cosmetics-perfume-mist-sprayer-full-cover-for-bottles/": {
+    "title": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles",
+    "description": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles. Custom fine mist sprayer for perfume, toner, hair care, skincare and tra.",
+    "canonical": "https://sunshine-lotionpump.com/product/24-410-high-quality-plastic-cosmetics-perfume-mist-sprayer-full-cover-for-bottles/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles",
+    "ogDescription": "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles. Custom fine mist sprayer for perfume, toner, hair care, skincare and tra.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777671821235.webp",
     "ogType": "article"
   },
   "/product/high-quality-24-410-33-410-nail-polish-dispenser-remover-pump-sunshine/": {
@@ -658,14 +648,24 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777699954768-1024x1024.webp",
     "ogType": "article"
   },
-  "/product/24-410-yellow-plastic-lotion-treatment-pump-sunshine/": {
-    "title": "24/410 Yellow Plastic Lotion Treatment Pump - SUNSHINE",
-    "description": "24/410 yellow lotion treatment pump for serum and skincare bottles. OEM colors, tube length options and bulk supply available.",
-    "canonical": "https://sunshine-lotionpump.com/product/24-410-yellow-plastic-lotion-treatment-pump-sunshine/",
+  "/product/wholesale-high-quality-purple-nail-polish-pump-28-410-33-410-remover-dispenser-pump/": {
+    "title": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump",
+    "description": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pum. Custom nail polish pump for nail polish remover, makeup remover and bea.",
+    "canonical": "https://sunshine-lotionpump.com/product/wholesale-high-quality-purple-nail-polish-pump-28-410-33-410-remover-dispenser-pump/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "24/410 Yellow Plastic Lotion Treatment Pump - SUNSHINE",
-    "ogDescription": "24/410 yellow lotion treatment pump for serum and skincare bottles. OEM colors, tube length options and bulk supply available.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777701254405.webp",
+    "ogTitle": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump",
+    "ogDescription": "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pum. Custom nail polish pump for nail polish remover, makeup remover and bea.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700775639-1024x1024.webp",
+    "ogType": "article"
+  },
+  "/product/28-410-yellow-plastic-airless-lotion-pump-for-cosmetic-treatment-sunshine/": {
+    "title": "28/410 Yellow Plastic Airless Lotion Pump for Cosmetic Treatment - SUNSHINE",
+    "description": "28/410 yellow treatment pump for skincare and cosmetic bottles. OEM color matching, tube length options and bulk orders available.",
+    "canonical": "https://sunshine-lotionpump.com/product/28-410-yellow-plastic-airless-lotion-pump-for-cosmetic-treatment-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "28/410 Yellow Plastic Airless Lotion Pump for Cosmetic Treatment - SUNSHINE",
+    "ogDescription": "28/410 yellow treatment pump for skincare and cosmetic bottles. OEM color matching, tube length options and bulk orders available.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777703715171.webp",
     "ogType": "article"
   },
   "/product/customized-plastic-fine-mist-sprayer-24-410-with-silver-uv-printing-sunshine/": {
@@ -676,6 +676,16 @@
     "ogTitle": "Customized Plastic Fine Mist Sprayer 24/410 with Silver UV Printing | SUNSHINE",
     "ogDescription": "Customized Plastic Fine Mist Sprayer 24/410 with Silver UV Printing | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777663596238.webp",
+    "ogType": "article"
+  },
+  "/product/24-410-yellow-plastic-lotion-treatment-pump-sunshine/": {
+    "title": "24/410 Yellow Plastic Lotion Treatment Pump - SUNSHINE",
+    "description": "24/410 yellow lotion treatment pump for serum and skincare bottles. OEM colors, tube length options and bulk supply available.",
+    "canonical": "https://sunshine-lotionpump.com/product/24-410-yellow-plastic-lotion-treatment-pump-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "24/410 Yellow Plastic Lotion Treatment Pump - SUNSHINE",
+    "ogDescription": "24/410 yellow lotion treatment pump for serum and skincare bottles. OEM colors, tube length options and bulk supply available.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777701254405.webp",
     "ogType": "article"
   },
   "/product/wholesale-customized-28mm-black-plastic-28-410-fine-mist-sprayer-for-cosmetics-cleaning/": {
@@ -706,36 +716,6 @@
     "ogTitle": "24/410 Eco Friendly Fine Mist Sprayer for Cleaning & Body Care | SUNSHINE",
     "ogDescription": "24/410 Eco Friendly Fine Mist Sprayer for Cleaning & Body Care | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777662867509.webp",
-    "ogType": "article"
-  },
-  "/product/gold-aluminum-fine-mist-sprayer-hand-press-pump-for-24-410-spray-bottles-lids-closures-sunshine/": {
-    "title": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Closures SUNSHINE",
-    "description": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Clos. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr.",
-    "canonical": "https://sunshine-lotionpump.com/product/gold-aluminum-fine-mist-sprayer-hand-press-pump-for-24-410-spray-bottles-lids-closures-sunshine/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Closures SUNSHINE",
-    "ogDescription": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Clos. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777657167427.webp",
-    "ogType": "article"
-  },
-  "/product/eco-friendly-plastic-pump-dispenser-for-cosmetic-cream-lotion-20-24-28-410-sizes-sunshine/": {
-    "title": "Eco-Friendly Plastic Pump Dispenser 20/410 24/410 28/410 | SUNSHINE",
-    "description": "Eco-friendly plastic pump dispenser for cosmetic cream, lotion and personal care bottles. Available in 20/410, 24/410 and 28/410 neck sizes.",
-    "canonical": "https://sunshine-lotionpump.com/product/eco-friendly-plastic-pump-dispenser-for-cosmetic-cream-lotion-20-24-28-410-sizes-sunshine/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Eco-Friendly Plastic Pump Dispenser 20/410 24/410 28/410 | SUNSHINE",
-    "ogDescription": "Eco-friendly plastic pump dispenser for cosmetic cream, lotion and personal care bottles. Available in 20/410, 24/410 and 28/410 neck sizes.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708138969.webp",
-    "ogType": "article"
-  },
-  "/product/custom-28-410-plastic-strong-trigger-sprayer-for-cleaning-garden-use-sunshine/": {
-    "title": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE",
-    "description": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and house.",
-    "canonical": "https://sunshine-lotionpump.com/product/custom-28-410-plastic-strong-trigger-sprayer-for-cleaning-garden-use-sunshine/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE",
-    "ogDescription": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and house.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777653438353.webp",
     "ogType": "article"
   },
   "/product/24-410-fine-mist-sprayer-atomizer-perfume-pump-by-sunshine-b2b-plastic-packaging/": {
@@ -778,6 +758,16 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777655314024.webp",
     "ogType": "article"
   },
+  "/product/sunshine-28mm-mist-trigger-sprayer-pump-for-car-washing-high-quality-plastic-sprayer/": {
+    "title": "SUNSHINE 28mm Mist Trigger Sprayer Pump for Car Washing - High Quality Plastic Sprayer",
+    "description": "28mm trigger sprayer pump for car washing, cleaning and household liquids. Custom colors and wholesale plastic sprayer supply.",
+    "canonical": "https://sunshine-lotionpump.com/product/sunshine-28mm-mist-trigger-sprayer-pump-for-car-washing-high-quality-plastic-sprayer/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "SUNSHINE 28mm Mist Trigger Sprayer Pump for Car Washing - High Quality Plastic Sprayer",
+    "ogDescription": "28mm trigger sprayer pump for car washing, cleaning and household liquids. Custom colors and wholesale plastic sprayer supply.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651874586.png",
+    "ogType": "article"
+  },
   "/product/factory-price-top-quality-mini-plastic-trigger-sprayer-non-spill-pump-for-kitchen-cleaning-sunshine/": {
     "title": "Factory Price Top Quality Mini Plastic Trigger Sprayer Non-spill Pump for Kitchen Cleaning (SUNSHINE)",
     "description": "Factory Price Top Quality Mini Plastic Trigger Sprayer Non-spill Pump for Kitchen. Custom trigger sprayer for cleaning, garden care, car care and household.",
@@ -788,14 +778,24 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651779526.png",
     "ogType": "article"
   },
-  "/product/wholesale-mini-trigger-sprayer-28-410-plastic-sprayer-pump-spray-caps-sunshine/": {
-    "title": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE",
-    "description": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household ch.",
-    "canonical": "https://sunshine-lotionpump.com/product/wholesale-mini-trigger-sprayer-28-410-plastic-sprayer-pump-spray-caps-sunshine/",
+  "/product/gold-aluminum-fine-mist-sprayer-hand-press-pump-for-24-410-spray-bottles-lids-closures-sunshine/": {
+    "title": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Closures SUNSHINE",
+    "description": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Clos. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr.",
+    "canonical": "https://sunshine-lotionpump.com/product/gold-aluminum-fine-mist-sprayer-hand-press-pump-for-24-410-spray-bottles-lids-closures-sunshine/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE",
-    "ogDescription": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household ch.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651477288.png",
+    "ogTitle": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Closures SUNSHINE",
+    "ogDescription": "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Clos. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777657167427.webp",
+    "ogType": "article"
+  },
+  "/product/custom-28-410-plastic-strong-trigger-sprayer-for-cleaning-garden-use-sunshine/": {
+    "title": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE",
+    "description": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and house.",
+    "canonical": "https://sunshine-lotionpump.com/product/custom-28-410-plastic-strong-trigger-sprayer-for-cleaning-garden-use-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE",
+    "ogDescription": "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and house.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777653438353.webp",
     "ogType": "article"
   },
   "/product/33-410-hot-sale-body-shampoo-lotion-pump-liquid-dispenser-pump-for-cleaning-sunshine-china/": {
@@ -808,36 +808,6 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625834467.webp",
     "ogType": "article"
   },
-  "/product/wholesale-28-410-hand-soap-dispenser-pump-lotion-shampoo-pump-by-sunshine/": {
-    "title": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE",
-    "description": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
-    "canonical": "https://sunshine-lotionpump.com/product/wholesale-28-410-hand-soap-dispenser-pump-lotion-shampoo-pump-by-sunshine/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE",
-    "ogDescription": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625194238.webp",
-    "ogType": "article"
-  },
-  "/product/sunshine-28mm-mist-trigger-sprayer-pump-for-car-washing-high-quality-plastic-sprayer/": {
-    "title": "SUNSHINE 28mm Mist Trigger Sprayer Pump for Car Washing - High Quality Plastic Sprayer",
-    "description": "28mm trigger sprayer pump for car washing, cleaning and household liquids. Custom colors and wholesale plastic sprayer supply.",
-    "canonical": "https://sunshine-lotionpump.com/product/sunshine-28mm-mist-trigger-sprayer-pump-for-car-washing-high-quality-plastic-sprayer/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "SUNSHINE 28mm Mist Trigger Sprayer Pump for Car Washing - High Quality Plastic Sprayer",
-    "ogDescription": "28mm trigger sprayer pump for car washing, cleaning and household liquids. Custom colors and wholesale plastic sprayer supply.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651874586.png",
-    "ogType": "article"
-  },
-  "/product/sunshine-black-plastic-lotion-pumps-for-liquid-soap-dispensers-24-410-28-410-28-412/": {
-    "title": "SUNSHINE Black Plastic Lotion Pumps for Liquid Soap Dispensers - 24/410, 28/410, 28/412",
-    "description": "Black plastic lotion pumps for liquid soap dispensers in 24/410, 28/410 and 28/412 sizes. Custom bulk packaging supply.",
-    "canonical": "https://sunshine-lotionpump.com/product/sunshine-black-plastic-lotion-pumps-for-liquid-soap-dispensers-24-410-28-410-28-412/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "SUNSHINE Black Plastic Lotion Pumps for Liquid Soap Dispensers - 24/410, 28/410, 28/412",
-    "ogDescription": "Black plastic lotion pumps for liquid soap dispensers in 24/410, 28/410 and 28/412 sizes. Custom bulk packaging supply.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625267216.webp",
-    "ogType": "article"
-  },
   "/product/hot-selling-24-410-28-410-plastic-lotion-dispenser-pump-screw-pump-for-body-care-sunshine/": {
     "title": "Hot Selling 24/410 28/410 Plastic Lotion Dispenser Pump Screw Pump for Body Care | SUNSHINE",
     "description": "Hot Selling 24/410 28/410 Plastic Lotion Dispenser Pump Screw Pump for Body Care. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic.",
@@ -848,14 +818,14 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625771885.webp",
     "ogType": "article"
   },
-  "/product/wholesale-24-410-plastic-shampoo-lotion-pump-customized-hand-soap-dispenser-sunshine/": {
-    "title": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHINE",
-    "description": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
-    "canonical": "https://sunshine-lotionpump.com/product/wholesale-24-410-plastic-shampoo-lotion-pump-customized-hand-soap-dispenser-sunshine/",
+  "/product/sunshine-black-plastic-lotion-pumps-for-liquid-soap-dispensers-24-410-28-410-28-412/": {
+    "title": "SUNSHINE Black Plastic Lotion Pumps for Liquid Soap Dispensers - 24/410, 28/410, 28/412",
+    "description": "Black plastic lotion pumps for liquid soap dispensers in 24/410, 28/410 and 28/412 sizes. Custom bulk packaging supply.",
+    "canonical": "https://sunshine-lotionpump.com/product/sunshine-black-plastic-lotion-pumps-for-liquid-soap-dispensers-24-410-28-410-28-412/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHINE",
-    "ogDescription": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624686490.webp",
+    "ogTitle": "SUNSHINE Black Plastic Lotion Pumps for Liquid Soap Dispensers - 24/410, 28/410, 28/412",
+    "ogDescription": "Black plastic lotion pumps for liquid soap dispensers in 24/410, 28/410 and 28/412 sizes. Custom bulk packaging supply.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625267216.webp",
     "ogType": "article"
   },
   "/product/sunshine-custom-plastic-hand-wash-lotion-dispenser-pump-up-down-lock-24-410-28-410-28-412/": {
@@ -878,6 +848,36 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624852283.webp",
     "ogType": "article"
   },
+  "/product/wholesale-24-410-plastic-shampoo-lotion-pump-customized-hand-soap-dispenser-sunshine/": {
+    "title": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHINE",
+    "description": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
+    "canonical": "https://sunshine-lotionpump.com/product/wholesale-24-410-plastic-shampoo-lotion-pump-customized-hand-soap-dispenser-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHINE",
+    "ogDescription": "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624686490.webp",
+    "ogType": "article"
+  },
+  "/product/wholesale-mini-trigger-sprayer-28-410-plastic-sprayer-pump-spray-caps-sunshine/": {
+    "title": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE",
+    "description": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household ch.",
+    "canonical": "https://sunshine-lotionpump.com/product/wholesale-mini-trigger-sprayer-28-410-plastic-sprayer-pump-spray-caps-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE",
+    "ogDescription": "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household ch.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651477288.png",
+    "ogType": "article"
+  },
+  "/product/custom-left-right-lock-pump-24-410-white-lotion-dispenser-for-liquid-soap-sunshine/": {
+    "title": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap – SUNSHINE",
+    "description": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap - SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
+    "canonical": "https://sunshine-lotionpump.com/product/custom-left-right-lock-pump-24-410-white-lotion-dispenser-for-liquid-soap-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap – SUNSHINE",
+    "ogDescription": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap - SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624603057.webp",
+    "ogType": "article"
+  },
   "/product/factory-24-410-step-pressing-emulsion-pump-head-aluminum-oxide-cream-pump-for-b2b-packaging/": {
     "title": "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B Packaging",
     "description": "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bot.",
@@ -886,16 +886,6 @@
     "ogTitle": "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B Packaging",
     "ogDescription": "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bot.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777614360386.webp",
-    "ogType": "article"
-  },
-  "/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottle/": {
-    "title": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle",
-    "description": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
-    "canonical": "https://sunshine-lotionpump.com/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottle/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle",
-    "ogDescription": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624386169.webp",
     "ogType": "article"
   },
   "/product/24-410-28-410-lotion-pump-water-transfer-printing-sunshine-b2b-plastic-packaging/": {
@@ -928,6 +918,26 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777614167906.webp",
     "ogType": "article"
   },
+  "/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottle/": {
+    "title": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle",
+    "description": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
+    "canonical": "https://sunshine-lotionpump.com/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottle/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle",
+    "ogDescription": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624386169.webp",
+    "ogType": "article"
+  },
+  "/product/wholesale-28-410-hand-soap-dispenser-pump-lotion-shampoo-pump-by-sunshine/": {
+    "title": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE",
+    "description": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
+    "canonical": "https://sunshine-lotionpump.com/product/wholesale-28-410-hand-soap-dispenser-pump-lotion-shampoo-pump-by-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE",
+    "ogDescription": "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625194238.webp",
+    "ogType": "article"
+  },
   "/product/matt-white-smooth-makeup-cream-pump-0-25cc-24-410-with-clear-cap-sunshine-b2b-plastic-packaging/": {
     "title": "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap – SUNSHINE B2B Plastic Packaging",
     "description": "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap - SUNSHINE B2B Pl. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo.",
@@ -936,26 +946,6 @@
     "ogTitle": "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap – SUNSHINE B2B Plastic Packaging",
     "ogDescription": "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap - SUNSHINE B2B Pl. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777613768711.webp",
-    "ogType": "article"
-  },
-  "/product/custom-left-right-lock-pump-24-410-white-lotion-dispenser-for-liquid-soap-sunshine/": {
-    "title": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap – SUNSHINE",
-    "description": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap - SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
-    "canonical": "https://sunshine-lotionpump.com/product/custom-left-right-lock-pump-24-410-white-lotion-dispenser-for-liquid-soap-sunshine/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap – SUNSHINE",
-    "ogDescription": "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap - SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624603057.webp",
-    "ogType": "article"
-  },
-  "/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottles/": {
-    "title": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottles",
-    "description": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottl. Custom lotion pump for lotion, shampoo, body wash, hand soap and co.",
-    "canonical": "https://sunshine-lotionpump.com/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottles/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottles",
-    "ogDescription": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottl. Custom lotion pump for lotion, shampoo, body wash, hand soap and co.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776951003881.webp",
     "ogType": "article"
   },
   "/product/20-410-plastic-push-cream-pump-lotion-dispenser-for-cosmetic-packing-by-sunshine/": {
@@ -968,6 +958,16 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777613486521.webp",
     "ogType": "article"
   },
+  "/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottles/": {
+    "title": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottles",
+    "description": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottl. Custom lotion pump for lotion, shampoo, body wash, hand soap and co.",
+    "canonical": "https://sunshine-lotionpump.com/product/28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottles/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottles",
+    "ogDescription": "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo & Soap Bottl. Custom lotion pump for lotion, shampoo, body wash, hand soap and co.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776951003881.webp",
+    "ogType": "article"
+  },
   "/product/24-410-double-layer-cream-pump-plastic-lotions-dispenser-with-half-cap-whole-cap-non-spill-sunshine/": {
     "title": "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap Non-Spill – SUNSHINE",
     "description": "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap N. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo.",
@@ -976,16 +976,6 @@
     "ogTitle": "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap Non-Spill – SUNSHINE",
     "ogDescription": "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap N. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo.",
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777613677032.webp",
-    "ogType": "article"
-  },
-  "/product/high-performance-plastic-trigger-spray-nozzles-24-410-28-410-for-b2b/": {
-    "title": "Plastic Trigger Spray Nozzles 24/410 28/410 | SUNSHINE",
-    "description": "Durable plastic trigger spray nozzles for 24/410 and 28/410 bottles. Suitable for cleaning, garden care and professional B2B packaging.",
-    "canonical": "https://sunshine-lotionpump.com/product/high-performance-plastic-trigger-spray-nozzles-24-410-28-410-for-b2b/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Plastic Trigger Spray Nozzles 24/410 28/410 | SUNSHINE",
-    "ogDescription": "Durable plastic trigger spray nozzles for 24/410 and 28/410 bottles. Suitable for cleaning, garden care and professional B2B packaging.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776640407065.jpg",
     "ogType": "article"
   },
   "/product/28-410-long-nozzle-dispenser-pump-for-highly-viscous-liquids-sunshine/": {
@@ -998,13 +988,23 @@
     "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776641393138.webp",
     "ogType": "article"
   },
-  "/product-category/foam-pump/": {
-    "title": "Foam Pump Manufacturer | Custom Foaming Pump Dispensers - SUNSHINE",
-    "description": "SUNSHINE supplies custom foam pumps for hand wash, cleanser and body wash bottles. 28/410 foaming dispensers, OEM colors, MOQ 10,000 pcs.",
-    "canonical": "https://sunshine-lotionpump.com/product-category/foam-pump/",
+  "/product-category/disc-top-cap/": {
+    "title": "Disc Top Cap Manufacturer | Flip Top Caps Wholesale - SUNSHINE",
+    "description": "SUNSHINE manufactures disc top caps and flip top caps for shampoo, body wash and cosmetic bottles. 20/410, 24/410, 28/410 sizes, OEM colors.",
+    "canonical": "https://sunshine-lotionpump.com/product-category/disc-top-cap/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Foam Pump Manufacturer | Custom Foaming Pump Dispensers - SUNSHINE",
-    "ogDescription": "SUNSHINE supplies custom foam pumps for hand wash, cleanser and body wash bottles. 28/410 foaming dispensers, OEM colors, MOQ 10,000 pcs.",
+    "ogTitle": "Disc Top Cap Manufacturer | Flip Top Caps Wholesale - SUNSHINE",
+    "ogDescription": "SUNSHINE manufactures disc top caps and flip top caps for shampoo, body wash and cosmetic bottles. 20/410, 24/410, 28/410 sizes, OEM colors.",
+    "ogType": "article"
+  },
+  "/product/28-410-up-down-lock-lotion-pump-durable-plastic-dispenser-for-sunshine/": {
+    "title": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE",
+    "description": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bottles.",
+    "canonical": "https://sunshine-lotionpump.com/product/28-410-up-down-lock-lotion-pump-durable-plastic-dispenser-for-sunshine/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE",
+    "ogDescription": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bottles.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776640018986.jpg",
     "ogType": "article"
   },
   "/product-category/cream-pump/": {
@@ -1016,15 +1016,6 @@
     "ogDescription": "SUNSHINE manufactures cream pumps for cosmetic cream, lotion and skincare bottles. 20/410, 24/410 and custom options, OEM colors, bulk supply.",
     "ogType": "article"
   },
-  "/product-category/disc-top-cap/": {
-    "title": "Disc Top Cap Manufacturer | Flip Top Caps Wholesale - SUNSHINE",
-    "description": "SUNSHINE manufactures disc top caps and flip top caps for shampoo, body wash and cosmetic bottles. 20/410, 24/410, 28/410 sizes, OEM colors.",
-    "canonical": "https://sunshine-lotionpump.com/product-category/disc-top-cap/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Disc Top Cap Manufacturer | Flip Top Caps Wholesale - SUNSHINE",
-    "ogDescription": "SUNSHINE manufactures disc top caps and flip top caps for shampoo, body wash and cosmetic bottles. 20/410, 24/410, 28/410 sizes, OEM colors.",
-    "ogType": "article"
-  },
   "/product-category/fine-mist-sprayer/": {
     "title": "Fine Mist Sprayer Manufacturer | Cosmetic Mist Pumps Wholesale - SUNSHINE",
     "description": "Custom fine mist sprayers for perfume, toner, hair care and cosmetic bottles. 18/410, 20/410, 24/410 and 28/410 sizes, OEM colors, MOQ 10,000 pcs.",
@@ -1032,6 +1023,15 @@
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
     "ogTitle": "Fine Mist Sprayer Manufacturer | Cosmetic Mist Pumps Wholesale - SUNSHINE",
     "ogDescription": "Custom fine mist sprayers for perfume, toner, hair care and cosmetic bottles. 18/410, 20/410, 24/410 and 28/410 sizes, OEM colors, MOQ 10,000 pcs.",
+    "ogType": "article"
+  },
+  "/product-category/foam-pump/": {
+    "title": "Foam Pump Manufacturer | Custom Foaming Pump Dispensers - SUNSHINE",
+    "description": "SUNSHINE supplies custom foam pumps for hand wash, cleanser and body wash bottles. 28/410 foaming dispensers, OEM colors, MOQ 10,000 pcs.",
+    "canonical": "https://sunshine-lotionpump.com/product-category/foam-pump/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Foam Pump Manufacturer | Custom Foaming Pump Dispensers - SUNSHINE",
+    "ogDescription": "SUNSHINE supplies custom foam pumps for hand wash, cleanser and body wash bottles. 28/410 foaming dispensers, OEM colors, MOQ 10,000 pcs.",
     "ogType": "article"
   },
   "/product-category/nail-polish-pump/": {
@@ -1052,6 +1052,15 @@
     "ogDescription": "Custom lotion pumps for cosmetic, shampoo, body wash and hand soap bottles. 24/410, 28/410, 28/412 and 33/410 sizes, OEM colors, MOQ 10,000 pcs.",
     "ogType": "article"
   },
+  "/product-category/trigger-sprayers/": {
+    "title": "Trigger Sprayer Manufacturer | Custom Wholesale Spray Triggers - SUNSHINE",
+    "description": "SUNSHINE manufactures custom trigger sprayers for cleaning, garden and personal care bottles. 28/400, 28/410 and 28/415 sizes, OEM colors, MOQ 10,000 pcs.",
+    "canonical": "https://sunshine-lotionpump.com/product-category/trigger-sprayers/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Trigger Sprayer Manufacturer | Custom Wholesale Spray Triggers - SUNSHINE",
+    "ogDescription": "SUNSHINE manufactures custom trigger sprayers for cleaning, garden and personal care bottles. 28/400, 28/410 and 28/415 sizes, OEM colors, MOQ 10,000 pcs.",
+    "ogType": "article"
+  },
   "/product-category/treatment-pump/": {
     "title": "Treatment Pump Manufacturer | Serum & Skincare Pump Wholesale - SUNSHINE",
     "description": "Custom treatment pumps for serum, essence and skincare bottles. Controlled dosage, OEM colors, 18/410 to 24/410 options, MOQ 10,000 pcs.",
@@ -1059,6 +1068,16 @@
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
     "ogTitle": "Treatment Pump Manufacturer | Serum & Skincare Pump Wholesale - SUNSHINE",
     "ogDescription": "Custom treatment pumps for serum, essence and skincare bottles. Controlled dosage, OEM colors, 18/410 to 24/410 options, MOQ 10,000 pcs.",
+    "ogType": "article"
+  },
+  "/product/high-performance-plastic-trigger-spray-nozzles-24-410-28-410-for-b2b/": {
+    "title": "Plastic Trigger Spray Nozzles 24/410 28/410 | SUNSHINE",
+    "description": "Durable plastic trigger spray nozzles for 24/410 and 28/410 bottles. Suitable for cleaning, garden care and professional B2B packaging.",
+    "canonical": "https://sunshine-lotionpump.com/product/high-performance-plastic-trigger-spray-nozzles-24-410-28-410-for-b2b/",
+    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+    "ogTitle": "Plastic Trigger Spray Nozzles 24/410 28/410 | SUNSHINE",
+    "ogDescription": "Durable plastic trigger spray nozzles for 24/410 and 28/410 bottles. Suitable for cleaning, garden care and professional B2B packaging.",
+    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776640407065.jpg",
     "ogType": "article"
   },
   "/category/blog/product-comparisons/": {
@@ -1070,29 +1089,11 @@
     "ogDescription": "Head-to-head comparisons of cosmetic packaging types to help buyers choose the right solution",
     "ogType": "article"
   },
-  "/product-category/trigger-sprayers/": {
-    "title": "Trigger Sprayer Manufacturer | Custom Wholesale Spray Triggers - SUNSHINE",
-    "description": "SUNSHINE manufactures custom trigger sprayers for cleaning, garden and personal care bottles. 28/400, 28/410 and 28/415 sizes, OEM colors, MOQ 10,000 pcs.",
-    "canonical": "https://sunshine-lotionpump.com/product-category/trigger-sprayers/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Trigger Sprayer Manufacturer | Custom Wholesale Spray Triggers - SUNSHINE",
-    "ogDescription": "SUNSHINE manufactures custom trigger sprayers for cleaning, garden and personal care bottles. 28/400, 28/410 and 28/415 sizes, OEM colors, MOQ 10,000 pcs.",
-    "ogType": "article"
-  },
   "/category/blog/blog/": {
     "title": "Blog - Sunshine Custom Cosmetic Pump Manufacturer",
     "canonical": "https://sunshine-lotionpump.com/category/blog/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
     "ogTitle": "Blog - Sunshine Custom Cosmetic Pump Manufacturer",
-    "ogType": "article"
-  },
-  "/category/blog/technical-specifications/": {
-    "title": "Technical Specifications - Sunshine Custom Cosmetic Pump Manufacturer",
-    "description": "Detailed technical specs, dimensions, and material data for cosmetic packaging components",
-    "canonical": "https://sunshine-lotionpump.com/category/blog/technical-specifications/",
-    "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "Technical Specifications - Sunshine Custom Cosmetic Pump Manufacturer",
-    "ogDescription": "Detailed technical specs, dimensions, and material data for cosmetic packaging components",
     "ogType": "article"
   },
   "/category/blog/product-guides/": {
@@ -1113,14 +1114,13 @@
     "ogDescription": "Step-by-step guides for sourcing custom cosmetic packaging from China factories",
     "ogType": "article"
   },
-  "/product/28-410-up-down-lock-lotion-pump-durable-plastic-dispenser-for-sunshine/": {
-    "title": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE",
-    "description": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bottles.",
-    "canonical": "https://sunshine-lotionpump.com/product/28-410-up-down-lock-lotion-pump-durable-plastic-dispenser-for-sunshine/",
+  "/category/blog/technical-specifications/": {
+    "title": "Technical Specifications - Sunshine Custom Cosmetic Pump Manufacturer",
+    "description": "Detailed technical specs, dimensions, and material data for cosmetic packaging components",
+    "canonical": "https://sunshine-lotionpump.com/category/blog/technical-specifications/",
     "robots": "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
-    "ogTitle": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE",
-    "ogDescription": "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bottles.",
-    "ogImage": "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776640018986.jpg",
+    "ogTitle": "Technical Specifications - Sunshine Custom Cosmetic Pump Manufacturer",
+    "ogDescription": "Detailed technical specs, dimensions, and material data for cosmetic packaging components",
     "ogType": "article"
   }
 }

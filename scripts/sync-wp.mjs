@@ -130,11 +130,19 @@ const decodeEntities = (s = '') =>
 /** WordPress stores "rendered" fields with HTML entities — undo that. */
 const unRendered = (obj) => decodeEntities(obj?.rendered ?? '').trim();
 
-/** Make every internal absolute URL root-relative so staging builds behave. */
+/**
+ * Make internal *links* root-relative so the build is domain-agnostic and the
+ * local preview stays navigable.
+ *
+ * Images and other assets are deliberately left absolute: a relative
+ * `/wp-content/...` URL only resolves on the production domain, so it would 404
+ * in local preview (and on any staging domain).
+ */
 function relativise(html) {
-  return html
-    .replace(/https?:\/\/(?:www\.)?sunshine-lotionpump\.com/gi, '')
-    .replace(/https?:\/\/spraypump\.supcous\.com/gi, '');
+  return html.replace(
+    /(<a\b[^>]*?\bhref=["'])https?:\/\/(?:www\.)?sunshine-lotionpump\.com/gi,
+    '$1',
+  );
 }
 
 /** Drop WordPress block comments / editor leftovers. */
@@ -464,7 +472,7 @@ async function main() {
       const { html: stripped, sources } = stripCf7(html);
       fs.writeFileSync(
         path.join(OUT.landing, `${p.slug}.html`),
-        `${stripped.trim()}\n`,
+        `${relativise(stripped).trim()}\n`,
         'utf8',
       );
       pageIndex.push({
