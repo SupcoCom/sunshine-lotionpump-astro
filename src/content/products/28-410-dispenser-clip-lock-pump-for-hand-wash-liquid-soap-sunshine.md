@@ -2,7 +2,7 @@
 id: 1350
 slug: "28-410-dispenser-clip-lock-pump-for-hand-wash-liquid-soap-sunshine"
 title: "28/410 Clip Lock Lotion Pump for Hand Wash & Liquid Soap | SUNSHINE"
-excerpt: "<p>28/410 clip lock dispenser pump for hand wash, liquid soap, shampoo and body wash bottles. Leak-resistant plastic lotion pump for B2B orders.</p>"
+excerpt: "28/410 clip lock dispenser pump for hand wash, liquid soap, shampoo and body wash bottles. Leak-resistant plastic lotion pump for B2B orders."
 modified: "2026-07-17T15:37:24"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

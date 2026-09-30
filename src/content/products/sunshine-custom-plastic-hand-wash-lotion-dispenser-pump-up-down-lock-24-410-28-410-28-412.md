@@ -2,7 +2,7 @@
 id: 1206
 slug: "sunshine-custom-plastic-hand-wash-lotion-dispenser-pump-up-down-lock-24-410-28-410-28-412"
 title: "SUNSHINE Custom Plastic Hand Wash Lotion Dispenser Pump Up/Down Lock 24/410 28/410 28/412"
-excerpt: "<p>SUNSHINE Custom Plastic Hand Wash Lotion Dispenser Pump Up/Down Lock 24/410 28/410. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.</p>"
+excerpt: "SUNSHINE Custom Plastic Hand Wash Lotion Dispenser Pump Up/Down Lock 24/410 28/410. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet."
 modified: "2026-07-17T15:38:19"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

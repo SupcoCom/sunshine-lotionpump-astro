@@ -2,7 +2,7 @@
 id: 1197
 slug: "24-410-28-410-lotion-pump-water-transfer-printing-sunshine-b2b-plastic-packaging"
 title: "24/410 28/410 Lotion Pump – Water Transfer Printing, SUNSHINE B2B Plastic Packaging"
-excerpt: "<p>24/410 28/410 Lotion Pump – Water Transfer Printing, SUNSHINE B2B Plastic Packagin. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.</p>"
+excerpt: "24/410 28/410 Lotion Pump – Water Transfer Printing, SUNSHINE B2B Plastic Packagin. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet."
 modified: "2026-07-17T15:38:24"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

@@ -2,7 +2,7 @@
 id: 1200
 slug: "custom-left-right-lock-pump-24-410-white-lotion-dispenser-for-liquid-soap-sunshine"
 title: "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap – SUNSHINE"
-excerpt: "<p>Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap – SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.</p>"
+excerpt: "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid Soap – SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet."
 modified: "2026-07-17T15:40:26"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

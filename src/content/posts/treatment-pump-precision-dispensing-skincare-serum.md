@@ -2,7 +2,7 @@
 id: 1989
 slug: "treatment-pump-precision-dispensing-skincare-serum"
 title: "Treatment Pump: Precision Dispensing for Skincare & Serum"
-excerpt: "<p>Treatment pumps deliver 0.08–0.30 ml per stroke — specifying output volume before sampling prevents the most common brand error: a 30 ml serum bottle that runs out in 4 weeks instead of 4 months.</p>"
+excerpt: "Treatment pumps deliver 0.08–0.30 ml per stroke — specifying output volume before sampling prevents the most common brand error: a 30 ml serum bottle that runs out in 4 weeks instead of 4 months."
 date: "2026-05-09T05:03:36"
 modified: "2026-05-09T05:22:45"
 categories: ["product-guides"]

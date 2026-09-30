@@ -2,7 +2,7 @@
 id: 1215
 slug: "wholesale-28-410-hand-soap-dispenser-pump-lotion-shampoo-pump-by-sunshine"
 title: "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE"
-excerpt: "<p>Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.</p>"
+excerpt: "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti."
 modified: "2026-07-17T15:38:16"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

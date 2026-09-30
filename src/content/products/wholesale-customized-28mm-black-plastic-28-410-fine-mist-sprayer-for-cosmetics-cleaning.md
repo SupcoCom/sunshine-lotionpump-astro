@@ -2,7 +2,7 @@
 id: 1267
 slug: "wholesale-customized-28mm-black-plastic-28-410-fine-mist-sprayer-for-cosmetics-cleaning"
 title: "Wholesale Customized 28mm Black Plastic 28/410 Fine Mist Sprayer for Cosmetics & Cleaning"
-excerpt: "<p>Wholesale Customized 28mm Black Plastic 28/410 Fine Mist Sprayer for Cosmetics & C. Custom fine mist sprayer for perfume, toner, hair care, skincare an.</p>"
+excerpt: "Wholesale Customized 28mm Black Plastic 28/410 Fine Mist Sprayer for Cosmetics & C. Custom fine mist sprayer for perfume, toner, hair care, skincare an."
 modified: "2026-07-17T15:37:54"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]

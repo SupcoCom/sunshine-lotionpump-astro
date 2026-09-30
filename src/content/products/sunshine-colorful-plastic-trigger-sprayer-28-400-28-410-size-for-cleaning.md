@@ -2,7 +2,7 @@
 id: 1244
 slug: "sunshine-colorful-plastic-trigger-sprayer-28-400-28-410-size-for-cleaning"
 title: "SUNSHINE Colorful Plastic Trigger Sprayer 28/400 28/410 Size for Cleaning"
-excerpt: "<p>SUNSHINE Colorful Plastic Trigger Sprayer 28/400 28/410 Size for Cleaning. Custom trigger sprayer for cleaning, garden care, car care and household chemica.</p>"
+excerpt: "SUNSHINE Colorful Plastic Trigger Sprayer 28/400 28/410 Size for Cleaning. Custom trigger sprayer for cleaning, garden care, car care and household chemica."
 modified: "2026-07-17T15:38:03"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

@@ -2,7 +2,7 @@
 id: 1934
 slug: "fine-mist-sprayer"
 title: "Fine Mist Sprayer: Complete Guide for Cosmetic & Personal Care Brands"
-excerpt: "<p>Fine mist VMD (30–80 µm) is set by orifice diameter and swirl chamber geometry — specifying these two parameters before sampling prevents 80% of mist performance complaints in cosmetic packaging.</p>"
+excerpt: "Fine mist VMD (30–80 µm) is set by orifice diameter and swirl chamber geometry — specifying these two parameters before sampling prevents 80% of mist performance complaints in cosmetic packaging."
 date: "2026-05-08T21:14:07"
 modified: "2026-05-09T05:22:40"
 categories: ["product-guides"]

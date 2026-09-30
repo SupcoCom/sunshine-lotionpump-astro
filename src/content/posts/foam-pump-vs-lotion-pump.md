@@ -2,7 +2,7 @@
 id: 1469
 slug: "foam-pump-vs-lotion-pump"
 title: "Foam Pump vs Lotion Pump: When Should You Choose Foam Dispensing?"
-excerpt: "<p>Introduction: The Same Bottle, Two Completely Different Dispensing Experiences Pick up a bottle of foaming hand soap, then pick up a bottle of body lotion. Both have a pump on top. Both dispense product when you press down. But inside, they are completely different mechanisms designed for fundamentally different purposes. A lotion pump moves liquid [&hellip;]</p>"
+excerpt: "Introduction: The Same Bottle, Two Completely Different Dispensing Experiences Pick up a bottle of foaming hand soap, then pick up a bottle of body lotion. Both have a pump on top. Both dispense product when you press down. But inside, they are completely different mechanisms designed for fundamentally different purposes. A lotion pump moves liquid [&hellip;]"
 date: "2026-05-03T16:55:21"
 modified: "2026-05-09T04:32:31"
 categories: ["product-comparisons"]

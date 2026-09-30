@@ -2,7 +2,7 @@
 id: 1239
 slug: "custom-28-410-plastic-strong-trigger-sprayer-for-cleaning-garden-use-sunshine"
 title: "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE"
-excerpt: "<p>Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and house.</p>"
+excerpt: "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and house."
 modified: "2026-07-17T15:38:05"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

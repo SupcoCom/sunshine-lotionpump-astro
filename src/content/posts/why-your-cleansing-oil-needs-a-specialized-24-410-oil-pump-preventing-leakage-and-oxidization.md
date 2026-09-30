@@ -2,7 +2,7 @@
 id: 1
 slug: "why-your-cleansing-oil-needs-a-specialized-24-410-oil-pump-preventing-leakage-and-oxidization"
 title: "Why Your Cleansing Oil Needs a Specialized 24-410 Oil Pump: Preventing Leakage and Oxidization"
-excerpt: "<p>Finding the perfect packaging for cleansing oils is a challenge for many cosmetic brands. Unlike water-based lotions, cleansing oils have lower surface tension, making them prone to leaking during shipping or daily use.</p>"
+excerpt: "Finding the perfect packaging for cleansing oils is a challenge for many cosmetic brands. Unlike water-based lotions, cleansing oils have lower surface tension, making them prone to leaking during shipping or daily use."
 date: "2026-04-07T22:39:55"
 modified: "2026-05-03T22:44:45"
 categories: ["technical-specifications"]

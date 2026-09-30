@@ -2,7 +2,7 @@
 id: 1391
 slug: "wholesale-foam-pump-28-custom-plastic-packaging-for-hand-wash-shampoo-sunshine"
 title: "Wholesale Foam Pump 28 – Custom Plastic Packaging for Hand Wash & Shampoo | SUNSHINE"
-excerpt: "<p>Custom foam pump for hand wash, facial cleanser, body wash and shampoo packaging. OEM colors and wholesale bulk orders available.</p>"
+excerpt: "Custom foam pump for hand wash, facial cleanser, body wash and shampoo packaging. OEM colors and wholesale bulk orders available."
 modified: "2026-07-17T15:37:09"
 categories: ["foam-pump"]
 categoryNames: ["Foam Pump"]

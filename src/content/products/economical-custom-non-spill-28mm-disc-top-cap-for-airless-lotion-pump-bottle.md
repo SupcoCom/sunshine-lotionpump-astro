@@ -2,7 +2,7 @@
 id: 1378
 slug: "economical-custom-non-spill-28mm-disc-top-cap-for-airless-lotion-pump-bottle"
 title: "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle"
-excerpt: "<p>Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze b.</p>"
+excerpt: "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze b."
 modified: "2026-07-17T15:37:17"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]

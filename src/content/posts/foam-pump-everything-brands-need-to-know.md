@@ -2,7 +2,7 @@
 id: 1971
 slug: "foam-pump-everything-brands-need-to-know"
 title: "Foam Pump: Everything Brands Need to Know"
-excerpt: "<p>Foam pumps deliver 0.12 ml liquid per stroke at 5:1 air-to-liquid ratio — concentrated formulas above 8% active surfactant clog the 200-mesh screen within 30 strokes; dilution before filling is mandatory.</p>"
+excerpt: "Foam pumps deliver 0.12 ml liquid per stroke at 5:1 air-to-liquid ratio — concentrated formulas above 8% active surfactant clog the 200-mesh screen within 30 strokes; dilution before filling is mandatory."
 date: "2026-05-09T04:32:29"
 modified: "2026-05-09T05:22:43"
 categories: ["product-guides"]

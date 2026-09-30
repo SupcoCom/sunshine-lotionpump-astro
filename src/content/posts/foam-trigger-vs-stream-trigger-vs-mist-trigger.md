@@ -2,7 +2,7 @@
 id: 1459
 slug: "foam-trigger-vs-stream-trigger-vs-mist-trigger"
 title: "Foam Trigger vs Stream Trigger vs Mist Trigger: Spray Pattern Comparison"
-excerpt: "<p>Introduction: Why Your Spray Pattern Decision Makes or Breaks the User Experience Imagine a customer picks up your surface cleaner, pulls the trigger, and gets a dripping wet stream instead of the fine mist they expected. Or worse — your foaming hand soap dispenses a watery jet instead of a rich, creamy lather. The spray [&hellip;]</p>"
+excerpt: "Introduction: Why Your Spray Pattern Decision Makes or Breaks the User Experience Imagine a customer picks up your surface cleaner, pulls the trigger, and gets a dripping wet stream instead of the fine mist they expected. Or worse — your foaming hand soap dispenses a watery jet instead of a rich, creamy lather. The spray [&hellip;]"
 date: "2026-05-03T14:54:04"
 modified: "2026-05-03T22:44:39"
 categories: ["product-comparisons"]

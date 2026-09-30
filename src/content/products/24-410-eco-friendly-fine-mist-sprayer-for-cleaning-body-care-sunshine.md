@@ -2,7 +2,7 @@
 id: 1276
 slug: "24-410-eco-friendly-fine-mist-sprayer-for-cleaning-body-care-sunshine"
 title: "24/410 Eco Friendly Fine Mist Sprayer for Cleaning & Body Care | SUNSHINE"
-excerpt: "<p>24/410 Eco Friendly Fine Mist Sprayer for Cleaning & Body Care | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel.</p>"
+excerpt: "24/410 Eco Friendly Fine Mist Sprayer for Cleaning & Body Care | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel."
 modified: "2026-07-17T15:37:52"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]

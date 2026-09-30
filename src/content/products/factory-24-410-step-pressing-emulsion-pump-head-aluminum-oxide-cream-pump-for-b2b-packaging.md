@@ -2,7 +2,7 @@
 id: 1162
 slug: "factory-24-410-step-pressing-emulsion-pump-head-aluminum-oxide-cream-pump-for-b2b-packaging"
 title: "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B Packaging"
-excerpt: "<p>Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bot.</p>"
+excerpt: "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bot."
 modified: "2026-07-17T15:38:37"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]

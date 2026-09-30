@@ -2,7 +2,7 @@
 id: 1413
 slug: "oem-custom-lotion-pump-moq-lead-time-pricing"
 title: "OEM Custom Lotion Pump: MOQ, Lead Time & Pricing Explained"
-excerpt: "<p>Introduction: The Three Numbers Every Lotion Pump Buyer Needs You’ve found a lotion pump you like. The sample sprays well. Now the supplier sends you a quote with three numbers: MOQ 50,000, lead time 45 days, unit price $0.18. Is that good? Can you negotiate? What if you only need 5,000 for your first production [&hellip;]</p>"
+excerpt: "Introduction: The Three Numbers Every Lotion Pump Buyer Needs You’ve found a lotion pump you like. The sample sprays well. Now the supplier sends you a quote with three numbers: MOQ 50,000, lead time 45 days, unit price $0.18. Is that good? Can you negotiate? What if you only need 5,000 for your first production [&hellip;]"
 date: "2026-05-03T10:53:53"
 modified: "2026-05-07T12:41:15"
 categories: ["sourcing-manufacturing"]

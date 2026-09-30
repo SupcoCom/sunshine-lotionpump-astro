@@ -2,7 +2,7 @@
 id: 1957
 slug: "disc-top-cap-flip-top-cap-buyers-guide"
 title: "Disc Top Cap & Flip Top Cap: Packaging Closure Buyer’s Guide"
-excerpt: "<p>Disc top caps seal at 4–6 N actuation force with ≥5,000 hinge cycles; wrong orifice size (5 mm vs 7 mm) for formula viscosity is the leading cause of consumer complaints in shampoo and conditioner closures.</p>"
+excerpt: "Disc top caps seal at 4–6 N actuation force with ≥5,000 hinge cycles; wrong orifice size (5 mm vs 7 mm) for formula viscosity is the leading cause of consumer complaints in shampoo and conditioner closures."
 date: "2026-05-08T21:37:48"
 modified: "2026-05-09T05:22:42"
 categories: ["product-guides"]

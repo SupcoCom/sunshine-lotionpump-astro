@@ -2,7 +2,7 @@
 id: 1224
 slug: "hot-selling-24-410-28-410-plastic-lotion-dispenser-pump-screw-pump-for-body-care-sunshine"
 title: "Hot Selling 24/410 28/410 Plastic Lotion Dispenser Pump Screw Pump for Body Care | SUNSHINE"
-excerpt: "<p>Hot Selling 24/410 28/410 Plastic Lotion Dispenser Pump Screw Pump for Body Care. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic.</p>"
+excerpt: "Hot Selling 24/410 28/410 Plastic Lotion Dispenser Pump Screw Pump for Body Care. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic."
 modified: "2026-07-17T15:38:13"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

@@ -2,7 +2,7 @@
 id: 1376
 slug: "smooth-disc-top-caps-for-plastic-bottles-sunshine-b2b-packaging"
 title: "Smooth Disc Top Caps for Plastic Bottles | SUNSHINE B2B Packaging"
-excerpt: "<p>Smooth Disc Top Caps for Plastic Bottles | SUNSHINE B2B Packaging. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles. OEM.</p>"
+excerpt: "Smooth Disc Top Caps for Plastic Bottles | SUNSHINE B2B Packaging. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles. OEM."
 modified: "2026-07-17T15:37:14"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]

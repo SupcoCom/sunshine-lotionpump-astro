@@ -2,7 +2,7 @@
 id: 1203
 slug: "wholesale-24-410-plastic-shampoo-lotion-pump-customized-hand-soap-dispenser-sunshine"
 title: "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHINE"
-excerpt: "<p>Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet.</p>"
+excerpt: "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHI. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmet."
 modified: "2026-07-17T15:38:21"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

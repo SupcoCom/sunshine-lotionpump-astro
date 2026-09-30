@@ -2,7 +2,7 @@
 id: 1242
 slug: "28mm-pp-garden-trigger-sprayer-for-water-bottle-custom-oem-plastic-sprayer-head"
 title: "28mm PP Garden Trigger Sprayer for Water Bottle | Custom OEM Plastic Sprayer Head"
-excerpt: "<p>28mm PP Garden Trigger Sprayer for Water Bottle | Custom OEM Plastic Sprayer Head. Custom trigger sprayer for cleaning, garden care, car care and household.</p>"
+excerpt: "28mm PP Garden Trigger Sprayer for Water Bottle | Custom OEM Plastic Sprayer Head. Custom trigger sprayer for cleaning, garden care, car care and household."
 modified: "2026-07-17T15:38:02"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

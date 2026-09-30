@@ -2,7 +2,7 @@
 id: 1146
 slug: "20-410-plastic-push-cream-pump-lotion-dispenser-for-cosmetic-packing-by-sunshine"
 title: "20/410 Plastic Push Cream Pump Lotion Dispenser for Cosmetic Packing by SUNSHINE"
-excerpt: "<p>20/410 Plastic Push Cream Pump Lotion Dispenser for Cosmetic Packing by SUNSHINE. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bott.</p>"
+excerpt: "20/410 Plastic Push Cream Pump Lotion Dispenser for Cosmetic Packing by SUNSHINE. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bott."
 modified: "2026-07-17T15:38:45"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]

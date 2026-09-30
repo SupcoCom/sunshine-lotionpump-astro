@@ -2,7 +2,7 @@
 id: 1360
 slug: "silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging"
 title: "Custom 24/410 Silver UV Lotion Pump for Cosmetic Packaging | SUNSHINE"
-excerpt: "<p>Custom 24/410 silver UV lotion pump for cosmetic, shampoo and body care packaging. OEM colors, tube length cutting and bulk factory supply.</p>"
+excerpt: "Custom 24/410 silver UV lotion pump for cosmetic, shampoo and body care packaging. OEM colors, tube length cutting and bulk factory supply."
 modified: "2026-07-17T15:37:27"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

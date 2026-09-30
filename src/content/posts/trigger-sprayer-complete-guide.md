@@ -2,7 +2,7 @@
 id: 1991
 slug: "trigger-sprayer-complete-guide"
 title: "Trigger Sprayer: Complete Manufacturing & Sourcing Guide"
-excerpt: "<p>Complete B2B sourcing guide for trigger sprayers: types, materials, sizes (24/410, 28/410, 28/412), MOQ from 10,000 units, lead times 20–30 days. Factory-direct data from SUNSHINE (Ningbo Shaoshuai Plastic).</p>"
+excerpt: "Complete B2B sourcing guide for trigger sprayers: types, materials, sizes (24/410, 28/410, 28/412), MOQ from 10,000 units, lead times 20–30 days. Factory-direct data from SUNSHINE (Ningbo Shaoshuai Plastic)."
 date: "2026-05-09T05:00:34"
 modified: "2026-05-09T05:38:04"
 categories: ["blog"]

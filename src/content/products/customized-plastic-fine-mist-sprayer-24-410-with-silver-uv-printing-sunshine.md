@@ -2,7 +2,7 @@
 id: 1281
 slug: "customized-plastic-fine-mist-sprayer-24-410-with-silver-uv-printing-sunshine"
 title: "Customized Plastic Fine Mist Sprayer 24/410 with Silver UV Printing | SUNSHINE"
-excerpt: "<p>Customized Plastic Fine Mist Sprayer 24/410 with Silver UV Printing | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel.</p>"
+excerpt: "Customized Plastic Fine Mist Sprayer 24/410 with Silver UV Printing | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel."
 modified: "2026-07-17T15:37:51"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]

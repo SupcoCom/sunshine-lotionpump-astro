@@ -2,7 +2,7 @@
 id: 1468
 slug: "disc-top-cap-sizes-explained"
 title: "Disc Top Cap Sizes Explained: 20/410, 24/410 & 28/410 Compatibility"
-excerpt: "<p>Introduction: Why “24/410” Is the Most Important Number on Your Bottle Specification If you have ever ordered bottle caps and found they do not fit your bottles, you already understand why neck finish dimensions are non-negotiable. The numbers “20/410,” “24/410,” and “28/410” are not arbitrary — they define a precise mechanical interface between your bottle [&hellip;]</p>"
+excerpt: "Introduction: Why “24/410” Is the Most Important Number on Your Bottle Specification If you have ever ordered bottle caps and found they do not fit your bottles, you already understand why neck finish dimensions are non-negotiable. The numbers “20/410,” “24/410,” and “28/410” are not arbitrary — they define a precise mechanical interface between your bottle [&hellip;]"
 date: "2026-05-03T16:51:45"
 modified: "2026-05-03T22:44:35"
 categories: ["technical-specifications"]

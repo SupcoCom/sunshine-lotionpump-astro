@@ -2,7 +2,7 @@
 id: 1837
 slug: "lotion-pump-quality-testing"
 title: "Lotion Pump Quality Testing: Spring Life, Leak Proof and Compatibility Standards"
-excerpt: "<p>A practical B2B sourcing guide to lotion pump quality testing: how to specify spring life (50,000-cycle commercial standard with SUS304 stainless spring), validate leak-proof performance across 4 lock mechanisms, and confirm neck finish compatibility (24/410, 28/410, 28/412 GPI thread) before placing a 10,000+ unit production order. Includes 7 data tables, material-formula compatibility matrix, and supplier QC evaluation checklist.</p>"
+excerpt: "A practical B2B sourcing guide to lotion pump quality testing: how to specify spring life (50,000-cycle commercial standard with SUS304 stainless spring), validate leak-proof performance across 4 lock mechanisms, and confirm neck finish compatibility (24/410, 28/410, 28/412 GPI thread) before placing a 10,000+ unit production order. Includes 7 data tables, material-formula compatibility matrix, and supplier QC evaluation checklist."
 date: "2026-05-07T12:22:09"
 modified: "2026-05-07T12:41:19"
 categories: ["product-guides"]

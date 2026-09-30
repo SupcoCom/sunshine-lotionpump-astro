@@ -2,7 +2,7 @@
 id: 1255
 slug: "24-410-fine-mist-sprayer-atomizer-perfume-pump-by-sunshine-b2b-plastic-packaging"
 title: "24/410 Fine Mist Sprayer Atomizer Perfume Pump by SUNSHINE – B2B Plastic Packaging"
-excerpt: "<p>24/410 Fine Mist Sprayer Atomizer Perfume Pump by SUNSHINE – B2B Plastic Packaging. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr.</p>"
+excerpt: "24/410 Fine Mist Sprayer Atomizer Perfume Pump by SUNSHINE – B2B Plastic Packaging. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr."
 modified: "2026-07-17T15:37:59"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]

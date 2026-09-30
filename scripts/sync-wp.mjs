@@ -145,6 +145,22 @@ function relativise(html) {
   );
 }
 
+/**
+ * Reduce a rich-text field to plain text.
+ *
+ * WordPress excerpts and taxonomy descriptions are stored as rendered HTML
+ * (every post excerpt on this site starts with `<p>`). They are displayed as
+ * text in cards and meta descriptions, so any markup has to go — otherwise the
+ * browser shows a literal `<p>` on the page.
+ */
+function toPlainText(value = '') {
+  return decodeEntities(String(value))
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 /** Drop WordPress block comments / editor leftovers. */
 function stripWpNoise(html) {
   return html
@@ -331,7 +347,7 @@ async function main() {
         slug: c.slug,
         name: decodeEntities(c.name),
         count: c.count,
-        description: stripWpNoise(decodeEntities(c.description || '')),
+        description: toPlainText(c.description),
       })),
       null,
       2,
@@ -345,7 +361,7 @@ async function main() {
     name: decodeEntities(c.name),
     count: c.count,
     parent: c.parent,
-    description: stripWpNoise(decodeEntities(c.description || '')),
+    description: toPlainText(c.description),
   }));
   fs.writeFileSync(
     path.join(OUT.data, 'post-categories.json'),
@@ -366,7 +382,7 @@ async function main() {
       id: p.id,
       slug: p.slug,
       title: decodeEntities(unRendered(p.title)),
-      excerpt: stripWpNoise(decodeEntities(unRendered(p.excerpt))),
+      excerpt: toPlainText(unRendered(p.excerpt)),
       date: p.date,
       modified: p.modified,
       categories: cats.map((c) => c.slug),
@@ -409,7 +425,7 @@ async function main() {
       id: p.id,
       slug: p.slug,
       title: decodeEntities(unRendered(p.title)),
-      excerpt: stripWpNoise(decodeEntities(unRendered(p.excerpt))),
+      excerpt: toPlainText(unRendered(p.excerpt)),
       modified: p.modified,
       categories: cats.map((c) => c.slug),
       categoryNames: cats.map((c) => decodeEntities(c.name)),

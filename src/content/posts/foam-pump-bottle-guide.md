@@ -2,7 +2,7 @@
 id: 1470
 slug: "foam-pump-bottle-guide"
 title: "Foam Pump Bottle Guide: How the Mesh Screen Creates Perfect Foam"
-excerpt: "<p>Introduction: The Tiny Mesh That Transforms Your Product When a consumer presses down on a foam pump bottle and a cloud of rich, creamy foam lands in their palm, there is a single component making that magic happen: a mesh screen no bigger than a coin, with pores measured in microns. If that mesh is [&hellip;]</p>"
+excerpt: "Introduction: The Tiny Mesh That Transforms Your Product When a consumer presses down on a foam pump bottle and a cloud of rich, creamy foam lands in their palm, there is a single component making that magic happen: a mesh screen no bigger than a coin, with pores measured in microns. If that mesh is [&hellip;]"
 date: "2026-05-03T16:57:56"
 modified: "2026-05-09T04:32:33"
 categories: ["product-guides"]

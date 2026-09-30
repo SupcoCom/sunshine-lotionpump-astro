@@ -2,7 +2,7 @@
 id: 1153
 slug: "matt-white-smooth-makeup-cream-pump-0-25cc-24-410-with-clear-cap-sunshine-b2b-plastic-packaging"
 title: "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap – SUNSHINE B2B Plastic Packaging"
-excerpt: "<p>Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap – SUNSHINE B2B Pl. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo.</p>"
+excerpt: "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap – SUNSHINE B2B Pl. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo."
 modified: "2026-07-17T15:38:42"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]

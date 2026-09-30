@@ -2,7 +2,7 @@
 id: 1289
 slug: "24-410-high-quality-plastic-cosmetics-perfume-mist-sprayer-full-cover-for-bottles"
 title: "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles"
-excerpt: "<p>24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles. Custom fine mist sprayer for perfume, toner, hair care, skincare and tra.</p>"
+excerpt: "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles. Custom fine mist sprayer for perfume, toner, hair care, skincare and tra."
 modified: "2026-07-17T15:37:41"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]

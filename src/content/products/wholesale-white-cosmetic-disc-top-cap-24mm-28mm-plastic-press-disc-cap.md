@@ -2,7 +2,7 @@
 id: 1374
 slug: "wholesale-white-cosmetic-disc-top-cap-24mm-28mm-plastic-press-disc-cap"
 title: "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap"
-excerpt: "<p>Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles.</p>"
+excerpt: "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap. Custom disc top cap for shampoo, conditioner, body wash, lotion and squeeze bottles."
 modified: "2026-07-17T15:37:15"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]

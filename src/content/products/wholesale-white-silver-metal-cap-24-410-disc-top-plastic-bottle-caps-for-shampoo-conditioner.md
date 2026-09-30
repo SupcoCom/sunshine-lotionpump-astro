@@ -2,7 +2,7 @@
 id: 1380
 slug: "wholesale-white-silver-metal-cap-24-410-disc-top-plastic-bottle-caps-for-shampoo-conditioner"
 title: "Wholesale White Silver Metal Cap 24/410 Disc Top Plastic Bottle Caps for Shampoo & Conditioner"
-excerpt: "<p>Wholesale White Silver Metal Cap 24/410 Disc Top Plastic Bottle Caps for Shampoo &. Custom disc top cap for shampoo, conditioner, body wash, lotion and.</p>"
+excerpt: "Wholesale White Silver Metal Cap 24/410 Disc Top Plastic Bottle Caps for Shampoo &. Custom disc top cap for shampoo, conditioner, body wash, lotion and."
 modified: "2026-07-17T15:37:19"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]

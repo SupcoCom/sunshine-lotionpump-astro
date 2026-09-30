@@ -2,7 +2,7 @@
 id: 1851
 slug: "top-5-lotion-pump-materials"
 title: "Top 5 Lotion Pump Materials: PP, PE & Metal-Free Option"
-excerpt: "<p>PP handles 100–115°C and Non Spill-tested output; replace the steel spring with PP to achieve mono-material recyclability required by EU AGEC/PPWR.</p>"
+excerpt: "PP handles 100–115°C and Non Spill-tested output; replace the steel spring with PP to achieve mono-material recyclability required by EU AGEC/PPWR."
 date: "2026-05-07T10:44:46"
 modified: "2026-05-07T12:41:18"
 categories: ["technical-specifications"]

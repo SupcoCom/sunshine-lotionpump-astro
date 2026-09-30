@@ -2,7 +2,7 @@
 id: 1362
 slug: "eco-friendly-plastic-pump-dispenser-for-cosmetic-cream-lotion-20-24-28-410-sizes-sunshine"
 title: "Eco-Friendly Plastic Pump Dispenser 20/410 24/410 28/410 | SUNSHINE"
-excerpt: "<p>Eco-friendly plastic pump dispenser for cosmetic cream, lotion and personal care bottles. Available in 20/410, 24/410 and 28/410 neck sizes.</p>"
+excerpt: "Eco-friendly plastic pump dispenser for cosmetic cream, lotion and personal care bottles. Available in 20/410, 24/410 and 28/410 neck sizes."
 modified: "2026-07-22T14:49:07"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

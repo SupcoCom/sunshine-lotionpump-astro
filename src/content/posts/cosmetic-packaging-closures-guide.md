@@ -2,7 +2,7 @@
 id: 1472
 slug: "cosmetic-packaging-closures-guide"
 title: "Complete Guide to Cosmetic Packaging Closures: Pumps, Sprayers & Caps"
-excerpt: "<p>Introduction: Your Package Is Your Product’s First Impression In cosmetic and personal care packaging, the closure — the pump, sprayer, or cap on top of the bottle — is the only part of the package the consumer physically interacts with every single time they use the product. The bottle is seen; the closure is touched. [&hellip;]</p>"
+excerpt: "Introduction: Your Package Is Your Product’s First Impression In cosmetic and personal care packaging, the closure — the pump, sprayer, or cap on top of the bottle — is the only part of the package the consumer physically interacts with every single time they use the product. The bottle is seen; the closure is touched. [&hellip;]"
 date: "2026-05-03T17:00:48"
 modified: "2026-05-03T22:44:27"
 categories: ["product-guides"]

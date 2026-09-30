@@ -2,7 +2,7 @@
 id: 1227
 slug: "33-410-hot-sale-body-shampoo-lotion-pump-liquid-dispenser-pump-for-cleaning-sunshine-china"
 title: "33/410 Hot Sale Body Shampoo Lotion Pump Liquid Dispenser Pump for Cleaning – SUNSHINE China"
-excerpt: "<p>33/410 lotion pump dispenser for shampoo, body wash and cleaning liquids. OEM colors and wholesale bulk supply from SUNSHINE.</p>"
+excerpt: "33/410 lotion pump dispenser for shampoo, body wash and cleaning liquids. OEM colors and wholesale bulk supply from SUNSHINE."
 modified: "2026-07-17T15:38:11"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

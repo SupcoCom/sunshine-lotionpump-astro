@@ -2,7 +2,7 @@
 id: 1260
 slug: "24-410-gold-fine-mist-sprayer-pump-for-perfume-cosmetics-sunshine"
 title: "24-410 Gold Fine Mist Sprayer Pump for Perfume & Cosmetics | SUNSHINE"
-excerpt: "<p>24-410 Gold Fine Mist Sprayer Pump for Perfume & Cosmetics | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel-size.</p>"
+excerpt: "24-410 Gold Fine Mist Sprayer Pump for Perfume & Cosmetics | SUNSHINE. Custom fine mist sprayer for perfume, toner, hair care, skincare and travel-size."
 modified: "2026-07-17T15:37:55"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]

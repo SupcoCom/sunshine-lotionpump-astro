@@ -2,7 +2,7 @@
 id: 1339
 slug: "white-plastic-treatment-pump-dispenser-24-410-sunshine"
 title: "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE"
-excerpt: "<p>White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottles. OEM co.</p>"
+excerpt: "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottles. OEM co."
 modified: "2026-07-17T15:37:35"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]

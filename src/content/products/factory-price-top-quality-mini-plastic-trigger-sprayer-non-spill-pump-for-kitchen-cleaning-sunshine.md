@@ -2,7 +2,7 @@
 id: 1234
 slug: "factory-price-top-quality-mini-plastic-trigger-sprayer-non-spill-pump-for-kitchen-cleaning-sunshine"
 title: "Factory Price Top Quality Mini Plastic Trigger Sprayer Non-spill Pump for Kitchen Cleaning (SUNSHINE)"
-excerpt: "<p>Factory Price Top Quality Mini Plastic Trigger Sprayer Non-spill Pump for Kitchen. Custom trigger sprayer for cleaning, garden care, car care and household.</p>"
+excerpt: "Factory Price Top Quality Mini Plastic Trigger Sprayer Non-spill Pump for Kitchen. Custom trigger sprayer for cleaning, garden care, car care and household."
 modified: "2026-07-17T15:38:08"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

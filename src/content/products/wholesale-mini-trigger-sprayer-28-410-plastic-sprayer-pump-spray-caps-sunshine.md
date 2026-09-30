@@ -2,7 +2,7 @@
 id: 1231
 slug: "wholesale-mini-trigger-sprayer-28-410-plastic-sprayer-pump-spray-caps-sunshine"
 title: "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE"
-excerpt: "<p>Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household ch.</p>"
+excerpt: "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household ch."
 modified: "2026-07-17T15:38:10"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

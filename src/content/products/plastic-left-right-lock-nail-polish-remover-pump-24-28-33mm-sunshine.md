@@ -2,7 +2,7 @@
 id: 1295
 slug: "plastic-left-right-lock-nail-polish-remover-pump-24-28-33mm-sunshine"
 title: "Plastic Left Right Lock Nail Polish Remover Pump 24/28/33mm – SUNSHINE"
-excerpt: "<p>Left-right lock nail polish remover pump in 24mm, 28mm and 33mm sizes. Custom color and wholesale supply for beauty packaging.</p>"
+excerpt: "Left-right lock nail polish remover pump in 24mm, 28mm and 33mm sizes. Custom color and wholesale supply for beauty packaging."
 modified: "2026-07-17T15:37:43"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]

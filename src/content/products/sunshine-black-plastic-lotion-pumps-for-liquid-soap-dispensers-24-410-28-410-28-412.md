@@ -2,7 +2,7 @@
 id: 1218
 slug: "sunshine-black-plastic-lotion-pumps-for-liquid-soap-dispensers-24-410-28-410-28-412"
 title: "SUNSHINE Black Plastic Lotion Pumps for Liquid Soap Dispensers – 24/410, 28/410, 28/412"
-excerpt: "<p>Black plastic lotion pumps for liquid soap dispensers in 24/410, 28/410 and 28/412 sizes. Custom bulk packaging supply.</p>"
+excerpt: "Black plastic lotion pumps for liquid soap dispensers in 24/410, 28/410 and 28/412 sizes. Custom bulk packaging supply."
 modified: "2026-07-17T15:38:15"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

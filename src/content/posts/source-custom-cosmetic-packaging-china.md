@@ -2,7 +2,7 @@
 id: 1473
 slug: "source-custom-cosmetic-packaging-china"
 title: "How to Source Custom Cosmetic Packaging from China: Step-by-Step"
-excerpt: "<p>Introduction: The $450 Billion Global Cosmetics Market Starts with a Packaging Decision Behind every bottle of luxury serum, every pump of foaming hand soap, every fine mist of perfume on a department store counter, there is a supply chain decision made months earlier: which factory in China will manufacture the packaging. That decision determines your [&hellip;]</p>"
+excerpt: "Introduction: The $450 Billion Global Cosmetics Market Starts with a Packaging Decision Behind every bottle of luxury serum, every pump of foaming hand soap, every fine mist of perfume on a department store counter, there is a supply chain decision made months earlier: which factory in China will manufacture the packaging. That decision determines your [&hellip;]"
 date: "2026-05-03T17:01:10"
 modified: "2026-05-03T22:44:26"
 categories: ["sourcing-manufacturing"]

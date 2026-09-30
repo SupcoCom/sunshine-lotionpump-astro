@@ -2,7 +2,7 @@
 id: 1393
 slug: "foam-28-410-plastic-bottle-for-hand-washing-and-body-washing-sunshine"
 title: "Foam 28/410 Plastic Bottle for Hand Washing and Body Washing – SUNSHINE"
-excerpt: "<p>28/410 foam pump bottle packaging for hand wash and body wash. Custom colors, tube length and bulk supply for personal care brands.</p>"
+excerpt: "28/410 foam pump bottle packaging for hand wash and body wash. Custom colors, tube length and bulk supply for personal care brands."
 modified: "2026-07-17T15:37:10"
 categories: ["foam-pump"]
 categoryNames: ["Foam Pump"]

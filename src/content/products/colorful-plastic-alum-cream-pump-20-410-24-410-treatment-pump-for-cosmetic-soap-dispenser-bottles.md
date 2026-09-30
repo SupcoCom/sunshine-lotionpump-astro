@@ -2,7 +2,7 @@
 id: 1159
 slug: "colorful-plastic-alum-cream-pump-20-410-24-410-treatment-pump-for-cosmetic-soap-dispenser-bottles"
 title: "Colorful Plastic Alum Cream Pump 20/410 24/410 Treatment Pump for Cosmetic & Soap Dispenser Bottles"
-excerpt: "<p>Colorful Plastic Alum Cream Pump 20/410 24/410 Treatment Pump for Cosmetic & Soap. Custom cream pump for cream, lotion, cosmetic and skincare dispenser.</p>"
+excerpt: "Colorful Plastic Alum Cream Pump 20/410 24/410 Treatment Pump for Cosmetic & Soap. Custom cream pump for cream, lotion, cosmetic and skincare dispenser."
 modified: "2026-07-17T15:38:39"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]

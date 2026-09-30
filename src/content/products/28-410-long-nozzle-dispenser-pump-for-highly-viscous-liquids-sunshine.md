@@ -2,7 +2,7 @@
 id: 885
 slug: "28-410-long-nozzle-dispenser-pump-for-highly-viscous-liquids-sunshine"
 title: "28/410 Long Nozzle Dispenser Pump for Highly Viscous Liquids | SUNSHINE"
-excerpt: "<p>28/410 Long Nozzle Dispenser Pump for Highly Viscous Liquids | SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bottles..</p>"
+excerpt: "28/410 Long Nozzle Dispenser Pump for Highly Viscous Liquids | SUNSHINE. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bottles.."
 modified: "2026-07-17T15:38:48"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

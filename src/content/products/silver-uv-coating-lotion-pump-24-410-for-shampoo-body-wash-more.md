@@ -2,7 +2,7 @@
 id: 1356
 slug: "silver-uv-coating-lotion-pump-24-410-for-shampoo-body-wash-more"
 title: "24/410 Silver UV Lotion Pump for Shampoo & Body Wash | SUNSHINE"
-excerpt: "<p>Silver UV coating 24/410 lotion pump for shampoo, body wash, hand soap and daily care bottles. Custom colors and factory-direct wholesale supply.</p>"
+excerpt: "Silver UV coating 24/410 lotion pump for shampoo, body wash, hand soap and daily care bottles. Custom colors and factory-direct wholesale supply."
 modified: "2026-07-17T15:37:30"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

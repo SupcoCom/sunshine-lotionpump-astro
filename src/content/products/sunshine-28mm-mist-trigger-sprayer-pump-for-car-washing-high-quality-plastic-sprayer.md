@@ -2,7 +2,7 @@
 id: 1237
 slug: "sunshine-28mm-mist-trigger-sprayer-pump-for-car-washing-high-quality-plastic-sprayer"
 title: "SUNSHINE 28mm Mist Trigger Sprayer Pump for Car Washing – High Quality Plastic Sprayer"
-excerpt: "<p>28mm trigger sprayer pump for car washing, cleaning and household liquids. Custom colors and wholesale plastic sprayer supply.</p>"
+excerpt: "28mm trigger sprayer pump for car washing, cleaning and household liquids. Custom colors and wholesale plastic sprayer supply."
 modified: "2026-07-17T15:38:06"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

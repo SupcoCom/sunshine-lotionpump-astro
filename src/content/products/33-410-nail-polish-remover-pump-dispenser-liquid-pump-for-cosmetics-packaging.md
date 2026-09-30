@@ -2,7 +2,7 @@
 id: 1300
 slug: "33-410-nail-polish-remover-pump-dispenser-liquid-pump-for-cosmetics-packaging"
 title: "33/410 Nail Polish Remover Pump Dispenser – Liquid Pump for Cosmetics Packaging"
-excerpt: "<p>33/410 nail polish remover pump dispenser for cosmetics packaging. Custom color, closure size and bulk wholesale supply available.</p>"
+excerpt: "33/410 nail polish remover pump dispenser for cosmetics packaging. Custom color, closure size and bulk wholesale supply available."
 modified: "2026-07-17T15:37:46"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]

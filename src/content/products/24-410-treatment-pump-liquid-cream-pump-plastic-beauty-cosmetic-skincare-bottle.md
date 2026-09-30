@@ -2,7 +2,7 @@
 id: 1337
 slug: "24-410-treatment-pump-liquid-cream-pump-plastic-beauty-cosmetic-skincare-bottle"
 title: "24/410 Treatment Pump Liquid Cream Pump Plastic Beauty Cosmetic Skincare Bottle"
-excerpt: "<p>24/410 Treatment Pump Liquid Cream Pump Plastic Beauty Cosmetic Skincare Bottle. Custom treatment pump for serum, essence, skincare treatment and premium c.</p>"
+excerpt: "24/410 Treatment Pump Liquid Cream Pump Plastic Beauty Cosmetic Skincare Bottle. Custom treatment pump for serum, essence, skincare treatment and premium c."
 modified: "2026-07-17T15:37:37"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]

@@ -2,7 +2,7 @@
 id: 1293
 slug: "high-quality-24-410-33-410-nail-polish-dispenser-remover-pump-sunshine"
 title: "High Quality 24/410 33/410 Nail Polish Dispenser Remover Pump – SUNSHINE"
-excerpt: "<p>24/410 and 33/410 nail polish remover pump dispenser for beauty liquid packaging. Wholesale custom colors and bulk orders available.</p>"
+excerpt: "24/410 and 33/410 nail polish remover pump dispenser for beauty liquid packaging. Wholesale custom colors and bulk orders available."
 modified: "2026-07-17T15:37:44"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]

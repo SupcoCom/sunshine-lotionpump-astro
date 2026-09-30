@@ -2,7 +2,7 @@
 id: 1194
 slug: "28mm-silver-uv-coating-left-right-lock-lotion-pump-28-410-for-shampoo-soap-bottle"
 title: "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle"
-excerpt: "<p>28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti.</p>"
+excerpt: "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo Soap Bottle. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmeti."
 modified: "2026-07-17T15:38:26"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

@@ -2,7 +2,7 @@
 id: 1618
 slug: "lotion-pump-size-guide-24-410-vs-28-410-vs-33-410"
 title: "How to Choose the Right Lotion Pump Size: 24/410 vs 28/410 vs 33/410"
-excerpt: "<p>Choosing between 24/410, 28/410, and 33/410 lotion pump sizes affects output volume, application fit, and shelf claims. This guide maps each neck finish to its ideal product category with SUNSHINE spec data: MOQ 10,000 pcs, 15–30 day lead times.</p>"
+excerpt: "Choosing between 24/410, 28/410, and 33/410 lotion pump sizes affects output volume, application fit, and shelf claims. This guide maps each neck finish to its ideal product category with SUNSHINE spec data: MOQ 10,000 pcs, 15–30 day lead times."
 date: "2026-05-07T12:22:08"
 modified: "2026-05-07T12:41:22"
 categories: ["product-guides"]

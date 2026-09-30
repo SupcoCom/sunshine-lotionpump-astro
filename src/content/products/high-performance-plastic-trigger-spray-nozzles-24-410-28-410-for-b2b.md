@@ -2,7 +2,7 @@
 id: 880
 slug: "high-performance-plastic-trigger-spray-nozzles-24-410-28-410-for-b2b"
 title: "Plastic Trigger Spray Nozzles 24/410 28/410 | SUNSHINE"
-excerpt: "<p>Durable plastic trigger spray nozzles for 24/410 and 28/410 bottles. Suitable for cleaning, garden care and professional B2B packaging.</p>"
+excerpt: "Durable plastic trigger spray nozzles for 24/410 and 28/410 bottles. Suitable for cleaning, garden care and professional B2B packaging."
 modified: "2026-07-17T15:38:50"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

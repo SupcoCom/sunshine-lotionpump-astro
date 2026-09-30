@@ -2,7 +2,7 @@
 id: 1209
 slug: "sunshine-24-410-28-410-hand-lotion-pump-plastic-dispenser-pump-for-bottles"
 title: "SUNSHINE 24/410 28/410 Hand Lotion Pump – Plastic Dispenser Pump for Bottles"
-excerpt: "<p>SUNSHINE 24/410 28/410 Hand Lotion Pump – Plastic Dispenser Pump for Bottles. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bot.</p>"
+excerpt: "SUNSHINE 24/410 28/410 Hand Lotion Pump – Plastic Dispenser Pump for Bottles. Custom lotion pump for lotion, shampoo, body wash, hand soap and cosmetic bot."
 modified: "2026-07-17T15:38:18"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

@@ -2,7 +2,7 @@
 id: 1341
 slug: "white-plastic-non-spill-32-410-treatment-pump-with-cap-sunshine"
 title: "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE"
-excerpt: "<p>White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottle.</p>"
+excerpt: "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE. Custom treatment pump for serum, essence, skincare treatment and premium cosmetic bottle."
 modified: "2026-07-17T15:37:34"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]

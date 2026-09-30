@@ -2,7 +2,7 @@
 id: 1298
 slug: "wholesale-high-quality-purple-nail-polish-pump-28-410-33-410-remover-dispenser-pump"
 title: "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump"
-excerpt: "<p>Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pum. Custom nail polish pump for nail polish remover, makeup remover and bea.</p>"
+excerpt: "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pum. Custom nail polish pump for nail polish remover, makeup remover and bea."
 modified: "2026-07-17T15:37:47"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]

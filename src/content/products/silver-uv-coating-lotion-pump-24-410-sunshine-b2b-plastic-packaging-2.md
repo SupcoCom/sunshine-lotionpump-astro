@@ -2,7 +2,7 @@
 id: 1358
 slug: "silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging-2"
 title: "24/410 Silver UV Lotion Pump for Hand Wash Bottles | SUNSHINE"
-excerpt: "<p>24/410 silver UV lotion pump for hand wash, cleaning liquid and personal care bottles. B2B plastic dispenser pump with custom finish options.</p>"
+excerpt: "24/410 silver UV lotion pump for hand wash, cleaning liquid and personal care bottles. B2B plastic dispenser pump with custom finish options."
 modified: "2026-07-17T15:37:29"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

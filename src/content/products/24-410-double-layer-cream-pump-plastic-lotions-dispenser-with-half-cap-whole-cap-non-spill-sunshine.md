@@ -2,7 +2,7 @@
 id: 1150
 slug: "24-410-double-layer-cream-pump-plastic-lotions-dispenser-with-half-cap-whole-cap-non-spill-sunshine"
 title: "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap Non-Spill – SUNSHINE"
-excerpt: "<p>24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap N. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo.</p>"
+excerpt: "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap N. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo."
 modified: "2026-07-17T15:38:43"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]

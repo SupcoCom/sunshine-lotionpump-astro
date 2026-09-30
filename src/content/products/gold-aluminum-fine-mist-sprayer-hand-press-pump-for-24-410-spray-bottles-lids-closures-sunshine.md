@@ -2,7 +2,7 @@
 id: 1258
 slug: "gold-aluminum-fine-mist-sprayer-hand-press-pump-for-24-410-spray-bottles-lids-closures-sunshine"
 title: "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Closures SUNSHINE"
-excerpt: "<p>Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Clos. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr.</p>"
+excerpt: "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Clos. Custom fine mist sprayer for perfume, toner, hair care, skincare and tr."
 modified: "2026-07-17T15:37:57"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]

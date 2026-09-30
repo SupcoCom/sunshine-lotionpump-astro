@@ -2,7 +2,7 @@
 id: 1156
 slug: "sunshine-20-410-plastic-push-cream-pump-double-deck-lotion-pump-for-cosmetic-packing-b2b"
 title: "SUNSHINE 20/410 Plastic Push Cream Pump Double Deck Lotion Pump for Cosmetic Packing B2B"
-excerpt: "<p>SUNSHINE 20/410 Plastic Push Cream Pump Double Deck Lotion Pump for Cosmetic Packi. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo.</p>"
+excerpt: "SUNSHINE 20/410 Plastic Push Cream Pump Double Deck Lotion Pump for Cosmetic Packi. Custom cream pump for cream, lotion, cosmetic and skincare dispenser bo."
 modified: "2026-07-17T15:38:40"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]

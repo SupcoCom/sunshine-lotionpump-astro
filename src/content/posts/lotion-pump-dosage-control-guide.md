@@ -2,7 +2,7 @@
 id: 1836
 slug: "lotion-pump-dosage-control-guide"
 title: "How Lotion Pump Dosage Control Works: 1mL, 2mL, 4mL Output Guide"
-excerpt: "<p>Learn how lotion pump dosage control works — the mechanical principles behind 1mL, 2mL, and 4mL output volumes. Covers bore/stroke engineering, neck finish selection (24/410 vs 28/410), lock mechanisms, and a sourcing checklist for B2B buyers. Includes SUNSHINE product specs: MOQ 10,000 pcs, 15–30 day lead times, PP/PE and PP material options.</p>"
+excerpt: "Learn how lotion pump dosage control works — the mechanical principles behind 1mL, 2mL, and 4mL output volumes. Covers bore/stroke engineering, neck finish selection (24/410 vs 28/410), lock mechanisms, and a sourcing checklist for B2B buyers. Includes SUNSHINE product specs: MOQ 10,000 pcs, 15–30 day lead times, PP/PE and PP material options."
 date: "2026-05-07T12:22:09"
 modified: "2026-05-07T12:41:21"
 categories: ["technical-specifications"]

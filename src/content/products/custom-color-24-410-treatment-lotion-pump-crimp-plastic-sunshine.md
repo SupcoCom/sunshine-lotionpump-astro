@@ -2,7 +2,7 @@
 id: 1329
 slug: "custom-color-24-410-treatment-lotion-pump-crimp-plastic-sunshine"
 title: "Custom Color 24/410 Treatment Lotion Pump Crimp Plastic – SUNSHINE"
-excerpt: "<p>24/410 treatment lotion pump for serum, essence and cosmetic bottles. Custom colors and bulk OEM packaging supply available.</p>"
+excerpt: "24/410 treatment lotion pump for serum, essence and cosmetic bottles. Custom colors and bulk OEM packaging supply available."
 modified: "2026-07-17T15:37:38"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]

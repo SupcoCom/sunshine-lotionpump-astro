@@ -2,7 +2,7 @@
 id: 1246
 slug: "28-410-high-quality-plastic-hand-trigger-sprayer-for-bottles-sunshine"
 title: "28/410 High Quality Plastic Hand Trigger Sprayer for Bottles | SUNSHINE"
-excerpt: "<p>28/410 High Quality Plastic Hand Trigger Sprayer for Bottles | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household chemical.</p>"
+excerpt: "28/410 High Quality Plastic Hand Trigger Sprayer for Bottles | SUNSHINE. Custom trigger sprayer for cleaning, garden care, car care and household chemical."
 modified: "2026-07-17T15:38:00"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]

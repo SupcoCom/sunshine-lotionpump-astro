@@ -2,7 +2,7 @@
 id: 1471
 slug: "treatment-pump-vs-lotion-pump-vs-dropper"
 title: "Treatment Pump vs Lotion Pump vs Dropper: Best Dispenser for Serums"
-excerpt: "<p>Introduction: Why Your $80 Serum Deserves the Right Dispenser You have spent months formulating the perfect serum — precisely calibrated actives, a luxurious texture, packaging that communicates science and sophistication. Then you put it in a bottle with a generic pump that dispenses too much, too fast, or inconsistently, and your customer’s first impression is [&hellip;]</p>"
+excerpt: "Introduction: Why Your $80 Serum Deserves the Right Dispenser You have spent months formulating the perfect serum — precisely calibrated actives, a luxurious texture, packaging that communicates science and sophistication. Then you put it in a bottle with a generic pump that dispenses too much, too fast, or inconsistently, and your customer’s first impression is [&hellip;]"
 date: "2026-05-03T16:57:57"
 modified: "2026-05-09T05:03:38"
 categories: ["product-comparisons"]

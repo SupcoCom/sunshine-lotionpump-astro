@@ -2,7 +2,7 @@
 id: 1354
 slug: "silver-uv-coating-lotion-pump-24-410-sunshine-b2b-plastic-packaging-3"
 title: "24/410 Silver UV Lotion Pump for Cleansing Oil & Cream | SUNSHINE"
-excerpt: "<p>24/410 silver UV coating lotion pump for cleansing oil, cream and personal care bottles. Premium metallic look with custom bulk production.</p>"
+excerpt: "24/410 silver UV coating lotion pump for cleansing oil, cream and personal care bottles. Premium metallic look with custom bulk production."
 modified: "2026-07-17T15:37:26"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]

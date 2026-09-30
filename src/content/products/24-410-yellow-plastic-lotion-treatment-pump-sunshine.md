@@ -2,7 +2,7 @@
 id: 1305
 slug: "24-410-yellow-plastic-lotion-treatment-pump-sunshine"
 title: "24/410 Yellow Plastic Lotion Treatment Pump – SUNSHINE"
-excerpt: "<p>24/410 yellow lotion treatment pump for serum and skincare bottles. OEM colors, tube length options and bulk supply available.</p>"
+excerpt: "24/410 yellow lotion treatment pump for serum and skincare bottles. OEM colors, tube length options and bulk supply available."
 modified: "2026-07-17T15:37:49"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]

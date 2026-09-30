@@ -2,7 +2,7 @@
 id: 1372
 slug: "wholesale-28-410-white-disc-top-cap-plastic-caps-for-shampoo-body-wash-sunshine"
 title: "Wholesale 28/410 White Disc Top Cap Plastic Caps for Shampoo & Body Wash – SUNSHINE"
-excerpt: "<p>28/410 white disc top caps for shampoo, body wash and lotion bottles. Wholesale plastic cap supply with custom color options.</p>"
+excerpt: "28/410 white disc top caps for shampoo, body wash and lotion bottles. Wholesale plastic cap supply with custom color options."
 modified: "2026-07-17T15:37:12"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]
