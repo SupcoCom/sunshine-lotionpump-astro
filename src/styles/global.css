@@ -65,23 +65,23 @@
 
   h1 {
     font-weight: 800;
-    font-size: clamp(2.1rem, 1.2rem + 3.4vw, 3.9rem);
-    line-height: 1.06;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.4rem, 1.3rem + 4vw, 4.4rem);
+    line-height: 1.04;
+    letter-spacing: -0.035em;
   }
 
   h2 {
     font-weight: 800;
-    font-size: clamp(1.6rem, 1.25rem + 1.5vw, 2.3rem);
-    line-height: 1.15;
-    letter-spacing: -0.025em;
+    font-size: clamp(1.75rem, 1.3rem + 1.8vw, 2.6rem);
+    line-height: 1.12;
+    letter-spacing: -0.03em;
   }
 
   h3 {
     font-weight: 700;
-    font-size: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
-    line-height: 1.25;
-    letter-spacing: -0.015em;
+    font-size: clamp(1.2rem, 1.05rem + 0.5vw, 1.5rem);
+    line-height: 1.22;
+    letter-spacing: -0.02em;
   }
 
   a { color: inherit; }
@@ -92,12 +92,78 @@
 @layer components {
   .container-x {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1240px;
     margin-inline: auto;
     padding-inline: 24px;
   }
 
-  .container-narrow { max-width: 760px; }
+  .container-narrow { max-width: 780px; }
+
+  /* ---------- Hero (full-bleed, editorial) ---------- */
+  .hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: flex-end;
+    min-height: min(88vh, 760px);
+    color: #fff;
+    overflow: hidden;
+    background: var(--color-brand-strong);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.02);
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(8, 44, 38, 0.55) 0%, rgba(8, 44, 38, 0.35) 45%, rgba(8, 44, 38, 0.82) 100%);
+  }
+  .hero-inner { padding-block: 120px 72px; }
+  .hero h1 { color: #fff; max-width: 16ch; }
+  .hero .lede { margin-top: 1.5rem; max-width: 56ch; font-size: clamp(1rem, 0.95rem + 0.4vw, 1.2rem); line-height: 1.6; color: rgba(255, 255, 255, 0.88); }
+  .hero-cta { margin-top: 2.25rem; display: flex; flex-wrap: wrap; gap: 14px; }
+  .hero-stats {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .hero-stats dt { font-size: 0.6875rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255, 255, 255, 0.6); }
+  .hero-stats dd { margin: 0.35rem 0 0; font-family: var(--font-display); font-size: clamp(1.6rem, 1.2rem + 1.6vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; color: #fff; }
+  .hero-stats dd em { font-style: normal; color: var(--color-accent-bright); }
+
+  /* ---------- Numbered section (01 / 02 / 03) ---------- */
+  .num {
+    font-family: var(--font-display);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: var(--color-accent);
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5rem;
+  }
+  .num::before { content: ''; width: 28px; height: 2px; background: var(--color-brand); align-self: center; }
+
+  /* ---------- Big stat block ---------- */
+  .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px 32px; }
+  @media (max-width: 900px) { .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+  .stat .stat-value { font-family: var(--font-display); font-size: clamp(2.2rem, 1.6rem + 2.4vw, 3.4rem); font-weight: 800; letter-spacing: -0.03em; color: var(--color-brand); line-height: 1; }
+  .stat .stat-value em { font-style: normal; color: var(--color-accent); }
+  .stat .stat-label { margin-top: 0.6rem; font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-muted); }
+
+  /* ---------- Feature row (image + text) ---------- */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  @media (max-width: 900px) { .split { grid-template-columns: 1fr; gap: 40px; } }
+  .split img { border-radius: var(--radius-card); box-shadow: var(--shadow-card); }
 
   /* ---------- Buttons ---------- */
   .btn {

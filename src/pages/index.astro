@@ -1,7 +1,8 @@
 ---
 /**
- * Home page — re-authored from the legacy Elementor layout.
- * Copy is preserved; the layout is rebuilt with semantic HTML + Tailwind.
+ * Home — bold industrial editorial.
+ * Reference language: Edison Motors / KAL Containers / luoitheptop —
+ * full-bleed hero, numbered sections, oversized stats, strong rules, real imagery.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -17,50 +18,42 @@ const seo = seoFor(path);
 
 const CATALOG_PDF =
   'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/07/Sunshine-Catalog.pdf';
+const HERO_POSTER =
+  'https://img.supcous.com/2026/04/21dec35f4422a9b46ecd7d43d392cb38.webp';
+const HERO_VIDEO =
+  'https://cloud.video.alibaba.com/play/u/2153292369/p/1/e/6/t/1/d/hd/407602126837.mp4';
 
-const HERO_IMAGES = [
-  'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/5144be47754aa59e90ee0abfb3ad7337.webp',
-  'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/748b806b4ade9bd47e714b0b61e17360.webp',
-];
+const families = PRODUCT_CATEGORIES.map((family) => {
+  const inFamily = products.filter((p) => p.data.categories.includes(family.slug));
+  return { ...family, count: inFamily.length, image: inFamily[0]?.data.image || '' };
+}).filter((f) => f.count > 0);
 
-const highlights = [
-  { title: 'Premium Quality', text: 'ISO 9001:2015 certified production' },
-  { title: 'Fast Turnaround', text: '15–20 day standard lead time' },
-  { title: 'Competitive Pricing', text: 'Factory-direct pricing, no middlemen' },
-  { title: 'Low MOQ', text: 'Orders from 10,000 pcs' },
-  { title: 'Flexible Production', text: 'Full customisation available' },
-];
-
-const pillars = [
+const why = [
   {
-    tag: 'Manufacturing Excellence',
-    title: '7+ years of plastic pump manufacturing',
+    num: '01',
+    title: 'Manufacturing excellence',
     body: 'Our 7,000 m² cosmetic pump facility runs 20 assembly machines and 2 automated assembly lines — factory-direct quality at wholesale prices.',
-    points: [
-      '50M+ spray pumps produced annually with consistent quality',
-      'Perfect safety record with a comprehensive quality tracking system',
-    ],
+    points: ['50M+ spray pumps produced annually', 'Perfect safety record with full quality tracking'],
   },
   {
-    tag: 'Precision Standards',
-    title: 'Factory quality standards',
-    body: 'ISO 9001:2015 certified manufacturer. An in-house testing lab ensures every spray pump meets international standards for the US, EU and global markets.',
-    points: [
-      '±0.1 mm dimensional accuracy guaranteed',
-      'Triple quality inspection before shipment',
-      '24-hour aging test for durability validation',
-    ],
+    num: '02',
+    title: 'Precision standards',
+    body: 'ISO 9001:2015 certified manufacturer. An in-house testing lab ensures every pump meets international standards for the US, EU and global markets.',
+    points: ['±0.1 mm dimensional accuracy', 'Triple quality inspection before shipment'],
   },
   {
-    tag: 'Fast Delivery',
-    title: 'Fast & reliable delivery, guaranteed',
-    body: 'Direct cosmetic pump manufacturer with in-house mould making. No intermediaries — your order goes straight to our factory floor.',
-    points: [
-      '15–20 days standard, 12-day rush available',
-      '99.8% on-time delivery rate',
-      'Direct factory pricing saves 10–30%',
-    ],
+    num: '03',
+    title: 'Fast, reliable delivery',
+    body: 'Direct manufacturer with in-house mould making. No intermediaries — your order goes straight to our factory floor.',
+    points: ['15–20 days standard, 12-day rush', '99.8% on-time delivery rate'],
   },
+];
+
+const stats = [
+  { value: '7,000', unit: 'm²', label: 'Factory floor' },
+  { value: '50M+', unit: '', label: 'Units per year' },
+  { value: '10', unit: '', label: 'Injection machines' },
+  { value: '4', unit: '', label: 'Assembly lines' },
 ];
 
 const certifications = [
@@ -93,18 +86,6 @@ const faqs = [
   },
 ];
 
-/** two products per family, up to 12, for the filterable grid */
-const featured = [];
-for (const category of PRODUCT_CATEGORIES) {
-  const inFamily = products.filter((p) => p.data.categories.includes(category.slug));
-  featured.push(...inFamily.slice(0, 2));
-}
-const featuredProducts = featured.slice(0, 12).slice(0, 18);
-
-const families = PRODUCT_CATEGORIES.filter((c) =>
-  featuredProducts.some((p) => p.data.categories.includes(c.slug)),
-);
-
 const schema = [
   {
     '@type': 'WebPage',
@@ -136,163 +117,139 @@ const schema = [
   schema={schema}
 >
   <!-- Hero -->
-  <section class="bg-brand text-white">
-    <div class="container-x grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
-      <div>
-        <span class="eyebrow text-accent-bright">Company since {SITE.established}</span>
-        <h1 class="mt-3 text-white">{SITE.tagline}</h1>
-        <p class="mt-5 max-w-xl text-lg text-white/85">
-          Fine mist sprayers · lotion pumps · foam pumps · trigger sprayers — all made in-house in
-          Cixi, Ningbo, China.
-        </p>
-        <div class="mt-7 flex flex-wrap gap-3">
-          <a href="#quote" class="btn btn-lg">Get a Quote</a>
-          <a href="#products" class="btn btn-ghost btn-lg border-white/30 bg-transparent text-white hover:bg-white/10">
-            Browse products
-          </a>
-        </div>
-        <dl class="mt-9 grid max-w-md grid-cols-3 gap-4">
-          {
-            TRUST_STATS.map((stat) => (
-              <div>
-                <dt class="text-[11px] uppercase tracking-wide text-white/60">{stat.label}</dt>
-                <dd class="text-xl font-black text-accent-bright">{stat.value}</dd>
-              </div>
-            ))
-          }
-        </dl>
-      </div>
-      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
-        {
-          HERO_IMAGES.map((src, index) => (
-            <img
-              src={src}
-              alt={index === 0 ? 'Fine mist sprayers and lotion pumps manufactured by SUNSHINE' : 'Cosmetic pump assembly line at the Cixi factory'}
-              width="640"
-              height="420"
-              loading="eager"
-              decoding="async"
-              class:list={[
-                'w-full rounded-xl object-cover shadow-2xl',
-                index === 1 ? 'hidden sm:block' : '',
-              ]}
-            />
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <section class="container-x py-14">
-    <div class="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-      <div>
-        <h2>Your OEM cosmetic pump manufacturer — factory direct from China</h2>
-        <p class="mt-4 text-ink/75">
-          {SITE.legalName} (brand: <strong>{SITE.brand}</strong>) is a B2B cosmetic pump manufacturer
-          in Cixi, Ningbo, Zhejiang — 30 minutes from Ningbo Port. We specialise in fine mist
-          sprayers, lotion pumps, foam pumps, trigger sprayers, disc caps, oil pumps and treatment
-          pumps. ISO 9001:2015 certified. MOQ 10,000 pcs. Lead time 15–30 days. Full OEM/ODM
-          available.
-        </p>
-      </div>
-      <div class="card flex flex-col justify-between gap-4 p-6">
-        <p class="text-sm text-muted">
-          Need pricing today? Send your spec and we reply within one business day.
-        </p>
-        <a href="#quote" class="btn">GET A QUOTE</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Solutions -->
-  <section class="bg-surface py-14">
-    <div class="container-x">
-      <h2>OEM/ODM cosmetic pump &amp; dispenser solutions</h2>
-      <p class="mt-2 text-sm font-semibold uppercase tracking-wide text-accent">
-        Factory direct — Cixi, Ningbo, Zhejiang China
+  <section class="hero">
+    <div class="hero-bg" style={`background-image: url(${HERO_POSTER})`} aria-hidden="true"></div>
+    <div class="container-x hero-inner">
+      <span class="eyebrow text-accent-bright">Company since {SITE.established}</span>
+      <h1>{SITE.tagline}</h1>
+      <p class="lede">
+        Fine mist sprayers · lotion pumps · foam pumps · trigger sprayers — engineered and
+        assembled in-house at our Cixi, Ningbo factory. ISO 9001:2015 certified.
       </p>
-      <p class="mt-4 max-w-3xl text-ink/75">
-        Different products need different dispensing mechanisms. Fine mist for skincare serums, foam
-        for hand wash, lotion pumps for body care, trigger sprayers for household use — we
-        manufacture them all in-house. Tell us your application and we'll engineer the right
-        solution. All pumps are manufactured at our 7,000 m² Cixi factory under ISO 9001:2015
-        quality control.
-      </p>
-      <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
-        {
-          highlights.map((item) => (
-            <li class="card p-5">
-              <h3 class="text-base">{item.title}</h3>
-              <p class="mt-1 text-sm text-muted">{item.text}</p>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-  </section>
-
-  <!-- Products -->
-  <section id="products" class="container-x scroll-mt-24 py-14">
-    <h2>Cosmetic dispensing pumps &amp; closures</h2>
-    <p class="mt-2 text-sm text-muted">
-      {products.length} standard products across {PRODUCT_CATEGORIES.length} families — every one
-      available in custom OEM/ODM configuration.
-    </p>
-
-    <div class="mt-6 flex flex-wrap gap-2" data-product-filter>
-      <button type="button" class="btn text-sm" data-filter="all" aria-pressed="true">All</button>
-      {
-        families.map((family) => (
-          <button
-            type="button"
-            class="btn btn-ghost text-sm"
-            data-filter={family.slug}
-            aria-pressed="false"
-          >
-            {family.label}
-          </button>
-        ))
-      }
-    </div>
-
-    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-product-grid>
-      {
-        featuredProducts.map((product, index) => (
-          <div data-product-category={product.data.categories.join(' ')}>
-            <ProductCard product={product.data} eager={index < 3} />
+      <div class="hero-cta">
+        <a href="#quote" class="btn btn-lg">Get a Quote</a>
+        <a href="#families" class="btn btn-lg btn-ghost border-white/40 text-white hover:bg-white/10 hover:text-white">Browse products</a>
+      </div>
+      <dl class="hero-stats">
+        {TRUST_STATS.map((stat) => (
+          <div>
+            <dt>{stat.label}</dt>
+            <dd>{stat.value}</dd>
           </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+
+  <!-- Intro statement -->
+  <section class="container-x py-24">
+    <div class="split" data-reveal>
+      <div>
+        <span class="num">01</span>
+        <h2 class="mt-4">Your OEM cosmetic pump manufacturer — factory direct from China</h2>
+        <p class="mt-5 leading-relaxed text-muted">
+          {SITE.legalName} (brand: <strong class="text-ink">{SITE.brand}</strong>) is a B2B cosmetic pump
+          manufacturer in Cixi, Ningbo, Zhejiang — 30 minutes from Ningbo Port. We specialise in fine mist
+          sprayers, lotion pumps, foam pumps, trigger sprayers, disc caps, oil pumps and treatment pumps.
+        </p>
+        <ul class="mt-6 space-y-2.5 text-sm text-ink/80">
+          <li class="flex gap-2.5"><span class="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-brand-soft text-[10px] font-bold text-brand">✓</span>ISO 9001:2015 certified · SGS-tested products</li>
+          <li class="flex gap-2.5"><span class="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-brand-soft text-[10px] font-bold text-brand">✓</span>MOQ 10,000 pcs · lead time 15–30 days</li>
+          <li class="flex gap-2.5"><span class="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-brand-soft text-[10px] font-bold text-brand">✓</span>Full OEM/ODM — colour, material, finish, dosage</li>
+        </ul>
+      </div>
+      <img
+        src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/all-closures-overview.png"
+        alt={`${SITE.brand} closures and pumps product overview`}
+        width="620"
+        height="620"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </section>
+
+  <!-- Product families -->
+  <section id="families" class="border-y border-line bg-surface-alt py-24">
+    <div class="container-x">
+      <div class="section-head flex flex-wrap items-end justify-between gap-6" data-reveal>
+        <div>
+          <span class="num">02</span>
+          <h2 class="mt-4">Nine product families, one factory</h2>
+          <span class="rule" aria-hidden="true"></span>
+        </div>
+        <a href="/products/" class="link font-semibold">View the full catalogue →</a>
+      </div>
+
+      <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        {
+          families.map((family, index) => (
+            <a
+              href={`/product-category/${family.slug}/`}
+              class="card group flex items-center gap-4 p-4"
+              data-reveal
+            >
+              {family.image && (
+                <img
+                  src={family.image}
+                  alt={family.label}
+                  width="96"
+                  height="96"
+                  loading="lazy"
+                  decoding="async"
+                  class="size-20 shrink-0 rounded-lg border border-line bg-white object-contain p-1.5"
+                />
+              )}
+              <span class="min-w-0">
+                <span class="block font-display text-[15px] font-bold text-brand">{family.label}</span>
+                <span class="mt-0.5 block text-xs text-muted">{family.count} products</span>
+              </span>
+              <svg class="ml-auto size-4 shrink-0 text-faint transition group-hover:translate-x-1 group-hover:text-accent" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="container-x py-24">
+    <div class="section-head" data-reveal>
+      <span class="num">03</span>
+      <h2 class="mt-4">Why 100+ global beauty brands choose {SITE.brand}</h2>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+    <div class="grid gap-5 lg:grid-cols-3">
+      {
+        why.map((item) => (
+          <article class="card p-7" data-reveal>
+            <span class="num">{item.num}</span>
+            <h3 class="mt-4">{item.title}</h3>
+            <p class="mt-3 text-sm leading-relaxed text-muted">{item.body}</p>
+            <ul class="mt-5 space-y-2 border-t border-line pt-5 text-sm">
+              {item.points.map((point) => (
+                <li class="flex gap-2.5">
+                  <span class="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-brand-soft text-[10px] font-bold text-brand">✓</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
         ))
       }
     </div>
   </section>
 
-  <!-- Why us -->
-  <section class="bg-surface py-14">
+  <!-- Stats -->
+  <section class="border-y border-line bg-brand-strong py-20 text-white">
     <div class="container-x">
-      <h2>Why 100+ global beauty brands choose {SITE.brand}</h2>
-      <p class="mt-4 max-w-3xl text-ink/75">
-        Over 100 beauty and personal care brands — from indie startups to large-scale OEM clients
-        across the Middle East, Africa, Southeast Asia and North America — source their pumps
-        directly from our factory. Here's what keeps them coming back.
-      </p>
-
-      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+      <div class="stat-grid" data-reveal>
         {
-          pillars.map((pillar) => (
-            <article class="card p-6">
-              <span class="eyebrow">{pillar.tag}</span>
-              <h3 class="mt-2">{pillar.title}</h3>
-              <p class="mt-3 text-sm text-ink/75">{pillar.body}</p>
-              <ul class="mt-4 space-y-2 text-sm">
-                {pillar.points.map((point) => (
-                  <li class="flex gap-2">
-                    <span class="text-accent" aria-hidden="true">✔</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+          stats.map((stat) => (
+            <div class="stat">
+              <div class="stat-value">{stat.value} <em>{stat.unit}</em></div>
+              <div class="stat-label !text-white/60">{stat.label}</div>
+            </div>
           ))
         }
       </div>
@@ -300,24 +257,24 @@ const schema = [
   </section>
 
   <!-- Certifications -->
-  <section class="container-x py-14">
-    <h2>Our quality certifications</h2>
-    <p class="mt-4 max-w-3xl text-ink/75">
-      {SITE.brand} is ISO 9001:2015 certified and conducts SGS testing on our cosmetic pumps and
-      dispensers to ensure every product meets international import standards for the US, EU and
-      global markets.
-    </p>
-    <div class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+  <section class="container-x py-24">
+    <div class="section-head" data-reveal>
+      <span class="num">04</span>
+      <h2 class="mt-4">Certified for global markets</h2>
+      <span class="rule" aria-hidden="true"></span>
+    </div>
+    <div class="grid grid-cols-2 gap-5 lg:grid-cols-4">
       {
         certifications.map((src, index) => (
           <img
             src={src}
             alt={`${SITE.brand} certification document ${index + 1}`}
-            width="400"
-            height="520"
+            width="420"
+            height="560"
             loading="lazy"
             decoding="async"
-            class="card h-full w-full object-contain p-2"
+            class="card h-full w-full object-contain p-3"
+            data-reveal
           />
         ))
       }
@@ -325,23 +282,17 @@ const schema = [
   </section>
 
   <!-- Catalog -->
-  <section class="bg-brand-strong py-14 text-white">
-    <div class="container-x grid items-center gap-10 lg:grid-cols-2">
+  <section class="container-x pb-24">
+    <div class="card grid items-center gap-8 overflow-hidden p-8 lg:grid-cols-[1.3fr_1fr]" data-reveal>
       <div>
-        <h2 class="text-white">Download our product catalog</h2>
-        <p class="mt-3 text-white/80">
+        <span class="num">05</span>
+        <h2 class="mt-4">Download the full product catalogue</h2>
+        <p class="mt-4 max-w-xl leading-relaxed text-muted">
           Complete specifications of all 9 product families — lotion pumps, foam pumps, fine mist
-          sprayers, trigger sprayers, disc caps and more. All in one convenient PDF.
+          sprayers, trigger sprayers, disc caps and more. Dimensions, material options, neck sizes,
+          dosage charts and MOQ details in one PDF.
         </p>
-        <ul class="mt-5 space-y-2 text-sm text-white/85">
-          <li>✔ Full product specifications &amp; dimensions</li>
-          <li>✔ Material options (PP, aluminium, PET, bamboo)</li>
-          <li>✔ Neck size &amp; dosage charts</li>
-          <li>✔ Customisation options &amp; MOQ details</li>
-        </ul>
-        <a href={CATALOG_PDF} target="_blank" rel="noopener" class="btn mt-6">
-          Download free catalog
-        </a>
+        <a href={CATALOG_PDF} target="_blank" rel="noopener" class="btn mt-7">Download free catalogue</a>
       </div>
       <img
         src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/07/xyc.png"
@@ -350,83 +301,40 @@ const schema = [
         height="480"
         loading="lazy"
         decoding="async"
-        class="w-full rounded-xl object-cover shadow-xl"
+        class="w-full rounded-xl border border-line object-cover"
       />
     </div>
-  </section>
-
-  <!-- About + FAQ -->
-  <section class="container-x py-14">
-    <h2>Your custom cosmetic pump &amp; dispenser manufacturer</h2>
-    <p class="mt-4 max-w-3xl text-ink/75">
-      One manufacturer, full service. From pump design and mould making to assembly, QC and export
-      shipping — all under one roof in Cixi, Ningbo, China.
-    </p>
   </section>
 
   <FaqList items={faqs} title="Frequently asked questions" />
 
   <!-- Quote -->
-  <section id="quote" class="scroll-mt-20 bg-brand py-16 text-white">
-    <div class="container-x grid gap-10 lg:grid-cols-2">
-      <div>
+  <section id="quote" class="scroll-mt-20 bg-brand-strong py-24 text-white">
+    <div class="container-x grid gap-12 lg:grid-cols-2">
+      <div data-reveal>
         <span class="eyebrow text-accent-bright">Reply within 24 hours</span>
-        <h2 class="mt-2 text-white">Ready for factory-direct cosmetic pump pricing?</h2>
-        <p class="mt-4 text-white/80">
+        <h2 class="mt-3 text-white">Ready for factory-direct cosmetic pump pricing?</h2>
+        <p class="mt-5 max-w-xl leading-relaxed text-white/80">
           Skip the middlemen. We've manufactured spray pumps and dispensers since {SITE.established} —
           tell us your specs and get honest factory pricing within 24 hours.
         </p>
-
-        <p class="mt-6 text-sm font-bold uppercase tracking-wide text-accent-bright">
-          Zero-risk guarantee
-        </p>
-        <ul class="mt-3 space-y-2 text-sm text-white/85">
+        <p class="mt-7 text-sm font-bold uppercase tracking-wide text-accent-bright">Zero-risk guarantee</p>
+        <ul class="mt-3 space-y-2.5 text-sm text-white/85">
           <li>✔ Quality issues? We remake for free</li>
           <li>✔ Late delivery? 5% discount on next order</li>
           <li>✔ Not satisfied? We resolve it — no excuses, no delays</li>
           <li>✔ Customer satisfaction priority</li>
         </ul>
-
-        <ul class="mt-6 space-y-2 text-sm">
+        <ul class="mt-7 space-y-2.5 border-t border-white/15 pt-7 text-sm">
           <li><a href={`mailto:${CONTACT.email}`} class="text-accent-bright hover:text-white">✉ {CONTACT.email}</a></li>
           <li><a href={CONTACT.phoneHref} class="text-accent-bright hover:text-white">☎ Call us: {CONTACT.phoneDisplay}</a></li>
           <li><a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-bright hover:text-white">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
-          <li class="text-white/70">Response: within 24 hours guaranteed</li>
+          <li class="text-white/60">{CONTACT.addressOneLine}</li>
         </ul>
       </div>
-
-      <div class="rounded-xl bg-white p-6 shadow-xl">
-        <h2 class="text-xl">Get your factory-direct quote</h2>
-        <p class="mt-1 text-sm text-muted">
-          Share your requirements — pump type, size, volume and quantity. We'll respond within 24
-          hours with factory pricing and a sample recommendation.
-        </p>
-        <div class="mt-4">
-          <LeadForm variant="site" source="home-quote" submitLabel="Get Your Factory-Direct Quote" />
-        </div>
+      <div class="card p-8" data-reveal>
+        <LeadForm variant="site" source="home-quote" submitLabel="Get Your Factory-Direct Quote" />
       </div>
     </div>
   </section>
-
-  <script>
-    const wrapper = document.querySelector<HTMLElement>('[data-product-filter]');
-    const grid = document.querySelector<HTMLElement>('[data-product-grid]');
-    if (wrapper && grid) {
-      const cards = Array.from(grid.querySelectorAll<HTMLElement>('[data-product-category]'));
-      wrapper.addEventListener('click', (event) => {
-        const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-filter]');
-        if (!button) return;
-        const filter = button.dataset.filter ?? 'all';
-        wrapper.querySelectorAll('button').forEach((b) => {
-          const active = b === button;
-          b.setAttribute('aria-pressed', String(active));
-          b.classList.toggle('btn-ghost', !active);
-        });
-        cards.forEach((card) => {
-          const categories = card.dataset.productCategory ?? '';
-          card.hidden = filter !== 'all' && !categories.split(' ').includes(filter);
-        });
-      });
-    }
-  </script>
 </BaseLayout>
