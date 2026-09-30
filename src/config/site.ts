@@ -32,7 +32,6 @@ export const CONTACT = {
   phoneAlt: '+86 15757418802',
   whatsappDisplay: '+86-158-8850-3691',
   whatsappHref: 'https://wa.me/8615888503691',
-  alibaba: 'https://cn1527061733eukl.en.alibaba.com/',
   addressLines: [
     '1109 Huancheng South Road, Zhouxiang Town',
     'Cixi City, Ningbo City, Zhejiang Province, China',

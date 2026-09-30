@@ -36,4 +36,4 @@ packing: "Carton Box"
 leadTime: "15~20days"
 ---
 
-<h2>Product Description</h2><p>Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump – Buy Nail Polish Pump plastic Nail Remover Pump Liquid Dispenser Pump Product on Alibaba.com</p><p>This pump is designed for nail polish and nail remover dispensing. Available in sizes 28/410 and 33/410. The purple color adds a stylish touch. Ideal for professional and personal use.</p>
+<h2>Product Description</h2><p>Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump – Buy Nail Polish Pump plastic Nail Remover Pump Liquid Dispenser Pump Product on .com</p><p>This pump is designed for nail polish and nail remover dispensing. Available in sizes 28/410 and 33/410. The purple color adds a stylish touch. Ideal for professional and personal use.</p>

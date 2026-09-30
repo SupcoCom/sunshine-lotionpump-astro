@@ -161,6 +161,17 @@ function toPlainText(value = '') {
     .trim();
 }
 
+/**
+ * Remove every Alibaba reference from synced content:
+ * links to alibaba.com, and text mentions (e.g. "Alibaba Trade Assurance").
+ */
+function stripAlibaba(html = '') {
+  return html
+    .replace(/<a\b[^>]*href=["'][^"']*alibaba\.com[^"']*["'][^>]*>[\s\S]*?<\/a>/gi, '')
+    .replace(/We do not offer Alibaba Trade Assurance on direct B2B orders—/g, '')
+    .replace(/\bAlibaba\b/g, '');
+}
+
 /** Drop WordPress block comments / editor leftovers. */
 function stripWpNoise(html) {
   return html
@@ -374,7 +385,7 @@ async function main() {
   const postIndex = [];
   for (const p of posts) {
     const cats = (p.categories || []).map((id) => postCatById.get(id)).filter(Boolean);
-    const html = relativise(stripWpNoise(unRendered(p.content)));
+    const html = stripAlibaba(relativise(stripWpNoise(unRendered(p.content))));
     const internalScripts = (html.match(/<script/gi) || []).length;
     if (internalScripts) report.issues.push(`post ${p.slug}: ${internalScripts} inline <script>`);
 
@@ -459,7 +470,7 @@ async function main() {
       leadTime: acf.lead_time || '',
     };
 
-    const body = collapseForMarkdown(relativise(stripWpNoise(unRendered(p.content))));
+    const body = collapseForMarkdown(stripAlibaba(relativise(stripWpNoise(unRendered(p.content)))));
     fs.writeFileSync(
       path.join(OUT.products, `${p.slug}.md`),
       `${frontmatter(fm)}\n\n${body}\n`,
@@ -482,7 +493,7 @@ async function main() {
       report.skipped.push({ slug: p.slug, reason: 'elementor — re-authored in Astro' });
       continue;
     }
-    let html = stripWpNoise(unRendered(p.content));
+    let html = stripAlibaba(stripWpNoise(unRendered(p.content)));
 
     if (LANDING_TEMPLATE_SLUGS.has(p.slug)) {
       const { html: stripped, sources } = stripCf7(html);

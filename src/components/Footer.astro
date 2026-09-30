@@ -8,7 +8,7 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
 }));
 ---
 
-<footer class="mt-24 bg-brand-strong text-white">
+<footer class="border-t border-white/10 bg-brand-strong text-white">
   <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
     <div>
       <div class="flex items-center gap-3">
@@ -22,15 +22,6 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
         {SITE.legalName}. {SITE.shortDescription} Serving buyers globally since {SITE.established}.
         ISO 9001:2015 certified. Factory: 7,000 m², Cixi, Ningbo, China.
       </p>
-      <a
-        href={CONTACT.alibaba}
-        rel="noopener nofollow"
-        target="_blank"
-        class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white underline decoration-white/40 underline-offset-4 transition hover:decoration-white"
-      >
-        View our Alibaba store
-        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
     </div>
 
     <nav aria-label="Footer products">
