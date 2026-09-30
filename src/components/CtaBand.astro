@@ -26,42 +26,31 @@ const promises = [
 ];
 ---
 
-<section id="quote" class="bg-brand-600 py-16 text-white">
-  <div class="container-x grid gap-10 lg:grid-cols-2">
-    <div>
-      <span class="eyebrow text-accent-400">{eyebrow}</span>
-      <h2 class="mt-2 text-white">{title}</h2>
-      <p class="mt-4 max-w-xl text-white/80">{description}</p>
+<section id="quote" class="border-y border-line bg-surface-alt py-20">
+  <div class="container-x grid gap-12 lg:grid-cols-2">
+    <div data-reveal>
+      <span class="eyebrow">{eyebrow}</span>
+      <h2>{title}</h2>
+      <p class="mt-4 max-w-xl leading-relaxed text-muted">{description}</p>
 
-      <ul class="mt-6 space-y-2 text-sm text-white/85">
-        {promises.map((promise) => <li>✔ {promise}</li>)}
+      <ul class="mt-7 space-y-2.5 text-sm text-ink/80">
+        {promises.map((promise) => (
+          <li class="flex gap-2.5">
+            <span class="mt-0.5 grid size-4 shrink-0 place-items-center rounded-full bg-brand-soft text-[10px] font-bold text-brand">✓</span>
+            <span>{promise}</span>
+          </li>
+        ))}
       </ul>
 
-      <div class="mt-8 space-y-3 text-sm">
-        <p>
-          <a href={`mailto:${CONTACT.email}`} class="text-accent-400 hover:text-white"
-            >✉ {CONTACT.email}</a
-          >
-        </p>
-        <p>
-          <a href={CONTACT.phoneHref} class="text-accent-400 hover:text-white"
-            >☎ Call us: {CONTACT.phoneDisplay}</a
-          >
-        </p>
-        <p>
-          <a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-400 hover:text-white"
-            >WhatsApp: {CONTACT.whatsappDisplay}</a
-          >
-        </p>
-        <p>
-          <a href={CONTACT.alibaba} rel="noopener nofollow" class="text-accent-400 hover:text-white"
-            >Alibaba store →</a
-          >
-        </p>
+      <div class="mt-9 space-y-3 border-t border-line pt-7 text-sm">
+        <p><a href={`mailto:${CONTACT.email}`} class="font-medium text-brand hover:text-accent">✉ {CONTACT.email}</a></p>
+        <p><a href={CONTACT.phoneHref} class="font-medium text-brand hover:text-accent">☎ Call us: {CONTACT.phoneDisplay}</a></p>
+        <p><a href={CONTACT.whatsappHref} rel="noopener" class="font-medium text-brand hover:text-accent">WhatsApp: {CONTACT.whatsappDisplay}</a></p>
+        <p><a href={CONTACT.alibaba} rel="noopener nofollow" class="font-medium text-brand hover:text-accent">Alibaba store →</a></p>
       </div>
     </div>
 
-    <div class="rounded-xl bg-white p-6 shadow-xl">
+    <div class="card h-fit p-7" data-reveal>
       <LeadForm variant="site" source={source} group={group} submitLabel="Get Your Factory-Direct Quote" />
     </div>
   </div>

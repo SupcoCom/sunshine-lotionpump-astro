@@ -8,16 +8,17 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
 }));
 ---
 
-<footer class="mt-20 bg-brand-700 text-white/85">
-  <div class="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-4">
+<footer class="mt-24 bg-brand-strong text-white">
+  <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
     <div>
-      <div class="mb-4 flex items-center gap-2.5">
-        <span class="grid size-9 place-items-center rounded-md bg-white text-lg font-black text-brand-600"
-          >S</span
-        >
-        <strong class="text-base font-black text-white">{SITE.brand} Plastic</strong>
+      <div class="flex items-center gap-3">
+        <span class="grid size-10 place-items-center rounded-md bg-white font-display text-lg font-black text-brand">S</span>
+        <div>
+          <strong class="block font-display text-base font-extrabold tracking-tight">{SITE.brand} Plastic</strong>
+          <span class="block text-[11px] uppercase tracking-[0.14em] text-white/60">{SITE.tagline}</span>
+        </div>
       </div>
-      <p class="text-sm leading-relaxed text-white/75">
+      <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
         {SITE.legalName}. {SITE.shortDescription} Serving buyers globally since {SITE.established}.
         ISO 9001:2015 certified. Factory: 7,000 m², Cixi, Ningbo, China.
       </p>
@@ -25,23 +26,21 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
         href={CONTACT.alibaba}
         rel="noopener nofollow"
         target="_blank"
-        class="mt-4 inline-block text-sm font-semibold text-accent-400 hover:text-white"
-        >View our Alibaba store →</a
+        class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-white underline decoration-white/40 underline-offset-4 transition hover:decoration-white"
       >
+        View our Alibaba store
+        <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
     </div>
 
     <nav aria-label="Footer products">
-      <h2 class="mb-4 text-sm font-bold uppercase tracking-[0.14em] text-white">Products</h2>
-      <ul class="space-y-2 text-sm">
-        <li>
-          <a href="/products/" class="text-white/75 hover:text-accent-400">All products</a>
-        </li>
+      <h2 class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Products</h2>
+      <ul class="space-y-2.5 text-sm">
+        <li><a href="/products/" class="text-white/75 transition hover:text-white">All products</a></li>
         {
           productLinks.map((link) => (
             <li>
-              <a href={link.href} class="text-white/75 hover:text-accent-400">
-                {link.label}
-              </a>
+              <a href={link.href} class="text-white/75 transition hover:text-white">{link.label}</a>
             </li>
           ))
         }
@@ -49,26 +48,20 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
     </nav>
 
     <nav aria-label="Footer navigation">
-      <h2 class="mb-4 text-sm font-bold uppercase tracking-[0.14em] text-white">Quick Links</h2>
-      <ul class="space-y-2 text-sm">
+      <h2 class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Quick Links</h2>
+      <ul class="space-y-2.5 text-sm">
         {
           NAV.map((item) => (
             <li>
               {item.href ? (
-                <a href={item.href} class="text-white/75 hover:text-accent-400">
-                  {item.label}
-                </a>
+                <a href={item.href} class="text-white/75 transition hover:text-white">{item.label}</a>
               ) : (
                 <details>
-                  <summary class="cursor-pointer text-white/75 hover:text-accent-400">
-                    {item.label}
-                  </summary>
-                  <ul class="mt-2 space-y-1.5 pl-3">
+                  <summary class="cursor-pointer text-white/75 transition hover:text-white">{item.label}</summary>
+                  <ul class="mt-2.5 space-y-2 pl-3">
                     {item.children?.map((child) => (
                       <li>
-                        <a href={child.href} class="text-white/60 hover:text-accent-400">
-                          {child.label}
-                        </a>
+                        <a href={child.href} class="text-white/55 transition hover:text-white">{child.label}</a>
                       </li>
                     ))}
                   </ul>
@@ -81,35 +74,28 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
     </nav>
 
     <div>
-      <h2 class="mb-4 text-sm font-bold uppercase tracking-[0.14em] text-white">Get In Touch</h2>
+      <h2 class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Get In Touch</h2>
       <ul class="space-y-3 text-sm text-white/75">
-        <li>{CONTACT.addressOneLine}</li>
+        <li class="leading-relaxed">{CONTACT.addressOneLine}</li>
         <li>
-          Email:
-          <a href={`mailto:${CONTACT.email}`} class="hover:text-accent-400">{CONTACT.email}</a>
+          Email: <a href={`mailto:${CONTACT.email}`} class="text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">{CONTACT.email}</a>
         </li>
         <li>
-          Phone:
-          <a href={CONTACT.phoneHref} class="hover:text-accent-400">{CONTACT.phoneDisplay}</a>
+          Phone: <a href={CONTACT.phoneHref} class="text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">{CONTACT.phoneDisplay}</a>
           {' / '}
-          <a href="tel:+8615757418802" class="hover:text-accent-400">{CONTACT.phoneAlt}</a>
+          <a href="tel:+8615757418802" class="text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">{CONTACT.phoneAlt}</a>
         </li>
-        <li>WhatsApp: <a href={CONTACT.whatsappHref} rel="noopener" class="hover:text-accent-400">{CONTACT.whatsappDisplay}</a></li>
-        <li>Hours: {CONTACT.hours}</li>
+        <li>WhatsApp: <a href={CONTACT.whatsappHref} rel="noopener" class="text-white underline decoration-white/30 underline-offset-2 hover:decoration-white">{CONTACT.whatsappDisplay}</a></li>
+        <li class="text-white/55">Hours: {CONTACT.hours}</li>
       </ul>
     </div>
   </div>
 
-  <div class="border-t border-white/15">
-    <div
-      class="container-x flex flex-col gap-2 py-5 text-xs text-white/60 md:flex-row md:items-center md:justify-between"
-    >
+  <div class="border-t border-white/10">
+    <div class="container-x flex flex-col gap-2 py-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
+      <p>Copyright © {year} {SITE.legalName}. All Rights Reserved. Wholesale Plastic Dispenser Pump Manufacturers.</p>
       <p>
-        Copyright © {year} {SITE.legalName}. All Rights Reserved. Wholesale Plastic Dispenser
-        Pump Manufacturers.
-      </p>
-      <p>
-        <a href="/privacy-policy/" class="hover:text-accent-400">Privacy Policy</a>
+        <a href="/privacy-policy/" class="underline decoration-white/30 underline-offset-2 hover:text-white">Privacy Policy</a>
         <span class="mx-2" aria-hidden="true">·</span>
         Built headless on Astro
       </p>

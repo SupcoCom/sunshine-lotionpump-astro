@@ -361,7 +361,7 @@ const schema = [
       {catalog.map((product, index) => <ProductCard product={product.data} eager={index < 3} />)}
     </div>
     <p class="mt-4 text-sm">
-      <a class="font-semibold text-accent-600 underline" href="/product-category/lotion-pump/"
+      <a class="font-semibold text-accent-strong underline" href="/product-category/lotion-pump/"
         >View the full lotion pump range →</a
       >
     </p>
@@ -385,7 +385,7 @@ const schema = [
               class="aspect-square w-full object-cover"
             />
             <figcaption class="p-4 text-xs">
-              <strong class="block text-brand-600">{item.caption}</strong>
+              <strong class="block text-brand">{item.caption}</strong>
               <span class="text-muted">{item.price}</span>
             </figcaption>
           </figure>
@@ -498,14 +498,14 @@ const schema = [
     <div class="mx-auto mt-6 grid max-w-3xl gap-5 md:grid-cols-2">
       <div class="card p-5">
         <h3 class="text-base">Free / no-tool customization</h3>
-        <p class="text-xs uppercase tracking-wide text-accent-500">Standard lead time 15–30 days</p>
+        <p class="text-xs uppercase tracking-wide text-accent">Standard lead time 15–30 days</p>
         <ul class="mt-3 space-y-2 text-sm">
           {freeCustom.map((item) => <li class="flex gap-2">✔ <span>{item}</span></li>)}
         </ul>
       </div>
       <div class="card p-5">
         <h3 class="text-base">Tooling-required customization</h3>
-        <p class="text-xs uppercase tracking-wide text-accent-500">
+        <p class="text-xs uppercase tracking-wide text-accent">
           +30–45 days · $4K–$12K mold cost
         </p>
         <ul class="mt-3 space-y-2 text-sm">
@@ -549,8 +549,8 @@ const schema = [
       {
         markets.map(([share, region, countries]) => (
           <div class="card p-4">
-            <p class="text-2xl font-black text-accent-500">{share}</p>
-            <p class="text-sm font-bold text-brand-600">{region}</p>
+            <p class="text-2xl font-black text-accent">{share}</p>
+            <p class="text-sm font-bold text-brand">{region}</p>
             <p class="text-xs text-muted">{countries}</p>
           </div>
         ))
@@ -743,7 +743,7 @@ const schema = [
         {
           commercial.map(([label, value]) => (
             <div class="grid gap-1 px-5 py-4 sm:grid-cols-[160px_1fr]">
-              <dt class="text-sm font-bold text-brand-600">{label}</dt>
+              <dt class="text-sm font-bold text-brand">{label}</dt>
               <dd class="text-sm text-ink/80">{value}</dd>
             </div>
           ))
@@ -754,7 +754,7 @@ const schema = [
 
   <FaqList items={faqs.map(([q, a]) => ({ q, a }))} title="Frequently asked questions" />
 
-  <section class="bg-brand-700 py-14 text-white">
+  <section class="bg-brand-strong py-14 text-white">
     <div class="container-x">
       <h2 class="text-white">Trusted by 90,000+ global B2B buyers</h2>
       <p class="mt-2 text-white/75">
@@ -765,7 +765,7 @@ const schema = [
           trust.map(([value, label]) => (
             <div>
               <dt class="text-[11px] uppercase tracking-wide text-white/60">{label}</dt>
-              <dd class="text-2xl font-black text-accent-400">{value}</dd>
+              <dd class="text-2xl font-black text-accent-bright">{value}</dd>
             </div>
           ))
         }
@@ -789,7 +789,7 @@ const schema = [
           <li>
             <a
               href={item.href}
-              class="card block p-4 text-sm font-medium text-brand-600 transition hover:border-accent-500"
+              class="card block p-4 text-sm font-medium text-brand transition hover:border-accent"
             >
               {item.label} →
             </a>
@@ -799,10 +799,10 @@ const schema = [
     </ul>
   </section>
 
-  <section class="bg-brand-600 py-16 text-white">
+  <section class="bg-brand py-16 text-white">
     <div class="container-x grid gap-10 lg:grid-cols-2">
       <div>
-        <span class="eyebrow text-accent-400">Reply within 24 hours</span>
+        <span class="eyebrow text-accent-bright">Reply within 24 hours</span>
         <h2 class="mt-2 text-white">Ready to source your lotion pumps?</h2>
         <p class="mt-4 text-white/80">
           If you have a target neck size, finish type and target volume in mind, we can return a

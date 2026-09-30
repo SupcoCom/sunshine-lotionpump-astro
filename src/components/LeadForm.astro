@@ -57,7 +57,7 @@ const controls = [
   data-min-ms="1500"
   novalidate
 >
-  {title && <h3 class={variant === 'lp' ? '' : 'text-xl font-bold text-brand-600'}>{title}</h3>}
+  {title && <h3 class={variant === 'lp' ? '' : 'text-xl font-bold text-brand'}>{title}</h3>}
   {description && <p class={variant === 'lp' ? 'text-sm text-muted' : 'text-sm text-muted'}>{description}</p>}
 
   <div class={variant === 'lp' ? 'sr-only' : 'sr-only'}>
@@ -107,7 +107,7 @@ const controls = [
           </p>
         ) : (
           <label class="block">
-            <span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-brand-600">
+            <span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-brand">
               {control.label} *
             </span>
             {control.type === 'textarea' ? (
@@ -118,7 +118,7 @@ const controls = [
                 required
                 aria-required="true"
                 placeholder={control.placeholder}
-                class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
               />
             ) : (
               <input
@@ -129,7 +129,7 @@ const controls = [
                 aria-required="true"
                 autocomplete={control.autocomplete}
                 placeholder={control.placeholder}
-                class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent-500 focus:ring-2 focus:ring-accent-500/20"
+                class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
               />
             )}
           </label>
@@ -154,7 +154,7 @@ const controls = [
   </p>
 
   <div class="wpcf7-response-output" role="status" aria-live="polite"></div>
-  <p class="text-sm font-medium text-accent-600" data-lead-error hidden></p>
+  <p class="text-sm font-medium text-accent-strong" data-lead-error hidden></p>
 </form>
 
 <script>

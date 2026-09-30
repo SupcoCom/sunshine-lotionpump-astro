@@ -19,18 +19,20 @@ const schema = {
 };
 ---
 
-<nav aria-label="Breadcrumb" class="border-b border-line bg-surface">
-  <div class="container-x py-3">
-    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted">
+<nav aria-label="Breadcrumb" class="border-b border-line bg-surface-alt/60">
+  <div class="container-x py-3.5">
+    <ol class="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-faint">
       {
         items.map((item, index) => (
           <li class="flex items-center gap-2">
             {item.href && index < items.length - 1 ? (
-              <a href={item.href} class="hover:text-brand-600">{item.label}</a>
+              <a href={item.href} class="transition hover:text-brand">{item.label}</a>
             ) : (
-              <span class="font-medium text-brand-600">{item.label}</span>
+              <span class="font-semibold text-brand">{item.label}</span>
             )}
-            {index < items.length - 1 && <span aria-hidden="true">/</span>}
+            {index < items.length - 1 && (
+              <svg width="10" height="10" viewBox="0 0 24 24" aria-hidden="true" class="text-line-strong"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            )}
           </li>
         ))
       }

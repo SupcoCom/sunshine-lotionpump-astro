@@ -82,7 +82,7 @@ const certifications = [
   <section class="container-x py-12">
     <span class="eyebrow">About {SITE.brand} Plastic</span>
     <h1 class="mt-2">About {SITE.brand} Plastic</h1>
-    <p class="mt-3 text-lg font-semibold text-brand-600">{SITE.legalName}</p>
+    <p class="mt-3 text-lg font-semibold text-brand">{SITE.legalName}</p>
     <p class="mt-2 max-w-3xl text-sm text-muted">
       ISO 9001:2015 certified B2B cosmetic pump manufacturer · Cixi, Ningbo, China · {SITE.established} ·
       Factory-direct OEM/ODM
@@ -122,7 +122,7 @@ const certifications = [
         ABOUT_STATS.map((stat) => (
           <div class="card p-5">
             <dt class="text-[11px] uppercase tracking-wide text-muted">{stat.label}</dt>
-            <dd class="text-2xl font-black text-accent-500">{stat.value}</dd>
+            <dd class="text-2xl font-black text-accent">{stat.value}</dd>
           </div>
         ))
       }
@@ -159,7 +159,7 @@ const certifications = [
       {
         range.map(([name, sizes], index) => (
           <li class="card flex items-center justify-between gap-3 p-4 text-sm">
-            <span class="font-semibold text-brand-600">{name}</span>
+            <span class="font-semibold text-brand">{name}</span>
             <span class="text-right text-xs text-muted">{sizes}</span>
             {PRODUCT_CATEGORIES[index] && (
               <a href={`/product-category/${PRODUCT_CATEGORIES[index].slug}/`} class="sr-only">
@@ -171,7 +171,7 @@ const certifications = [
       }
     </ul>
     <p class="mt-4 text-sm">
-      <a href="/product-category/lotion-pump/" class="font-semibold text-accent-600 underline"
+      <a href="/product-category/lotion-pump/" class="font-semibold text-accent-strong underline"
         >Browse the full product catalogue →</a
       >
     </p>
@@ -200,19 +200,19 @@ const certifications = [
     </div>
   </section>
 
-  <section class="bg-brand-600 py-16 text-white">
+  <section class="bg-brand py-16 text-white">
     <div class="container-x grid gap-10 lg:grid-cols-2">
       <div>
-        <span class="eyebrow text-accent-400">Reply within 24 hours</span>
+        <span class="eyebrow text-accent-bright">Reply within 24 hours</span>
         <h2 class="mt-2 text-white">Partner with {SITE.brand} today</h2>
         <p class="mt-4 text-white/80">
           Factory-direct pricing on custom spray pumps, lotion dispensers and cosmetic packaging.
           MOQ 5,000 pcs. Reply within 24 hours.
         </p>
         <ul class="mt-6 space-y-2 text-sm text-white/85">
-          <li><a href={`mailto:${CONTACT.email}`} class="text-accent-400 hover:text-white">✉ {CONTACT.email}</a></li>
-          <li><a href={CONTACT.phoneHref} class="text-accent-400 hover:text-white">☎ {CONTACT.phoneDisplay}</a></li>
-          <li><a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-400 hover:text-white">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
+          <li><a href={`mailto:${CONTACT.email}`} class="text-accent-bright hover:text-white">✉ {CONTACT.email}</a></li>
+          <li><a href={CONTACT.phoneHref} class="text-accent-bright hover:text-white">☎ {CONTACT.phoneDisplay}</a></li>
+          <li><a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-bright hover:text-white">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
           <li class="text-white/70">{CONTACT.addressOneLine}</li>
         </ul>
       </div>

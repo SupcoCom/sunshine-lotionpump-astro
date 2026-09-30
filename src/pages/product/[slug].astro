@@ -154,7 +154,7 @@ const schema = [
                   type="button"
                   class:list={[
                     'size-16 overflow-hidden rounded border bg-white p-1 transition',
-                    index === 0 ? 'border-accent-500' : 'border-line hover:border-accent-500',
+                    index === 0 ? 'border-accent' : 'border-line hover:border-accent',
                   ]}
                   data-gallery-src={src}
                   aria-label={`View image ${index + 1}`}
@@ -169,7 +169,7 @@ const schema = [
     </div>
 
     <div>
-      <h1 class="text-brand-600">{displayTitle}</h1>
+      <h1 class="text-brand">{displayTitle}</h1>
       {p.excerpt && <p class="mt-3 text-ink/75">{p.excerpt}</p>}
 
       <ul class="mt-5 grid gap-2 text-sm sm:grid-cols-2">
@@ -268,7 +268,7 @@ const schema = [
         if (src) main.src = src;
         gallery
           .querySelectorAll('button')
-          .forEach((b) => b.classList.toggle('border-accent-500', b === button));
+          .forEach((b) => b.classList.toggle('border-accent', b === button));
       });
     }
   </script>

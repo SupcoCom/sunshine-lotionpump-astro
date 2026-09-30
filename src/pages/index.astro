@@ -136,10 +136,10 @@ const schema = [
   schema={schema}
 >
   <!-- Hero -->
-  <section class="bg-brand-600 text-white">
+  <section class="bg-brand text-white">
     <div class="container-x grid items-center gap-10 py-14 lg:grid-cols-2 lg:py-20">
       <div>
-        <span class="eyebrow text-accent-400">Company since {SITE.established}</span>
+        <span class="eyebrow text-accent-bright">Company since {SITE.established}</span>
         <h1 class="mt-3 text-white">{SITE.tagline}</h1>
         <p class="mt-5 max-w-xl text-lg text-white/85">
           Fine mist sprayers · lotion pumps · foam pumps · trigger sprayers — all made in-house in
@@ -156,7 +156,7 @@ const schema = [
             TRUST_STATS.map((stat) => (
               <div>
                 <dt class="text-[11px] uppercase tracking-wide text-white/60">{stat.label}</dt>
-                <dd class="text-xl font-black text-accent-400">{stat.value}</dd>
+                <dd class="text-xl font-black text-accent-bright">{stat.value}</dd>
               </div>
             ))
           }
@@ -209,7 +209,7 @@ const schema = [
   <section class="bg-surface py-14">
     <div class="container-x">
       <h2>OEM/ODM cosmetic pump &amp; dispenser solutions</h2>
-      <p class="mt-2 text-sm font-semibold uppercase tracking-wide text-accent-500">
+      <p class="mt-2 text-sm font-semibold uppercase tracking-wide text-accent">
         Factory direct — Cixi, Ningbo, Zhejiang China
       </p>
       <p class="mt-4 max-w-3xl text-ink/75">
@@ -287,7 +287,7 @@ const schema = [
               <ul class="mt-4 space-y-2 text-sm">
                 {pillar.points.map((point) => (
                   <li class="flex gap-2">
-                    <span class="text-accent-500" aria-hidden="true">✔</span>
+                    <span class="text-accent" aria-hidden="true">✔</span>
                     <span>{point}</span>
                   </li>
                 ))}
@@ -325,7 +325,7 @@ const schema = [
   </section>
 
   <!-- Catalog -->
-  <section class="bg-brand-700 py-14 text-white">
+  <section class="bg-brand-strong py-14 text-white">
     <div class="container-x grid items-center gap-10 lg:grid-cols-2">
       <div>
         <h2 class="text-white">Download our product catalog</h2>
@@ -367,17 +367,17 @@ const schema = [
   <FaqList items={faqs} title="Frequently asked questions" />
 
   <!-- Quote -->
-  <section id="quote" class="scroll-mt-20 bg-brand-600 py-16 text-white">
+  <section id="quote" class="scroll-mt-20 bg-brand py-16 text-white">
     <div class="container-x grid gap-10 lg:grid-cols-2">
       <div>
-        <span class="eyebrow text-accent-400">Reply within 24 hours</span>
+        <span class="eyebrow text-accent-bright">Reply within 24 hours</span>
         <h2 class="mt-2 text-white">Ready for factory-direct cosmetic pump pricing?</h2>
         <p class="mt-4 text-white/80">
           Skip the middlemen. We've manufactured spray pumps and dispensers since {SITE.established} —
           tell us your specs and get honest factory pricing within 24 hours.
         </p>
 
-        <p class="mt-6 text-sm font-bold uppercase tracking-wide text-accent-400">
+        <p class="mt-6 text-sm font-bold uppercase tracking-wide text-accent-bright">
           Zero-risk guarantee
         </p>
         <ul class="mt-3 space-y-2 text-sm text-white/85">
@@ -388,9 +388,9 @@ const schema = [
         </ul>
 
         <ul class="mt-6 space-y-2 text-sm">
-          <li><a href={`mailto:${CONTACT.email}`} class="text-accent-400 hover:text-white">✉ {CONTACT.email}</a></li>
-          <li><a href={CONTACT.phoneHref} class="text-accent-400 hover:text-white">☎ Call us: {CONTACT.phoneDisplay}</a></li>
-          <li><a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-400 hover:text-white">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
+          <li><a href={`mailto:${CONTACT.email}`} class="text-accent-bright hover:text-white">✉ {CONTACT.email}</a></li>
+          <li><a href={CONTACT.phoneHref} class="text-accent-bright hover:text-white">☎ Call us: {CONTACT.phoneDisplay}</a></li>
+          <li><a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-bright hover:text-white">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
           <li class="text-white/70">Response: within 24 hours guaranteed</li>
         </ul>
       </div>
