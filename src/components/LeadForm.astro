@@ -38,6 +38,7 @@ const fieldId = id ?? `lead-${source}-${Math.random().toString(36).slice(2, 7)}`
 const controls = [
   { name: 'your-name', label: 'Your Name', type: 'text', placeholder: 'e.g. Sarah Chen', autocomplete: 'name' },
   { name: 'your-email', label: 'Email', type: 'email', placeholder: 'buyer@yourcompany.com', autocomplete: 'email' },
+  { name: 'phone', label: 'WhatsApp / Phone', type: 'tel', placeholder: 'e.g. +86 158 8850 3691', autocomplete: 'tel', optional: true },
   {
     name: 'your-message',
     label: 'Your Requirement',
@@ -75,7 +76,8 @@ const controls = [
         {variant === 'lp' ? (
           <p>
             <label for={`${fieldId}-${control.name}`}>
-              {control.label} *
+              {control.label}
+              {control.optional ? ' (optional)' : ' *'}
             </label>
             <span class="wpcf7-form-control-wrap" data-name={control.name}>
               {control.type === 'textarea' ? (
@@ -83,8 +85,8 @@ const controls = [
                   id={`${fieldId}-${control.name}`}
                   name={control.name}
                   rows={compact ? 3 : 5}
-                  required
-                  aria-required="true"
+                  required={!control.optional}
+                  aria-required={control.optional ? 'false' : 'true'}
                   placeholder={control.placeholder}
                   class="wpcf7-form-control wpcf7-textarea"
                 />
@@ -93,8 +95,8 @@ const controls = [
                   id={`${fieldId}-${control.name}`}
                   name={control.name}
                   type={control.type}
-                  required
-                  aria-required="true"
+                  required={!control.optional}
+                  aria-required={control.optional ? 'false' : 'true'}
                   autocomplete={control.autocomplete}
                   placeholder={control.placeholder}
                   class:list={[
@@ -108,15 +110,16 @@ const controls = [
         ) : (
           <label class="block">
             <span class="mb-1.5 block text-xs font-semibold uppercase tracking-wide text-brand">
-              {control.label} *
+              {control.label}
+              {control.optional ? ' (optional)' : ' *'}
             </span>
             {control.type === 'textarea' ? (
               <textarea
                 id={`${fieldId}-${control.name}`}
                 name={control.name}
                 rows={compact ? 3 : 4}
-                required
-                aria-required="true"
+                required={!control.optional}
+                aria-required={control.optional ? 'false' : 'true'}
                 placeholder={control.placeholder}
                 class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
               />
@@ -125,8 +128,8 @@ const controls = [
                 id={`${fieldId}-${control.name}`}
                 name={control.name}
                 type={control.type}
-                required
-                aria-required="true"
+                required={!control.optional}
+                aria-required={control.optional ? 'false' : 'true'}
                 autocomplete={control.autocomplete}
                 placeholder={control.placeholder}
                 class="w-full rounded-lg border border-line bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
