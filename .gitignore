@@ -28,3 +28,7 @@ Thumbs.db
 
 # local wrangler / miniflare state
 .wrangler/
+
+# local dev/preview logs
+dev.log
+*.log
