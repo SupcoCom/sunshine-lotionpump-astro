@@ -52,10 +52,14 @@ export const LEAD = {
   minMs: 1500,
 } as const;
 
+/**
+ * Analytics — mirrors the live site, which loads gtag.js directly (no GTM).
+ * The conversion label is the one already verified on the legacy WordPress pages.
+ */
 export const TRACKING = {
-  gtmId: 'GTM-XXXXXXX',
   ga4Id: 'G-8FBX0D4TKK',
   googleAdsId: 'AW-18370250001',
+  conversionLabel: 'AW-18370250001/HC1NCLmest4cEJGKz7dE',
 } as const;
 
 export type NavLink = { label: string; href: string };

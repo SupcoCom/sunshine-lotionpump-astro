@@ -1,30 +1,25 @@
 ---
 /**
- * Analytics + Google Ads. Single place, env-overridable.
- * GTM is loaded only when a real container id is configured, so preview
- * builds never pollute production analytics.
+ * Analytics — direct gtag.js, identical to the live WordPress site.
+ *
+ * The legacy site loads gtag.js with the Google Ads id and configures both
+ * GA4 and Google Ads. The lead form fires the verified conversion label on
+ * success. No GTM container is involved.
  */
 import { TRACKING } from '@/config/site';
 
-const gtm = TRACKING.gtmId;
-const ga4 = TRACKING.ga4Id;
-const ads = TRACKING.googleAdsId;
-const hasGtm = /^GTM-[A-Z0-9]{4,}$/.test(gtm) && !gtm.includes('XXXX');
+const { ga4Id, googleAdsId, conversionLabel } = TRACKING;
 ---
 
-{hasGtm && (
-  <script is:inline>
-    {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${gtm}');`}
-  </script>
-)}
-
-<script is:inline define:vars={{ ga4, ads, hasGtm }}>
+<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}></script>
+<script is:inline define:vars={{ ga4Id, googleAdsId, conversionLabel }}>
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = window.gtag || gtag;
 
-  // Mirror the legacy tags: GA4 + Google Ads conversion linker.
-  window.__SUNSHINE_TAGS__ = { ga4, ads, gtm: hasGtm };
+  gtag('js', new Date());
+  gtag('config', googleAdsId);
+  gtag('config', ga4Id);
 
   // Lead conversion helper — called by the lead form on success.
   window.sunshineTrackLead = function (source) {
@@ -33,17 +28,6 @@ const hasGtm = /^GTM-[A-Z0-9]{4,}$/.test(gtm) && !gtm.includes('XXXX');
       lead_source: source || 'unknown',
       form_location: document.location.pathname,
     });
-    if (typeof window.gtag === 'function' && ads) {
-      window.gtag('event', 'conversion', { send_to: ads });
-    }
+    gtag('event', 'conversion', { send_to: conversionLabel });
   };
 </script>
-
-<noscript>
-  <iframe
-    src={`https://www.googletagmanager.com/ns.html?id=${gtm}`}
-    height="0"
-    width="0"
-    style="display:none;visibility:hidden"
-    title="gtm"></iframe>
-</noscript>
