@@ -64,7 +64,7 @@ const certifications = [
 <BaseLayout
   title={seo.title || `About ${SITE.brand} | Cosmetic Pump Manufacturer in China`}
   description={seo.description ||
-    `${SITE.legalName} — ISO 9001:2015 certified B2B cosmetic pump manufacturer in Cixi, Ningbo, China. 7,000 m² factory, 50M+ units per year, full OEM/ODM.`}
+    `${SITE.legalName} — ISO 9001:2015 certified B2B cosmetic pump manufacturer in Yuyao, Ningbo, China. 7,000 m² factory, 50M+ units per year, full OEM/ODM.`}
   canonicalPath={path}
   schema={[
     {
@@ -79,50 +79,67 @@ const certifications = [
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About Us' }]} />
 
-  <section class="container-x py-14 md:py-24" data-reveal>
-    <span class="eyebrow">About {SITE.brand} Plastic</span>
-    <h1 class="mt-2">About {SITE.brand} Plastic</h1>
-    <p class="mt-3 text-lg font-semibold text-brand">{SITE.legalName}</p>
-    <p class="mt-2 max-w-3xl text-sm text-muted">
-      ISO 9001:2015 certified B2B cosmetic pump manufacturer · Cixi, Ningbo, China · {SITE.established} ·
-      Factory-direct OEM/ODM
-    </p>
-
-    <div class="mt-10 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-      <div class="prose-wp max-w-none">
-        <h2>Our story</h2>
-        <p>
-          Founded in {SITE.established}, {SITE.brand} Plastic ({SITE.legalName}) is a dedicated B2B
-          manufacturer of cosmetic spray pumps and dispensers in Cixi, Ningbo, Zhejiang — minutes
-          from Ningbo Port for efficient global export.
-        </p>
-        <p>
-          We have scaled to a 7,000 m² factory with 10 injection moulding machines and 4 automated
-          assembly lines, producing over 50 million units annually. Our single focus:
-          precision-engineered cosmetic pumps at transparent factory-direct prices, with full OEM/ODM
-          support for beauty brands worldwide.
-        </p>
-        <ul>
-          {bullets.map((item) => <li>{item}</li>)}
-        </ul>
+  <header class="hero-band">
+    <div class="container-x hero-band-inner">
+      <span class="hero-band-eyebrow">About {SITE.brand} Plastic</span>
+      <h1>Precision cosmetic pumps, factory direct</h1>
+      <p class="lede">
+        {SITE.legalName} — ISO 9001:2015 certified B2B cosmetic pump manufacturer in Yuyao, Ningbo,
+        China. Founded {SITE.established}, serving beauty brands worldwide with full OEM/ODM support.
+      </p>
+      <div class="hero-band-stats">
+        <span>Established <strong>{SITE.established}</strong></span>
+        <span><strong>7,000 m²</strong> factory</span>
+        <span><strong>50M+</strong> units / year</span>
+        <span><strong>ISO 9001:2015</strong> certified</span>
       </div>
-      <img
-        src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/all-closures-overview.png"
-        alt={`${SITE.brand} closures and pumps product overview`}
-        width="620"
-        height="620"
-        loading="lazy"
-        decoding="async"
-        class="card w-full object-contain p-3"
-      />
+      <div class="hero-band-pills">
+        <a href="#quote" class="hero-pill">Request a quote</a>
+        <a href="/products/" class="hero-pill">Browse products</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="container-x py-12 md:py-16" data-reveal>
+    <div class="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
+      <div class="about-story">
+        <span class="eyebrow">Our story</span>
+        <h2>Built in Ningbo, trusted worldwide</h2>
+        <div class="prose-wp mt-5 max-w-none">
+          <p>
+            Founded in {SITE.established}, {SITE.brand} Plastic ({SITE.legalName}) is a dedicated B2B
+            manufacturer of cosmetic spray pumps and dispensers in Yuyao, Ningbo, Zhejiang — minutes
+            from Ningbo Port for efficient global export.
+          </p>
+          <p>
+            We have scaled to a 7,000 m² factory with 10 injection moulding machines and 4 automated
+            assembly lines, producing over 50 million units annually. Our single focus:
+            precision-engineered cosmetic pumps at transparent factory-direct prices, with full OEM/ODM
+            support for beauty brands worldwide.
+          </p>
+          <ul>
+            {bullets.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+      <div class="about-media">
+        <img
+          src="https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/all-closures-overview.png"
+          alt={`${SITE.brand} closures and pumps product overview`}
+          width="620"
+          height="620"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
     </div>
 
     <dl class="mt-10 grid grid-cols-2 gap-4 lg:grid-cols-4">
       {
         ABOUT_STATS.map((stat) => (
-          <div class="card p-5">
-            <dt class="text-[11px] uppercase tracking-wide text-muted">{stat.label}</dt>
-            <dd class="text-2xl font-black text-accent">{stat.value}</dd>
+          <div class="about-stat">
+            <dt>{stat.label}</dt>
+            <dd>{stat.value}</dd>
           </div>
         ))
       }
@@ -142,10 +159,13 @@ const certifications = [
       </p>
       <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
         {
-          capabilities.map((item) => (
-            <article class="card p-5">
-              <h3 class="text-base">{item.title}</h3>
-              <p class="mt-2 text-sm text-ink/75">{item.body}</p>
+          capabilities.map((item, index) => (
+            <article class="about-cap" data-reveal>
+              <span class="about-cap-num" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <h3>{item.title}</h3>
+              <p>{item.body}</p>
             </article>
           ))
         }
@@ -166,19 +186,19 @@ const certifications = [
     <ul class="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
       {
         range.map(([name, sizes], index) => (
-          <li class="card flex items-center justify-between gap-3 p-4 text-sm">
-            <span class="font-semibold text-brand">{name}</span>
-            <span class="text-right text-xs text-muted">{sizes}</span>
+          <li class="about-range">
+            <span class="about-range-name">{name}</span>
+            <span class="about-range-sizes">{sizes}</span>
             {PRODUCT_CATEGORIES[index] && (
-              <a href={`/product-category/${PRODUCT_CATEGORIES[index].slug}/`} class="sr-only">
-                {name}
+              <a href={`/product-category/${PRODUCT_CATEGORIES[index].slug}/`} class="about-range-link">
+                View <span aria-hidden="true">→</span>
               </a>
             )}
           </li>
         ))
       }
     </ul>
-    <p class="mt-4 text-sm">
+    <p class="mt-5 text-sm">
       <a href="/product-category/lotion-pump/" class="font-semibold text-accent-strong underline"
         >Browse the full product catalogue →</a
       >
@@ -212,24 +232,24 @@ const certifications = [
     </div>
   </section>
 
-  <section class="bg-brand py-14 md:py-24 text-white" data-reveal>
-    <div class="container-x grid gap-10 lg:grid-cols-2">
+  <section class="about-cta" id="quote">
+    <div class="container-x about-cta-inner grid gap-10 lg:grid-cols-2">
       <div>
-        <span class="eyebrow text-accent-bright">Reply within 24 hours</span>
-        <h2 class="mt-2 text-white">Partner with {SITE.brand} today</h2>
-        <p class="mt-4 text-white/80">
+        <span class="about-cta-eyebrow">Reply within 24 hours</span>
+        <h2>Partner with {SITE.brand} today</h2>
+        <p class="about-cta-text">
           Factory-direct pricing on custom spray pumps, lotion dispensers and cosmetic packaging.
           MOQ 5,000 pcs. Reply within 24 hours.
         </p>
-        <ul class="mt-6 space-y-2 text-sm text-white/85">
-          <li><a href={`mailto:${CONTACT.email}`} class="text-accent-bright hover:text-white">✉ {CONTACT.email}</a></li>
-          <li><a href={CONTACT.phoneHref} class="text-accent-bright hover:text-white">☎ {CONTACT.phoneDisplay}</a></li>
-          <li><a href={CONTACT.whatsappHref} rel="noopener" class="text-accent-bright hover:text-white">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
+        <ul class="mt-6 space-y-2.5 text-sm">
+          <li><a href={`mailto:${CONTACT.email}`} class="about-cta-link">✉ {CONTACT.email}</a></li>
+          <li><a href={CONTACT.phoneHref} class="about-cta-link">☎ {CONTACT.phoneDisplay}</a></li>
+          <li><a href={CONTACT.whatsappHref} rel="noopener" class="about-cta-link">WhatsApp: {CONTACT.whatsappDisplay}</a></li>
           <li class="text-white/70">{CONTACT.addressOneLine}</li>
         </ul>
       </div>
-      <div class="rounded-xl bg-white p-6 shadow-xl">
-        <h2 class="text-xl">Request a quote</h2>
+      <div class="about-cta-form">
+        <h3>Request a quote</h3>
         <p class="mt-1 text-sm text-muted">
           Tell us your product, size and volume — we'll reply with pricing and a sample plan.
         </p>
@@ -240,3 +260,183 @@ const certifications = [
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .about-story {
+    padding: clamp(24px, 3.5vw, 44px);
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+  }
+  .about-media {
+    overflow: hidden;
+    padding: clamp(16px, 2.5vw, 28px);
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 20px;
+    box-shadow: var(--shadow-card);
+  }
+  .about-media img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+  }
+
+  .about-stat {
+    padding: 22px;
+    background: var(--color-brand-strong);
+    border-radius: 16px;
+    color: #fff;
+  }
+  .about-stat dt {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .about-stat dd {
+    margin-top: 0.5rem;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 1.2rem + 1.2vw, 2.1rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    color: var(--color-accent-bright);
+  }
+
+  .about-cap {
+    padding: 24px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 16px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .about-cap:hover {
+    border-color: var(--color-line-strong);
+    box-shadow: var(--shadow-card);
+    transform: translateY(-4px);
+  }
+  .about-cap-num {
+    display: block;
+    margin-bottom: 0.9rem;
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-accent);
+  }
+  .about-cap h3 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .about-cap p {
+    margin-top: 0.55rem;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--color-muted);
+  }
+
+  .about-range {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    padding: 16px 18px;
+    background: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: 14px;
+    transition: border-color 0.18s ease, transform 0.18s ease;
+  }
+  .about-range:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+  }
+  .about-range-name {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: var(--color-brand);
+  }
+  .about-range-sizes {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: var(--color-muted);
+    white-space: nowrap;
+  }
+  .about-range-link {
+    display: inline-flex;
+    gap: 0.3rem;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-accent-strong);
+    text-decoration: none;
+  }
+  .about-range-link span {
+    transition: transform 0.18s ease;
+  }
+  .about-range-link:hover span {
+    transform: translateX(3px);
+  }
+
+  .about-cta {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(52px, 7vw, 88px);
+    background: var(--color-brand-strong);
+    color: #fff;
+  }
+  .about-cta::after {
+    content: '';
+    position: absolute;
+    top: -90px;
+    right: -70px;
+    width: 380px;
+    height: 380px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(228, 87, 15, 0.32), transparent 70%);
+    pointer-events: none;
+  }
+  .about-cta-inner {
+    position: relative;
+    z-index: 1;
+  }
+  .about-cta-eyebrow {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent-bright);
+  }
+  .about-cta h2 {
+    color: #fff;
+  }
+  .about-cta-text {
+    max-width: 52ch;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.78);
+  }
+  .about-cta-link {
+    font-weight: 600;
+    color: var(--color-accent-bright);
+    text-decoration: none;
+  }
+  .about-cta-link:hover {
+    color: #fff;
+  }
+  .about-cta-form {
+    padding: clamp(22px, 3vw, 32px);
+    background: var(--color-surface);
+    border-top: 4px solid var(--color-accent);
+    border-radius: 16px;
+    box-shadow: var(--shadow-pop);
+    color: var(--color-ink);
+  }
+  .about-cta-form h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-brand);
+  }
+</style>

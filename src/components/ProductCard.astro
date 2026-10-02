@@ -13,6 +13,8 @@ interface Props {
     sample?: string;
     oemOdm?: string;
     origin?: string;
+    characteristic?: string;
+    types?: string;
   };
   eager?: boolean;
 }
@@ -22,46 +24,56 @@ const specs = [
   { label: 'Size', value: product.size?.join(', ') },
   { label: 'Material', value: product.material },
   { label: 'MOQ', value: product.moq },
-  { label: 'Lead Time', value: product.leadTime },
+  { label: 'Lead time', value: product.leadTime },
   { label: 'Capacity', value: product.supplyAbility },
   { label: 'Sample', value: product.sample },
   { label: 'OEM/ODM', value: product.oemOdm },
   { label: 'Origin', value: product.origin },
 ].filter((s) => s.value);
+const firstSpecs = specs.slice(0, 4);
 ---
 
-<article class="card group flex flex-col overflow-hidden" data-reveal>
-  <a href={`/product/${product.slug}/`} class="block border-b border-line bg-white p-4">
+<article class="pp-card" data-reveal>
+  <a href={`/product/${product.slug}/`} class="pp-card-img">
     {
       product.image ? (
         <img
           src={product.image}
           alt={product.imageAlt || product.title}
-          width="300"
-          height="300"
+          width="400"
+          height="400"
           loading={eager ? 'eager' : 'lazy'}
           decoding="async"
-          class="mx-auto aspect-square w-full max-w-[220px] object-contain transition duration-300 group-hover:scale-[1.03]"
         />
       ) : (
         <div class="grid aspect-square w-full place-items-center text-xs text-faint">Image on request</div>
       )
     }
+    {product.types && <span class="pp-card-type">{product.types}</span>}
   </a>
-  <div class="flex flex-1 flex-col p-5">
-    <h3 class="font-display text-[15px] font-bold leading-snug text-brand">
+  <div class="pp-card-body">
+    <h3 class="pp-card-title">
       <a href={`/product/${product.slug}/`}>{product.title}</a>
     </h3>
-    <dl class="mt-3 space-y-1.5 text-[12.5px] text-muted">
-      {
-        specs.map((spec) => (
-          <div class="flex gap-2">
-            <dt class="min-w-[76px] shrink-0 text-faint">{spec.label}</dt>
-            <dd class="font-medium text-ink">{spec.value}</dd>
-          </div>
-        ))
-      }
+    {product.characteristic && <p class="pp-card-char">{product.characteristic}</p>}
+    <dl class="pp-card-specs">
+      {firstSpecs.map((spec) => (
+        <div class="pp-card-spec">
+          <dt>{spec.label}</dt>
+          <dd>{spec.value}</dd>
+        </div>
+      ))}
     </dl>
-    <a href={`/product/${product.slug}/`} class="btn btn-sm mt-5 self-start">Get a Quote</a>
+    <div class="pp-card-foot">
+      <button
+        type="button"
+        class="btn btn-sm"
+        data-open-quote
+        data-quote-product={product.title}
+      >
+        Get a Quote
+      </button>
+      <a href={`/product/${product.slug}/`} class="pp-card-view">Details</a>
+    </div>
   </div>
 </article>

@@ -8,7 +8,9 @@
 /elementor-1657/ / 301
 
 # WordPress plumbing that must never resolve on the static site
-/wp-admin/* / 301
+# Concrete paths first (Cloudflare Pages evaluates rules top-down; keeping
+# literal rules above the splat avoids a per-request scan of /wp-admin/*).
 /wp-login.php / 301
 /xmlrpc.php / 301
 /feed/ / 301
+/wp-admin/* / 301

@@ -65,7 +65,111 @@ const ARTICLE_PAGE_SLUGS = new Set(['pump-manufacturer-china']);
 const NOINDEX_SLUGS = new Set(['thank-you']);
 
 /** Pages that only need an inline notice rendered (no <seo> overrides). */
-const report = { fetched: {}, skipped: [], issues: [], redirects: [] };
+const report = { fetched: {}, skipped: [], issues: [], redirects: [], overrides: {} };
+
+// ------------------------------------------------------------------ content overrides
+/**
+ * Post-sync content corrections.
+ *
+ * The legacy WordPress site still publishes the old city. The owner confirmed on
+ * 2026-10-01 that the factory is in YUYAO (not Cixi), so every artefact this
+ * script pulls from WP is rewritten here — otherwise every build silently
+ * reverts the correction and the old city reappears in category descriptions,
+ * page metadata and 13 landing pages.
+ *
+ * The legacy site is the CMS, so this is the only place a correction can live
+ * until WordPress itself is fixed. Keep the list short and factual: each entry
+ * needs a stated reason, and anything that is a judgement rather than a fact
+ * belongs in `report.issues`, not here.
+ */
+const CONTENT_OVERRIDES = [
+  {
+    id: 'city-yuyao',
+    from: /\bCixi City\b/g,
+    to: 'Yuyao City',
+    reason: 'owner confirmed the factory city is Yuyao, not Cixi (2026-10-01)',
+  },
+  {
+    id: 'city-yuyao-bare',
+    from: /\bCixi\b/g,
+    to: 'Yuyao',
+    reason: 'owner confirmed the factory city is Yuyao, not Cixi (2026-10-01)',
+  },
+  {
+    id: 'wp-content-absolute',
+    from: /((?:src|href)=["'])\/wp-content\//g,
+    to: '$1https://sunshine-lotionpump.com/wp-content/',
+    reason:
+      'WP stores asset URLs as root-relative /wp-content/ which only resolves on the ' +
+      'production domain. Making them absolute keeps images from 404ing on any host ' +
+      '(local preview, staging, Cloudflare Pages).',
+  },
+  {
+    id: 'legacy-contact-link',
+    from: /href="\/contact\/?"/g,
+    to: 'href="/contact-us/"',
+    reason: 'legacy /contact link no longer exists in the rebuild; point to /contact-us/',
+  },
+  {
+    id: 'dead-mist-product-link',
+    from: /\/product\/customized-color-continuous-hair-mist-spray-bottle-200ml-plastic-bottle-for-hair-care-sunshine\//g,
+    to: '/product-category/fine-mist-sprayer/',
+    reason: 'that product page was removed from WP; link to the fine-mist family instead',
+  },
+  {
+    id: 'dead-lotion-product-link',
+    from: /\/product\/wholesale-custom-color-24-410-plastic-lotion-pump-bottle-for-cosmetics-makeup-remover\//g,
+    to: '/product-category/lotion-pump/',
+    reason: 'that product page was removed from WP; link to the lotion family instead',
+  },
+  {
+    id: 'dead-oil-product-link',
+    from: /\/product\/lotion-pump\/cosmetic-packaging-customized-oil-pump-24410\.html/g,
+    to: '/products/',
+    reason: 'legacy oil-pump product page does not exist in the rebuild',
+  },
+];
+
+/** Human-evaluated claims that a mechanical override must not silently rewrite. */
+const CLAIMS_TO_REVIEW = [
+  {
+    id: 'ningbo-port-eta',
+    pattern: /30\s*min(?:ute)?s?\s+from\s+Ningbo\s+Port/gi,
+    note:
+      '"30 min from Ningbo Port" was measured from Cixi. Yuyao is further out, so this ' +
+      'travel-time claim is now unverified — get the real figure from the owner.',
+  },
+];
+
+const overrideCounts = new Map();
+
+/** Apply CONTENT_OVERRIDES + surface CLAIMS_TO_REVIEW. Returns corrected text. */
+function applyOverrides(text = '', where = '') {
+  let out = String(text);
+  for (const rule of CONTENT_OVERRIDES) {
+    const hits = out.match(rule.from);
+    if (!hits) continue;
+    out = out.replace(rule.from, rule.to);
+    const key = `${rule.id}@${where || 'global'}`;
+    overrideCounts.set(key, (overrideCounts.get(key) || 0) + hits.length);
+  }
+  return out;
+}
+
+function reviewClaims(text = '', where = '') {
+  for (const claim of CLAIMS_TO_REVIEW) {
+    const hits = String(text).match(claim.pattern);
+    if (!hits) continue;
+    const key = `${claim.id}@${where}`;
+    if (report.issues.includes(key)) continue;
+    report.issues.push(`${key}: ${claim.note} (${hits.length} occurrence(s))`);
+  }
+}
+
+/** writeFileSync wrapper: every synced artefact goes through the overrides. */
+function writeSynced(file, contents, where = '') {
+  fs.writeFileSync(file, applyOverrides(contents, where), 'utf8');
+}
 
 // --------------------------------------------------------------------------- utils
 
@@ -342,28 +446,27 @@ async function main() {
       height: m.media_details?.height,
     };
   }
-  fs.writeFileSync(
-    path.join(OUT.data, 'media.json'),
-    JSON.stringify(mediaMap, null, 2),
-    'utf8',
-  );
+  writeSynced(path.join(OUT.data, 'media.json'), JSON.stringify(mediaMap, null, 2), 'media');
   report.fetched.media = media.length;
 
   // ---- taxonomies
-  fs.writeFileSync(
+  // Category descriptions are used as meta descriptions on the category pages,
+  // so the city override has to reach them too.
+  const productCatsClean = productCats.map((c) => {
+    const description = toPlainText(c.description);
+    reviewClaims(description, `product-category:${c.slug}`);
+    return {
+      id: c.id,
+      slug: c.slug,
+      name: decodeEntities(c.name),
+      count: c.count,
+      description: applyOverrides(description, `product-category:${c.slug}`),
+    };
+  });
+  writeSynced(
     path.join(OUT.data, 'product-categories.json'),
-    JSON.stringify(
-      productCats.map((c) => ({
-        id: c.id,
-        slug: c.slug,
-        name: decodeEntities(c.name),
-        count: c.count,
-        description: toPlainText(c.description),
-      })),
-      null,
-      2,
-    ),
-    'utf8',
+    JSON.stringify(productCatsClean, null, 2),
+    'product-categories',
   );
 
   const postCatsClean = postCats.map((c) => ({
@@ -372,12 +475,12 @@ async function main() {
     name: decodeEntities(c.name),
     count: c.count,
     parent: c.parent,
-    description: toPlainText(c.description),
+    description: applyOverrides(toPlainText(c.description), `post-category:${c.slug}`),
   }));
-  fs.writeFileSync(
+  writeSynced(
     path.join(OUT.data, 'post-categories.json'),
     JSON.stringify(postCatsClean, null, 2),
-    'utf8',
+    'post-categories',
   );
   const postCatById = new Map(postCatsClean.map((c) => [c.id, c]));
 
@@ -392,8 +495,8 @@ async function main() {
     const fm = {
       id: p.id,
       slug: p.slug,
-      title: decodeEntities(unRendered(p.title)),
-      excerpt: toPlainText(unRendered(p.excerpt)),
+      title: applyOverrides(decodeEntities(unRendered(p.title)), `post:${p.slug}`),
+      excerpt: applyOverrides(toPlainText(unRendered(p.excerpt)), `post:${p.slug}`),
       date: p.date,
       modified: p.modified,
       categories: cats.map((c) => c.slug),
@@ -401,17 +504,18 @@ async function main() {
       heroImage:
         (html.match(/<img[^>]+src="([^"]+)"/i) || [])[1] || null,
     };
-    fs.writeFileSync(
+    reviewClaims(html, `post:${p.slug}`);
+    writeSynced(
       path.join(OUT.posts, `${p.slug}.md`),
       `${frontmatter(fm)}\n\n${collapseForMarkdown(html)}\n`,
-      'utf8',
+      `post:${p.slug}`,
     );
     postIndex.push({
       type: 'post',
       slug: p.slug,
       path: slugToPath(p.slug),
       title: fm.title,
-      date: p.date,
+      date: fm.date,
       categories: fm.categories,
     });
   }
@@ -471,10 +575,11 @@ async function main() {
     };
 
     const body = collapseForMarkdown(stripAlibaba(relativise(stripWpNoise(unRendered(p.content)))));
-    fs.writeFileSync(
+    reviewClaims(body, `product:${p.slug}`);
+    writeSynced(
       path.join(OUT.products, `${p.slug}.md`),
       `${frontmatter(fm)}\n\n${body}\n`,
-      'utf8',
+      `product:${p.slug}`,
     );
     productIndex.push({
       type: 'product',
@@ -497,16 +602,17 @@ async function main() {
 
     if (LANDING_TEMPLATE_SLUGS.has(p.slug)) {
       const { html: stripped, sources } = stripCf7(html);
-      fs.writeFileSync(
+      reviewClaims(stripped, `landing:${p.slug}`);
+      writeSynced(
         path.join(OUT.landing, `${p.slug}.html`),
         `${relativise(stripped).trim()}\n`,
-        'utf8',
+        `landing:${p.slug}`,
       );
       pageIndex.push({
         type: 'landing',
         slug: p.slug,
         path: slugToPath(p.slug),
-        title: decodeEntities(unRendered(p.title)),
+        title: applyOverrides(decodeEntities(unRendered(p.title)), `landing:${p.slug}`),
         leadForms: sources,
       });
       continue;
@@ -519,12 +625,17 @@ async function main() {
       html = stripped;
       report.issues.push(`page ${p.slug}: raw form markup replaced with unified lead form`);
     }
-    fs.writeFileSync(path.join(OUT.pages, `${p.slug}.html`), `${relativise(html).trim()}\n`, 'utf8');
+    reviewClaims(html, `page:${p.slug}`);
+    writeSynced(
+      path.join(OUT.pages, `${p.slug}.html`),
+      `${relativise(html).trim()}\n`,
+      `page:${p.slug}`,
+    );
     pageIndex.push({
       type: 'page',
       slug: p.slug,
       path: slugToPath(p.slug),
-      title: decodeEntities(unRendered(p.title)),
+      title: applyOverrides(decodeEntities(unRendered(p.title)), `page:${p.slug}`),
       noindex: NOINDEX_SLUGS.has(p.slug),
       layout: ARTICLE_PAGE_SLUGS.has(p.slug) ? 'article' : 'simple',
     });
@@ -563,10 +674,10 @@ async function main() {
 
   // ---- registry consumed by src/pages/[slug].astro
   const registry = [...pageIndex, ...postIndex];
-  fs.writeFileSync(
+  writeSynced(
     path.join(OUT.data, 'registry.json'),
     JSON.stringify(registry, null, 2),
-    'utf8',
+    'registry',
   );
   report.fetched.registry = registry.length;
 
@@ -597,7 +708,16 @@ async function main() {
       async (u) => {
         try {
           const html = await getText(WP + u);
-          seo[u] = parseSeo(html);
+          const meta = parseSeo(html);
+          // These strings become the published <title>/description/og:*, so the
+          // city correction has to be applied per field (not to the JSON blob,
+          // which would also rewrite keys and any unrelated string).
+          for (const [key, value] of Object.entries(meta)) {
+            if (typeof value !== 'string') continue;
+            reviewClaims(value, `seo:${u}.${key}`);
+            meta[key] = applyOverrides(value, `seo:${u}.${key}`);
+          }
+          seo[u] = meta;
         } catch (err) {
           seo[u] = { error: String(err.message || err) };
           report.issues.push(`seo fetch failed for ${u}`);
@@ -605,9 +725,15 @@ async function main() {
         return u;
       },
     );
+    // Plain write: seo.json has already been overridden field by field above.
     fs.writeFileSync(path.join(OUT.data, 'seo.json'), JSON.stringify(seo, null, 2), 'utf8');
     report.fetched.seo = Object.keys(seo).length;
   }
+
+  // Record what the overrides actually changed, so a build log shows the
+  // correction still being applied instead of silently reverting.
+  report.overrides = Object.fromEntries(overrideCounts);
+  const totalOverrides = Object.values(overrideCounts).reduce((a, b) => a + b, 0);
 
   fs.writeFileSync(
     path.join(OUT.data, 'sync-report.json'),
@@ -617,6 +743,17 @@ async function main() {
 
   console.log('✓ sync complete');
   console.log(JSON.stringify(report.fetched, null, 2));
+  if (totalOverrides) {
+    console.log(`✓ content overrides applied to ${totalOverrides} string(s)`);
+    const byRule = {};
+    for (const [key, n] of overrideCounts) {
+      const rule = key.split('@')[0];
+      byRule[rule] = (byRule[rule] || 0) + n;
+    }
+    console.log(`  ${JSON.stringify(byRule)}`);
+  } else {
+    console.log('! no content overrides matched — the legacy site may already be correct');
+  }
   if (report.issues.length) {
     console.log(`! ${report.issues.length} issue(s) — see src/data/sync-report.json`);
   }

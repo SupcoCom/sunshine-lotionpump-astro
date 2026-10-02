@@ -28,8 +28,7 @@
         "locale": "en_US"
       }
     ],
-    "registry": 39,
-    "seo": 115
+    "registry": 39
   },
   "skipped": [
     {
@@ -49,6 +48,66 @@
       "reason": "elementor — re-authored in Astro"
     }
   ],
-  "issues": [],
-  "redirects": []
+  "issues": [
+    "ningbo-port-eta@landing:oem-private-label-pump-manufacturer-landingpage: \"30 min from Ningbo Port\" was measured from Cixi. Yuyao is further out, so this travel-time claim is now unverified — get the real figure from the owner. (1 occurrence(s))",
+    "ningbo-port-eta@landing:lotion-pump-head-manufacturer-landingpage: \"30 min from Ningbo Port\" was measured from Cixi. Yuyao is further out, so this travel-time claim is now unverified — get the real figure from the owner. (1 occurrence(s))",
+    "ningbo-port-eta@landing:lotion-pump-manufacturer-landingpage-v2: \"30 min from Ningbo Port\" was measured from Cixi. Yuyao is further out, so this travel-time claim is now unverified — get the real figure from the owner. (1 occurrence(s))"
+  ],
+  "redirects": [],
+  "overrides": {
+    "city-yuyao-bare@product-category:cream-pump": 1,
+    "city-yuyao-bare@product-category:disc-top-cap": 1,
+    "city-yuyao-bare@product-category:fine-mist-sprayer": 1,
+    "city-yuyao-bare@product-category:foam-pump": 1,
+    "city-yuyao-bare@product-category:lotion-pump": 1,
+    "city-yuyao-bare@product-category:nail-polish-pump": 1,
+    "city-yuyao-bare@product-category:oil-pump": 1,
+    "city-yuyao-bare@product-category:plastic-bottles": 1,
+    "city-yuyao-bare@product-category:treatment-pump": 1,
+    "city-yuyao-bare@product-category:trigger-sprayers": 1,
+    "wp-content-absolute@post:treatment-pump-precision-dispensing-skincare-serum": 3,
+    "wp-content-absolute@post:trigger-sprayer-complete-guide": 3,
+    "legacy-contact-link@post:trigger-sprayer-complete-guide": 1,
+    "wp-content-absolute@post:foam-pump-everything-brands-need-to-know": 3,
+    "wp-content-absolute@post:disc-top-cap-flip-top-cap-buyers-guide": 6,
+    "wp-content-absolute@post:fine-mist-sprayer": 7,
+    "dead-mist-product-link@post:fine-mist-sprayer": 1,
+    "wp-content-absolute@post:lotion-pump-quality-testing": 2,
+    "wp-content-absolute@post:lotion-pump-dosage-control-guide": 3,
+    "wp-content-absolute@post:lotion-pump-size-guide-24-410-vs-28-410-vs-33-410": 2,
+    "legacy-contact-link@post:lotion-pump-size-guide-24-410-vs-28-410-vs-33-410": 1,
+    "wp-content-absolute@post:top-5-lotion-pump-materials": 2,
+    "dead-lotion-product-link@post:top-5-lotion-pump-materials": 1,
+    "wp-content-absolute@post:source-custom-cosmetic-packaging-china": 1,
+    "dead-lotion-product-link@post:source-custom-cosmetic-packaging-china": 1,
+    "wp-content-absolute@post:cosmetic-packaging-closures-guide": 1,
+    "dead-lotion-product-link@post:cosmetic-packaging-closures-guide": 1,
+    "wp-content-absolute@post:treatment-pump-vs-lotion-pump-vs-dropper": 1,
+    "wp-content-absolute@post:foam-pump-bottle-guide": 1,
+    "wp-content-absolute@post:foam-pump-vs-lotion-pump": 1,
+    "dead-lotion-product-link@post:foam-pump-vs-lotion-pump": 1,
+    "wp-content-absolute@post:disc-top-cap-sizes-explained": 1,
+    "wp-content-absolute@post:disc-top-vs-flip-top-vs-screw-cap": 1,
+    "wp-content-absolute@post:custom-trigger-sprayers-china": 1,
+    "wp-content-absolute@post:foam-trigger-vs-stream-trigger-vs-mist-trigger": 2,
+    "wp-content-absolute@post:trigger-sprayer-buying-guide": 3,
+    "wp-content-absolute@post:oem-custom-lotion-pump-moq-lead-time-pricing": 2,
+    "wp-content-absolute@post:best-mist-sprayers-perfume-toner-hair-care": 3,
+    "dead-mist-product-link@post:best-mist-sprayers-perfume-toner-hair-care": 1,
+    "wp-content-absolute@post:fine-mist-sprayer-vs-regular-sprayer": 2,
+    "dead-oil-product-link@post:why-your-cleansing-oil-needs-a-specialized-24-410-oil-pump-preventing-leakage-and-oxidization": 2,
+    "city-yuyao-bare@landing:oem-private-label-pump-manufacturer-landingpage": 3,
+    "city-yuyao-bare@landing:lotion-pump-head-manufacturer-landingpage": 3,
+    "city-yuyao-bare@landing:airless-pump-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:spray-pump-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:nail-polish-pump-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:cream-pump-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:fine-mist-sprayer-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:treatment-pump-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:disc-top-cap-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:foam-pump-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:trigger-sprayer-manufacturer-landingpage": 2,
+    "city-yuyao-bare@landing:lotion-pump-manufacturer-landingpage-v2": 3,
+    "city-yuyao-bare@page:pump-manufacturer-china": 4
+  }
 }

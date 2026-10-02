@@ -2,11 +2,9 @@
 /**
  * /products/ — the product archive.
  *
- * On the legacy site this was the WordPress custom-post-type archive rendered
- * through an Elementor template: a flat grid plus a "Product Catagories" list,
- * with a broken H1 (it printed a random product title) and an auto-generated
- * meta description. This rebuild keeps the URL and the purpose, fixes the
- * heading/metadata and makes the grid filterable.
+ * Professional B2B catalogue: factory hero, filterable family pills, and a
+ * clean spec-driven product grid. Each card surfaces the key B2B specs (size,
+ * material, MOQ, lead time) and a direct quote action.
  */
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
@@ -50,47 +48,59 @@ const schema = [
 <BaseLayout
   title={seo.title || `Cosmetic Pump Products | ${SITE.brand} Manufacturer`}
   description={seo.description ||
-    `Browse ${products.length} cosmetic dispensing pumps and closures — lotion pumps, foam pumps, fine mist sprayers, trigger sprayers, disc caps and treatment pumps. MOQ 10,000 pcs, factory direct.`}
+    `Browse ${products.length} cosmetic dispensing pumps and closures — lotion pumps, foam pumps, fine mist sprayers, trigger sprayers, disc caps and treatment pumps. Factory direct, custom OEM/ODM.`}
   canonicalPath={path}
   robots="index, follow"
   schema={schema}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Products' }]} />
 
-  <section class="container-x py-14 md:py-24">
-    <h1>Cosmetic pump products</h1>
-    <p class="mt-3 max-w-3xl text-ink/75">
-      {products.length} standard products across {families.length} families — lotion pumps, cream
-      pumps, fine mist sprayers, foam pumps, trigger sprayers, treatment pumps, disc top caps, oil
-      pumps and nail polish pumps. Every item is manufactured in-house in Cixi, Ningbo, China and is
-      available in custom OEM/ODM configuration.
-    </p>
-
-    <nav class="mt-6 flex flex-wrap gap-2" aria-label="Product families">
-      {
-        families.map((family) => (
-          <a
-            href={`/product-category/${family.slug}/`}
-            class="rounded-full border border-line bg-white px-4 py-2 text-sm hover:border-accent hover:text-accent-strong"
-          >
-            {family.name} ({family.count})
-          </a>
-        ))
-      }
-    </nav>
-
-    <div class="mt-8 flex flex-wrap gap-2" data-product-filter>
-      <button type="button" class="btn text-sm" data-filter="all" aria-pressed="true">All</button>
-      {
-        families.map((family) => (
-          <button type="button" class="btn btn-ghost text-sm" data-filter={family.slug} aria-pressed="false">
-            {family.name}
-          </button>
-        ))
-      }
+  <!-- Catalogue hero — professional B2B -->
+  <section class="pp-hero">
+    <div class="pp-hero-bg" aria-hidden="true">
+      <img
+        src="https://img.supcous.com/2026/04/21dec35f4422a9b46ecd7d43d392cb38.webp"
+        alt=""
+        loading="eager"
+        decoding="async"
+      />
     </div>
+    <div class="container-x pp-hero-inner">
+      <div class="pp-hero-head" data-reveal="left">
+        <span class="p-eyebrow"><span class="p-eyebrow-dot"></span>Full catalogue</span>
+        <h1 class="pp-hero-title">Cosmetic pump products</h1>
+        <p class="pp-hero-lede">
+          {products.length} standard products across {families.length} families — lotion, cream,
+          fine mist, foam, trigger sprayers, treatment, disc top caps, oil and nail polish pumps.
+          Every item is manufactured in-house in Yuyao, Ningbo, China.
+        </p>
+        <dl class="pp-hero-stats">
+          <div><dt>Products</dt><dd>{products.length}</dd></div>
+          <div><dt>Families</dt><dd>{families.length}</dd></div>
+          <div><dt>MOQ from</dt><dd>10,000 pcs</dd></div>
+          <div><dt>Lead time</dt><dd>15–20 days</dd></div>
+        </dl>
+      </div>
 
-    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-product-grid>
+      <div class="pp-filter" data-reveal="right">
+        <span class="pp-filter-label">Filter by category</span>
+        <nav class="pp-filter-pills" aria-label="Product families" data-product-filter>
+          <button type="button" class="pp-pill is-active" data-filter="all" aria-pressed="true">All</button>
+          {
+            families.map((family) => (
+              <button type="button" class="pp-pill" data-filter={family.slug} aria-pressed="false">
+                {family.name}
+              </button>
+            ))
+          }
+        </nav>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product grid -->
+  <section class="container-x py-12 md:py-16">
+    <div class="pp-grid" data-product-grid>
       {
         products.map((product, index) => (
           <div data-product-category={product.data.categories.join(' ')}>
@@ -115,7 +125,7 @@ const schema = [
         wrapper.querySelectorAll('button').forEach((b) => {
           const active = b === button;
           b.setAttribute('aria-pressed', String(active));
-          b.classList.toggle('btn-ghost', !active);
+          b.classList.toggle('is-active', active);
         });
         cards.forEach((card) => {
           const categories = card.dataset.productCategory ?? '';

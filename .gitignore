@@ -32,3 +32,6 @@ Thumbs.db
 # local dev/preview logs
 dev.log
 *.log
+
+# local agent backups
+.claude/

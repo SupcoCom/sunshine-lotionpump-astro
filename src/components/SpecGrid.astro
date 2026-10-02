@@ -21,14 +21,14 @@ const { rows, caption } = Astro.props;
       rows.map((row, index) => (
         <div
           class:list={[
-            'flex flex-col gap-0.5 border-line px-5 py-4',
-            index % 2 === 0 ? 'bg-white' : 'bg-surface-alt/60',
+            'flex flex-col gap-1 border-line px-5 py-4',
+            index % 2 === 0 ? 'bg-white' : 'bg-surface-alt/40',
             'border-b sm:border-r',
             index % 2 === 1 ? 'sm:border-r-0' : '',
           ]}
         >
-          <dt class="text-[11px] font-bold uppercase tracking-[0.1em] text-faint">{row.label}</dt>
-          <dd class="text-sm font-semibold text-ink">{row.value}</dd>
+          <dt class="text-[11px] font-bold uppercase tracking-[0.12em] text-faint">{row.label}</dt>
+          <dd class="text-[15px] font-semibold text-ink">{row.value}</dd>
         </div>
       ))
     }

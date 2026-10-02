@@ -5,6 +5,7 @@ import Tracking from '@/components/Tracking.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import JsonLd from '@/components/JsonLd.astro';
+import LeadForm from '@/components/LeadForm.astro';
 import { SITE, CONTACT } from '@/config/site';
 
 interface Props {
@@ -48,7 +49,7 @@ const organisation = {
   address: {
     '@type': 'PostalAddress',
     streetAddress: '1109 Huancheng South Road, Zhouxiang Town',
-    addressLocality: 'Cixi City, Ningbo',
+    addressLocality: 'Yuyao City, Ningbo',
     addressRegion: 'Zhejiang',
     addressCountry: 'CN',
   },
@@ -98,25 +99,97 @@ const graph = [
     </main>
     {chrome && <Footer />}
 
+    <div class="mobile-fab" data-mobile-fab>
+      <div class="mobile-fab-actions">
+        <a href="/contact-us/" class="fab-action fab-action-quote" data-open-quote>Get a Quote</a>
+        <a href={CONTACT.whatsappHref} rel="noopener" class="fab-action fab-action-whatsapp">WhatsApp</a>
+      </div>
+      <button type="button" class="fab-main" aria-label="Contact us" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H7l-3 3V6z" />
+        </svg>
+      </button>
+    </div>
+
+    {chrome && (
+      <div class="quote-modal" data-quote-modal hidden>
+        <div class="quote-modal-backdrop" data-quote-close></div>
+        <div class="quote-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
+          <button type="button" class="quote-modal-close" data-quote-close aria-label="Close dialog">&times;</button>
+          <span class="eyebrow">Quick quote</span>
+          <h2 id="quote-modal-title">Request factory pricing</h2>
+          <p class="quote-modal-context" data-quote-context hidden>
+            Inquiry about: <strong data-quote-product></strong>
+          </p>
+          <LeadForm variant="site" source="quick-quote" submitLabel="Get a Quote" />
+        </div>
+      </div>
+    )}
+
     <script>
-      // L2 — scroll reveal (IntersectionObserver, rAF-throttled by the browser)
+      // L2 — scroll reveal.
+      // Variants come from data-reveal (up | fade | wipe | none); data-reveal-stagger
+      // on a parent walks its children with an incremental delay. Everything is
+      // opt-in and collapses to "visible" when IntersectionObserver is missing or
+      // the user asked for reduced motion — the content is never held hostage.
       const revealTargets = document.querySelectorAll('[data-reveal]');
-      if ('IntersectionObserver' in window && revealTargets.length) {
+      const revealNow = () => revealTargets.forEach((el) => el.classList.add('is-visible'));
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (reducedMotion || !('IntersectionObserver' in window)) {
+        revealNow();
+      } else if (revealTargets.length) {
+        // stagger: mark each child of a [data-reveal-stagger] group
+        document.querySelectorAll('[data-reveal-stagger]').forEach((group) => {
+          const step = Number(group.getAttribute('data-reveal-stagger')) || 70;
+          Array.from(group.children).forEach((child, i) => {
+            if (child.hasAttribute('data-reveal')) {
+              (child as HTMLElement).style.setProperty('--reveal-delay', `${i * step}ms`);
+            }
+          });
+        });
+
         const io = new IntersectionObserver(
           (entries) => {
             for (const entry of entries) {
               if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                io.unobserve(entry.target);
+                const el = entry.target as HTMLElement;
+                // honour per-element delay set via style="--d:...ms"
+                const d = el.style.getPropertyValue('--d');
+                if (d) el.style.setProperty('--reveal-delay', d);
+                el.classList.add('is-visible');
+                io.unobserve(el);
+                // kick any number count-up inside this element
+                el.querySelectorAll<HTMLElement>('[data-count]').forEach(countUp);
               }
             }
           },
-          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' },
+          { threshold: 0.1, rootMargin: '0px 0px -6% 0px' },
         );
         revealTargets.forEach((el) => io.observe(el));
-      } else {
-        revealTargets.forEach((el) => el.classList.add('is-visible'));
       }
+
+      // L2 — animated number count-up (no dependency)
+      function countUp(el: HTMLElement) {
+        const target = Number(el.getAttribute('data-count') || '0');
+        const suffix = el.getAttribute('data-suffix') || '';
+        if (reducedMotion || !target) { el.textContent = target.toLocaleString() + suffix; return; }
+        const dur = 1200;
+        const start = performance.now();
+        const fmt = (v: number) => v.toLocaleString('en-US') + suffix;
+        el.textContent = fmt(0);
+        const tick = (now: number) => {
+          const p = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = fmt(Math.round(target * eased));
+          if (p < 1) requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      }
+      // count stats already in the initial viewport
+      document.querySelectorAll<HTMLElement>('[data-count]').forEach((el) => {
+        if (el.closest('[data-reveal]') === null) countUp(el);
+      });
 
       // L2 — header background once the page is scrolled
       const header = document.querySelector('[data-site-header]');
@@ -124,6 +197,61 @@ const graph = [
         const onScroll = () => header.classList.toggle('is-scrolled', window.scrollY > 8);
         window.addEventListener('scroll', onScroll, { passive: true });
         onScroll();
+      }
+
+      // Mobile floating inquiry FAB
+      const fab = document.querySelector<HTMLElement>('[data-mobile-fab]');
+      if (fab) {
+        const needsPageBar = document.querySelector('.pdp-mobile-cta');
+        const isThankYou = window.location.pathname.startsWith('/thank-you');
+        if (needsPageBar || isThankYou) {
+          fab.remove();
+        } else {
+          const button = fab.querySelector<HTMLButtonElement>('.fab-main');
+          button?.addEventListener('click', () => {
+            const open = fab.classList.toggle('is-open');
+            button.setAttribute('aria-expanded', String(open));
+          });
+        }
+      }
+
+      // Quick quote modal — any [data-open-quote] trigger opens it
+      const quoteModal = document.querySelector<HTMLElement>('[data-quote-modal]');
+      if (quoteModal) {
+        const contextBox = quoteModal.querySelector<HTMLElement>('[data-quote-context]');
+        const productLabel = quoteModal.querySelector<HTMLElement>('[data-quote-product]');
+        const groupInput = quoteModal.querySelector<HTMLInputElement>('input[name="lp-group"]');
+
+        const openQuote = (product: string) => {
+          if (product && contextBox && productLabel) {
+            productLabel.textContent = product;
+            contextBox.hidden = false;
+            if (groupInput) groupInput.value = product.slice(0, 120);
+          } else {
+            if (contextBox) contextBox.hidden = true;
+            if (groupInput) groupInput.value = '';
+          }
+          quoteModal.hidden = false;
+          document.body.style.overflow = 'hidden';
+        };
+        const closeQuote = () => {
+          quoteModal.hidden = true;
+          document.body.style.overflow = '';
+        };
+
+        document.addEventListener('click', (event) => {
+          const target = event.target as HTMLElement;
+          const trigger = target.closest<HTMLElement>('[data-open-quote]');
+          if (trigger) {
+            event.preventDefault();
+            openQuote(trigger.dataset.quoteProduct ?? '');
+            return;
+          }
+          if (target.closest('[data-quote-close]')) closeQuote();
+        });
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && !quoteModal.hidden) closeQuote();
+        });
       }
     </script>
   </body>

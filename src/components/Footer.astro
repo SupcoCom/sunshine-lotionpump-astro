@@ -1,5 +1,6 @@
 ---
 import { NAV, CONTACT, SITE, PRODUCT_CATEGORIES } from '@/config/site';
+import Logo from '@/components/Logo.astro';
 
 const year = new Date().getFullYear();
 const productLinks = PRODUCT_CATEGORIES.map((c) => ({
@@ -12,7 +13,7 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
   <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
     <div>
       <div class="flex items-center gap-3">
-        <span class="grid size-10 place-items-center rounded-md bg-white font-display text-lg font-black text-brand">S</span>
+        <Logo class="size-10 shrink-0" />
         <div>
           <strong class="block font-display text-base font-extrabold tracking-tight">{SITE.brand} Plastic</strong>
           <span class="block text-[11px] uppercase tracking-[0.14em] text-white/60">{SITE.tagline}</span>
@@ -20,12 +21,12 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
       </div>
       <p class="mt-5 max-w-sm text-sm leading-relaxed text-white/70">
         {SITE.legalName}. {SITE.shortDescription} Serving buyers globally since {SITE.established}.
-        ISO 9001:2015 certified. Factory: 7,000 m², Cixi, Ningbo, China.
+        ISO 9001:2015 certified. Factory: 7,000 m², Yuyao, Ningbo, China.
       </p>
     </div>
 
     <nav aria-label="Footer products">
-      <h2 class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Products</h2>
+      <p class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Products</p>
       <ul class="space-y-2.5 text-sm">
         <li><a href="/products/" class="text-white/75 transition hover:text-white">All products</a></li>
         {
@@ -39,7 +40,7 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
     </nav>
 
     <nav aria-label="Footer navigation">
-      <h2 class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Quick Links</h2>
+      <p class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Quick Links</p>
       <ul class="space-y-2.5 text-sm">
         {
           NAV.map((item) => (
@@ -65,7 +66,7 @@ const productLinks = PRODUCT_CATEGORIES.map((c) => ({
     </nav>
 
     <div>
-      <h2 class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Get In Touch</h2>
+      <p class="mb-5 text-[11px] font-bold uppercase tracking-[0.16em] text-white/50">Get In Touch</p>
       <ul class="space-y-3 text-sm text-white/75">
         <li class="leading-relaxed">{CONTACT.addressOneLine}</li>
         <li>

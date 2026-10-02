@@ -26,6 +26,10 @@ const seo = seoFor(path);
 const rows = specRows(p).map(([label, value]) => ({ label, value }));
 const gallery = [p.image, ...p.gallery].filter(Boolean) as string[];
 
+const bodyHtml = (product.body ?? '')
+  .replace(/<table\b/gi, '<div class="table-scroll"><table')
+  .replace(/<\/table>/gi, '</table></div>');
+
 const related = all
   .filter((other) => other.data.slug !== p.slug)
   .map((other) => ({
@@ -36,6 +40,13 @@ const related = all
   .sort((a, b) => b.score - a.score)
   .slice(0, 3)
   .map((x) => x.other);
+
+const benefits = [
+  'Exact unit price for your quantity — no hidden fees',
+  'Tooling, colour-matching and custom-logo quotes',
+  'Free samples arranged within 3 working days',
+  'FOB / CIF / EXW quote from Ningbo Port',
+];
 
 const faqs = [
   {
@@ -125,104 +136,160 @@ const schema = [
     ]}
   />
 
-  <div class="container-x grid gap-10 py-10 lg:grid-cols-[1.1fr_1fr]">
-    <div>
-      <div class="card overflow-hidden p-4">
-        {
-          p.image ? (
-            <img
-              id="product-image"
-              src={p.image}
-              alt={p.imageAlt || displayTitle}
-              width="700"
-              height="700"
-              class="mx-auto aspect-square w-full max-w-[520px] object-contain"
-              loading="eager"
-              decoding="async"
-            />
-          ) : (
-            <div class="grid aspect-square place-items-center text-sm text-muted">
-              Product image available on request
-            </div>
-          )
-        }
+  <section class="pdp-hero">
+    <div class="container-x pdp-hero-inner grid gap-10 py-12 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:py-16">
+      <div class="lg:sticky lg:top-24 lg:self-start">
+        <div class="pdp-frame">
+          <div class="pdp-badges">
+            {p.oemOdm && <span class="tag tag-accent">OEM/ODM</span>}
+            {p.sample && <span class="tag">Sample Available</span>}
+          </div>
+          {
+            p.image ? (
+              <img
+                id="product-image"
+                src={p.image}
+                alt={p.imageAlt || displayTitle}
+                width="700"
+                height="700"
+                class="mx-auto aspect-square w-full object-contain"
+                loading="eager"
+                decoding="async"
+              />
+            ) : (
+              <div class="grid aspect-square place-items-center text-sm text-muted">
+                Product image available on request
+              </div>
+            )
+          }
+        </div>
         {
           gallery.length > 1 && (
-            <div class="mt-4 flex flex-wrap gap-2" data-gallery>
+            <div class="pdp-thumbs" data-gallery>
               {gallery.map((src, index) => (
                 <button
                   type="button"
-                  class:list={[
-                    'size-16 overflow-hidden rounded border bg-white p-1 transition',
-                    index === 0 ? 'border-accent' : 'border-line hover:border-accent',
-                  ]}
+                  class:list={['pdp-thumb', index === 0 && 'is-active']}
                   data-gallery-src={src}
                   aria-label={`View image ${index + 1}`}
                 >
-                  <img src={src} alt="" width="64" height="64" loading="lazy" class="size-full object-contain" />
+                  <img src={src} alt="" width="76" height="76" loading="lazy" />
                 </button>
               ))}
             </div>
           )
         }
       </div>
-    </div>
 
-    <div>
-      <h1 class="text-brand">{displayTitle}</h1>
-      {p.excerpt && <p class="mt-3 text-ink/75">{p.excerpt}</p>}
+      <div>
+        <span class="pdp-eyebrow">{p.categoryNames?.[0] ?? 'Product'}</span>
+        <h1 class="pdp-title">{displayTitle}</h1>
+        {p.excerpt && <p class="pdp-lede">{p.excerpt}</p>}
 
-      <ul class="mt-5 grid gap-2 text-sm sm:grid-cols-2">
-        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">MOQ:</span> <strong>{p.moq || '10,000 pcs'}</strong></li>
-        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">Lead time:</span> <strong>{p.leadTime || p.deliveryTime || '15–20 days'}</strong></li>
-        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">Material:</span> <strong>{p.material || 'PP'}</strong></li>
-        <li class="rounded-lg bg-surface px-3 py-2"><span class="text-muted">Sample:</span> <strong>{p.sample || 'Available'}</strong></li>
-      </ul>
+        <dl class="pdp-stats">
+          <div>
+            <dt>MOQ</dt>
+            <dd>{p.moq || '10,000 pcs'}</dd>
+          </div>
+          <div>
+            <dt>Lead Time</dt>
+            <dd>{p.leadTime || p.deliveryTime || '15–20 days'}</dd>
+          </div>
+          <div>
+            <dt>Material</dt>
+            <dd>{p.material || 'PP'}</dd>
+          </div>
+          <div>
+            <dt>Sample</dt>
+            <dd>{p.sample || 'Available'}</dd>
+          </div>
+        </dl>
 
-      <div class="card mt-6 p-5">
-        <h2 class="text-lg">Request factory pricing</h2>
-        <p class="mt-1 text-sm text-muted">
-          Send your target size, colour and quantity — we reply within 24 hours.
-        </p>
-        <div class="mt-4">
-          <LeadForm
-            variant="site"
-            source={`product-${p.slug}`}
-            group={p.categoryNames?.[0] ?? ''}
-            submitLabel="Get a Quote"
-            compact
-          />
+        <div class="pdp-actions">
+          <a href="#quote" class="btn btn-lg">Request Factory Pricing</a>
+          <a href={CONTACT.whatsappHref} rel="noopener" class="pdp-ghost">WhatsApp</a>
         </div>
+
+        <ul class="pdp-trust">
+          <li>Quality Guaranteed</li>
+          <li>Factory Direct</li>
+          <li>Global Shipping</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote" class="pdp-quote">
+    <div class="container-x grid gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+      <div>
+        <span class="eyebrow">Pricing</span>
+        <h2>Get factory pricing in 24 hours</h2>
+        <p class="mt-4 max-w-xl text-ink/70">
+          Tell us the size, colour and quantity — our engineering team replies with a full quotation, tooling
+          notes and sample options.
+        </p>
+        <ul class="mt-7 space-y-4">
+          {
+            benefits.map((item) => (
+              <li class="pdp-benefit">
+                <span class="pdp-benefit-icon" aria-hidden="true">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  </svg>
+                </span>
+                <span>{item}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <p class="mt-8 text-xs text-faint">
+          Last updated {formatDate(p.modified || new Date().toISOString())}
+        </p>
       </div>
 
-      <p class="mt-4 text-xs text-muted">
-        Last updated {formatDate(p.modified || new Date().toISOString())}
-      </p>
+      <div class="pdp-form-card">
+        <LeadForm
+          variant="site"
+          source={`product-${p.slug}`}
+          group={p.categoryNames?.[0] ?? ''}
+          submitLabel="Get a Quote"
+        />
+      </div>
     </div>
-  </div>
+  </section>
 
-  <section class="container-x pb-4">
-    <h2 class="mb-5">Technical specifications</h2>
+  <section class="container-x py-14 md:py-20">
+    <div class="section-head">
+      <span class="eyebrow">Specifications</span>
+      <h2>Technical specifications</h2>
+      <div class="rule"></div>
+    </div>
     <SpecGrid rows={rows} caption={p.categoryNames?.[0] ?? 'Product data'} />
   </section>
 
   {
     p.use.length > 0 && (
-      <section class="container-x py-14 md:py-24">
-        <h2 class="mb-4">Recommended applications</h2>
-        <ul class="flex flex-wrap gap-2">
-          {p.use.map((item) => (
-            <li class="rounded-full border border-line bg-white px-4 py-2 text-sm">{item}</li>
-          ))}
-        </ul>
-      </section>
+      <div class="pdp-band">
+        <section class="container-x py-14 md:py-20">
+          <div class="section-head">
+            <span class="eyebrow">Applications</span>
+            <h2>Recommended applications</h2>
+            <div class="rule"></div>
+          </div>
+          <ul class="flex flex-wrap gap-2.5">
+            {p.use.map((item) => (
+              <li class="pdp-pill">{item}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
     )
   }
 
   {
     product.body && (
-      <section class="container-x py-14 md:py-24">
-        <div class="prose-wp mx-auto max-w-3xl" set:html={product.body} />
+      <section class="container-x py-14 md:py-20">
+        <div class="prose-wp mx-auto max-w-3xl" set:html={bodyHtml} />
       </section>
     )
   }
@@ -231,8 +298,12 @@ const schema = [
 
   {
     related.length > 0 && (
-      <section class="container-x py-14 md:py-24">
-        <h2 class="mb-6">Related products</h2>
+      <section class="container-x py-14 md:py-20">
+        <div class="section-head">
+          <span class="eyebrow">Related</span>
+          <h2>Related products</h2>
+          <div class="rule"></div>
+        </div>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {related.map((item) => (
             <ProductCard product={item.data} />
@@ -243,19 +314,26 @@ const schema = [
   }
 
   <section class="container-x pb-14 md:pb-24">
-    <div class="card flex flex-col items-start gap-3 p-6 sm:flex-row sm:items-center sm:justify-between">
+    <div class="pdp-cta">
       <div>
-        <h2 class="text-lg">Need a different size or finish?</h2>
-        <p class="text-sm text-muted">
+        <span class="pdp-cta-eyebrow">Custom manufacturing</span>
+        <h2>Need a different size or finish?</h2>
+        <p class="pdp-cta-text">
           We tool custom pumps in-house — tell us the neck size, dosage and closure you need.
         </p>
       </div>
-      <div class="flex gap-3">
-        <a href="/contact-us/" class="btn">Contact us</a>
-        <a href={CONTACT.whatsappHref} rel="noopener" class="btn btn-ghost">WhatsApp</a>
+      <div class="flex shrink-0 gap-3">
+        <a href="/contact-us/" class="btn btn-lg">Contact us</a>
+        <a href={CONTACT.whatsappHref} rel="noopener" class="pdp-ghost">WhatsApp</a>
       </div>
     </div>
   </section>
+
+  <div class="pdp-mobile-cta">
+    <a href="#quote" class="btn">Get a Quote</a>
+    <a href={CONTACT.whatsappHref} rel="noopener" class="pdp-ghost">WhatsApp</a>
+  </div>
+  <div class="h-24 lg:hidden" aria-hidden="true"></div>
 
   <script>
     const gallery = document.querySelector<HTMLElement>('[data-gallery]');
@@ -268,8 +346,323 @@ const schema = [
         if (src) main.src = src;
         gallery
           .querySelectorAll('button')
-          .forEach((b) => b.classList.toggle('border-accent', b === button));
+          .forEach((b) => b.classList.toggle('is-active', b === button));
       });
     }
   </script>
 </BaseLayout>
+
+<style>
+  .pdp-hero {
+    position: relative;
+    overflow: hidden;
+    background: var(--color-brand-strong);
+    color: #fff;
+  }
+  .pdp-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(120% 90% at 50% 0%, #000 30%, transparent 100%);
+  }
+  .pdp-hero::after {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -12%;
+    width: 60vw;
+    height: 60vw;
+    max-width: 720px;
+    max-height: 720px;
+    background: radial-gradient(circle, rgba(228, 87, 15, 0.3), transparent 65%);
+    pointer-events: none;
+  }
+  .pdp-hero-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .pdp-frame {
+    position: relative;
+    padding: clamp(24px, 4vw, 48px);
+    background: var(--color-surface);
+    border-radius: 20px;
+    box-shadow: 0 40px 70px -40px rgba(0, 0, 0, 0.6);
+  }
+  .pdp-badges {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+  }
+
+  .pdp-thumbs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  .pdp-thumb {
+    width: 76px;
+    height: 76px;
+    padding: 6px;
+    border: 2px solid rgba(255, 255, 255, 0.22);
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.07);
+    cursor: pointer;
+    transition: border-color 0.18s ease, background-color 0.18s ease, transform 0.18s ease;
+  }
+  .pdp-thumb:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+  }
+  .pdp-thumb.is-active {
+    border-color: var(--color-accent-bright);
+    background: rgba(240, 160, 75, 0.16);
+  }
+  .pdp-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .pdp-eyebrow {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-accent-bright);
+  }
+  .pdp-title {
+    margin: 0;
+    color: #fff;
+    font-size: clamp(1.9rem, 1.05rem + 2.6vw, 3.2rem);
+  }
+  .pdp-lede {
+    max-width: 54ch;
+    margin-top: 1.1rem;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.78);
+  }
+
+  .pdp-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1px;
+    margin-top: 30px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+  }
+  .pdp-stats > div {
+    padding: 14px 18px;
+    background: var(--color-brand-strong);
+  }
+  .pdp-stats dt {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.55);
+  }
+  .pdp-stats dd {
+    margin: 0.35rem 0 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.3rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: var(--color-accent-bright);
+  }
+
+  .pdp-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+  }
+  .pdp-ghost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 1.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: var(--radius-btn);
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1;
+    color: #fff;
+    transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+  }
+  .pdp-ghost:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #fff;
+    transform: translateY(-1px);
+  }
+
+  .pdp-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+    margin-top: 26px;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.72);
+  }
+  .pdp-trust li {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+  .pdp-trust li::before {
+    content: '✓';
+    font-weight: 800;
+    color: var(--color-accent-bright);
+  }
+
+  .pdp-quote {
+    padding-block: clamp(52px, 7vw, 88px);
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .pdp-benefit {
+    display: flex;
+    gap: 0.85rem;
+    align-items: flex-start;
+  }
+  .pdp-benefit-icon {
+    display: grid;
+    flex-shrink: 0;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    margin-top: 0.15rem;
+    border-radius: 999px;
+    background: var(--color-accent);
+    color: #fff;
+  }
+  .pdp-form-card {
+    padding: clamp(22px, 3vw, 34px);
+    background: var(--color-bg);
+    border: 1px solid var(--color-line);
+    border-top: 4px solid var(--color-accent);
+    border-radius: 16px;
+    box-shadow: var(--shadow-pop);
+  }
+
+  .pdp-band {
+    background: var(--color-surface);
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+  }
+  .pdp-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.15rem;
+    border-radius: 999px;
+    background: var(--color-brand-soft);
+    color: var(--color-brand);
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: background-color 0.18s ease, color 0.18s ease;
+  }
+  .pdp-pill:hover {
+    background: var(--color-accent-soft);
+    color: var(--color-accent-strong);
+  }
+
+  .pdp-cta {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    gap: 24px;
+    padding: clamp(28px, 4vw, 48px);
+    border-radius: 20px;
+    background: var(--color-brand-strong);
+    color: #fff;
+  }
+  .pdp-cta::after {
+    content: '';
+    position: absolute;
+    top: -80px;
+    right: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(228, 87, 15, 0.35), transparent 70%);
+    pointer-events: none;
+  }
+  .pdp-cta > * {
+    position: relative;
+    z-index: 1;
+  }
+  .pdp-cta-eyebrow {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-accent-bright);
+  }
+  .pdp-cta h2 {
+    color: #fff;
+  }
+  .pdp-cta-text {
+    max-width: 52ch;
+    margin-top: 0.75rem;
+    color: rgba(255, 255, 255, 0.75);
+  }
+  @media (min-width: 640px) {
+    .pdp-cta {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .pdp-mobile-cta {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 60;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    background: color-mix(in srgb, var(--color-surface) 92%, transparent);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid var(--color-line);
+  }
+  .pdp-mobile-cta .btn {
+    flex: 1;
+  }
+  .pdp-mobile-cta .pdp-ghost {
+    padding: 0.85rem 1.2rem;
+    color: var(--color-brand);
+    border-color: var(--color-line-strong);
+    font-size: 0.9375rem;
+  }
+  .pdp-mobile-cta .pdp-ghost:hover {
+    background: var(--color-brand-soft);
+    border-color: var(--color-brand);
+    color: var(--color-brand);
+  }
+  @media (min-width: 1024px) {
+    .pdp-mobile-cta {
+      display: none;
+    }
+  }
+</style>

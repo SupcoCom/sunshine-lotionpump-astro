@@ -40,7 +40,7 @@ const intro =
   seo.description ||
   category.description ||
   fallbackCopy[category.slug] ||
-  `Browse our ${name} range, manufactured in-house in Cixi, Ningbo, China.`;
+  `Browse our ${name} range, manufactured in-house in Yuyao, Ningbo, China.`;
 
 const schema = [
   {
@@ -71,46 +71,48 @@ const schema = [
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: name }]} />
 
-  <div class="container-x py-10">
-    <h1 class="text-brand">{name} Manufacturer</h1>
-    <p class="mt-3 max-w-3xl text-ink/75">{intro}</p>
+  <header class="hero-band">
+    <div class="container-x hero-band-inner">
+      <span class="hero-band-eyebrow">Product category</span>
+      <h1>{name} Manufacturer</h1>
+      <p class="lede">{intro}</p>
 
-    <p class="mt-4 text-sm text-muted">
-      {products.length} product{products.length === 1 ? '' : 's'} · MOQ from 10,000 pcs · Lead time 15–20 days · OEM/ODM
-      available
-    </p>
+      <div class="hero-band-stats">
+        <span><strong>{products.length}</strong> product{products.length === 1 ? '' : 's'}</span>
+        <span>MOQ from <strong>10,000 pcs</strong></span>
+        <span>Lead time <strong>15–20 days</strong></span>
+        <span>OEM/ODM available</span>
+      </div>
 
-    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <nav class="hero-band-pills" aria-label="Product families">
+        {
+          productCategories
+            .filter((c) => c.count > 0)
+            .map((c) => (
+              <a
+                href={`/product-category/${c.slug}/`}
+                class:list={['hero-pill', c.slug === category.slug && 'is-active']}
+              >
+                {c.name} ({c.count})
+              </a>
+            ))
+        }
+      </nav>
+    </div>
+  </header>
+
+  <div class="container-x py-12 md:py-16">
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {products.map((product, index) => <ProductCard product={product.data} eager={index < 3} />)}
     </div>
 
     {products.length === 0 && (
-      <p class="mt-8 rounded-lg border border-dashed border-line p-6 text-center text-sm text-muted">
+      <p class="rounded-lg border border-dashed border-line p-6 text-center text-sm text-muted">
         Product sheets for this family are being finalised — <a class="underline" href="/contact-us/"
           >ask us for the current catalogue</a
         >.
       </p>
     )}
-
-    <nav class="mt-12" aria-label="Other product families">
-      <h2 class="mb-4 text-lg">Other product families</h2>
-      <ul class="flex flex-wrap gap-2">
-        {
-          productCategories
-            .filter((c) => c.count > 0 && c.slug !== category.slug)
-            .map((c) => (
-              <li>
-                <a
-                  href={`/product-category/${c.slug}/`}
-                  class="rounded-full border border-line bg-white px-4 py-2 text-sm hover:border-accent hover:text-accent-strong"
-                >
-                  {c.name}
-                </a>
-              </li>
-            ))
-        }
-      </ul>
-    </nav>
   </div>
 
   <CtaBand source={`category-${category.slug}`} group={name} />

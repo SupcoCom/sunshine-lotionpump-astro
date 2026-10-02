@@ -32,12 +32,15 @@ export const CONTACT = {
   phoneAlt: '+86 15757418802',
   whatsappDisplay: '+86-158-8850-3691',
   whatsappHref: 'https://wa.me/8615888503691',
+  // TODO(owner 2026-10-01): city confirmed as Yuyao by the owner, but the street
+  // line below is the legacy Cixi/Zhouxiang one inherited from the old site
+  // (Zhouxiang is a town in Cixi). Needs the real Yuyao street address.
   addressLines: [
     '1109 Huancheng South Road, Zhouxiang Town',
-    'Cixi City, Ningbo City, Zhejiang Province, China',
+    'Yuyao City, Ningbo City, Zhejiang Province, China',
   ],
   addressOneLine:
-    '1109 Huancheng South Road, Zhouxiang Town, Cixi City, Ningbo City, Zhejiang Province, China',
+    '1109 Huancheng South Road, Zhouxiang Town, Yuyao City, Ningbo City, Zhejiang Province, China',
   hours: 'Mon – Fri: 08:30 – 18:00 CST · Sat: 09:00 – 13:00 CST',
   responseTime: 'Within 24 hours',
 } as const;
@@ -75,7 +78,6 @@ export const NAV: NavGroup[] = [
       { label: 'Lotion Pump', href: '/product-category/lotion-pump/' },
       { label: 'Cream Pump', href: '/product-category/cream-pump/' },
       { label: 'Trigger Sprayers', href: '/product-category/trigger-sprayers/' },
-      { label: 'Oil Pump', href: '/product-category/oil-pump/' },
       { label: 'Fine Mist Sprayer', href: '/product-category/fine-mist-sprayer/' },
       { label: 'Treatment Pump', href: '/product-category/treatment-pump/' },
       { label: 'Disc Top Cap', href: '/product-category/disc-top-cap/' },
@@ -111,7 +113,6 @@ export const PRODUCT_CATEGORIES = [
   { slug: 'cream-pump', label: 'Cream Pump' },
   { slug: 'trigger-sprayers', label: 'Trigger Sprayer' },
   { slug: 'fine-mist-sprayer', label: 'Fine Mist Sprayer' },
-  { slug: 'oil-pump', label: 'Oil Pump' },
   { slug: 'disc-top-cap', label: 'Disc Top Cap' },
   { slug: 'treatment-pump', label: 'Treatment Pump' },
   { slug: 'nail-polish-pump', label: 'Nail Polish Pump' },
@@ -120,7 +121,10 @@ export const PRODUCT_CATEGORIES = [
 
 /**
  * Values that appear on the legacy site in more than one version.
- * `kept` is what this rebuild publishes; the rest need owner confirmation.
+ *
+ * RESOLVED 2026-10-01 by the owner: founding year = 2018, city = Yuyao,
+ * MOQ = 5,000 pcs. The conflicts below are kept as an audit trail; the
+ * `resolution` field records what was decided.
  */
 export const DATA_CONFLICTS = [
   {
@@ -128,36 +132,49 @@ export const DATA_CONFLICTS = [
     kept: 'Ningbo Sunshine Plastic Industry Co., Ltd.',
     others: ['Ningbo Shaoshuai Plastic Industry Co., Ltd.'],
     where: 'about-us body, contact-us body vs. home body + footer',
+    resolution: 'unresolved — still needs the business licence to confirm',
   },
   {
     field: 'city',
-    kept: 'Cixi, Ningbo',
-    others: ['Yuyao, Zhejiang'],
+    kept: 'Yuyao, Ningbo',
+    others: ['Cixi, Ningbo'],
     where: 'about-us + contact-us bodies vs. home body + footer',
+    resolution: 'owner confirmed Yuyao (2026-10-01). Street address still shows the legacy Cixi/Zhouxiang line — needs updating.',
   },
   {
     field: 'year founded',
     kept: '2018',
     others: ['2005', '2010', '2015'],
     where: 'home hero "SINCE 2018" vs. about counter "2010" vs. home counter from-value 2015 vs. about counter "2005"',
+    resolution: 'owner confirmed 2018 (2026-10-01). Retire the 2005/2010/2015 counters.',
   },
   {
     field: 'years in business',
     kept: 'since 2018',
     others: ['7+ years', '14+ years'],
     where: 'home "7+ Years" vs. about "Over 14+ years"',
+    resolution: 'owner confirmed 2018 (2026-10-01). Compute any "X+ years" claim from 2018.',
+  },
+  {
+    field: 'MOQ',
+    kept: '5,000 pcs',
+    others: ['10,000 pcs'],
+    where: 'home meta description said 10,000; ABOUT_STATS said 5,000',
+    resolution: 'owner confirmed 5,000 pcs (2026-10-01). Site-wide single value.',
   },
   {
     field: 'factory floor',
     kept: '7,000 m²',
     others: [],
     where: 'consistent — home + about both say 7,000 m²',
+    resolution: 'no conflict',
   },
   {
     field: 'annual output',
     kept: '50M+ units',
     others: [],
     where: 'about + home both say 50M+',
+    resolution: 'no conflict',
   },
 ] as const;
 
