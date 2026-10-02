@@ -35,24 +35,28 @@ const productShowcase = [
     title: 'Lotion Pumps',
     desc: '24/410 · 28/410 · 33/410 neck sizes',
     image: '/img/products/pump-large-body.webp',
+    image1x: '/img/products/pump-large-body-1x.webp',
     href: '/product-category/lotion-pump/',
   },
   {
     title: 'Trigger Sprayers',
     desc: '28/400 · 28/410 square & round',
     image: '/img/products/trigger-sprayer-square-nozzle.webp',
+    image1x: '/img/products/trigger-sprayer-square-nozzle-1x.webp',
     href: '/product-category/trigger-sprayers/',
   },
   {
     title: 'Fine Mist Sprayers',
     desc: '18/415 · 20/410 · 24/410',
     image: '/img/products/sprayer-fine-mist.webp',
+    image1x: '/img/products/sprayer-fine-mist-1x.webp',
     href: '/product-category/fine-mist-sprayer/',
   },
   {
     title: 'Foam Pumps',
     desc: '30/400 · 40/400 · 43/400',
     image: '/img/products/pump-powder.webp',
+    image1x: '/img/products/pump-powder-1x.webp',
     href: '/product-category/foam-pump/',
   },
   {
@@ -299,10 +303,11 @@ const schema = [
           <a href={item.href} class="p-product" data-reveal style={`--d:${(i % 3) * 90}ms`}>
             <div class="p-product-img">
               <img
-                src={item.image}
+                src={item.image1x || item.image}
+                srcset={`${item.image1x || item.image} 1x, ${item.image} 2x`}
                 alt={item.title}
-                width="480"
-                height="480"
+                width="550"
+                height="550"
                 loading="lazy"
                 decoding="async"
               />
