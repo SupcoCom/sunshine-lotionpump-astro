@@ -6,7 +6,7 @@ excerpt: "SUNSHINE 20/410 Plastic Push Cream Pump Double Deck Lotion Pump for Co
 modified: "2026-07-17T15:38:40"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777614167906.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777614167906.webp"
 imageAlt: "SUNSHINE 20/410 Plastic Push Cream Pump Double Deck Lotion Pump for Cosmetic Packing B2B"
 gallery: []
 video: ""

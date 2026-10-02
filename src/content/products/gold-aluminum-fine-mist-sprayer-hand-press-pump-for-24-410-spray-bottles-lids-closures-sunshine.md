@@ -6,7 +6,7 @@ excerpt: "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottl
 modified: "2026-07-17T15:37:57"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777657167427.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777657167427.webp"
 imageAlt: "Gold Aluminum Fine Mist Sprayer Hand Press Pump for 24/410 Spray Bottles Lids Closures SUNSHINE"
 gallery: []
 video: ""

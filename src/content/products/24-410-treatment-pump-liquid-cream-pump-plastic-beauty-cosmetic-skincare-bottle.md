@@ -6,7 +6,7 @@ excerpt: "24/410 Treatment Pump Liquid Cream Pump Plastic Beauty Cosmetic Skinca
 modified: "2026-07-17T15:37:37"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706961288.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777706961288.webp"
 imageAlt: "24/410 Treatment Pump Liquid Cream Pump Plastic Beauty Cosmetic Skincare Bottle"
 gallery: []
 video: ""

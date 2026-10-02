@@ -6,7 +6,7 @@ excerpt: "24/410 silver UV lotion pump for hand wash, cleaning liquid and person
 modified: "2026-07-17T15:37:29"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708121993.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777708121993.webp"
 imageAlt: "24/410 silver UV coating plastic lotion pump — B2B OEM cosmetic dispenser, SUNSHINE"
 gallery: []
 video: ""

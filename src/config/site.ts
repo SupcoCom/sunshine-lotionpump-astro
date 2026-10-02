@@ -20,8 +20,8 @@ export const SITE = {
   locale: 'en_US',
   lang: 'en',
   established: '2018',
-  logo: 'https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/SunShine-Logo.png',
-  favicon: 'https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/favicon.ico',
+  logo: 'https://img.sunshine-lotionpump.com/2026/04/SunShine-Logo.png',
+  favicon: 'https://img.sunshine-lotionpump.com/2026/04/favicon.ico',
   cdnHost: 'img.supcous.com',
 } as const;
 

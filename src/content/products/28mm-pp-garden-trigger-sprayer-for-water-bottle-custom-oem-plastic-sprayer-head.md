@@ -6,7 +6,7 @@ excerpt: "28mm PP Garden Trigger Sprayer for Water Bottle | Custom OEM Plastic S
 modified: "2026-07-17T15:38:02"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777654398848.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777654398848.webp"
 imageAlt: "28mm PP Garden Trigger Sprayer for Water Bottle | Custom OEM Plastic Sprayer Head"
 gallery: []
 video: ""

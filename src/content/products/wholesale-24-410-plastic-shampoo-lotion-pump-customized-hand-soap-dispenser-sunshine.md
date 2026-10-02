@@ -6,7 +6,7 @@ excerpt: "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Disp
 modified: "2026-07-17T15:38:21"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624686490.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777624686490.webp"
 imageAlt: "Wholesale 24/410 Plastic Shampoo Lotion Pump Customized Hand Soap Dispenser SUNSHINE"
 gallery: []
 video: ""

@@ -6,7 +6,7 @@ excerpt: "SUNSHINE Colorful Plastic Trigger Sprayer 28/400 28/410 Size for Clean
 modified: "2026-07-17T15:38:03"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777655314024.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777655314024.webp"
 imageAlt: "SUNSHINE Colorful Plastic Trigger Sprayer 28/400 28/410 Size for Cleaning"
 gallery: []
 video: ""

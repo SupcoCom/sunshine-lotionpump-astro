@@ -6,7 +6,7 @@ excerpt: "Factory Price Top Quality Mini Plastic Trigger Sprayer Non-spill Pump 
 modified: "2026-07-17T15:38:08"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651779526.png"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777651779526.png"
 imageAlt: "Factory Price Top Quality Mini Plastic Trigger Sprayer Non-spill Pump for Kitchen Cleaning (SUNSHINE)"
 gallery: []
 video: ""

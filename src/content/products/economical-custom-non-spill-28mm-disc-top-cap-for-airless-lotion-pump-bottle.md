@@ -6,7 +6,7 @@ excerpt: "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump 
 modified: "2026-07-17T15:37:17"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709824918.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777709824918.webp"
 imageAlt: "Economical Custom Non-Spill 28mm Disc Top Cap for Airless Lotion Pump Bottle"
 gallery: []
 video: ""

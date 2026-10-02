@@ -6,7 +6,7 @@ excerpt: "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover D
 modified: "2026-07-17T15:37:47"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700775639-scaled.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777700775639-scaled.webp"
 imageAlt: "Wholesale High Quality Purple Nail Polish Pump 28/410 33/410 Remover Dispenser Pump"
 gallery: []
 video: ""

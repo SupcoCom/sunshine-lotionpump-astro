@@ -6,7 +6,7 @@ excerpt: "Smooth Disc Top Caps for Plastic Bottles | SUNSHINE B2B Packaging. Cus
 modified: "2026-07-17T15:37:14"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709812686.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777709812686.webp"
 imageAlt: "Smooth Disc Top Caps for Plastic Bottles | SUNSHINE B2B Packaging"
 gallery: []
 video: ""

@@ -6,7 +6,7 @@ excerpt: "28/410 High Quality Plastic Hand Trigger Sprayer for Bottles | SUNSHIN
 modified: "2026-07-17T15:38:00"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777655889088.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777655889088.webp"
 imageAlt: "28/410 High Quality Plastic Hand Trigger Sprayer for Bottles | SUNSHINE"
 gallery: []
 video: ""

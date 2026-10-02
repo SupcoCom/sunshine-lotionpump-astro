@@ -6,7 +6,7 @@ excerpt: "24/410 yellow lotion treatment pump for serum and skincare bottles. OE
 modified: "2026-07-17T15:37:49"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777701254405.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777701254405.webp"
 imageAlt: "24/410 Yellow Plastic Lotion Treatment Pump – SUNSHINE"
 gallery: []
 video: ""

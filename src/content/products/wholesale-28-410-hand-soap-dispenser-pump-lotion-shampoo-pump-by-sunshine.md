@@ -6,7 +6,7 @@ excerpt: "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by S
 modified: "2026-07-17T15:38:16"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625194238.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777625194238.webp"
 imageAlt: "Wholesale 28/410 Hand Soap Dispenser Pump | Lotion & Shampoo Pump by SUNSHINE"
 gallery: []
 video: ""

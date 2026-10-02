@@ -6,7 +6,7 @@ excerpt: "28/410 clip lock dispenser pump for hand wash, liquid soap, shampoo an
 modified: "2026-07-17T15:37:24"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708073788.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777708073788.webp"
 imageAlt: "28/410 clip lock dispenser pump for hand wash liquid soap — PP plastic, MOQ 10K pcs"
 gallery: []
 video: ""

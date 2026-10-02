@@ -6,7 +6,7 @@ excerpt: "33/410 nail polish remover pump dispenser for cosmetics packaging. Cus
 modified: "2026-07-17T15:37:46"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700818309.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777700818309.webp"
 imageAlt: "33/410 Nail Polish Remover Pump Dispenser – Liquid Pump for Cosmetics Packaging"
 gallery: []
 video: ""

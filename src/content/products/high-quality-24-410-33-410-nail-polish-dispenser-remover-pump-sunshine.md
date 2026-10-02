@@ -6,7 +6,7 @@ excerpt: "24/410 and 33/410 nail polish remover pump dispenser for beauty liquid
 modified: "2026-07-17T15:37:44"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777699954768-scaled.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777699954768-scaled.webp"
 imageAlt: "High Quality 24/410 33/410 Nail Polish Dispenser Remover Pump – SUNSHINE"
 gallery: []
 video: ""

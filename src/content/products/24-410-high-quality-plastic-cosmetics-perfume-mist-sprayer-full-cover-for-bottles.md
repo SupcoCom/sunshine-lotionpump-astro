@@ -6,7 +6,7 @@ excerpt: "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover 
 modified: "2026-07-17T15:37:41"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777671821235.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777671821235.webp"
 imageAlt: "24/410 High Quality Plastic Cosmetics Perfume Mist Sprayer Full Cover for Bottles"
 gallery: []
 video: ""

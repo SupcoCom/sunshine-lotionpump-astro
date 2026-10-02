@@ -97,12 +97,21 @@ const CONTENT_OVERRIDES = [
   },
   {
     id: 'wp-content-absolute',
-    from: /((?:src|href)=["'])\/wp-content\//g,
-    to: '$1https://admin.sunshine-lotionpump.com/wp-content/',
+    from: /((?:src|href)=["'])\/wp-content\/uploads\/sites\/2\//g,
+    to: '$1https://img.sunshine-lotionpump.com/',
     reason:
-      'WP stores asset URLs as root-relative /wp-content/ which only resolves on the ' +
-      'production domain. Making them absolute keeps images from 404ing on any host ' +
-      '(local preview, staging, Cloudflare Pages).',
+      'WP stores asset URLs as root-relative /wp-content/uploads/sites/2/ (Multisite blog 2). ' +
+      'Media files are mirrored to Cloudflare R2 (bucket slpimg -> img.sunshine-lotionpump.com) ' +
+      'with the wp-content/uploads/sites/2/ prefix stripped. Rewrite to the R2 CDN so images ' +
+      'never load from the WordPress origin.',
+  },
+  {
+    id: 'wp-content-admin-absolute',
+    from: /https:\/\/admin\.sunshine-lotionpump\.com\/wp-content\/uploads\/sites\/2\//g,
+    to: 'https://img.sunshine-lotionpump.com/',
+    reason:
+      'WP may emit absolute media URLs pointing at its own admin subdomain; rewrite them to the ' +
+      'R2 CDN so frontend images are served from Cloudflare R2, not the WordPress origin.',
   },
   {
     id: 'legacy-contact-link',

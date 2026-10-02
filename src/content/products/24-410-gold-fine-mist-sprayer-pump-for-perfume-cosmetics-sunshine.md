@@ -6,7 +6,7 @@ excerpt: "24-410 Gold Fine Mist Sprayer Pump for Perfume & Cosmetics | SUNSHINE.
 modified: "2026-07-17T15:37:55"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777657747785.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777657747785.webp"
 imageAlt: "24-410 Gold Fine Mist Sprayer Pump for Perfume & Cosmetics | SUNSHINE"
 gallery: []
 video: ""

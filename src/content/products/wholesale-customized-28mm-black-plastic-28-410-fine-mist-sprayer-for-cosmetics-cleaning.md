@@ -6,7 +6,7 @@ excerpt: "Wholesale Customized 28mm Black Plastic 28/410 Fine Mist Sprayer for C
 modified: "2026-07-17T15:37:54"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777660073357.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777660073357.webp"
 imageAlt: "Wholesale Customized 28mm Black Plastic 28/410 Fine Mist Sprayer for Cosmetics & Cleaning"
 gallery: []
 video: ""

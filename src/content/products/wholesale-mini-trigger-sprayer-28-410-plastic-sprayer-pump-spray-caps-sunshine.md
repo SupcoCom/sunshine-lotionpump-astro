@@ -6,7 +6,7 @@ excerpt: "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps 
 modified: "2026-07-17T15:38:10"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651477288.png"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777651477288.png"
 imageAlt: "Wholesale Mini Trigger Sprayer 28/410 Plastic Sprayer Pump Spray Caps SUNSHINE"
 gallery: []
 video: ""

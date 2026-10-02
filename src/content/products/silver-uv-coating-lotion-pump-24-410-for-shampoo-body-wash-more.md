@@ -6,7 +6,7 @@ excerpt: "Silver UV coating 24/410 lotion pump for shampoo, body wash, hand soap
 modified: "2026-07-17T15:37:30"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708112920.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777708112920.webp"
 imageAlt: "24/410 silver UV lotion pump for shampoo and body wash — premium metallic finish dispenser"
 gallery: []
 video: ""

@@ -6,7 +6,7 @@ excerpt: "Durable plastic trigger spray nozzles for 24/410 and 28/410 bottles. S
 modified: "2026-07-17T15:38:50"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776640407065.jpg"
+image: "https://img.sunshine-lotionpump.com/2026/04/prod-0-1776640407065.jpg"
 imageAlt: "Plastic Trigger Spray Nozzles 24/410 28/410 | SUNSHINE"
 gallery: []
 video: ""

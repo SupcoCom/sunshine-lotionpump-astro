@@ -6,7 +6,7 @@ excerpt: "24/410 treatment lotion pump for serum, essence and cosmetic bottles. 
 modified: "2026-07-17T15:37:38"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777704919547.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777704919547.webp"
 imageAlt: "Custom Color 24/410 Treatment Lotion Pump Crimp Plastic – SUNSHINE"
 gallery: []
 video: ""

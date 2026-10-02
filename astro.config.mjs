@@ -58,7 +58,7 @@ export default defineConfig({
   },
   image: {
     // Product photography lives on the existing OSS/CDN
-    domains: ['img.supcous.com'],
+    domains: ['img.supcous.com', 'img.sunshine-lotionpump.com'],
   },
   build: {
     // Inline all CSS into HTML to remove the render-blocking stylesheet request.

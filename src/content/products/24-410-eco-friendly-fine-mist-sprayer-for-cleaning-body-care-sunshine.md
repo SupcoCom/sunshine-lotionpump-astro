@@ -6,7 +6,7 @@ excerpt: "24/410 Eco Friendly Fine Mist Sprayer for Cleaning & Body Care | SUNSH
 modified: "2026-07-17T15:37:52"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]
-image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777662867509.webp"
+image: "https://img.sunshine-lotionpump.com/2026/05/prod-0-1777662867509.webp"
 imageAlt: "24/410 Eco Friendly Fine Mist Sprayer for Cleaning & Body Care | SUNSHINE"
 gallery: []
 video: ""
