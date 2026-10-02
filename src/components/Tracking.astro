@@ -11,23 +11,30 @@ import { TRACKING } from '@/config/site';
 const { ga4Id, googleAdsId, conversionLabel } = TRACKING;
 ---
 
-<script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}></script>
 <script is:inline define:vars={{ ga4Id, googleAdsId, conversionLabel }}>
   // Stub gtag immediately so lead form calls never throw before the real script loads.
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = window.gtag || gtag;
 
-  // Defer the actual GA/Ads pageview + conversion setup until the browser is idle,
-  // so analytics never blocks first paint / LCP. Fire-and-forget.
   const idle =
     (typeof requestIdleCallback === 'function' && requestIdleCallback) ||
     ((cb) => setTimeout(cb, 0));
+
+  // Load gtag.js itself only after the browser is idle, so analytics never
+  // sits on the critical path / blocks first paint. The stub above captures
+  // any early lead-form events and replays them once gtag.js is ready.
   idle(() => {
     try {
-      gtag('js', new Date());
-      gtag('config', googleAdsId);
-      gtag('config', ga4Id);
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + googleAdsId;
+      s.onload = function () {
+        gtag('js', new Date());
+        gtag('config', googleAdsId);
+        gtag('config', ga4Id);
+      };
+      document.head.appendChild(s);
     } catch (e) {
       // analytics must never break the page
     }
