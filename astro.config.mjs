@@ -61,7 +61,9 @@ export default defineConfig({
     domains: ['img.supcous.com'],
   },
   build: {
-    inlineStylesheets: 'auto',
+    // Inline all CSS into HTML to remove the render-blocking stylesheet request.
+    // This site is small enough that the ~15KiB CSS is worth inlining for a faster LCP.
+    inlineStylesheets: 'always',
   },
   compressHTML: true,
 });

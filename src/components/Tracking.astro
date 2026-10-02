@@ -13,13 +13,25 @@ const { ga4Id, googleAdsId, conversionLabel } = TRACKING;
 
 <script async src={`https://www.googletagmanager.com/gtag/js?id=${googleAdsId}`}></script>
 <script is:inline define:vars={{ ga4Id, googleAdsId, conversionLabel }}>
+  // Stub gtag immediately so lead form calls never throw before the real script loads.
   window.dataLayer = window.dataLayer || [];
   function gtag() { window.dataLayer.push(arguments); }
   window.gtag = window.gtag || gtag;
 
-  gtag('js', new Date());
-  gtag('config', googleAdsId);
-  gtag('config', ga4Id);
+  // Defer the actual GA/Ads pageview + conversion setup until the browser is idle,
+  // so analytics never blocks first paint / LCP. Fire-and-forget.
+  const idle =
+    (typeof requestIdleCallback === 'function' && requestIdleCallback) ||
+    ((cb) => setTimeout(cb, 0));
+  idle(() => {
+    try {
+      gtag('js', new Date());
+      gtag('config', googleAdsId);
+      gtag('config', ga4Id);
+    } catch (e) {
+      // analytics must never break the page
+    }
+  });
 
   // Lead conversion helper — called by the lead form on success.
   window.sunshineTrackLead = function (source) {
@@ -28,6 +40,10 @@ const { ga4Id, googleAdsId, conversionLabel } = TRACKING;
       lead_source: source || 'unknown',
       form_location: document.location.pathname,
     });
-    gtag('event', 'conversion', { send_to: conversionLabel });
+    try {
+      gtag('event', 'conversion', { send_to: conversionLabel });
+    } catch (e) {
+      // ignore
+    }
   };
 </script>
