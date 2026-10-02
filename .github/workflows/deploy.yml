@@ -11,6 +11,10 @@ on:
   #   Authorization: Bearer <GH_TOKEN with repo scope>
   repository_dispatch:
     types: [wp-content-updated]
+  # Periodic rebuild so WordPress edits go live without a webhook.
+  # Runs every 30 min; keep WordPress content fresh on Cloudflare Pages.
+  schedule:
+    - cron: '*/30 * * * *'
 
 concurrency:
   group: pages-deploy
