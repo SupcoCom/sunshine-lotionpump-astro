@@ -21,7 +21,7 @@ import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const WP = 'https://sunshine-lotionpump.com';
+const WP = 'https://admin.sunshine-lotionpump.com';
 const API = `${WP}/wp-json/wp/v2`;
 const SKIP_SEO = process.argv.includes('--no-seo');
 
@@ -98,7 +98,7 @@ const CONTENT_OVERRIDES = [
   {
     id: 'wp-content-absolute',
     from: /((?:src|href)=["'])\/wp-content\//g,
-    to: '$1https://sunshine-lotionpump.com/wp-content/',
+    to: '$1https://admin.sunshine-lotionpump.com/wp-content/',
     reason:
       'WP stores asset URLs as root-relative /wp-content/ which only resolves on the ' +
       'production domain. Making them absolute keeps images from 404ing on any host ' +

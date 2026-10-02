@@ -6,7 +6,7 @@ excerpt: "Left-right lock nail polish remover pump in 24mm, 28mm and 33mm sizes.
 modified: "2026-07-17T15:37:43"
 categories: ["nail-polish-pump"]
 categoryNames: ["Nail Polish pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700704010.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777700704010.webp"
 imageAlt: "Plastic Left Right Lock Nail Polish Remover Pump 24/28/33mm – SUNSHINE"
 gallery: []
 video: ""

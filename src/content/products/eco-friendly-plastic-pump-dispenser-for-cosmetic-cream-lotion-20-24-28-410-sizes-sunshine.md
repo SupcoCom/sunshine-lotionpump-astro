@@ -6,7 +6,7 @@ excerpt: "Eco-friendly plastic pump dispenser for cosmetic cream, lotion and per
 modified: "2026-07-22T14:49:07"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708138969.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708138969.webp"
 imageAlt: "Eco-Friendly Plastic Pump Dispenser 20/410 24/410 28/410 | SUNSHINE"
 gallery: []
 video: ""

@@ -6,7 +6,7 @@ excerpt: "SUNSHINE Custom Plastic Hand Wash Lotion Dispenser Pump Up/Down Lock 2
 modified: "2026-07-17T15:38:19"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624750675.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624750675.webp"
 imageAlt: "SUNSHINE Custom Plastic Hand Wash Lotion Dispenser Pump Up/Down Lock 24/410 28/410 28/412"
 gallery: []
 video: ""

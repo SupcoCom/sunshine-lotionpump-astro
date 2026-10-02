@@ -6,7 +6,7 @@ excerpt: "Custom foam pump for hand wash, facial cleanser, body wash and shampoo
 modified: "2026-07-17T15:37:09"
 categories: ["foam-pump"]
 categoryNames: ["Foam Pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777712121152-scaled.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777712121152-scaled.webp"
 imageAlt: "Wholesale Foam Pump 28 – Custom Plastic Packaging for Hand Wash & Shampoo | SUNSHINE"
 gallery: []
 video: ""

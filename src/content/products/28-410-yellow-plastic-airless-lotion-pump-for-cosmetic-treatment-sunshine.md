@@ -6,7 +6,7 @@ excerpt: "28/410 yellow treatment pump for skincare and cosmetic bottles. OEM co
 modified: "2026-07-17T15:37:40"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777703715171.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777703715171.webp"
 imageAlt: "28/410 Yellow Plastic Airless Lotion Pump for Cosmetic Treatment – SUNSHINE"
 gallery: []
 video: ""

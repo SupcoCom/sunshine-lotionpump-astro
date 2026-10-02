@@ -6,7 +6,7 @@ excerpt: "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap – S
 modified: "2026-07-17T15:38:42"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777613768711.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777613768711.webp"
 imageAlt: "Matt White Smooth Makeup Cream Pump 0.25cc 24/410 with Clear Cap – SUNSHINE B2B Plastic Packaging"
 gallery: []
 video: ""

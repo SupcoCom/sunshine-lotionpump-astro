@@ -6,7 +6,7 @@ excerpt: "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE. Cus
 modified: "2026-07-17T15:37:34"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706976675.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706976675.webp"
 imageAlt: "White Plastic Non-Spill 32-410 Treatment Pump with Cap | SUNSHINE"
 gallery: []
 video: ""

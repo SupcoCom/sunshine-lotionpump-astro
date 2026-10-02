@@ -6,7 +6,7 @@ excerpt: "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream P
 modified: "2026-07-17T15:38:37"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777614360386.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777614360386.webp"
 imageAlt: "Factory 24/410 Step Pressing Emulsion Pump Head Aluminum Oxide Cream Pump for B2B Packaging"
 gallery: []
 video: ""

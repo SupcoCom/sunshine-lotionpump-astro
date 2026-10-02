@@ -6,7 +6,7 @@ excerpt: "28mm Silver UV Coating Left Right Lock Lotion Pump 28/410 for Shampoo 
 modified: "2026-07-17T15:38:26"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624386169.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624386169.webp"
 imageAlt: "28mm silver UV left-right lock lotion pump 28/410 — shampoo and soap bottle dispenser"
 gallery: []
 video: ""

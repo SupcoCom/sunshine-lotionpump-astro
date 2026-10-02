@@ -6,7 +6,7 @@ excerpt: "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE. Custom treat
 modified: "2026-07-17T15:37:35"
 categories: ["treatment-pump"]
 categoryNames: ["Treatment pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706969385.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777706969385.webp"
 imageAlt: "White Plastic Treatment Pump Dispenser 24/410 | SUNSHINE"
 gallery: []
 video: ""

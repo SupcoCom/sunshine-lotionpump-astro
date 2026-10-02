@@ -6,7 +6,7 @@ excerpt: "28mm trigger sprayer pump for car washing, cleaning and household liqu
 modified: "2026-07-17T15:38:06"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651874586.png"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777651874586.png"
 imageAlt: "SUNSHINE 28mm Mist Trigger Sprayer Pump for Car Washing – High Quality Plastic Sprayer"
 gallery: []
 video: ""

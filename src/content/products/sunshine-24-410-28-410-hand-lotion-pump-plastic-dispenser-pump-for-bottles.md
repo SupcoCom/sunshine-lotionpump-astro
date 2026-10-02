@@ -6,7 +6,7 @@ excerpt: "SUNSHINE 24/410 28/410 Hand Lotion Pump – Plastic Dispenser Pump for
 modified: "2026-07-17T15:38:18"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624852283.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624852283.webp"
 imageAlt: "SUNSHINE 24/410 28/410 Hand Lotion Pump – Plastic Dispenser Pump for Bottles"
 gallery: []
 video: ""

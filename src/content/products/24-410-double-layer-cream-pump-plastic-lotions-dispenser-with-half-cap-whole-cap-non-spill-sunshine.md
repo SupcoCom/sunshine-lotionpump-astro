@@ -6,7 +6,7 @@ excerpt: "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap
 modified: "2026-07-17T15:38:43"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777613677032.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777613677032.webp"
 imageAlt: "24/410 Double Layer Cream Pump Plastic Lotions Dispenser with Half Cap Whole Cap Non-Spill – SUNSHINE"
 gallery: []
 video: ""

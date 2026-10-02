@@ -6,7 +6,7 @@ excerpt: "33/410 lotion pump dispenser for shampoo, body wash and cleaning liqui
 modified: "2026-07-17T15:38:11"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625834467.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625834467.webp"
 imageAlt: "33/410 plastic lotion pump dispenser for body shampoo and cleaning — large neck size, SUNSHINE"
 gallery: []
 video: ""

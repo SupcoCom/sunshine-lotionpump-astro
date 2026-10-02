@@ -6,7 +6,7 @@ excerpt: "Colorful Plastic Alum Cream Pump 20/410 24/410 Treatment Pump for Cosm
 modified: "2026-07-17T15:38:39"
 categories: ["cream-pump"]
 categoryNames: ["cream pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777614301241.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777614301241.webp"
 imageAlt: "Colorful Plastic Alum Cream Pump 20/410 24/410 Treatment Pump for Cosmetic & Soap Dispenser Bottles"
 gallery: []
 video: ""

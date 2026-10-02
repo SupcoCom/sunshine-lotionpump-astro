@@ -6,7 +6,7 @@ excerpt: "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use
 modified: "2026-07-17T15:38:05"
 categories: ["trigger-sprayers"]
 categoryNames: ["Trigger Sprayers"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777653438353.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777653438353.webp"
 imageAlt: "Custom 28/410 Plastic Strong Trigger Sprayer for Cleaning & Garden Use | SUNSHINE"
 gallery: []
 video: ""

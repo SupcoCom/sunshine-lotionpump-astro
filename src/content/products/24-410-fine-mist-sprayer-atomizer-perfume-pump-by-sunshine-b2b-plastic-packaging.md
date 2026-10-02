@@ -6,7 +6,7 @@ excerpt: "24/410 Fine Mist Sprayer Atomizer Perfume Pump by SUNSHINE – B2B Pla
 modified: "2026-07-17T15:37:59"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777656888064.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777656888064.webp"
 imageAlt: "24/410 Fine Mist Sprayer Atomizer Perfume Pump by SUNSHINE – B2B Plastic Packaging"
 gallery: []
 video: ""

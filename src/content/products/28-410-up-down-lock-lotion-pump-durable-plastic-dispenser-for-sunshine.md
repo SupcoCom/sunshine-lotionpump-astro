@@ -6,7 +6,7 @@ excerpt: "28/410 Up/Down Lock Lotion Pump | Durable Plastic Dispenser for SUNSHI
 modified: "2026-07-17T15:38:51"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776640018986.jpg"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776640018986.jpg"
 imageAlt: "28/410 up-down lock lotion pump — durable PP plastic dispenser, MOQ 10K, SUNSHINE China"
 gallery: []
 video: ""

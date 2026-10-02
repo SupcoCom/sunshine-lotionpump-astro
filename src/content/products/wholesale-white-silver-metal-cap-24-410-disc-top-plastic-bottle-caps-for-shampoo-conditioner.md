@@ -6,7 +6,7 @@ excerpt: "Wholesale White Silver Metal Cap 24/410 Disc Top Plastic Bottle Caps f
 modified: "2026-07-17T15:37:19"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709834926.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709834926.webp"
 imageAlt: "Wholesale White Silver Metal Cap 24/410 Disc Top Plastic Bottle Caps for Shampoo & Conditioner"
 gallery: []
 video: ""

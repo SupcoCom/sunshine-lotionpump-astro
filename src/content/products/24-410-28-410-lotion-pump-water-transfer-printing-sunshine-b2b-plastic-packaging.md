@@ -6,7 +6,7 @@ excerpt: "24/410 28/410 Lotion Pump – Water Transfer Printing, SUNSHINE B2B Pl
 modified: "2026-07-17T15:38:24"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624527105.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624527105.webp"
 imageAlt: "24/410 28/410 lotion pump with water transfer printing finish — SUNSHINE B2B factory China"
 gallery: []
 video: ""

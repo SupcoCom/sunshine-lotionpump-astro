@@ -20,8 +20,8 @@ export const SITE = {
   locale: 'en_US',
   lang: 'en',
   established: '2018',
-  logo: 'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/SunShine-Logo.png',
-  favicon: 'https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/favicon.ico',
+  logo: 'https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/SunShine-Logo.png',
+  favicon: 'https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/favicon.ico',
   cdnHost: 'img.supcous.com',
 } as const;
 
@@ -50,7 +50,7 @@ export const LEAD = {
   /** WP CF7 form id that owns the existing email + Flamingo + HubSpot chain. */
   wpFormId: 2575,
   /** Where the Astro edge function forwards submissions. */
-  wpEndpoint: 'https://sunshine-lotionpump.com/wp-json/contact-form-7/v1/contact-forms',
+  wpEndpoint: 'https://admin.sunshine-lotionpump.com/wp-json/contact-form-7/v1/contact-forms',
   successPath: '/thank-you/',
   minMs: 1500,
 } as const;

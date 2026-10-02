@@ -6,7 +6,7 @@ excerpt: "Customized Plastic Fine Mist Sprayer 24/410 with Silver UV Printing | 
 modified: "2026-07-17T15:37:51"
 categories: ["fine-mist-sprayer"]
 categoryNames: ["Fine Mist Sprayer"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777663596238.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777663596238.webp"
 imageAlt: "Customized Plastic Fine Mist Sprayer 24/410 with Silver UV Printing | SUNSHINE"
 gallery: []
 video: ""

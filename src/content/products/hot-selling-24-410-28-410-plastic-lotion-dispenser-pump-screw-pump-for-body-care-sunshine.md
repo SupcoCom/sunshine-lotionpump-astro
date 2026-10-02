@@ -6,7 +6,7 @@ excerpt: "Hot Selling 24/410 28/410 Plastic Lotion Dispenser Pump Screw Pump for
 modified: "2026-07-17T15:38:13"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625771885.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777625771885.webp"
 imageAlt: "24/410 28/410 hot-selling plastic screw lotion pump — body care dispenser, SUNSHINE China"
 gallery: []
 video: ""

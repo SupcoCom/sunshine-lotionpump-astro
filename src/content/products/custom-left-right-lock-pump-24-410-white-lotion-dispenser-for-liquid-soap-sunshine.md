@@ -6,7 +6,7 @@ excerpt: "Custom Left Right Lock Pump 24/410 White Lotion Dispenser for Liquid S
 modified: "2026-07-17T15:40:26"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624603057.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777624603057.webp"
 imageAlt: "24/410 white plastic left-right lock lotion pump — liquid soap dispenser, custom OEM"
 gallery: []
 video: ""

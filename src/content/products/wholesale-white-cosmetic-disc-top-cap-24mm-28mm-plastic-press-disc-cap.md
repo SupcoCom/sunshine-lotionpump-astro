@@ -6,7 +6,7 @@ excerpt: "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap
 modified: "2026-07-17T15:37:15"
 categories: ["disc-top-cap"]
 categoryNames: ["Disc top cap"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709803546.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777709803546.webp"
 imageAlt: "Wholesale White Cosmetic Disc Top Cap 24mm 28mm Plastic Press Disc Cap"
 gallery: []
 video: ""

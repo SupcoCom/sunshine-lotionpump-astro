@@ -6,7 +6,7 @@ excerpt: "24/410 silver UV coating lotion pump for cleansing oil, cream and pers
 modified: "2026-07-17T15:37:26"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708103143.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708103143.webp"
 imageAlt: "24/410 silver UV coating lotion pump — cleansing cream and oil dispenser, SUNSHINE B2B"
 gallery: []
 video: ""

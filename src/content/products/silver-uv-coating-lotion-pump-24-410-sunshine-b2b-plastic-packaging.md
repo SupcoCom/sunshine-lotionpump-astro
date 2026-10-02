@@ -6,7 +6,7 @@ excerpt: "Custom 24/410 silver UV lotion pump for cosmetic, shampoo and body car
 modified: "2026-07-17T15:37:27"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708130300.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/05/prod-0-1777708130300.webp"
 imageAlt: "24/410 silver UV lotion pump dispenser — custom closure options, MOQ 10000 pcs, SUNSHINE"
 gallery: []
 video: ""

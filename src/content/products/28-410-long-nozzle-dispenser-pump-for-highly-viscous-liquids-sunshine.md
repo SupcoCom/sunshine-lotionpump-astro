@@ -6,7 +6,7 @@ excerpt: "28/410 Long Nozzle Dispenser Pump for Highly Viscous Liquids | SUNSHIN
 modified: "2026-07-17T15:38:48"
 categories: ["lotion-pump"]
 categoryNames: ["Lotion pump"]
-image: "https://sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776641393138.webp"
+image: "https://admin.sunshine-lotionpump.com/wp-content/uploads/sites/2/2026/04/prod-0-1776641393138.webp"
 imageAlt: "28/410 long nozzle lotion pump for high-viscosity liquids — SUNSHINE B2B plastic packaging"
 gallery: []
 video: ""
